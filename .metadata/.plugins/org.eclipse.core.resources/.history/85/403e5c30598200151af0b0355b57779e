@@ -1,0 +1,173 @@
+module Esterel_Exam_Review :
+	input RANDOM1, RANDOM2, RANDOM3;
+	output TA_INREVIEW, TA_SLEEPING;
+	%output STUD_WANTREVIEW1, STUD_INREVIEW1, STUD_WANTREVIEW2, STUD_INREVIEW2, STUD_WANTREVIEW3, STUD_INREVIEW3;
+	output WANT_REVIEW;
+	output STUD_WANTREVIEW, STUD_INREVIEW;
+	output STUDENTS_WAITING := 0 : combine integer with +;
+	
+	signal STUD_WANTREVIEW1, STUD_INREVIEW1, STUD_WANTREVIEW2, STUD_INREVIEW2, STUD_WANTREVIEW3, STUD_INREVIEW3 in
+	
+	run TA; % never terminates
+	 ||
+	% produce random student pattern:
+	
+	% student Kevin
+	loop
+		await RANDOM1;
+		run KEVIN / STUDENT [ constant 2 / const_TOTAL_SEATS; signal STUD_WANTREVIEW1 / STUD_WANTREVIEW, STUD_INREVIEW1 / STUD_INREVIEW ];	% blocks until this instance finishes
+	end loop;
+	 ||
+	% student Stuart
+	loop await RANDOM2;
+		run STUART / STUDENT [ constant 2 / const_TOTAL_SEATS; signal STUD_WANTREVIEW2 / STUD_WANTREVIEW, STUD_INREVIEW2 / STUD_INREVIEW ];	% blocks until this instance finishes
+	end loop;	 
+	 ||
+	% student Bob
+	loop await RANDOM3;
+		run BOB / STUDENT [ constant 2 / const_TOTAL_SEATS; signal STUD_WANTREVIEW3 / STUD_WANTREVIEW, STUD_INREVIEW3 / STUD_INREVIEW ];	% blocks until this instance finishes
+	end loop;
+	 ||
+	loop
+		present STUD_WANTREVIEW1 or STUD_WANTREVIEW2 or STUD_WANTREVIEW3 then 
+			emit STUD_WANTREVIEW;
+		end present;
+			
+		pause;
+	end loop;
+		
+	end signal;
+	
+end module
+
+
+
+module TA:	
+
+	input STUDENTS_WAITING := 0 : combine integer with +;
+	input STUD_WANTREVIEW;
+	output TA_SLEEPING, TA_INREVIEW;
+	
+	loop	 
+		
+		present pre(TA_SLEEPING) then
+			
+			present STUD_WANTREVIEW then 		
+				
+				emit TA_INREVIEW
+			
+			else	
+			
+				emit TA_SLEEPING
+							
+			end; 
+		
+		else
+		
+			present STUD_WANTREVIEW then
+						
+				emit STUDENTS_WAITING(-1); % Student is not waiting anymore
+				emit TA_INREVIEW;
+	
+			else
+
+				emit TA_SLEEPING;
+		
+			end present;
+		
+
+		end;
+		
+		pause;
+		
+	end loop;
+end module
+
+
+
+module STUDENT :
+	
+	input TA_INREVIEW, TA_SLEEPING;
+	
+	input STUDENTS_WAITING : combine integer with +; % to increment number of waiting students
+
+	
+	output STUD_INREVIEW, STUD_WANTREVIEW;
+	
+	%output WAKE_UP;
+	
+	constant const_TOTAL_SEATS : integer;
+		% if student comes to office and TA is sleeping
+		present TA_SLEEPING then
+		
+%			emit STUD_WANTREVIEW;
+%			
+%			% wait until TA is awake
+%			await [not TA_SLEEPING];
+%			
+%			emit STUD_INREVIEW;
+			
+
+		else  %if TA is not sleeping
+		
+			%if at least one free seat
+%%			if (?STUDENTS_WAITING) < const_TOTAL_SEATS then  
+%
+%		%	if (?STUDENTS_WAITING) != 0 then
+%				
+%				%trap 
+%				
+%				emit STUDENTS_WAITING(1);
+%				
+%				trap T1 in
+%				[
+%					% if TA has no time, student waits for review
+%					present TA_INREVIEW then sustain STUD_WANTREVIEW end;	% should be sustained until review starts
+%										
+%				]
+%				||
+%				[
+%					await immediate [not TA_INREVIEW];	%wait for TA accepting me, meanwhile increment STUDENTS_WAITING
+%					exit T1;			
+%				]
+%				end trap;
+%			
+%				emit STUD_INREVIEW; % output that student is in review
+%				%emit STUDENTS_WAITING(-1); % Student is not waiting anymore
+%				
+%				
+			
+		%	end if;
+		
+		nothing;
+		
+			
+%			else
+%		
+%			nothing; %nothing. Student disappears because waiting room is full.
+%		
+%			end if;
+		end present;
+		
+end module
+
+module OBSERVER:
+	input TA_INREVIEW, TA_SLEEPING, STUDENT_INREVIEW, STUDENT_SLEEPING; 
+	output TA_INSANE, STUD_INSANE;
+	loop
+		%TA is not in both states at once
+		present (TA_INREVIEW and TA_SLEEPING) then
+			emit TA_INSANE;
+		end present;
+		% STUDENT is not in both states at once
+		present (STUDENT_INREVIEW and STUDENT_SLEEPING) then
+			emit TA_INSANE;
+		end present;
+		
+		pause;
+	end loop;
+end module
+
+
+
+		

@@ -1,0 +1,153 @@
+%module debug_project_2:
+%	
+%	input TA_INREVIEW, TA_SLEEPING;
+%	
+%	input STUDENTS_WAITING : combine integer with +; % to increment number of waiting students
+%
+%	
+%	output STUD_INREVIEW, STUD_WANTREVIEW;
+%	
+%	%output WAKE_UP;
+%	
+%	constant const_TOTAL_SEATS : integer;
+%		% if student comes to office and TA is sleeping
+%		present TA_SLEEPING then
+%			
+%			%############only inserted for debugging ##############
+%			%pause;
+%			%################
+%			
+%			emit STUD_WANTREVIEW;
+%			
+%			% wait until TA is awake
+%			await [not TA_SLEEPING];
+%			
+%			emit STUD_INREVIEW;
+%
+%		else  %if TA is not sleeping
+%		
+%			%if at least one free seat
+%			if (?STUDENTS_WAITING) < const_TOTAL_SEATS then  
+%
+%				pause;
+%						
+%				emit STUDENTS_WAITING(1);
+%				
+%				trap T1 in
+%				[
+%					% if TA has no time, student waits for review
+%					present TA_INREVIEW then sustain STUD_WANTREVIEW end;	% should be sustained until review starts
+%										
+%				]
+%				||
+%				[
+%					await immediate [not TA_INREVIEW];	%wait for TA accepting me, meanwhile increment STUDENTS_WAITING
+%					exit T1;			% lessons learned:
+%% outputs and inputs possbile for function module
+%% emit in function module possible
+%% v_MIL_SEC tick is trigger for "every" compare statement
+%% MIN(?MIN) is erroneous, just emit MIN(temp_variable)
+%% modules need to run concurrently and not sequential
+
+
+module debug_project_2:
+	input STOP,START,RESET;
+%	input i_MIN := 0 : integer, i_SEC := 0 : integer;
+	output MIL_SEC :=0 : integer;
+	output MIN := 0 : integer, SEC:= 0 : integer;  %, MIL_SEC: integer;
+	
+	var v_MIL_SEC := 0 : integer in
+	var v_MIN  := 0 :  integer in
+	var v_SEC  := 0 : integer in
+		 
+	loop
+		await immediate START;
+			[
+				
+			loop  
+			
+			v_MIL_SEC := v_MIL_SEC + 1;
+
+			emit MIL_SEC(v_MIL_SEC); 
+		
+			pause;
+			
+			end;
+			
+			||
+			
+			
+			% instanziierung modul COUNTER milli -> sec
+			run SECOND_COUNTER / COUNTER [
+		
+			constant 3 / LIMIT;
+		
+			signal MIL_SEC / COUNTER_IN, SEC / COUNTER_OUT
+		
+			];
+			%emit SEC(?SEC);
+			
+			% end instanziierung 
+			
+			||
+		
+			% instanziierung modul COUNTER sec -> min
+			run MINUTE_COUNTER / COUNTER [
+		
+			constant 3 / LIMIT;
+		
+			signal SEC / COUNTER_IN, MIN / COUNTER_OUT
+			
+			];
+			% end instanziierung 
+						
+			
+			pause;
+			
+			]
+		
+	each RESET;
+	
+
+	end var;
+	end var;
+	end var;
+end module
+
+
+
+module COUNTER:
+	input COUNTER_IN : integer;
+	output COUNTER_OUT: integer;
+	constant LIMIT: integer;
+	
+	var v_n_value: integer in
+	
+	v_n_value := pre(?COUNTER_OUT);
+	
+	every LIMIT COUNTER_IN do 
+	
+		v_n_value := v_n_value + 1; 
+		emit COUNTER_OUT(v_n_value) 
+
+	end	
+	
+	end var;
+end module
+
+
+					
+				]
+				end trap;
+			
+				emit STUD_INREVIEW; % output that student is in review
+				%emit STUDENTS_WAITING(-1); % Student is not waiting anymore
+
+			else
+		
+			nothing; %nothing. Student disappears because waiting room is full.
+		
+			end if;
+		end present;
+		
+end module

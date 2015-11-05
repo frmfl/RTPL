@@ -1,0 +1,4 @@
+module await_immediate:
+	output A, B;
+	emit B; emit A;
+end module

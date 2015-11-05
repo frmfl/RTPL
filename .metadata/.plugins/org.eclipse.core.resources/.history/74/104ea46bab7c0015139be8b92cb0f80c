@@ -1,0 +1,4 @@
+module TUT3_TASK2:
+	output O:integer in 
+
+end module

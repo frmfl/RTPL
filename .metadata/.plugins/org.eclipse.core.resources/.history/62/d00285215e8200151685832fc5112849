@@ -1,0 +1,300 @@
+/* sscc : C CODE OF SORTED EQUATIONS debug_project_2 - INLINE MODE */
+
+/* AUXILIARY DECLARATIONS */
+
+#ifndef STRLEN
+#define STRLEN 81
+#endif
+#define _COND(A,B,C) ((A)?(B):(C))
+#ifdef TRACE_ACTION
+#include <stdio.h>
+#endif
+#ifndef NULL
+#define NULL ((char*)0)
+#endif
+
+#ifndef __EXEC_STATUS_H_LOADED
+#define __EXEC_STATUS_H_LOADED
+
+typedef struct {
+unsigned int start:1;
+unsigned int kill:1;
+unsigned int active:1;
+unsigned int suspended:1;
+unsigned int prev_active:1;
+unsigned int prev_suspended:1;
+unsigned int exec_index;
+unsigned int task_exec_index;
+void (*pStart)();
+void (*pRet)();
+} __ExecStatus;
+
+#endif
+#define __ResetExecStatus(status) {\
+   status.prev_active = status.active; \
+   status.prev_suspended = status.suspended; \
+   status.start = status.kill = status.active = status.suspended = 0; }
+#define __DSZ(V) (--(V)<=0)
+#define BASIC_TYPES_DEFINED
+typedef int boolean;
+typedef int integer;
+typedef char* string;
+#define _true 1
+#define _false 0
+#define __debug_project_2_GENERIC_TEST(TEST) return TEST;
+typedef void (*__debug_project_2_APF)();
+static __debug_project_2_APF *__debug_project_2_PActionArray;
+
+#include "debug_project_2.h"
+
+/* EXTERN DECLARATIONS */
+
+#ifndef _NO_EXTERN_DEFINITIONS
+#ifndef _NO_CONSTANT_DEFINITIONS
+#ifndef _const_TOTAL_SEATS_DEFINED
+#ifndef const_TOTAL_SEATS
+extern integer const_TOTAL_SEATS;
+#endif
+#endif
+#endif
+#endif
+
+/* INITIALIZED CONSTANTS */
+
+/* MEMORY ALLOCATION */
+
+static boolean __debug_project_2_V0;
+static boolean __debug_project_2_V1;
+static integer __debug_project_2_V2;
+static boolean __debug_project_2_V3;
+
+
+/* INPUT FUNCTIONS */
+
+void debug_project_2_I_TA_INREVIEW () {
+__debug_project_2_V0 = _true;
+}
+void debug_project_2_I_TA_SLEEPING () {
+__debug_project_2_V1 = _true;
+}
+void debug_project_2_I_STUDENTS_WAITING (integer __V) {
+__debug_project_2_V2 = _COND(__debug_project_2_V3,(__debug_project_2_V2+(__V)),(__debug_project_2_V3=_true,__V));
+}
+
+/* ACTIONS */
+
+/* PREDEFINED ACTIONS */
+
+/* PRESENT SIGNAL TESTS */
+
+#define __debug_project_2_A1 \
+__debug_project_2_V0
+#define __debug_project_2_A2 \
+__debug_project_2_V1
+#define __debug_project_2_A3 \
+__debug_project_2_V3
+
+/* OUTPUT ACTIONS */
+
+#define __debug_project_2_A4 \
+debug_project_2_O_STUD_INREVIEW()
+#define __debug_project_2_A5 \
+debug_project_2_O_STUD_WANTREVIEW()
+
+/* ASSIGNMENTS */
+
+#define __debug_project_2_A6 \
+__debug_project_2_V0 = _false
+#define __debug_project_2_A7 \
+__debug_project_2_V1 = _false
+#define __debug_project_2_A8 \
+__debug_project_2_V3 = _false
+#define __debug_project_2_A9 \
+__debug_project_2_V2 = _COND(__debug_project_2_V3,(__debug_project_2_V2+(1)),(__debug_project_2_V3=_true,1))
+
+/* PROCEDURE CALLS */
+
+/* CONDITIONS */
+
+#define __debug_project_2_A10 \
+__debug_project_2_V2<const_TOTAL_SEATS
+
+/* DECREMENTS */
+
+/* START ACTIONS */
+
+/* KILL ACTIONS */
+
+/* SUSPEND ACTIONS */
+
+/* ACTIVATE ACTIONS */
+
+/* WRITE ARGS ACTIONS */
+
+/* RESET ACTIONS */
+
+#define __debug_project_2_A11 \
+
+
+/* ACTION SEQUENCES */
+
+/* FUNCTIONS RETURNING NUMBER OF EXEC */
+
+int debug_project_2_number_of_execs () {
+return (0);
+}
+
+
+/* AUTOMATON (STATE ACTION-TREES) */
+
+
+
+static void __debug_project_2__reset_input () {
+__debug_project_2_V0 = _false;
+__debug_project_2_V1 = _false;
+__debug_project_2_V3 = _false;
+}
+
+/* REDEFINABLE BIT TYPE */
+
+#ifndef __SSC_BIT_TYPE_DEFINED
+typedef char __SSC_BIT_TYPE;
+#endif
+
+/* REGISTER VARIABLES */
+
+static __SSC_BIT_TYPE __debug_project_2_R[5] = {_true,
+ _false,
+ _false,
+ _false,
+ _false};
+
+/* AUTOMATON ENGINE */
+
+int debug_project_2 () {
+/* AUXILIARY VARIABLES */
+
+static __SSC_BIT_TYPE E[14];
+E[0] = __debug_project_2_R[2]&&!(__debug_project_2_R[0]);
+E[1] = (
+#ifdef TRACE_ACTION
+fprintf(stderr, "test 3\n"),
+#endif
+__debug_project_2_A3)||E[0];
+if (E[0]) {
+__debug_project_2_A9;
+#ifdef TRACE_ACTION
+fprintf(stderr, "__debug_project_2_A9\n");
+#endif
+}
+E[2] = __debug_project_2_R[1]&&!(__debug_project_2_R[0]);
+E[3] = E[2]&&!((
+#ifdef TRACE_ACTION
+fprintf(stderr, "test 2\n"),
+#endif
+__debug_project_2_A2));
+E[4] = E[0]&&!((
+#ifdef TRACE_ACTION
+fprintf(stderr, "test 1\n"),
+#endif
+__debug_project_2_A1));
+E[5] = __debug_project_2_R[4]&&!(__debug_project_2_R[0]);
+E[6] = E[5]&&!((
+#ifdef TRACE_ACTION
+fprintf(stderr, "test 1\n"),
+#endif
+__debug_project_2_A1));
+E[6] = E[4]||E[6];
+E[4] = __debug_project_2_R[3]||__debug_project_2_R[4];
+E[7] = E[0]&&!((
+#ifdef TRACE_ACTION
+fprintf(stderr, "test 1\n"),
+#endif
+__debug_project_2_A1));
+E[8] = E[0]&&(
+#ifdef TRACE_ACTION
+fprintf(stderr, "test 1\n"),
+#endif
+__debug_project_2_A1);
+E[8] = E[8]||(__debug_project_2_R[3]&&!(__debug_project_2_R[0]));
+E[7] = (E[4]&&!(__debug_project_2_R[3]))||E[7]||E[8];
+E[9] = E[0]&&(
+#ifdef TRACE_ACTION
+fprintf(stderr, "test 1\n"),
+#endif
+__debug_project_2_A1);
+E[5] = E[5]&&(
+#ifdef TRACE_ACTION
+fprintf(stderr, "test 1\n"),
+#endif
+__debug_project_2_A1);
+E[5] = E[9]||(__debug_project_2_R[4]&&E[5]);
+E[9] = (E[4]&&!(__debug_project_2_R[4]))||E[5];
+E[6] = E[6]&&E[7]&&(E[9]||E[6]);
+if (E[3]||E[6]) {
+__debug_project_2_A4;
+#ifdef TRACE_ACTION
+fprintf(stderr, "__debug_project_2_A4\n");
+#endif
+}
+E[10] = __debug_project_2_R[0]&&!((
+#ifdef TRACE_ACTION
+fprintf(stderr, "test 3\n"),
+#endif
+__debug_project_2_A3));
+if (E[10]) {
+__debug_project_2_A11;
+#ifdef TRACE_ACTION
+fprintf(stderr, "__debug_project_2_A11\n");
+#endif
+}
+E[11] = __debug_project_2_R[0]&&(
+#ifdef TRACE_ACTION
+fprintf(stderr, "test 2\n"),
+#endif
+__debug_project_2_A2);
+if (E[11]||E[8]) {
+__debug_project_2_A5;
+#ifdef TRACE_ACTION
+fprintf(stderr, "__debug_project_2_A5\n");
+#endif
+}
+E[12] = __debug_project_2_R[0]&&!((
+#ifdef TRACE_ACTION
+fprintf(stderr, "test 2\n"),
+#endif
+__debug_project_2_A2));
+E[13] = E[12]&&(
+#ifdef TRACE_ACTION
+fprintf(stderr, "test 10\n"),
+#endif
+__debug_project_2_A10);
+E[12] = E[3]||E[6]||(E[12]&&!(E[13]));
+E[2] = E[2]&&(
+#ifdef TRACE_ACTION
+fprintf(stderr, "test 2\n"),
+#endif
+__debug_project_2_A2);
+E[2] = E[11]||(__debug_project_2_R[1]&&E[2]);
+E[9] = E[2]||E[13]||((E[8]||E[5])&&E[7]&&E[9]);
+E[4] = __debug_project_2_R[1]||__debug_project_2_R[2]||E[4];
+__debug_project_2_R[3] = E[8]&&!(E[6]);
+__debug_project_2_R[4] = E[5]&&!(E[6]);
+__debug_project_2_R[0] = !(_true);
+__debug_project_2_R[1] = E[2];
+__debug_project_2_R[2] = E[13];
+__debug_project_2__reset_input();
+return E[9];
+}
+
+/* AUTOMATON RESET */
+
+int debug_project_2_reset () {
+__debug_project_2_R[0] = _true;
+__debug_project_2_R[1] = _false;
+__debug_project_2_R[2] = _false;
+__debug_project_2_R[3] = _false;
+__debug_project_2_R[4] = _false;
+__debug_project_2__reset_input();
+return 0;
+}

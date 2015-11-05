@@ -1,0 +1,7 @@
+module TEST:
+	
+	output SECOND : integer;
+	
+	every 1000 MILLISECOND emit SECOND end
+	
+end module

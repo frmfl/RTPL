@@ -1,0 +1,68 @@
+module tutorial_4:
+
+input MANUAL_TRIGGER, MAYBE_CRITICAL;
+output SAFETY_FAIL, RELEASE_PARACHUTE;
+		
+	run Par1 / Parachute [
+		
+	signal MANUAL_TRIGGER / MANUAL_TRIGGER, MAYBE_CRITICAL / MAYBE_CRITICAL, RELEASE_PARACHUTE / RELEASE_PARACHUTE 
+	];
+	
+	||
+	[		
+		run Observer;    % observer in parallel
+	];
+
+
+end module
+
+
+
+
+module Parachute:
+input MANUAL_TRIGGER, MAYBE_CRITICAL;
+output RELEASE_PARACHUTE;
+signal CRITICAL in
+	present [not MANUAL_TRIGGER] then
+		trap T1 in
+			[await 2 MAYBE_CRITICAL; emit CRITICAL;] ||
+			[await MANUAL_TRIGGER; emit CRITICAL; ] ||
+			[await CRITICAL then exit T1; end; pause;]
+		end trap;
+	end present;
+	sustain RELEASE_PARACHUTE;
+end signal;
+end module
+
+
+
+module Observer:
+
+% emit C within next 2 cycles when A occurs
+% checks the property "".
+% emits "SAFETY_FAIL" if this does not hold true.
+input MANUAL_TRIGGER, MAYBE_CRITICAL, RELEASE_PARACHUTE;
+output SAFETY_FAIL;
+	loop
+	await MANUAL_TRIGGER;
+
+	trap deadline in
+	[
+		await RELEASE_PARACHUTE;
+		% wait until is present;
+		exit deadline;
+	]
+	||
+	[
+		pause; pause;
+		% 2-tick timeout.
+		emit SAFETY_FAIL;
+	]
+	end trap;
+end loop;
+
+end module
+
+
+
+

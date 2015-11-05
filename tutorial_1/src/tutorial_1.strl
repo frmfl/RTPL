@@ -1,0 +1,9 @@
+module tutorial_1:
+	input C,D,R;
+	output O;
+		loop 
+			weak abort [ await C || await immediate D ];
+				emit O;
+			when R
+		each R
+end module

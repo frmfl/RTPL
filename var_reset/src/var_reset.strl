@@ -1,0 +1,10 @@
+module var_reset:
+	input C,D,R;
+	output O : integer;
+	var i := 0 : integer in
+		loop [ await C || await immediate D ];			
+			i := i+1;
+			emit O(i)
+		each R
+	end var
+end module

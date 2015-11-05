@@ -1,0 +1,14 @@
+module tutorial_4:
+input MANUAL_TRIGGER, MAYBE_CRITICAL;
+output RELEASE_PARACHUTE;
+signal CRITICAL in
+	present [not MANUAL_TRIGGER] then
+		trap T1 in
+			[await 2 MAYBE_CRITICAL; emit CRITICAL;] ||
+			[await MANUAL_TRIGGER; emit CRITICAL; ] ||
+			[present CRITICAL then exit T1; end; pause;]
+		end trap;
+	end present;
+	sustain RELEASE_PARACHUTE;
+end signal;
+end module

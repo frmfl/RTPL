@@ -1,0 +1,75 @@
+module TUT3_STOPWATCH:
+	input STOP,START,RESET;
+	output MIN,SEC, MIL_SEC:integer;
+	
+	var v_MIL_SEC := 0 : integer in
+	var v_MIN  := 0 :  integer in
+	var v_SEC  := 0 : integer in
+	
+	signal RESET in
+	 
+	loop
+	 
+		await immediate START;
+	
+		loop 
+		
+			v_MIL_SEC := v_MIL_SEC + 1;
+		
+			emit MIL_SEC(v_MIL_SEC);
+		
+		
+			% instanziierung modul COUNTER milli -> sec
+			run SECOND_COUNTER / COUNTER [
+		
+			constant 3 / LIMIT;
+		
+			signal MIL_SEC / COUNTER_IN, SEC / COUNTER_OUT
+		
+			];
+			% end instanziierung 
+		
+			% instanziierung modul COUNTER sec -> min
+			run MINUTE_COUNTER / COUNTER [
+		
+			constant 60 / LIMIT;
+		
+			signal SEC / COUNTER_IN, MIN / COUNTER_OUT
+			
+			];
+			% end instanziierung 
+			
+			emit SEC(?SEC); emit MIN(?MIN); pause;
+		
+		end;
+	
+	each RESET;
+
+	
+	end signal;
+	end var;
+	end var;
+	end var;
+end module
+
+
+
+module COUNTER:
+	input COUNTER_IN : integer, COUNTER_OUT: integer;
+	constant LIMIT: integer;
+	
+	var v_n_value: integer in
+	
+	v_n_value := pre(?COUNTER_OUT);
+	
+	every LIMIT COUNTER_IN do 
+		
+		v_n_value := v_n_value + 1; 
+		emit COUNTER_OUT(v_n_value) 
+		
+	end	
+	
+	end var;
+end module
+
+

@@ -1,0 +1,5 @@
+module TUT3_TASK2:
+	output O : integer;
+	
+	emit O(2); emit O(3)
+end module
