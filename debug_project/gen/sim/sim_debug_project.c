@@ -237,8 +237,7 @@ struct __HaltEntry* halt_table;
 struct __NetEntry* net_table;
 };
 
-#include "sim_debug_project.h"
-
+                               
 /* EXTERN DECLARATIONS */
 
 extern int __CheckVariables(int*);
@@ -254,13 +253,6 @@ extern void __ResetModuleEntry();
 extern void __ResetModuleEntryBeforeReaction();
 extern void __ResetModuleEntryAfterReaction();
 #ifndef _NO_EXTERN_DEFINITIONS
-#ifndef _NO_CONSTANT_DEFINITIONS
-#ifndef _const_TOTAL_SEATS_DEFINED
-#ifndef const_TOTAL_SEATS
-extern integer const_TOTAL_SEATS;
-#endif
-#endif
-#endif
 #endif
 
 /* INITIALIZED CONSTANTS */
@@ -367,18 +359,22 @@ __debug_project_V3 = _false;
 }
 static int __debug_project_Check8 [] = {1,0,1,3};
 static void __debug_project_A9 () {
-__debug_project_V2 = _COND(__debug_project_V3,(__debug_project_V2+(1)),(__debug_project_V3=_true,1));
+__debug_project_V2 = 0;
 }
 static int __debug_project_Check9 [] = {1,0,1,2};
+static void __debug_project_A10 () {
+__debug_project_V2 = _COND(__debug_project_V3,(__debug_project_V2+(1)),(__debug_project_V3=_true,1));
+}
+static int __debug_project_Check10 [] = {1,0,1,2};
 
 /* PROCEDURE CALLS */
 
 /* CONDITIONS */
 
-static int __debug_project_A10 () {
-__debug_project_GENERIC_TEST(__debug_project_V2<const_TOTAL_SEATS);
+static int __debug_project_A11 () {
+__debug_project_GENERIC_TEST(__debug_project_V2<2);
 }
-static int __debug_project_Check10 [] = {1,1,2,0};
+static int __debug_project_Check11 [] = {1,1,2,0};
 
 /* DECREMENTS */
 
@@ -393,12 +389,6 @@ static int __debug_project_Check10 [] = {1,1,2,0};
 /* WRITE ARGS ACTIONS */
 
 /* RESET ACTIONS */
-
-static void __debug_project_A11 () {
-;
-__ResetVariable(2);
-}
-static int __debug_project_Check11 [] = {1,0,0};
 
 /* ACTION SEQUENCES */
 
@@ -453,7 +443,7 @@ return 0;
 /* SIMULATION TABLES */
 
 struct __InstanceEntry __debug_project_InstanceTable [] = {
-{"debug_project",0,"/home/student/workspace/eclipse_ws_tutorial/debug_project//src","debug_project.strl",{1,1,1,0},{1,59,1,0},{0,0,0,0}},
+{"debug_project",0,"/home/student/Desktop/RTPL_Windows/debug_project//src","debug_project.strl",{1,1,1,0},{1,58,1,0},{0,0,0,0}},
 };
 
 struct __SignalEntry __debug_project_SignalTable [] = {
@@ -462,7 +452,7 @@ struct __SignalEntry __debug_project_SignalTable [] = {
 {"STUDENTS_WAITING",65,2,0,{1,5,8,0},0,(void*) NULL,0,(void*) NULL,0,(void*) NULL},
 {"STUD_INREVIEW",34,0,0,{1,8,9,0},0,(void*) NULL,0,(void*) NULL,0,(void*) NULL},
 {"STUD_WANTREVIEW",34,0,0,{1,8,24,0},0,(void*) NULL,0,(void*) NULL,0,(void*) NULL},
-{"T1",48,0,0,{1,36,10,0},0,(void*) NULL,0,(void*) NULL,0,(void*) NULL}};
+{"T1",48,0,0,{1,35,10,0},0,(void*) NULL,0,(void*) NULL,0,(void*) NULL}};
 
 struct __InputEntry __debug_project_InputTable [] = {
 {"TA_INREVIEW",53,0,0,-1,0,0,0,debug_project_IS_TA_INREVIEW,0,{1,3,8,0}},
@@ -477,11 +467,11 @@ struct __VariableEntry __debug_project_VariableTable [] = {
 };
 
 struct __HaltEntry __debug_project_HaltTable [] = {
-{{1,59,1,0}},
-{{1,23,4,0}},
-{{1,32,5,0}},
-{{1,39,31,0}},
-{{1,44,6,0}}
+{{1,58,1,0}},
+{{1,22,4,0}},
+{{1,31,5,0}},
+{{1,38,31,0}},
+{{1,43,6,0}}
 };
 
 
@@ -552,9 +542,9 @@ if (E[1]) {
 __AppendToList(__debug_project_EmittedList,2);
 }
 if (E[0]) {
-__CheckVariables(__debug_project_CheckArray[9]);__debug_project_A9();
+__CheckVariables(__debug_project_CheckArray[10]);__debug_project_A10();
 #ifdef TRACE_ACTION
-fprintf(stderr, "__debug_project_A9\n");
+fprintf(stderr, "__debug_project_A10\n");
 #endif
 }
 E[2] = __debug_project_R[1]&&!(__debug_project_R[0]);
@@ -619,9 +609,9 @@ fprintf(stderr, "test 3\n"),
 #endif
 __debug_project_A3()));
 if (E[10]) {
-__CheckVariables(__debug_project_CheckArray[11]);__debug_project_A11();
+__CheckVariables(__debug_project_CheckArray[9]);__debug_project_A9();
 #ifdef TRACE_ACTION
-fprintf(stderr, "__debug_project_A11\n");
+fprintf(stderr, "__debug_project_A9\n");
 #endif
 }
 E[11] = __debug_project_R[0]&&(__CheckVariables(__debug_project_CheckArray[2]),
@@ -643,11 +633,11 @@ E[12] = __debug_project_R[0]&&!((__CheckVariables(__debug_project_CheckArray[2])
 fprintf(stderr, "test 2\n"),
 #endif
 __debug_project_A2()));
-E[13] = E[12]&&(__CheckVariables(__debug_project_CheckArray[10]),
+E[13] = E[12]&&(__CheckVariables(__debug_project_CheckArray[11]),
 #ifdef TRACE_ACTION
-fprintf(stderr, "test 10\n"),
+fprintf(stderr, "test 11\n"),
 #endif
-__debug_project_A10());
+__debug_project_A11());
 E[12] = E[3]||E[6]||(E[12]&&!(E[13]));
 E[2] = E[2]&&(__CheckVariables(__debug_project_CheckArray[2]),
 #ifdef TRACE_ACTION

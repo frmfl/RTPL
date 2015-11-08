@@ -1,0 +1,71 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	modified:   .metadata/.log
+#	modified:   .metadata/.plugins/org.eclipse.core.resources/.projects/Esterel_Exam_Review/.markers.snap
+#	modified:   .metadata/.plugins/org.eclipse.core.resources/.projects/Esterel_Exam_Review/.syncinfo.snap
+#	modified:   .metadata/.plugins/org.eclipse.core.resources/.projects/TUT3_STOPWATCH/.markers.snap
+#	modified:   .metadata/.plugins/org.eclipse.core.resources/.projects/TUT3_STOPWATCH/.syncinfo.snap
+#	modified:   .metadata/.plugins/org.eclipse.core.resources/.projects/debug_project/.indexes/e4/history.index
+#	modified:   .metadata/.plugins/org.eclipse.core.resources/.projects/debug_project/.markers.snap
+#	modified:   .metadata/.plugins/org.eclipse.core.resources/.projects/debug_project/.syncinfo.snap
+#	modified:   .metadata/.plugins/org.eclipse.core.resources/.projects/debug_project_2/.indexes/e4/history.index
+#	modified:   .metadata/.plugins/org.eclipse.core.resources/.projects/debug_project_2/.markers.snap
+#	modified:   .metadata/.plugins/org.eclipse.core.resources/.projects/debug_project_2/.syncinfo.snap
+#	modified:   .metadata/.plugins/org.eclipse.core.resources/.root/.markers.snap
+#	modified:   .metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources
+#	modified:   .metadata/.plugins/org.eclipse.core.resources/.snap
+#	modified:   .metadata/.plugins/org.eclipse.epp.usagedata.recording/usagedata.csv
+#	modified:   Esterel_Exam_Review/gen/sim/sim_Esterel_Exam_Review.c
+#	modified:   Esterel_Exam_Review/src/Esterel_Exam_Review.strl
+#	modified:   debug_project/.project
+#	modified:   debug_project/gen/sim/sim_debug_project.c
+#	modified:   debug_project/src/debug_project.strl
+#	modified:   debug_project_2/gen/sim/sim_debug_project_2.c
+#	modified:   debug_project_2/gen/sim/sim_debug_project_2.o
+#	modified:   debug_project_2/src/debug_project_2.strl
+#
+# Untracked files:
+#	.metadata/.plugins/org.eclipse.core.resources/.history/10/
+#	.metadata/.plugins/org.eclipse.core.resources/.history/1b/506a0d6eb88400151723a8021f7609d9
+#	.metadata/.plugins/org.eclipse.core.resources/.history/22/
+#	.metadata/.plugins/org.eclipse.core.resources/.history/25/
+#	.metadata/.plugins/org.eclipse.core.resources/.history/26/60c0b6c5ba8400151723a8021f7609d9
+#	.metadata/.plugins/org.eclipse.core.resources/.history/39/
+#	.metadata/.plugins/org.eclipse.core.resources/.history/3b/
+#	.metadata/.plugins/org.eclipse.core.resources/.history/4f/b0918972ba8400151723a8021f7609d9
+#	.metadata/.plugins/org.eclipse.core.resources/.history/58/
+#	.metadata/.plugins/org.eclipse.core.resources/.history/5a/a0b321e6ba8400151723a8021f7609d9
+#	.metadata/.plugins/org.eclipse.core.resources/.history/5e/
+#	.metadata/.plugins/org.eclipse.core.resources/.history/61/7034aa0dba8400151723a8021f7609d9
+#	.metadata/.plugins/org.eclipse.core.resources/.history/69/
+#	.metadata/.plugins/org.eclipse.core.resources/.history/73/
+#	.metadata/.plugins/org.eclipse.core.resources/.history/7f/b0757507ba8400151723a8021f7609d9
+#	.metadata/.plugins/org.eclipse.core.resources/.history/8/302ddab1b98400151723a8021f7609d9
+#	.metadata/.plugins/org.eclipse.core.resources/.history/8d/
+#	.metadata/.plugins/org.eclipse.core.resources/.history/94/b006652cba8400151723a8021f7609d9
+#	.metadata/.plugins/org.eclipse.core.resources/.history/9d/806172a8ba8400151723a8021f7609d9
+#	.metadata/.plugins/org.eclipse.core.resources/.history/a/b015a901ba8400151723a8021f7609d9
+#	.metadata/.plugins/org.eclipse.core.resources/.history/a3/
+#	.metadata/.plugins/org.eclipse.core.resources/.history/a4/
+#	.metadata/.plugins/org.eclipse.core.resources/.history/ae/80975643ba8400151723a8021f7609d9
+#	.metadata/.plugins/org.eclipse.core.resources/.history/b5/00782955bb8400151723a8021f7609d9
+#	.metadata/.plugins/org.eclipse.core.resources/.history/b5/b0e2fec6b88400151723a8021f7609d9
+#	.metadata/.plugins/org.eclipse.core.resources/.history/bd/
+#	.metadata/.plugins/org.eclipse.core.resources/.history/ce/
+#	.metadata/.plugins/org.eclipse.core.resources/.history/d7/
+#	.metadata/.plugins/org.eclipse.core.resources/.history/dc/60fe7f1cb78400151723a8021f7609d9
+#	.metadata/.plugins/org.eclipse.core.resources/.history/ed/
+#	.metadata/.plugins/org.eclipse.core.resources/.history/f3/
+#	.metadata/.plugins/org.eclipse.core.resources/.history/fa/
+#	.metadata/.plugins/org.eclipse.core.resources/.history/fc/
+#	.metadata/.plugins/org.eclipse.epp.usagedata.recording/upload10.csv
+#	.metadata/.plugins/org.eclipse.epp.usagedata.recording/upload9.csv
+#	Esterel_Exam_Review/gen/sim/sim_Esterel_Exam_Review.o
+#	debug_project/gen/sim/sim_debug_project.o
+#
+

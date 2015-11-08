@@ -100,7 +100,9 @@ module STUDENT :
 		% if student comes to office and TA is sleeping
 		present TA_SLEEPING then
 			
-			%############only inserted for debugging ##############
+			%############ "pause" is important here, because TA_SLEEPING depends on STUD_WANTREVIEW ##############
+			%############# ( because if TA_SLEEPING -> STUD_WANTREVIEW which causes [not TA_SLEEPING]   ###
+			%############	this is logical not correct, because its all in the same moment!
 			pause;
 			%################
 			
@@ -120,11 +122,26 @@ module STUDENT :
 		
 				emit STUDENTS_WAITING(1);
 				
+				pause;
+				
 				trap T1 in
 				[
 					% if TA has no time, student waits for review
-					present TA_INREVIEW then sustain STUD_WANTREVIEW end;	% should be sustained until review starts
-										
+					%present TA_INREVIEW then 
+					sustain STUD_WANTREVIEW %end;	% should be sustained until review starts
+					%nothing;		
+					
+					%%%%%%%%%%% 06.11.2015 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+					%%%		1. "present TA_INREVIEW then"... (3 lines under  trap  T1) was the problem for the compiler. 
+					%%%		I think because if STUD_WANTREVIEW is present, there is anyway ALWAYS a "TA_INREVIEW" -> could be the thing which makes no sense for the compiler
+					%%%
+					%%%		2. second bug: "sustain STUD_WANTREVIEW" causes, that "TA_INREVIEW" is always present
+					%%%		   that means, this part never reaches "exit T12"
+					%%%			-> NOT SOLVED YET
+					%%%		
+					%%%		3. STUDENTS_WAITING gets negative values sometimes
+					%%%			-> NOT SOLVED YET
+					%%%%%%%%%%%%			
 				]
 				||
 				[

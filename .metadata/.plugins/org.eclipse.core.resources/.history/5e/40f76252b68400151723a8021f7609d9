@@ -1,0 +1,59 @@
+module debug_project:
+	
+	input TA_INREVIEW, TA_SLEEPING;
+	
+	input STUDENTS_WAITING : combine integer with +; % to increment number of waiting students
+
+	
+	output STUD_INREVIEW, STUD_WANTREVIEW;
+	
+	%output WAKE_UP;
+	
+	constant const_TOTAL_SEATS : integer;
+		% if student comes to office and TA is sleeping
+		present TA_SLEEPING then
+			
+			%############only inserted for debugging ##############
+			%pause;
+			%################
+			
+			emit STUD_WANTREVIEW;
+			
+			% wait until TA is awake
+			await [not TA_SLEEPING];
+			
+			emit STUD_INREVIEW;
+
+		else  %if TA is not sleeping
+		
+			%if at least one free seat
+			if (?STUDENTS_WAITING) < const_TOTAL_SEATS then  
+
+				pause;
+						
+				emit STUDENTS_WAITING(1);
+				
+				trap T1 in
+				[
+					% if TA has no time, student waits for review
+					present TA_INREVIEW then sustain STUD_WANTREVIEW end;	% should be sustained until review starts
+										
+				]
+				||
+				[
+					await immediate [not TA_INREVIEW];	%wait for TA accepting me, meanwhile increment STUDENTS_WAITING
+					exit T1;			
+				]
+				end trap;
+			
+				emit STUD_INREVIEW; % output that student is in review
+				%emit STUDENTS_WAITING(-1); % Student is not waiting anymore
+
+			else
+		
+			nothing; %nothing. Student disappears because waiting room is full.
+		
+			end if;
+		end present;
+		
+end module

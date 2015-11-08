@@ -410,3 +410,42 @@ org.eclipse.core.internal.resources.ResourceException: Resource '/var_reset/src/
 !ENTRY org.apache.log4j 4 0 2015-11-03 20:01:35.613
 !MESSAGE org.eclipse.xtext.builder.nature.ToggleXtextNatureAction  - org.eclipse.core.internal.resources.ResourceException: Could not set the project description for 'debug_project_2' because the project description file (.project) is out of sync with the file system.
 
+!SESSION 2015-11-06 19:38:47.025 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_31
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -data /home/student/Desktop/RTPL_Windows -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-11-06 19:38:48.992
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.apache.log4j 4 0 2015-11-06 20:35:08.305
+!MESSAGE org.eclipse.xtext.ui.editor.folding.DefaultFoldingRegionProvider  - org.eclipse.core.runtime.AssertionFailedException: assertion failed: 
+
+!STACK 0
+org.eclipse.core.runtime.AssertionFailedException: assertion failed: 
+	at org.eclipse.core.runtime.Assert.isTrue(Assert.java:110)
+	at org.eclipse.core.runtime.Assert.isTrue(Assert.java:96)
+	at org.eclipse.jface.text.Position.setLength(Position.java:185)
+	at org.eclipse.xtext.ui.editor.model.DocumentPartitioner.computePartitioning(DocumentPartitioner.java:735)
+	at org.eclipse.jface.text.AbstractDocument.computePartitioning(AbstractDocument.java:1430)
+	at org.eclipse.xtext.ui.editor.folding.DefaultFoldingRegionProvider.computeCommentFolding(DefaultFoldingRegionProvider.java:115)
+	at org.eclipse.xtext.ui.editor.folding.DefaultFoldingRegionProvider.doGetFoldingRegions(DefaultFoldingRegionProvider.java:69)
+	at org.eclipse.xtext.ui.editor.folding.DefaultFoldingRegionProvider$1.exec(DefaultFoldingRegionProvider.java:60)
+	at org.eclipse.xtext.ui.editor.folding.DefaultFoldingRegionProvider$1.exec(DefaultFoldingRegionProvider.java:1)
+	at org.eclipse.xtext.util.concurrent.AbstractReadWriteAcces.readOnly(AbstractReadWriteAcces.java:32)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.readOnly(XtextDocument.java:78)
+	at org.eclipse.xtext.ui.editor.folding.DefaultFoldingRegionProvider.getFoldingRegions(DefaultFoldingRegionProvider.java:56)
+	at org.eclipse.xtext.ui.editor.folding.DefaultFoldingStructureProvider.calculateProjectionAnnotationModel(DefaultFoldingStructureProvider.java:114)
+	at org.eclipse.xtext.ui.editor.folding.DefaultFoldingStructureProvider.modelChanged(DefaultFoldingStructureProvider.java:92)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.notifyModelListeners(XtextDocument.java:118)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument$XtextDocumentLocker.afterModify(XtextDocument.java:172)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument$XtextDocumentLocker.afterModify(XtextDocument.java:1)
+	at org.eclipse.xtext.util.concurrent.AbstractReadWriteAcces.modify(AbstractReadWriteAcces.java:50)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument$XtextDocumentLocker.modify(XtextDocument.java:181)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.internalModify(XtextDocument.java:90)
+	at org.eclipse.xtext.ui.editor.reconciler.XtextDocumentReconcileStrategy.reconcile(XtextDocumentReconcileStrategy.java:33)
+	at org.eclipse.xtext.ui.editor.reconciler.XtextReconciler.run(XtextReconciler.java:239)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)

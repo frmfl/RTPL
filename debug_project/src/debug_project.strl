@@ -2,15 +2,14 @@ module debug_project:
 	
 	input TA_INREVIEW, TA_SLEEPING;
 	
-	input STUDENTS_WAITING : combine integer with +; % to increment number of waiting students
+	input STUDENTS_WAITING := 0 : combine integer with +; % to increment number of waiting students
 
 	
 	output STUD_INREVIEW, STUD_WANTREVIEW;
 	
 	%output WAKE_UP;
+	% if student comes to office and TA is sleeping
 	
-	constant const_TOTAL_SEATS : integer;
-		% if student comes to office and TA is sleeping
 		present TA_SLEEPING then
 			
 			%############only inserted for debugging ##############
@@ -27,7 +26,7 @@ module debug_project:
 		else  %if TA is not sleeping
 		
 			%if at least one free seat
-			if (?STUDENTS_WAITING) < const_TOTAL_SEATS then  
+			if (?STUDENTS_WAITING) < 2 then  
 
 				pause;
 						
