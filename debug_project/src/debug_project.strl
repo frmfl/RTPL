@@ -1,58 +1,246 @@
 module debug_project:
+%	module Esterel_Exam_Review :
+	input RANDOM1, RANDOM2, RANDOM3;
+	output TA_INREVIEW, TA_SLEEPING;
+	%output STUD_WANTREVIEW1, STUD_INREVIEW1, STUD_WANTREVIEW2, STUD_INREVIEW2, STUD_WANTREVIEW3, STUD_INREVIEW3;
+	output WANT_REVIEW;
+	output STUD_WANTREVIEW, STUD_INREVIEW;
+	output TA_DISMISS_STUD;
+	output STUDENTS_WAITING := 0 : combine integer with +;
+	
+	signal STUD_WANTREVIEW1, STUD_INREVIEW1, STUD_WANTREVIEW2, STUD_INREVIEW2, STUD_WANTREVIEW3, STUD_INREVIEW3 in
+	
+	run TA; % never terminates
+	 ||
+	% produce random student pattern:
+	
+	% student Kevin
+	loop
+		await RANDOM1;
+		run KEVIN / STUDENT [ constant 2 / const_TOTAL_SEATS; signal STUD_WANTREVIEW1 / STUD_WANTREVIEW, STUD_INREVIEW1 / STUD_INREVIEW ];	% blocks until this instance finishes
+	end loop;
+	 ||
+	% student Stuart
+	loop await RANDOM2;
+		run STUART / STUDENT [ constant 2 / const_TOTAL_SEATS; signal STUD_WANTREVIEW2 / STUD_WANTREVIEW, STUD_INREVIEW2 / STUD_INREVIEW ];	% blocks until this instance finishes
+	end loop;	 
+	 ||
+	% student Bob
+	loop await RANDOM3;
+		run BOB / STUDENT [ constant 2 / const_TOTAL_SEATS; signal STUD_WANTREVIEW3 / STUD_WANTREVIEW, STUD_INREVIEW3 / STUD_INREVIEW ];	% blocks until this instance finishes
+	end loop;
+	 ||
+	loop
+		present STUD_WANTREVIEW1 or STUD_WANTREVIEW2 or STUD_WANTREVIEW3 then 
+			emit STUD_WANTREVIEW;
+		end present;
+			
+		pause;
+	end loop;
+		||
+		loop
+		present STUD_INREVIEW1 or STUD_INREVIEW2 or STUD_INREVIEW3 then 
+			emit STUD_INREVIEW;
+		end present;
+			
+		pause;
+	end loop;
+		
+	end signal;
+	
+end module
+
+
+
+module TA:	
+
+	input STUDENTS_WAITING := 0 : combine integer with +;
+	input STUD_WANTREVIEW;
+	output TA_SLEEPING, TA_INREVIEW;
+	%%  to tell other students, that student is done
+	output TA_DISMISS_STUD;
+	%%
+	
+	loop	 
+		
+		present pre(STUD_WANTREVIEW) then 	% added pre, that there are no cyclic paths	
+				
+				emit TA_INREVIEW;
+				emit STUDENTS_WAITING(pre(?STUDENTS_WAITING)-1);
+				% pause and second TA_INREVIEW added for debugging (not defined in specification, how long a review takes)
+				pause;
+				emit TA_INREVIEW;
+				emit TA_DISMISS_STUD; %used to realize a fifo for waiting students
+		
+		else
+		
+			emit TA_SLEEPING
+		
+		end present;
+		
+		pause;
+		
+	end loop;
+end module
+
+
+
+module STUDENT :
 	
 	input TA_INREVIEW, TA_SLEEPING;
 	
-	input STUDENTS_WAITING := 0 : combine integer with +; % to increment number of waiting students
-
+	input STUDENTS_WAITING : combine integer with +; % to increment number of waiting students
+	
+	input TA_DISMISS_STUD; % from TA
 	
 	output STUD_INREVIEW, STUD_WANTREVIEW;
 	
-	%output WAKE_UP;
-	% if student comes to office and TA is sleeping
+	constant const_TOTAL_SEATS : integer;
 	
-		present TA_SLEEPING then
-			
-			%############only inserted for debugging ##############
-			%pause;
-			%################
-			
-			emit STUD_WANTREVIEW;
-			
-			% wait until TA is awake
-			await [not TA_SLEEPING];
-			
-			emit STUD_INREVIEW;
+	% use variable to check, whether its the students turn or not yet
+	var sig_students_before_me := 0 : integer in
+	signal sig_ta_free in
 
-		else  %if TA is not sleeping
 		
 			%if at least one free seat
-			if (?STUDENTS_WAITING) < 2 then  
-
-				pause;
-						
-				emit STUDENTS_WAITING(1);
+			if (pre(?STUDENTS_WAITING)) < const_TOTAL_SEATS then  % added "pre(.." that there is not cyclic loop because checking of value and incrementing in the same cycle makes no sence
+		
+				sig_students_before_me := pre(?STUDENTS_WAITING);
+		
+				emit STUDENTS_WAITING(pre(?STUDENTS_WAITING) + 1);
+							
+				%pause;
 				
 				trap T1 in
+				
 				[
 					% if TA has no time, student waits for review
-					present TA_INREVIEW then sustain STUD_WANTREVIEW end;	% should be sustained until review starts
-										
+					%present TA_INREVIEW then 
+					sustain STUD_WANTREVIEW %end;	% should be sustained until review starts	
 				]
 				||
 				[
-					await immediate [not TA_INREVIEW];	%wait for TA accepting me, meanwhile increment STUDENTS_WAITING
-					exit T1;			
+
+ 					% this loop counts down "sig_students_before_me" for every "TA_DISMISS_STUD" ( which means that a student finished review)
+ 					% if all other longer waiting students finished review, the trap T1 exists the loop
+					loop
+					
+						if sig_students_before_me <1 then
+							exit T1;
+						else
+							sig_students_before_me := sig_students_before_me - 1;
+						end;	
+				
+						await immediate TA_DISMISS_STUD; % in case there are others waiting
+
+						pause % await immediate is not allowed without "pause" in loops
+
+					end loop		
 				]
+				
 				end trap;
-			
-				emit STUD_INREVIEW; % output that student is in review
-				%emit STUDENTS_WAITING(-1); % Student is not waiting anymore
+				
+				% this trap forces the student to be in the state "STUD_INREVIEW" until the review is done
+				trap T2 in
+				
+					loop 
+						
+						emit STUD_INREVIEW;
+					
+						present TA_DISMISS_STUD then
+							exit T2;
+						end present;
+						
+						pause;
+					
+					end loop
+					
+				end trap
 
 			else
 		
 			nothing; %nothing. Student disappears because waiting room is full.
 		
 			end if;
+%		end present;
+		
+	end signal;
+	end var;
+end module
+
+module OBSERVER:
+	input TA_INREVIEW, TA_SLEEPING, STUDENT_INREVIEW, STUDENT_SLEEPING; 
+	output TA_INSANE, STUD_INSANE;
+	loop
+		%TA is not in both states at once
+		present (TA_INREVIEW and TA_SLEEPING) then
+			emit TA_INSANE;
+		end present;
+		% STUDENT is not in both states at once
+		present (STUDENT_INREVIEW and STUDENT_SLEEPING) then
+			emit TA_INSANE;
 		end present;
 		
+		pause;
+	end loop;
 end module
+
+
+
+		
+%	input TA_INREVIEW, TA_SLEEPING;
+%	
+%	input STUDENTS_WAITING := 0 : combine integer with +; % to increment number of waiting students
+%
+%	
+%	output STUD_INREVIEW, STUD_WANTREVIEW;
+%	
+%	%output WAKE_UP;
+%	% if student comes to office and TA is sleeping
+%	
+%		present TA_SLEEPING then
+%			
+%			%############only inserted for debugging ##############
+%			%pause;
+%			%################
+%			
+%			emit STUD_WANTREVIEW;
+%			
+%			% wait until TA is awake
+%			await [not TA_SLEEPING];
+%			
+%			emit STUD_INREVIEW;
+%
+%		else  %if TA is not sleeping
+%		
+%			%if at least one free seat
+%			if (?STUDENTS_WAITING) < 2 then  
+%
+%				pause;
+%						
+%				emit STUDENTS_WAITING(1);
+%				
+%				trap T1 in
+%				[
+%					% if TA has no time, student waits for review
+%					present TA_INREVIEW then sustain STUD_WANTREVIEW end;	% should be sustained until review starts
+%										
+%				]
+%				||
+%				[
+%					await immediate [not TA_INREVIEW];	%wait for TA accepting me, meanwhile increment STUDENTS_WAITING
+%					exit T1;			
+%				]
+%				end trap;
+%			
+%				emit STUD_INREVIEW; % output that student is in review
+%				%emit STUDENTS_WAITING(-1); % Student is not waiting anymore
+%
+%			else
+%		
+%			nothing; %nothing. Student disappears because waiting room is full.
+%		
+%			end if;
+%		end present;
+%		
+%end module
