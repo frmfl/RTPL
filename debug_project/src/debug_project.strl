@@ -8,7 +8,8 @@ module debug_project:
 	output TA_DISMISS_STUD;
 	output STUDENTS_WAITING := 0 : combine integer with +;
 	
-	signal STUD_WANTREVIEW1, STUD_INREVIEW1, STUD_WANTREVIEW2, STUD_INREVIEW2, STUD_WANTREVIEW3, STUD_INREVIEW3 in
+	output STUD_WANTREVIEW1, STUD_INREVIEW1, STUD_WANTREVIEW2, STUD_INREVIEW2, STUD_WANTREVIEW3, STUD_INREVIEW3;
+	
 	
 	run TA; % never terminates
 	 ||
@@ -46,50 +47,16 @@ module debug_project:
 		pause;
 	end loop;
 		
-	end signal;
 	
 end module
 
-
-
-module TA:	
-
-	input STUDENTS_WAITING := 0 : combine integer with +;
-	input STUD_WANTREVIEW;
-	output TA_SLEEPING, TA_INREVIEW;
-	%%  to tell other students, that student is done
-	output TA_DISMISS_STUD;
-	%%
-	
-	loop	 
-		
-		present pre(STUD_WANTREVIEW) then 	% added pre, that there are no cyclic paths	
-				
-				emit TA_INREVIEW;
-				emit STUDENTS_WAITING(pre(?STUDENTS_WAITING)-1);
-				% pause and second TA_INREVIEW added for debugging (not defined in specification, how long a review takes)
-				pause;
-				emit TA_INREVIEW;
-				emit TA_DISMISS_STUD; %used to realize a fifo for waiting students
-		
-		else
-		
-			emit TA_SLEEPING
-		
-		end present;
-		
-		pause;
-		
-	end loop;
-end module
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%% STUDENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 module STUDENT :
 	
 	input TA_INREVIEW, TA_SLEEPING;
 	
-	input STUDENTS_WAITING : combine integer with +; % to increment number of waiting students
+	input STUDENTS_WAITING : integer; % to increment number of waiting students
 	
 	input TA_DISMISS_STUD; % from TA
 	
@@ -106,56 +73,60 @@ module STUDENT :
 			if (pre(?STUDENTS_WAITING)) < const_TOTAL_SEATS then  % added "pre(.." that there is not cyclic loop because checking of value and incrementing in the same cycle makes no sence
 		
 				sig_students_before_me := pre(?STUDENTS_WAITING);
-		
-				emit STUDENTS_WAITING(pre(?STUDENTS_WAITING) + 1);
+				%emit STUDENTS_WAITING(pre(?STUDENTS_WAITING));
+				emit STUDENTS_WAITING(1);
 							
 				%pause;
 				
 				trap T1 in
 				
-				[
-					% if TA has no time, student waits for review
-					%present TA_INREVIEW then 
-					sustain STUD_WANTREVIEW %end;	% should be sustained until review starts	
-				]
-				||
+%				[
+%					% if TA has no time, student waits for review
+%					%present TA_INREVIEW then 
+%					sustain STUD_WANTREVIEW %end;	% should be sustained until review starts	
+%				]
+%				||
 				[
 
  					% this loop counts down "sig_students_before_me" for every "TA_DISMISS_STUD" ( which means that a student finished review)
  					% if all other longer waiting students finished review, the trap T1 exists the loop
 					loop
-					
-						if sig_students_before_me <1 then
+						emit STUD_WANTREVIEW;
+						
+						if sig_students_before_me < 1 then
 							exit T1;
 						else
 							sig_students_before_me := sig_students_before_me - 1;
 						end;	
 				
-						await immediate TA_DISMISS_STUD; % in case there are others waiting
+						%await immediate TA_DISMISS_STUD; % in case there are others waiting
 
 						pause % await immediate is not allowed without "pause" in loops
 
-					end loop		
+					end loop
+					%each TA_DISMISS_STUD
 				]
 				
 				end trap;
 				
-				% this trap forces the student to be in the state "STUD_INREVIEW" until the review is done
-				trap T2 in
 				
-					loop 
+				% this trap forces the student to be in the state "STUD_INREVIEW" until the review is done
+				%trap T2 in
+				
+					%loop 
+					pause;
 						
 						emit STUD_INREVIEW;
 					
-						present TA_DISMISS_STUD then
-							exit T2;
-						end present;
+%						present TA_DISMISS_STUD then
+%							exit T2;
+%						end present;
 						
-						pause;
+						%pause;
 					
-					end loop
+					%end loop
 					
-				end trap
+				%end trap
 
 			else
 		
@@ -167,6 +138,43 @@ module STUDENT :
 	end signal;
 	end var;
 end module
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% TA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+module TA:	
+% : combine integer with +
+	input STUDENTS_WAITING : integer;
+	input STUD_WANTREVIEW;
+	output TA_SLEEPING, TA_INREVIEW;
+	%%  to tell other students, that student is done
+	output TA_DISMISS_STUD;
+	%%
+	
+	loop	 
+		emit STUDENTS_WAITING(pre(?STUDENTS_WAITING));
+		
+		present pre(STUD_WANTREVIEW) then 	% added pre, that there are no cyclic paths	
+				
+				emit TA_INREVIEW;
+				emit STUDENTS_WAITING(-1);
+				% pause and second TA_INREVIEW added for debugging (not defined in specification, how long a review takes)
+				%pause;
+				%emit TA_INREVIEW;
+				%emit TA_DISMISS_STUD; %used to realize a fifo for waiting students
+		
+		else
+		
+			emit TA_SLEEPING
+		
+		end present;
+		
+		pause;
+		
+	end loop;
+end module
+
+
+
+
 
 module OBSERVER:
 	input TA_INREVIEW, TA_SLEEPING, STUDENT_INREVIEW, STUDENT_SLEEPING; 

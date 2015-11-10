@@ -261,42 +261,43 @@ extern void __ResetModuleEntryAfterReaction();
 
 static boolean __debug_project_V0;
 static boolean __debug_project_V1;
-static integer __debug_project_V2;
-static boolean __debug_project_V3;
+static boolean __debug_project_V2;
+static integer __debug_project_V3;
+static boolean __debug_project_V4;
+static integer __debug_project_V5;
+static integer __debug_project_V6;
+static integer __debug_project_V7;
+static integer __debug_project_V8;
 
-static unsigned short __debug_project_HaltList[6];
-static unsigned short __debug_project_AwaitedList[7];
-static unsigned short __debug_project_EmittedList[7];
+static unsigned short __debug_project_HaltList[14];
+static unsigned short __debug_project_AwaitedList[23];
+static unsigned short __debug_project_EmittedList[23];
 static unsigned short __debug_project_StartedList[1];
 static unsigned short __debug_project_KilledList[1];
 static unsigned short __debug_project_SuspendedList[1];
 static unsigned short __debug_project_ActiveList[1];
-static unsigned short __debug_project_AllAwaitedList[7]={3,0,1,2};
+static unsigned short __debug_project_AllAwaitedList[23]={3,0,1,2};
 
 
 /* INPUT FUNCTIONS */
 
-void debug_project_I_TA_INREVIEW () {
+void debug_project_I_RANDOM1 () {
 __debug_project_V0 = _true;
 }
-void debug_project_IS_TA_INREVIEW () {
+void debug_project_IS_RANDOM1 () {
 __debug_project_V0 = _true;
 }
-void debug_project_I_TA_SLEEPING () {
+void debug_project_I_RANDOM2 () {
 __debug_project_V1 = _true;
 }
-void debug_project_IS_TA_SLEEPING () {
+void debug_project_IS_RANDOM2 () {
 __debug_project_V1 = _true;
 }
-void debug_project_I_STUDENTS_WAITING (integer __V) {
-__WriteVariable(2);
-__debug_project_V2 = _COND(__debug_project_V3,(__debug_project_V2+(__V)),(__debug_project_V3=_true,__V));
+void debug_project_I_RANDOM3 () {
+__debug_project_V2 = _true;
 }
-void debug_project_IS_STUDENTS_WAITING (string __V) {
-static integer __SV;
-__WriteVariable(2);
-_text_to_integer(&__SV,__V);
-__debug_project_V2 = _COND(__debug_project_V3,(__debug_project_V2+(__SV)),(__debug_project_V3=_true,__SV));
+void debug_project_IS_RANDOM3 () {
+__debug_project_V2 = _true;
 }
 
 /* FUNCTIONS RETURNING NUMBER OF EXEC */
@@ -323,7 +324,7 @@ __debug_project_GENERIC_TEST(__debug_project_V1);
 }
 static int __debug_project_Check2 [] = {1,0,0};
 static int __debug_project_A3 () {
-__debug_project_GENERIC_TEST(__debug_project_V3);
+__debug_project_GENERIC_TEST(__debug_project_V2);
 }
 static int __debug_project_Check3 [] = {1,0,0};
 
@@ -331,50 +332,211 @@ static int __debug_project_Check3 [] = {1,0,0};
 
 static void __debug_project_A4 () {
 #ifdef __OUTPUT
-debug_project_O_STUD_INREVIEW();
+debug_project_O_TA_INREVIEW();
 #endif
 __AppendToList(__debug_project_EmittedList,3);
 }
 static int __debug_project_Check4 [] = {1,0,0};
 static void __debug_project_A5 () {
 #ifdef __OUTPUT
-debug_project_O_STUD_WANTREVIEW();
+debug_project_O_TA_SLEEPING();
 #endif
 __AppendToList(__debug_project_EmittedList,4);
 }
 static int __debug_project_Check5 [] = {1,0,0};
+static void __debug_project_A6 () {
+#ifdef __OUTPUT
+debug_project_O_WANT_REVIEW();
+#endif
+__AppendToList(__debug_project_EmittedList,5);
+}
+static int __debug_project_Check6 [] = {1,0,0};
+static void __debug_project_A7 () {
+#ifdef __OUTPUT
+debug_project_O_STUD_WANTREVIEW();
+#endif
+__AppendToList(__debug_project_EmittedList,6);
+}
+static int __debug_project_Check7 [] = {1,0,0};
+static void __debug_project_A8 () {
+#ifdef __OUTPUT
+debug_project_O_STUD_INREVIEW();
+#endif
+__AppendToList(__debug_project_EmittedList,7);
+}
+static int __debug_project_Check8 [] = {1,0,0};
+static void __debug_project_A9 () {
+#ifdef __OUTPUT
+debug_project_O_TA_DISMISS_STUD();
+#endif
+__AppendToList(__debug_project_EmittedList,8);
+}
+static int __debug_project_Check9 [] = {1,0,0};
+static void __debug_project_A10 () {
+#ifdef __OUTPUT
+debug_project_O_STUDENTS_WAITING(__debug_project_V3);
+#endif
+__AppendToList(__debug_project_EmittedList,9);
+}
+static int __debug_project_Check10 [] = {1,0,0};
+static void __debug_project_A11 () {
+#ifdef __OUTPUT
+debug_project_O_STUD_WANTREVIEW1();
+#endif
+__AppendToList(__debug_project_EmittedList,10);
+}
+static int __debug_project_Check11 [] = {1,0,0};
+static void __debug_project_A12 () {
+#ifdef __OUTPUT
+debug_project_O_STUD_INREVIEW1();
+#endif
+__AppendToList(__debug_project_EmittedList,11);
+}
+static int __debug_project_Check12 [] = {1,0,0};
+static void __debug_project_A13 () {
+#ifdef __OUTPUT
+debug_project_O_STUD_WANTREVIEW2();
+#endif
+__AppendToList(__debug_project_EmittedList,12);
+}
+static int __debug_project_Check13 [] = {1,0,0};
+static void __debug_project_A14 () {
+#ifdef __OUTPUT
+debug_project_O_STUD_INREVIEW2();
+#endif
+__AppendToList(__debug_project_EmittedList,13);
+}
+static int __debug_project_Check14 [] = {1,0,0};
+static void __debug_project_A15 () {
+#ifdef __OUTPUT
+debug_project_O_STUD_WANTREVIEW3();
+#endif
+__AppendToList(__debug_project_EmittedList,14);
+}
+static int __debug_project_Check15 [] = {1,0,0};
+static void __debug_project_A16 () {
+#ifdef __OUTPUT
+debug_project_O_STUD_INREVIEW3();
+#endif
+__AppendToList(__debug_project_EmittedList,15);
+}
+static int __debug_project_Check16 [] = {1,0,0};
 
 /* ASSIGNMENTS */
 
-static void __debug_project_A6 () {
+static void __debug_project_A17 () {
 __debug_project_V0 = _false;
 }
-static int __debug_project_Check6 [] = {1,0,1,0};
-static void __debug_project_A7 () {
+static int __debug_project_Check17 [] = {1,0,1,0};
+static void __debug_project_A18 () {
 __debug_project_V1 = _false;
 }
-static int __debug_project_Check7 [] = {1,0,1,1};
-static void __debug_project_A8 () {
-__debug_project_V3 = _false;
+static int __debug_project_Check18 [] = {1,0,1,1};
+static void __debug_project_A19 () {
+__debug_project_V2 = _false;
 }
-static int __debug_project_Check8 [] = {1,0,1,3};
-static void __debug_project_A9 () {
-__debug_project_V2 = 0;
+static int __debug_project_Check19 [] = {1,0,1,2};
+static void __debug_project_A20 () {
+__debug_project_V4 = _false;
 }
-static int __debug_project_Check9 [] = {1,0,1,2};
-static void __debug_project_A10 () {
-__debug_project_V2 = _COND(__debug_project_V3,(__debug_project_V2+(1)),(__debug_project_V3=_true,1));
+static int __debug_project_Check20 [] = {1,0,1,4};
+static void __debug_project_A21 () {
+__debug_project_V3 = 0;
 }
-static int __debug_project_Check10 [] = {1,0,1,2};
+static int __debug_project_Check21 [] = {1,0,1,3};
+static void __debug_project_A22 () {
+__debug_project_V5 = 0;
+}
+static int __debug_project_Check22 [] = {1,0,1,5};
+static void __debug_project_A23 () {
+__debug_project_V5 = __debug_project_V3;
+}
+static int __debug_project_Check23 [] = {1,1,3,1,5};
+static void __debug_project_A24 () {
+__debug_project_V3 = _COND(__debug_project_V4,(__debug_project_V3+(__debug_project_V5)),(__debug_project_V4=_true,__debug_project_V5));
+}
+static int __debug_project_Check24 [] = {1,1,5,1,3};
+static void __debug_project_A25 () {
+__debug_project_V3 = _COND(__debug_project_V4,(__debug_project_V3+(-(1))),(__debug_project_V4=_true,-(1)));
+}
+static int __debug_project_Check25 [] = {1,0,1,3};
+static void __debug_project_A26 () {
+__debug_project_V6 = 0;
+}
+static int __debug_project_Check26 [] = {1,0,1,6};
+static void __debug_project_A27 () {
+__debug_project_V6 = __debug_project_V5;
+}
+static int __debug_project_Check27 [] = {1,1,5,1,6};
+static void __debug_project_A28 () {
+__debug_project_V3 = _COND(__debug_project_V4,(__debug_project_V3+(1)),(__debug_project_V4=_true,1));
+}
+static int __debug_project_Check28 [] = {1,0,1,3};
+static void __debug_project_A29 () {
+__debug_project_V6 = __debug_project_V6-1;
+}
+static int __debug_project_Check29 [] = {1,1,6,1,6};
+static void __debug_project_A30 () {
+__debug_project_V7 = 0;
+}
+static int __debug_project_Check30 [] = {1,0,1,7};
+static void __debug_project_A31 () {
+__debug_project_V7 = __debug_project_V5;
+}
+static int __debug_project_Check31 [] = {1,1,5,1,7};
+static void __debug_project_A32 () {
+__debug_project_V3 = _COND(__debug_project_V4,(__debug_project_V3+(1)),(__debug_project_V4=_true,1));
+}
+static int __debug_project_Check32 [] = {1,0,1,3};
+static void __debug_project_A33 () {
+__debug_project_V7 = __debug_project_V7-1;
+}
+static int __debug_project_Check33 [] = {1,1,7,1,7};
+static void __debug_project_A34 () {
+__debug_project_V8 = 0;
+}
+static int __debug_project_Check34 [] = {1,0,1,8};
+static void __debug_project_A35 () {
+__debug_project_V8 = __debug_project_V5;
+}
+static int __debug_project_Check35 [] = {1,1,5,1,8};
+static void __debug_project_A36 () {
+__debug_project_V3 = _COND(__debug_project_V4,(__debug_project_V3+(1)),(__debug_project_V4=_true,1));
+}
+static int __debug_project_Check36 [] = {1,0,1,3};
+static void __debug_project_A37 () {
+__debug_project_V8 = __debug_project_V8-1;
+}
+static int __debug_project_Check37 [] = {1,1,8,1,8};
 
 /* PROCEDURE CALLS */
 
 /* CONDITIONS */
 
-static int __debug_project_A11 () {
-__debug_project_GENERIC_TEST(__debug_project_V2<2);
+static int __debug_project_A38 () {
+__debug_project_GENERIC_TEST(__debug_project_V5<2);
 }
-static int __debug_project_Check11 [] = {1,1,2,0};
+static int __debug_project_Check38 [] = {1,1,5,0};
+static int __debug_project_A39 () {
+__debug_project_GENERIC_TEST(__debug_project_V6<1);
+}
+static int __debug_project_Check39 [] = {1,1,6,0};
+static int __debug_project_A40 () {
+__debug_project_GENERIC_TEST(__debug_project_V5<2);
+}
+static int __debug_project_Check40 [] = {1,1,5,0};
+static int __debug_project_A41 () {
+__debug_project_GENERIC_TEST(__debug_project_V7<1);
+}
+static int __debug_project_Check41 [] = {1,1,7,0};
+static int __debug_project_A42 () {
+__debug_project_GENERIC_TEST(__debug_project_V5<2);
+}
+static int __debug_project_Check42 [] = {1,1,5,0};
+static int __debug_project_A43 () {
+__debug_project_GENERIC_TEST(__debug_project_V8<1);
+}
+static int __debug_project_Check43 [] = {1,1,8,0};
 
 /* DECREMENTS */
 
@@ -405,7 +567,39 @@ __debug_project_Check7,
 __debug_project_Check8,
 __debug_project_Check9,
 __debug_project_Check10,
-__debug_project_Check11
+__debug_project_Check11,
+__debug_project_Check12,
+__debug_project_Check13,
+__debug_project_Check14,
+__debug_project_Check15,
+__debug_project_Check16,
+__debug_project_Check17,
+__debug_project_Check18,
+__debug_project_Check19,
+__debug_project_Check20,
+__debug_project_Check21,
+__debug_project_Check22,
+__debug_project_Check23,
+__debug_project_Check24,
+__debug_project_Check25,
+__debug_project_Check26,
+__debug_project_Check27,
+__debug_project_Check28,
+__debug_project_Check29,
+__debug_project_Check30,
+__debug_project_Check31,
+__debug_project_Check32,
+__debug_project_Check33,
+__debug_project_Check34,
+__debug_project_Check35,
+__debug_project_Check36,
+__debug_project_Check37,
+__debug_project_Check38,
+__debug_project_Check39,
+__debug_project_Check40,
+__debug_project_Check41,
+__debug_project_Check42,
+__debug_project_Check43
 };
 static int **__debug_project_PCheckArray =  __debug_project_CheckArray;
 
@@ -443,42 +637,76 @@ return 0;
 /* SIMULATION TABLES */
 
 struct __InstanceEntry __debug_project_InstanceTable [] = {
-{"debug_project",0,"/home/student/Desktop/RTPL_Windows/debug_project//src","debug_project.strl",{1,1,1,0},{1,58,1,0},{0,0,0,0}},
+{"debug_project",0,"/home/student/Documents/RTPL/RTPL/debug_project//src","debug_project.strl",{1,1,1,0},{1,51,1,0},{0,0,0,0}},
+{"TA",0,"/home/student/Documents/RTPL/RTPL/debug_project//src","debug_project.strl",{1,143,1,1},{1,173,1,1},{1,14,2,0}},
+{"KEVIN",0,"/home/student/Documents/RTPL/RTPL/debug_project//src","debug_project.strl",{1,55,1,2},{1,140,1,2},{1,21,3,0}},
+{"STUART",0,"/home/student/Documents/RTPL/RTPL/debug_project//src","debug_project.strl",{1,55,1,3},{1,140,1,3},{1,26,3,0}},
+{"BOB",0,"/home/student/Documents/RTPL/RTPL/debug_project//src","debug_project.strl",{1,55,1,4},{1,140,1,4},{1,31,3,0}},
 };
 
 struct __SignalEntry __debug_project_SignalTable [] = {
-{"TA_INREVIEW",33,0,0,{1,3,8,0},0,(void*) NULL,0,(void*) NULL,0,(void*) NULL},
-{"TA_SLEEPING",33,0,0,{1,3,21,0},0,(void*) NULL,0,(void*) NULL,0,(void*) NULL},
-{"STUDENTS_WAITING",65,2,0,{1,5,8,0},0,(void*) NULL,0,(void*) NULL,0,(void*) NULL},
-{"STUD_INREVIEW",34,0,0,{1,8,9,0},0,(void*) NULL,0,(void*) NULL,0,(void*) NULL},
-{"STUD_WANTREVIEW",34,0,0,{1,8,24,0},0,(void*) NULL,0,(void*) NULL,0,(void*) NULL},
-{"T1",48,0,0,{1,35,10,0},0,(void*) NULL,0,(void*) NULL,0,(void*) NULL}};
+{"RANDOM1",33,0,0,{1,3,8,0},0,(void*) NULL,0,(void*) NULL,0,(void*) NULL},
+{"RANDOM2",33,0,0,{1,3,17,0},0,(void*) NULL,0,(void*) NULL,0,(void*) NULL},
+{"RANDOM3",33,0,0,{1,3,26,0},0,(void*) NULL,0,(void*) NULL,0,(void*) NULL},
+{"TA_INREVIEW",34,0,0,{1,4,9,0},0,(void*) NULL,0,(void*) NULL,0,(void*) NULL},
+{"TA_SLEEPING",34,0,0,{1,4,22,0},0,(void*) NULL,0,(void*) NULL,0,(void*) NULL},
+{"WANT_REVIEW",34,0,0,{1,6,9,0},0,(void*) NULL,0,(void*) NULL,0,(void*) NULL},
+{"STUD_WANTREVIEW",34,0,0,{1,7,9,0},0,(void*) NULL,0,(void*) NULL,0,(void*) NULL},
+{"STUD_INREVIEW",34,0,0,{1,7,26,0},0,(void*) NULL,0,(void*) NULL,0,(void*) NULL},
+{"TA_DISMISS_STUD",34,0,0,{1,8,9,0},0,(void*) NULL,0,(void*) NULL,0,(void*) NULL},
+{"STUDENTS_WAITING",66,3,0,{1,9,9,0},0,(void*) NULL,0,(void*) NULL,0,(void*) NULL},
+{"STUD_WANTREVIEW1",34,0,0,{1,11,9,0},0,(void*) NULL,0,(void*) NULL,0,(void*) NULL},
+{"STUD_INREVIEW1",34,0,0,{1,11,27,0},0,(void*) NULL,0,(void*) NULL,0,(void*) NULL},
+{"STUD_WANTREVIEW2",34,0,0,{1,11,43,0},0,(void*) NULL,0,(void*) NULL,0,(void*) NULL},
+{"STUD_INREVIEW2",34,0,0,{1,11,61,0},0,(void*) NULL,0,(void*) NULL,0,(void*) NULL},
+{"STUD_WANTREVIEW3",34,0,0,{1,11,77,0},0,(void*) NULL,0,(void*) NULL,0,(void*) NULL},
+{"STUD_INREVIEW3",34,0,0,{1,11,95,0},0,(void*) NULL,0,(void*) NULL,0,(void*) NULL},
+{"sig_ta_free",40,0,0,{1,69,9,2},0,(void*) NULL,0,(void*) NULL,0,(void*) NULL},
+{"T1",48,0,0,{1,81,10,2},0,(void*) NULL,0,(void*) NULL,0,(void*) NULL},
+{"sig_ta_free",40,0,0,{1,69,9,3},0,(void*) NULL,0,(void*) NULL,0,(void*) NULL},
+{"T1",48,0,0,{1,81,10,3},0,(void*) NULL,0,(void*) NULL,0,(void*) NULL},
+{"sig_ta_free",40,0,0,{1,69,9,4},0,(void*) NULL,0,(void*) NULL,0,(void*) NULL},
+{"T1",48,0,0,{1,81,10,4},0,(void*) NULL,0,(void*) NULL,0,(void*) NULL}};
 
 struct __InputEntry __debug_project_InputTable [] = {
-{"TA_INREVIEW",53,0,0,-1,0,0,0,debug_project_IS_TA_INREVIEW,0,{1,3,8,0}},
-{"TA_SLEEPING",35,0,0,-1,0,1,0,debug_project_IS_TA_SLEEPING,0,{1,3,21,0}},
-{"STUDENTS_WAITING",48,"integer",0,-3,1,2,_check_integer,debug_project_IS_STUDENTS_WAITING,0,{1,5,8,0}}};
+{"RANDOM1",94,0,0,-1,0,0,0,debug_project_IS_RANDOM1,0,{1,3,8,0}},
+{"RANDOM2",95,0,0,-1,0,1,0,debug_project_IS_RANDOM2,0,{1,3,17,0}},
+{"RANDOM3",96,0,0,-1,0,2,0,debug_project_IS_RANDOM3,0,{1,3,26,0}}};
 
 struct __VariableEntry __debug_project_VariableTable [] = {
-{"__debug_project_V0","V0","boolean",-2,2,0,(char*)&__debug_project_V0,"TA_INREVIEW",0,0,0,{1,3,8,0}},
-{"__debug_project_V1","V1","boolean",-2,2,0,(char*)&__debug_project_V1,"TA_SLEEPING",0,0,0,{1,3,21,0}},
-{"__debug_project_V2","V2","integer",-3,1,0,(char*)&__debug_project_V2,"STUDENTS_WAITING",0,0,0,{1,5,8,0}},
-{"__debug_project_V3","V3","boolean",-2,2,0,(char*)&__debug_project_V3,"STUDENTS_WAITING",0,0,0,{1,5,8,0}}
+{"__debug_project_V0","V0","boolean",-2,2,0,(char*)&__debug_project_V0,"RANDOM1",0,0,0,{1,3,8,0}},
+{"__debug_project_V1","V1","boolean",-2,2,0,(char*)&__debug_project_V1,"RANDOM2",0,0,0,{1,3,17,0}},
+{"__debug_project_V2","V2","boolean",-2,2,0,(char*)&__debug_project_V2,"RANDOM3",0,0,0,{1,3,26,0}},
+{"__debug_project_V3","V3","integer",-3,1,0,(char*)&__debug_project_V3,"STUDENTS_WAITING",0,0,0,{1,9,9,0}},
+{"__debug_project_V4","V4","boolean",-2,2,0,(char*)&__debug_project_V4,"STUDENTS_WAITING",0,0,0,{1,9,9,0}},
+{"__debug_project_V5","V5","integer",-3,10,0,(char*)&__debug_project_V5,"STUDENTS_WAITING",0,0,0,{1,145,8,1}},
+{"__debug_project_V6","V6","integer",-3,0,0,(char*)&__debug_project_V6,"sig_students_before_me",0,0,0,{1,68,6,2}},
+{"__debug_project_V7","V7","integer",-3,0,0,(char*)&__debug_project_V7,"sig_students_before_me",0,0,0,{1,68,6,3}},
+{"__debug_project_V8","V8","integer",-3,0,0,(char*)&__debug_project_V8,"sig_students_before_me",0,0,0,{1,68,6,4}}
 };
 
 struct __HaltEntry __debug_project_HaltTable [] = {
-{{1,58,1,0}},
-{{1,22,4,0}},
-{{1,31,5,0}},
-{{1,38,31,0}},
-{{1,43,6,0}}
+{{1,51,1,0}},
+{{1,20,3,0}},
+{{1,25,7,0}},
+{{1,30,7,0}},
+{{1,39,3,0}},
+{{1,47,3,0}},
+{{1,170,3,1}},
+{{1,104,7,2}},
+{{1,117,6,2}},
+{{1,104,7,3}},
+{{1,117,6,3}},
+{{1,104,7,4}},
+{{1,117,6,4}}
 };
 
 
 static void __debug_project__reset_input () {
 __debug_project_V0 = _false;
 __debug_project_V1 = _false;
-__debug_project_V3 = _false;
+__debug_project_V2 = _false;
+__debug_project_V4 = _false;
 }
 
 
@@ -489,7 +717,7 @@ int debug_project_reset();
 
 static struct __ModuleEntry __debug_project_ModuleData = {
 "Simulation interface release 5","debug_project",
-1,0,6,3,0,0,2,0,1,0,0,4,0,5,0,0,0,
+5,0,22,3,0,0,13,3,3,0,0,9,0,13,0,0,0,
 __debug_project_HaltList,
 __debug_project_AwaitedList,
 __debug_project_EmittedList,
@@ -517,7 +745,16 @@ typedef char __SSC_BIT_TYPE;
 
 /* REGISTER VARIABLES */
 
-static __SSC_BIT_TYPE __debug_project_R[5] = {_true,
+static __SSC_BIT_TYPE __debug_project_R[14] = {_false,
+ _true,
+ _false,
+ _false,
+ _false,
+ _false,
+ _false,
+ _false,
+ _false,
+ _false,
  _false,
  _false,
  _false,
@@ -528,139 +765,360 @@ static __SSC_BIT_TYPE __debug_project_R[5] = {_true,
 int debug_project () {
 /* AUXILIARY VARIABLES */
 
-static __SSC_BIT_TYPE E[14];
+static __SSC_BIT_TYPE E[36];
 
 __debug_project_ModuleData.awaited_list = __debug_project_AwaitedList;
 __ResetModuleEntryBeforeReaction();
-E[0] = __debug_project_R[2]&&!(__debug_project_R[0]);
-E[1] = (__CheckVariables(__debug_project_CheckArray[3]),
+if (__debug_project_R[1]) {
+__CheckVariables(__debug_project_CheckArray[21]);__debug_project_A21();
 #ifdef TRACE_ACTION
-fprintf(stderr, "test 3\n"),
+fprintf(stderr, "__debug_project_A21\n");
 #endif
-__debug_project_A3())||E[0];
-if (E[1]) {
-__AppendToList(__debug_project_EmittedList,2);
 }
+if (__debug_project_R[1]) {
+__CheckVariables(__debug_project_CheckArray[22]);__debug_project_A22();
+#ifdef TRACE_ACTION
+fprintf(stderr, "__debug_project_A22\n");
+#endif
+}
+E[0] = __debug_project_R[1]||(__debug_project_R[7]&&!(__debug_project_R[1]));
 if (E[0]) {
-__CheckVariables(__debug_project_CheckArray[10]);__debug_project_A10();
+__CheckVariables(__debug_project_CheckArray[24]);__debug_project_A24();
 #ifdef TRACE_ACTION
-fprintf(stderr, "__debug_project_A10\n");
+fprintf(stderr, "__debug_project_A24\n");
 #endif
 }
-E[2] = __debug_project_R[1]&&!(__debug_project_R[0]);
-E[3] = E[2]&&!((__CheckVariables(__debug_project_CheckArray[2]),
-#ifdef TRACE_ACTION
-fprintf(stderr, "test 2\n"),
-#endif
-__debug_project_A2()));
-E[4] = E[0]&&!((__CheckVariables(__debug_project_CheckArray[1]),
-#ifdef TRACE_ACTION
-fprintf(stderr, "test 1\n"),
-#endif
-__debug_project_A1()));
-E[5] = __debug_project_R[4]&&!(__debug_project_R[0]);
-E[6] = E[5]&&!((__CheckVariables(__debug_project_CheckArray[1]),
-#ifdef TRACE_ACTION
-fprintf(stderr, "test 1\n"),
-#endif
-__debug_project_A1()));
-E[6] = E[4]||E[6];
-if (E[6]) {
-__AppendToList(__debug_project_EmittedList,5);
-}
-E[4] = __debug_project_R[3]||__debug_project_R[4];
-E[7] = E[0]&&!((__CheckVariables(__debug_project_CheckArray[1]),
-#ifdef TRACE_ACTION
-fprintf(stderr, "test 1\n"),
-#endif
-__debug_project_A1()));
-E[8] = E[0]&&(__CheckVariables(__debug_project_CheckArray[1]),
-#ifdef TRACE_ACTION
-fprintf(stderr, "test 1\n"),
-#endif
-__debug_project_A1());
-E[8] = E[8]||(__debug_project_R[3]&&!(__debug_project_R[0]));
-E[7] = (E[4]&&!(__debug_project_R[3]))||E[7]||E[8];
-E[9] = E[0]&&(__CheckVariables(__debug_project_CheckArray[1]),
-#ifdef TRACE_ACTION
-fprintf(stderr, "test 1\n"),
-#endif
-__debug_project_A1());
-E[5] = E[5]&&(__CheckVariables(__debug_project_CheckArray[1]),
-#ifdef TRACE_ACTION
-fprintf(stderr, "test 1\n"),
-#endif
-__debug_project_A1());
-E[5] = E[9]||(__debug_project_R[4]&&E[5]);
-E[9] = (E[4]&&!(__debug_project_R[4]))||E[5];
-E[6] = E[6]&&E[7]&&(E[9]||E[6]);
-if (E[3]||E[6]) {
+E[1] = E[0]&&__debug_project_R[0];
+if (E[1]) {
 __AppendToList(__debug_project_EmittedList,3);
 }
-if (E[3]||E[6]) {
+if (E[1]) {
 __CheckVariables(__debug_project_CheckArray[4]);__debug_project_A4();
 #ifdef TRACE_ACTION
 fprintf(stderr, "__debug_project_A4\n");
 #endif
 }
-E[10] = __debug_project_R[0]&&!((__CheckVariables(__debug_project_CheckArray[3]),
-#ifdef TRACE_ACTION
-fprintf(stderr, "test 3\n"),
-#endif
-__debug_project_A3()));
-if (E[10]) {
-__CheckVariables(__debug_project_CheckArray[9]);__debug_project_A9();
-#ifdef TRACE_ACTION
-fprintf(stderr, "__debug_project_A9\n");
-#endif
-}
-E[11] = __debug_project_R[0]&&(__CheckVariables(__debug_project_CheckArray[2]),
-#ifdef TRACE_ACTION
-fprintf(stderr, "test 2\n"),
-#endif
-__debug_project_A2());
-if (E[11]||E[8]) {
+E[2] = E[0]&&!(__debug_project_R[0]);
+if (E[2]) {
 __AppendToList(__debug_project_EmittedList,4);
 }
-if (E[11]||E[8]) {
+if (E[2]) {
 __CheckVariables(__debug_project_CheckArray[5]);__debug_project_A5();
 #ifdef TRACE_ACTION
 fprintf(stderr, "__debug_project_A5\n");
 #endif
 }
-E[12] = __debug_project_R[0]&&!((__CheckVariables(__debug_project_CheckArray[2]),
+if (!(_true)) {
+__CheckVariables(__debug_project_CheckArray[6]);__debug_project_A6();
 #ifdef TRACE_ACTION
-fprintf(stderr, "test 2\n"),
+fprintf(stderr, "__debug_project_A6\n");
 #endif
-__debug_project_A2()));
-E[13] = E[12]&&(__CheckVariables(__debug_project_CheckArray[11]),
+}
+E[3] = (__debug_project_R[5]&&!(__debug_project_R[1]))||__debug_project_R[1];
+E[4] = __debug_project_R[2]&&!(__debug_project_R[1]);
+E[5] = E[4]&&(__CheckVariables(__debug_project_CheckArray[1]),
 #ifdef TRACE_ACTION
-fprintf(stderr, "test 11\n"),
+fprintf(stderr, "test 1\n"),
 #endif
-__debug_project_A11());
-E[12] = E[3]||E[6]||(E[12]&&!(E[13]));
-E[2] = E[2]&&(__CheckVariables(__debug_project_CheckArray[2]),
+__debug_project_A1());
+if (E[5]) {
+__CheckVariables(__debug_project_CheckArray[26]);__debug_project_A26();
+#ifdef TRACE_ACTION
+fprintf(stderr, "__debug_project_A26\n");
+#endif
+}
+E[6] = E[5]&&(__CheckVariables(__debug_project_CheckArray[38]),
+#ifdef TRACE_ACTION
+fprintf(stderr, "test 38\n"),
+#endif
+__debug_project_A38());
+if (E[6]) {
+__CheckVariables(__debug_project_CheckArray[27]);__debug_project_A27();
+#ifdef TRACE_ACTION
+fprintf(stderr, "__debug_project_A27\n");
+#endif
+}
+if (E[6]) {
+__CheckVariables(__debug_project_CheckArray[28]);__debug_project_A28();
+#ifdef TRACE_ACTION
+fprintf(stderr, "__debug_project_A28\n");
+#endif
+}
+E[7] = E[6]||(__debug_project_R[8]&&!(__debug_project_R[1]));
+if (E[7]) {
+__AppendToList(__debug_project_EmittedList,10);
+}
+E[8] = __debug_project_R[3]&&!(__debug_project_R[1]);
+E[9] = E[8]&&(__CheckVariables(__debug_project_CheckArray[2]),
 #ifdef TRACE_ACTION
 fprintf(stderr, "test 2\n"),
 #endif
 __debug_project_A2());
-E[2] = E[11]||(__debug_project_R[1]&&E[2]);
-E[9] = E[2]||E[13]||((E[8]||E[5])&&E[7]&&E[9]);
-E[4] = __debug_project_R[1]||__debug_project_R[2]||E[4];
-__debug_project_R[3] = E[8]&&!(E[6]);
-__debug_project_R[4] = E[5]&&!(E[6]);
-__debug_project_R[0] = !(_true);
-__debug_project_R[1] = E[2];
-if (__debug_project_R[1]) { __AppendToList(__debug_project_HaltList,1); }
-__debug_project_R[2] = E[13];
-if (__debug_project_R[2]) { __AppendToList(__debug_project_HaltList,2); }
-if (__debug_project_R[3]) { __AppendToList(__debug_project_HaltList,3); }
-if (__debug_project_R[4]) { __AppendToList(__debug_project_HaltList,4); }
-if (!E[9]) { __AppendToList(__debug_project_HaltList,0); }
+if (E[9]) {
+__CheckVariables(__debug_project_CheckArray[30]);__debug_project_A30();
+#ifdef TRACE_ACTION
+fprintf(stderr, "__debug_project_A30\n");
+#endif
+}
+E[10] = E[9]&&(__CheckVariables(__debug_project_CheckArray[40]),
+#ifdef TRACE_ACTION
+fprintf(stderr, "test 40\n"),
+#endif
+__debug_project_A40());
+if (E[10]) {
+__CheckVariables(__debug_project_CheckArray[31]);__debug_project_A31();
+#ifdef TRACE_ACTION
+fprintf(stderr, "__debug_project_A31\n");
+#endif
+}
+if (E[10]) {
+__CheckVariables(__debug_project_CheckArray[32]);__debug_project_A32();
+#ifdef TRACE_ACTION
+fprintf(stderr, "__debug_project_A32\n");
+#endif
+}
+E[11] = E[10]||(__debug_project_R[10]&&!(__debug_project_R[1]));
+if (E[11]) {
+__AppendToList(__debug_project_EmittedList,12);
+}
+E[12] = __debug_project_R[4]&&!(__debug_project_R[1]);
+E[13] = E[12]&&(__CheckVariables(__debug_project_CheckArray[3]),
+#ifdef TRACE_ACTION
+fprintf(stderr, "test 3\n"),
+#endif
+__debug_project_A3());
+if (E[13]) {
+__CheckVariables(__debug_project_CheckArray[34]);__debug_project_A34();
+#ifdef TRACE_ACTION
+fprintf(stderr, "__debug_project_A34\n");
+#endif
+}
+E[14] = E[13]&&(__CheckVariables(__debug_project_CheckArray[42]),
+#ifdef TRACE_ACTION
+fprintf(stderr, "test 42\n"),
+#endif
+__debug_project_A42());
+if (E[14]) {
+__CheckVariables(__debug_project_CheckArray[35]);__debug_project_A35();
+#ifdef TRACE_ACTION
+fprintf(stderr, "__debug_project_A35\n");
+#endif
+}
+if (E[14]) {
+__CheckVariables(__debug_project_CheckArray[36]);__debug_project_A36();
+#ifdef TRACE_ACTION
+fprintf(stderr, "__debug_project_A36\n");
+#endif
+}
+E[15] = E[14]||(__debug_project_R[12]&&!(__debug_project_R[1]));
+if (E[15]) {
+__AppendToList(__debug_project_EmittedList,14);
+}
+E[16] = E[7]||E[11]||E[15];
+E[17] = E[3]&&E[16];
+if (E[17]) {
+__AppendToList(__debug_project_EmittedList,6);
+}
+if (E[17]) {
+__CheckVariables(__debug_project_CheckArray[7]);__debug_project_A7();
+#ifdef TRACE_ACTION
+fprintf(stderr, "__debug_project_A7\n");
+#endif
+}
+if (E[1]) {
+__CheckVariables(__debug_project_CheckArray[25]);__debug_project_A25();
+#ifdef TRACE_ACTION
+fprintf(stderr, "__debug_project_A25\n");
+#endif
+}
+E[18] = E[1]||E[2];
+E[19] = __debug_project_R[9]&&!(__debug_project_R[1]);
+if (E[19]) {
+__AppendToList(__debug_project_EmittedList,11);
+}
+E[4] = E[4]&&!((__CheckVariables(__debug_project_CheckArray[1]),
+#ifdef TRACE_ACTION
+fprintf(stderr, "test 1\n"),
+#endif
+__debug_project_A1()));
+E[4] = __debug_project_R[1]||E[19]||(E[5]&&!(E[6]))||(__debug_project_R[2]&&E[4]);
+E[20] = E[7]&&(__CheckVariables(__debug_project_CheckArray[39]),
+#ifdef TRACE_ACTION
+fprintf(stderr, "test 39\n"),
+#endif
+__debug_project_A39());
+if (E[20]) {
+__AppendToList(__debug_project_EmittedList,17);
+}
+E[21] = E[7]&&!(E[20]);
+if (E[21]) {
+__CheckVariables(__debug_project_CheckArray[29]);__debug_project_A29();
+#ifdef TRACE_ACTION
+fprintf(stderr, "__debug_project_A29\n");
+#endif
+}
+E[22] = E[20]||E[21];
+E[23] = __debug_project_R[11]&&!(__debug_project_R[1]);
+if (E[23]) {
+__AppendToList(__debug_project_EmittedList,13);
+}
+E[8] = E[8]&&!((__CheckVariables(__debug_project_CheckArray[2]),
+#ifdef TRACE_ACTION
+fprintf(stderr, "test 2\n"),
+#endif
+__debug_project_A2()));
+E[8] = __debug_project_R[1]||E[23]||(E[9]&&!(E[10]))||(__debug_project_R[3]&&E[8]);
+E[24] = E[11]&&(__CheckVariables(__debug_project_CheckArray[41]),
+#ifdef TRACE_ACTION
+fprintf(stderr, "test 41\n"),
+#endif
+__debug_project_A41());
+if (E[24]) {
+__AppendToList(__debug_project_EmittedList,19);
+}
+E[25] = E[11]&&!(E[24]);
+if (E[25]) {
+__CheckVariables(__debug_project_CheckArray[33]);__debug_project_A33();
+#ifdef TRACE_ACTION
+fprintf(stderr, "__debug_project_A33\n");
+#endif
+}
+E[26] = E[24]||E[25];
+E[27] = __debug_project_R[13]&&!(__debug_project_R[1]);
+if (E[27]) {
+__AppendToList(__debug_project_EmittedList,15);
+}
+E[12] = E[12]&&!((__CheckVariables(__debug_project_CheckArray[3]),
+#ifdef TRACE_ACTION
+fprintf(stderr, "test 3\n"),
+#endif
+__debug_project_A3()));
+E[12] = __debug_project_R[1]||E[27]||(E[13]&&!(E[14]))||(__debug_project_R[4]&&E[12]);
+E[28] = E[15]&&(__CheckVariables(__debug_project_CheckArray[43]),
+#ifdef TRACE_ACTION
+fprintf(stderr, "test 43\n"),
+#endif
+__debug_project_A43());
+if (E[28]) {
+__AppendToList(__debug_project_EmittedList,21);
+}
+E[29] = E[15]&&!(E[28]);
+if (E[29]) {
+__CheckVariables(__debug_project_CheckArray[37]);__debug_project_A37();
+#ifdef TRACE_ACTION
+fprintf(stderr, "__debug_project_A37\n");
+#endif
+}
+E[30] = E[28]||E[29];
+E[16] = E[17]||(E[3]&&!(E[16]));
+E[3] = (__debug_project_R[6]&&!(__debug_project_R[1]))||__debug_project_R[1];
+E[31] = E[19]||E[23]||E[27];
+E[32] = E[3]&&E[31];
+if (E[32]) {
+__AppendToList(__debug_project_EmittedList,7);
+}
+E[31] = E[32]||(E[3]&&!(E[31]));
+E[3] = __debug_project_R[2]||__debug_project_R[9]||__debug_project_R[8];
+E[33] = __debug_project_R[3]||__debug_project_R[11]||__debug_project_R[10];
+E[34] = __debug_project_R[4]||__debug_project_R[13]||__debug_project_R[12];
+E[35] = __debug_project_R[7]||E[3]||E[33]||E[34]||__debug_project_R[5]||__debug_project_R[6];
+E[35] = (E[18]||E[4]||E[22]||E[8]||E[26]||E[12]||E[30]||E[16]||E[31])&&((E[35]&&!(__debug_project_R[7]))||E[18])&&((E[35]&&!(E[3]))||E[4]||E[22])&&((E[35]&&!(E[33]))||E[8]||E[26])&&((E[35]&&!(E[34]))||E[12]||E[30])&&((E[35]&&!(__debug_project_R[5]))||E[16])&&((E[35]&&!(__debug_project_R[6]))||E[31]);
+__debug_project_R[0] = E[17]&&E[35];
+if (E[32]) {
+__CheckVariables(__debug_project_CheckArray[8]);__debug_project_A8();
+#ifdef TRACE_ACTION
+fprintf(stderr, "__debug_project_A8\n");
+#endif
+}
+if (!(_true)) {
+__CheckVariables(__debug_project_CheckArray[9]);__debug_project_A9();
+#ifdef TRACE_ACTION
+fprintf(stderr, "__debug_project_A9\n");
+#endif
+}
+E[30] = E[0]||E[1]||E[6]||E[10]||E[14];
+if (E[30]) {
+__AppendToList(__debug_project_EmittedList,9);
+}
+if (E[30]) {
+__CheckVariables(__debug_project_CheckArray[10]);__debug_project_A10();
+#ifdef TRACE_ACTION
+fprintf(stderr, "__debug_project_A10\n");
+#endif
+}
+if (E[30]&&E[35]) {
+__CheckVariables(__debug_project_CheckArray[23]);__debug_project_A23();
+#ifdef TRACE_ACTION
+fprintf(stderr, "__debug_project_A23\n");
+#endif
+}
+if (E[7]) {
+__CheckVariables(__debug_project_CheckArray[11]);__debug_project_A11();
+#ifdef TRACE_ACTION
+fprintf(stderr, "__debug_project_A11\n");
+#endif
+}
+if (E[19]) {
+__CheckVariables(__debug_project_CheckArray[12]);__debug_project_A12();
+#ifdef TRACE_ACTION
+fprintf(stderr, "__debug_project_A12\n");
+#endif
+}
+if (E[11]) {
+__CheckVariables(__debug_project_CheckArray[13]);__debug_project_A13();
+#ifdef TRACE_ACTION
+fprintf(stderr, "__debug_project_A13\n");
+#endif
+}
+if (E[23]) {
+__CheckVariables(__debug_project_CheckArray[14]);__debug_project_A14();
+#ifdef TRACE_ACTION
+fprintf(stderr, "__debug_project_A14\n");
+#endif
+}
+if (E[15]) {
+__CheckVariables(__debug_project_CheckArray[15]);__debug_project_A15();
+#ifdef TRACE_ACTION
+fprintf(stderr, "__debug_project_A15\n");
+#endif
+}
+if (E[27]) {
+__CheckVariables(__debug_project_CheckArray[16]);__debug_project_A16();
+#ifdef TRACE_ACTION
+fprintf(stderr, "__debug_project_A16\n");
+#endif
+}
+E[34] = !(_true);
+__debug_project_R[1] = !(_true);
+__debug_project_R[2] = E[4];
+if (__debug_project_R[2]) { __AppendToList(__debug_project_HaltList,1); }
+__debug_project_R[3] = E[8];
+if (__debug_project_R[3]) { __AppendToList(__debug_project_HaltList,2); }
+__debug_project_R[4] = E[12];
+if (__debug_project_R[4]) { __AppendToList(__debug_project_HaltList,3); }
+__debug_project_R[5] = E[16];
+if (__debug_project_R[5]) { __AppendToList(__debug_project_HaltList,4); }
+__debug_project_R[6] = E[31];
+if (__debug_project_R[6]) { __AppendToList(__debug_project_HaltList,5); }
+__debug_project_R[7] = E[18];
+if (__debug_project_R[7]) { __AppendToList(__debug_project_HaltList,6); }
+__debug_project_R[8] = E[21];
+if (__debug_project_R[8]) { __AppendToList(__debug_project_HaltList,7); }
+__debug_project_R[9] = E[20];
+if (__debug_project_R[9]) { __AppendToList(__debug_project_HaltList,8); }
+__debug_project_R[10] = E[25];
+if (__debug_project_R[10]) { __AppendToList(__debug_project_HaltList,9); }
+__debug_project_R[11] = E[24];
+if (__debug_project_R[11]) { __AppendToList(__debug_project_HaltList,10); }
+__debug_project_R[12] = E[29];
+if (__debug_project_R[12]) { __AppendToList(__debug_project_HaltList,11); }
+__debug_project_R[13] = E[28];
+if (__debug_project_R[13]) { __AppendToList(__debug_project_HaltList,12); }
+if (!E[35]) { __AppendToList(__debug_project_HaltList,0); }
 __ResetModuleEntryAfterReaction();
 __debug_project_ModuleData.awaited_list = __debug_project_AllAwaitedList;
 __debug_project__reset_input();
-return E[9];
+return E[35];
 }
 
 /* AUTOMATON RESET */
@@ -670,11 +1128,20 @@ __debug_project_ModuleData.awaited_list = __debug_project_AwaitedList;
 __ResetModuleEntry();
 __debug_project_ModuleData.awaited_list = __debug_project_AllAwaitedList;
 __debug_project_ModuleData.state = 0;
-__debug_project_R[0] = _true;
-__debug_project_R[1] = _false;
+__debug_project_R[0] = _false;
+__debug_project_R[1] = _true;
 __debug_project_R[2] = _false;
 __debug_project_R[3] = _false;
 __debug_project_R[4] = _false;
+__debug_project_R[5] = _false;
+__debug_project_R[6] = _false;
+__debug_project_R[7] = _false;
+__debug_project_R[8] = _false;
+__debug_project_R[9] = _false;
+__debug_project_R[10] = _false;
+__debug_project_R[11] = _false;
+__debug_project_R[12] = _false;
+__debug_project_R[13] = _false;
 __debug_project__reset_input();
 return 0;
 }
