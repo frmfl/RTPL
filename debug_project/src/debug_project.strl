@@ -7,6 +7,10 @@ module debug_project:
 	output STUD_WANTREVIEW, STUD_INREVIEW;
 	output TA_DISMISS_STUD;
 	output STUDENTS_WAITING := 0 : combine integer with +;
+	output TA_INSANE, STUD_INSANE, RACECONDITION, DEADLOCK, TA_TOOSLOW;
+
+	output num_INREVIEWSTUDS :=0 : combine integer with +;
+	output PRIO_counter :=0 : combine integer with +;
 	
 	output STUD_WANTREVIEW1, STUD_INREVIEW1, STUD_WANTREVIEW2, STUD_INREVIEW2, STUD_WANTREVIEW3, STUD_INREVIEW3;
 	
@@ -16,19 +20,18 @@ module debug_project:
 	% produce random student pattern:
 	
 	% student Kevin
-	loop
-		await RANDOM1;
-		run KEVIN / STUDENT [ constant 2 / const_TOTAL_SEATS; signal STUD_WANTREVIEW1 / STUD_WANTREVIEW, STUD_INREVIEW1 / STUD_INREVIEW ];	% blocks until this instance finishes
+	loop await RANDOM1;
+		run KEVIN / STUDENT [ constant 1/ const_prio; constant 2 / const_TOTAL_SEATS; signal STUD_WANTREVIEW1 / STUD_WANTREVIEW, STUD_INREVIEW1 / STUD_INREVIEW ];	% blocks until this instance finishes
 	end loop;
 	 ||
 	% student Stuart
 	loop await RANDOM2;
-		run STUART / STUDENT [ constant 2 / const_TOTAL_SEATS; signal STUD_WANTREVIEW2 / STUD_WANTREVIEW, STUD_INREVIEW2 / STUD_INREVIEW ];	% blocks until this instance finishes
+		run STUART / STUDENT [ constant 2/ const_prio; constant 2 / const_TOTAL_SEATS; signal STUD_WANTREVIEW2 / STUD_WANTREVIEW, STUD_INREVIEW2 / STUD_INREVIEW ];	% blocks until this instance finishes
 	end loop;	 
 	 ||
 	% student Bob
 	loop await RANDOM3;
-		run BOB / STUDENT [ constant 2 / const_TOTAL_SEATS; signal STUD_WANTREVIEW3 / STUD_WANTREVIEW, STUD_INREVIEW3 / STUD_INREVIEW ];	% blocks until this instance finishes
+		run BOB / STUDENT [ constant 3/ const_prio; constant 2 / const_TOTAL_SEATS; signal STUD_WANTREVIEW3 / STUD_WANTREVIEW, STUD_INREVIEW3 / STUD_INREVIEW ];	% blocks until this instance finishes
 	end loop;
 	 ||
 	loop
@@ -46,6 +49,10 @@ module debug_project:
 			
 		pause;
 	end loop;
+	
+	||
+	
+	run OBSERVER; % never terminates
 		
 	
 end module
@@ -59,18 +66,60 @@ module STUDENT :
 	input STUDENTS_WAITING : integer; % to increment number of waiting students
 	
 	input TA_DISMISS_STUD; % from TA
+	output PRIO_counter : integer;
 	
 	output STUD_INREVIEW, STUD_WANTREVIEW;
 	
 	constant const_TOTAL_SEATS : integer;
+	constant const_prio : integer;
 	
 	% use variable to check, whether its the students turn or not yet
-	var sig_students_before_me := 0 : integer in
+	var WL_position := 0 : integer in
+		
+			emit PRIO_counter(const_prio);
+		
+		
+			trap T0 in
+			[
 		
 			%if at least one free seat
-			if (pre(?STUDENTS_WAITING)) < const_TOTAL_SEATS then  % added "pre(.." that there is not cyclic loop because checking of value and incrementing in the same cycle makes no sence
+			if ((pre(?STUDENTS_WAITING)) < const_TOTAL_SEATS  ) then  % added "pre(.." that there is not cyclic loop because checking of value and incrementing in the same cycle makes no sence
+						
+				if const_prio = 3 then
+				
+					WL_position := pre(?STUDENTS_WAITING);
+					
+				elsif const_prio = 2 then
+					
+					if ?PRIO_counter >= 5 then
+					
+						WL_position := pre(?STUDENTS_WAITING) + 1;
+					
+					else 
+					
+						WL_position := pre(?STUDENTS_WAITING);
+					
+					end if;
+					
+				else
+				
+					if ?PRIO_counter = 1 then
+						
+						WL_position := pre(?STUDENTS_WAITING);
+						
+					elsif ?PRIO_counter = 3 or ?PRIO_counter = 4 then
+						
+						WL_position := pre(?STUDENTS_WAITING) + 1;
+						
+					else 
+					
+						exit T0;
+						
+					end if;
+					
+				end if;	
 		
-				sig_students_before_me := pre(?STUDENTS_WAITING);
+				
 				emit STUDENTS_WAITING(1);
 							
 				trap T1 in
@@ -81,11 +130,12 @@ module STUDENT :
 					loop
 						emit STUD_WANTREVIEW;
 						
-						sig_students_before_me := sig_students_before_me - 1;
 						
-						if sig_students_before_me < 1 then
+						if WL_position < 1 then
 							exit T1;
 						end;	
+						
+						WL_position := WL_position - 1;
 				
 						%await immediate TA_DISMISS_STUD; % in case there are others waiting
 
@@ -106,6 +156,10 @@ module STUDENT :
 			nothing; %nothing. Student disappears because waiting room is full.
 		
 			end if;
+			
+			]
+			end trap;
+			 %nothing. Student disappears because waiting room is full.
 		
 	end var;
 end module
@@ -152,7 +206,7 @@ module OBSERVER:
 	input STUD_WANTREVIEW, STUD_INREVIEW;
 	output TA_INSANE, STUD_INSANE, RACECONDITION, DEADLOCK, TA_TOOSLOW;
 
-	output num_INREVIEWSTUDS :=0 : combine integer with +;
+	output num_INREVIEWSTUDS : combine integer with +;
 	
 	loop
 		%TA is not in both states at once
@@ -212,61 +266,3 @@ module OBSERVER:
 end module
 
 
-
-		
-%	input TA_INREVIEW, TA_SLEEPING;
-%	
-%	input STUDENTS_WAITING := 0 : combine integer with +; % to increment number of waiting students
-%
-%	
-%	output STUD_INREVIEW, STUD_WANTREVIEW;
-%	
-%	%output WAKE_UP;
-%	% if student comes to office and TA is sleeping
-%	
-%		present TA_SLEEPING then
-%			
-%			%############only inserted for debugging ##############
-%			%pause;
-%			%################
-%			
-%			emit STUD_WANTREVIEW;
-%			
-%			% wait until TA is awake
-%			await [not TA_SLEEPING];
-%			
-%			emit STUD_INREVIEW;
-%
-%		else  %if TA is not sleeping
-%		
-%			%if at least one free seat
-%			if (?STUDENTS_WAITING) < 2 then  
-%
-%				pause;
-%						
-%				emit STUDENTS_WAITING(1);
-%				
-%				trap T1 in
-%				[
-%					% if TA has no time, student waits for review
-%					present TA_INREVIEW then sustain STUD_WANTREVIEW end;	% should be sustained until review starts
-%										
-%				]
-%				||
-%				[
-%					await immediate [not TA_INREVIEW];	%wait for TA accepting me, meanwhile increment STUDENTS_WAITING
-%					exit T1;			
-%				]
-%				end trap;
-%			
-%				emit STUD_INREVIEW; % output that student is in review
-%				%emit STUDENTS_WAITING(-1); % Student is not waiting anymore
-%
-%			else
-%		
-%			nothing; %nothing. Student disappears because waiting room is full.
-%		
-%			end if;
-%		end present;
-%		
-%end module
