@@ -3,12 +3,12 @@ module:debug_project
 
 instances: 6
 root: 0
-0: debug_project 0 "/home/student/Documents/RTPL/RTPL/debug_project//src" "debug_project.strl" %lc: 1 1 0% %lc_end: 58 1 0%
-1: TA 0 "/home/student/Documents/RTPL/RTPL/debug_project//src" "debug_project.strl" %lc: 171 1 1% %lc_end: 197 1 1% %instance: 18 2 0%
-2: KEVIN/STUDENT 0 "/home/student/Documents/RTPL/RTPL/debug_project//src" "debug_project.strl" %lc: 62 1 2% %lc_end: 165 1 2% %instance: 24 3 0%
-3: STUART/STUDENT 0 "/home/student/Documents/RTPL/RTPL/debug_project//src" "debug_project.strl" %lc: 62 1 3% %lc_end: 165 1 3% %instance: 29 3 0%
-4: BOB/STUDENT 0 "/home/student/Documents/RTPL/RTPL/debug_project//src" "debug_project.strl" %lc: 62 1 4% %lc_end: 165 1 4% %instance: 34 3 0%
-5: OBSERVER 0 "/home/student/Documents/RTPL/RTPL/debug_project//src" "debug_project.strl" %lc: 203 1 5% %lc_end: 266 1 5% %instance: 55 2 0%
+0: debug_project 0 "/home/student/Documents/RTPL/RTPL/debug_project//src" "debug_project.strl" %lc: 1 1 0% %lc_end: 71 1 0%
+1: TA 0 "/home/student/Documents/RTPL/RTPL/debug_project//src" "debug_project.strl" %lc: 183 1 1% %lc_end: 209 1 1% %instance: 18 2 0%
+2: KEVIN/STUDENT 0 "/home/student/Documents/RTPL/RTPL/debug_project//src" "debug_project.strl" %lc: 75 1 2% %lc_end: 177 1 2% %instance: 28 3 0%
+3: STUART/STUDENT 0 "/home/student/Documents/RTPL/RTPL/debug_project//src" "debug_project.strl" %lc: 75 1 3% %lc_end: 177 1 3% %instance: 37 3 0%
+4: BOB/STUDENT 0 "/home/student/Documents/RTPL/RTPL/debug_project//src" "debug_project.strl" %lc: 75 1 4% %lc_end: 177 1 4% %instance: 46 3 0%
+5: OBSERVER 0 "/home/student/Documents/RTPL/RTPL/debug_project//src" "debug_project.strl" %lc: 215 1 5% %lc_end: 278 1 5% %instance: 68 2 0%
 end:
 
 signals: 29
@@ -35,12 +35,12 @@ signals: 29
 20: output: STUD_INREVIEW2 29 pure: %previous: 19% %lc: 15 61 0%
 21: output: STUD_WANTREVIEW3 30 pure: %previous: 20% %lc: 15 77 0%
 22: output: STUD_INREVIEW3 31 pure: %previous: 21% %lc: 15 95 0%
-23: exception: pure: %name:T0% %lc: 82 9 2%
-24: exception: pure: %name:T1% %lc: 125 10 2%
-25: exception: pure: %name:T0% %lc: 82 9 3%
-26: exception: pure: %name:T1% %lc: 125 10 3%
-27: exception: pure: %name:T0% %lc: 82 9 4%
-28: exception: pure: %name:T1% %lc: 125 10 4%
+23: exception: pure: %name:T0% %lc: 95 9 2%
+24: exception: pure: %name:T1% %lc: 138 10 2%
+25: exception: pure: %name:T0% %lc: 95 9 3%
+26: exception: pure: %name:T1% %lc: 138 10 3%
+27: exception: pure: %name:T0% %lc: 95 9 4%
+28: exception: pure: %name:T1% %lc: 138 10 4%
 end:
 
 variables: 13
@@ -53,10 +53,10 @@ variables: 13
 6: $0 %sigbool: 15% %lc: 12 9 0%
 7: $1 %sigval: 16% %lc: 13 9 0%
 8: $0 %sigbool: 16% %lc: 13 9 0%
-9: $1 %preval: 9% %lc: 173 8 1%
-10: $1 %name: WL_position% %lc: 77 6 2%
-11: $1 %name: WL_position% %lc: 77 6 3%
-12: $1 %name: WL_position% %lc: 77 6 4%
+9: $1 %preval: 9% %lc: 185 8 1%
+10: $1 %name: WL_position% %lc: 90 6 2%
+11: $1 %name: WL_position% %lc: 90 6 3%
+12: $1 %name: WL_position% %lc: 90 6 4%
 end:
 
 actions: 88
@@ -94,154 +94,154 @@ actions: 88
 31:  output: 22 %lc: 15 95 0%
 32: call: $1 (9) (#0)
 33: call: $1 (9) (3)
-34: combine: 9 9 %lc: 181 3 1%
-35: combine: 9 $18 (#1) %lc: 186 5 1%
-36: call: $1 (10) (#0) %lc: 77 6 2%
-37: combine: 16 #1 %lc: 79 4 2%
-38: if: $9 (9,#2) %lc: 86 4 2%
-39: if: $6 (#1,#3) %lc: 88 5 2%
-40: call: $1 (10) (9) %lc: 90 6 2%
-41: if: $6 (#1,#2) %lc: 92 5 2%
-42: if: $12 (7,#5) %lc: 94 6 2%
-43: call: $1 (10) ($13 (9,#1)) %lc: 96 7 2%
-44: call: $1 (10) (9) %lc: 100 7 2%
-45: if: $6 (7,#1) %lc: 106 6 2%
-46: call: $1 (10) (9) %lc: 108 7 2%
-47: if: $3 ($6 (7,#3),$6 (7,#4)) %lc: 110 6 2%
-48: call: $1 (10) ($13 (9,#1)) %lc: 112 7 2%
-49: combine: 9 #1 %lc: 123 5 2%
-50: if: $9 (10,#1) %lc: 134 7 2%
-51: call: $1 (10) ($14 (10,#1)) %lc: 138 7 2%
-52: call: $1 (11) (#0) %lc: 77 6 3%
-53: combine: 16 #2 %lc: 79 4 3%
-54: if: $9 (9,#2) %lc: 86 4 3%
-55: if: $6 (#2,#3) %lc: 88 5 3%
-56: call: $1 (11) (9) %lc: 90 6 3%
-57: if: $6 (#2,#2) %lc: 92 5 3%
-58: if: $12 (7,#5) %lc: 94 6 3%
-59: call: $1 (11) ($13 (9,#1)) %lc: 96 7 3%
-60: call: $1 (11) (9) %lc: 100 7 3%
-61: if: $6 (7,#1) %lc: 106 6 3%
-62: call: $1 (11) (9) %lc: 108 7 3%
-63: if: $3 ($6 (7,#3),$6 (7,#4)) %lc: 110 6 3%
-64: call: $1 (11) ($13 (9,#1)) %lc: 112 7 3%
-65: combine: 9 #1 %lc: 123 5 3%
-66: if: $9 (11,#1) %lc: 134 7 3%
-67: call: $1 (11) ($14 (11,#1)) %lc: 138 7 3%
-68: call: $1 (12) (#0) %lc: 77 6 4%
-69: combine: 16 #3 %lc: 79 4 4%
-70: if: $9 (9,#2) %lc: 86 4 4%
-71: if: $6 (#3,#3) %lc: 88 5 4%
-72: call: $1 (12) (9) %lc: 90 6 4%
-73: if: $6 (#3,#2) %lc: 92 5 4%
-74: if: $12 (7,#5) %lc: 94 6 4%
-75: call: $1 (12) ($13 (9,#1)) %lc: 96 7 4%
-76: call: $1 (12) (9) %lc: 100 7 4%
-77: if: $6 (7,#1) %lc: 106 6 4%
-78: call: $1 (12) (9) %lc: 108 7 4%
-79: if: $3 ($6 (7,#3),$6 (7,#4)) %lc: 110 6 4%
-80: call: $1 (12) ($13 (9,#1)) %lc: 112 7 4%
-81: combine: 9 #1 %lc: 123 5 4%
-82: if: $9 (12,#1) %lc: 134 7 4%
-83: call: $1 (12) ($14 (12,#1)) %lc: 138 7 4%
-84: combine: 15 #1 %lc: 232 3 5%
-85: combine: 15 #1 %lc: 236 3 5%
-86: combine: 15 #1 %lc: 240 3 5%
-87: if: $11 (5,#1) %lc: 243 3 5%
+34: combine: 9 9 %lc: 193 3 1%
+35: combine: 9 $18 (#1) %lc: 198 5 1%
+36: call: $1 (10) (#0) %lc: 90 6 2%
+37: combine: 16 #1 %lc: 92 4 2%
+38: if: $9 (9,#2) %lc: 99 4 2%
+39: if: $6 (#1,#3) %lc: 101 5 2%
+40: call: $1 (10) (9) %lc: 103 6 2%
+41: if: $6 (#1,#2) %lc: 105 5 2%
+42: if: $12 (7,#5) %lc: 107 6 2%
+43: call: $1 (10) ($13 (9,#2)) %lc: 109 7 2%
+44: call: $1 (10) (9) %lc: 113 7 2%
+45: if: $6 (7,#1) %lc: 119 6 2%
+46: call: $1 (10) (9) %lc: 121 7 2%
+47: if: $3 ($6 (7,#3),$6 (7,#4)) %lc: 123 6 2%
+48: call: $1 (10) ($13 (9,#2)) %lc: 125 7 2%
+49: combine: 9 #1 %lc: 136 5 2%
+50: call: $1 (10) ($14 (10,#1)) %lc: 146 7 2%
+51: if: $9 (10,#1) %lc: 148 7 2%
+52: call: $1 (11) (#0) %lc: 90 6 3%
+53: combine: 16 #2 %lc: 92 4 3%
+54: if: $9 (9,#2) %lc: 99 4 3%
+55: if: $6 (#2,#3) %lc: 101 5 3%
+56: call: $1 (11) (9) %lc: 103 6 3%
+57: if: $6 (#2,#2) %lc: 105 5 3%
+58: if: $12 (7,#5) %lc: 107 6 3%
+59: call: $1 (11) ($13 (9,#2)) %lc: 109 7 3%
+60: call: $1 (11) (9) %lc: 113 7 3%
+61: if: $6 (7,#1) %lc: 119 6 3%
+62: call: $1 (11) (9) %lc: 121 7 3%
+63: if: $3 ($6 (7,#3),$6 (7,#4)) %lc: 123 6 3%
+64: call: $1 (11) ($13 (9,#2)) %lc: 125 7 3%
+65: combine: 9 #1 %lc: 136 5 3%
+66: call: $1 (11) ($14 (11,#1)) %lc: 146 7 3%
+67: if: $9 (11,#1) %lc: 148 7 3%
+68: call: $1 (12) (#0) %lc: 90 6 4%
+69: combine: 16 #3 %lc: 92 4 4%
+70: if: $9 (9,#2) %lc: 99 4 4%
+71: if: $6 (#3,#3) %lc: 101 5 4%
+72: call: $1 (12) (9) %lc: 103 6 4%
+73: if: $6 (#3,#2) %lc: 105 5 4%
+74: if: $12 (7,#5) %lc: 107 6 4%
+75: call: $1 (12) ($13 (9,#2)) %lc: 109 7 4%
+76: call: $1 (12) (9) %lc: 113 7 4%
+77: if: $6 (7,#1) %lc: 119 6 4%
+78: call: $1 (12) (9) %lc: 121 7 4%
+79: if: $3 ($6 (7,#3),$6 (7,#4)) %lc: 123 6 4%
+80: call: $1 (12) ($13 (9,#2)) %lc: 125 7 4%
+81: combine: 9 #1 %lc: 136 5 4%
+82: call: $1 (12) ($14 (12,#1)) %lc: 146 7 4%
+83: if: $9 (12,#1) %lc: 148 7 4%
+84: combine: 15 #1 %lc: 244 3 5%
+85: combine: 15 #1 %lc: 248 3 5%
+86: combine: 15 #1 %lc: 252 3 5%
+87: if: $11 (5,#1) %lc: 255 3 5%
 end:
 
 halts: 14
-0: %lc: 58 1 0%
+0: %lc: 71 1 0%
 1: %lc: 23 7 0%
-2: %lc: 28 7 0%
-3: %lc: 33 7 0%
-4: %lc: 42 3 0%
-5: %lc: 50 3 0%
-6: %lc: 194 3 1%
-7: %lc: 142 7 2%
-8: %lc: 151 4 2%
-9: %lc: 142 7 3%
-10: %lc: 151 4 3%
-11: %lc: 142 7 4%
-12: %lc: 151 4 4%
-13: %lc: 264 3 5%
+2: %lc: 33 7 0%
+3: %lc: 42 7 0%
+4: %lc: 55 3 0%
+5: %lc: 63 3 0%
+6: %lc: 206 3 1%
+7: %lc: 154 7 2%
+8: %lc: 163 4 2%
+9: %lc: 154 7 3%
+10: %lc: 163 4 3%
+11: %lc: 154 7 4%
+12: %lc: 163 4 4%
+13: %lc: 276 3 5%
 end:
 
--- nets 349
+-- nets 373
 
 -- optimised nets 113
 
-signature: 1790508
+signature: 1897812
 dependencies: 82
 0: ACT_14_0__0 OutNet  : 14 %name: ACT_14_0_% %inst: 0%
 1: ACT_32_0__0 OutNet  : 32 %name: ACT_32_0_% %inst: 0%
 2: ACT_22_0__0 OutNet  : 22 %name: ACT_22_0_% %inst: 0%
 3: ACT_25_0__0 OutNet  : 25 %name: ACT_25_0_% %inst: 0%
-4: ACT_34_0_0__0 OutNet  0 1 : 34 %name: ACT_34_0_0_% %inst: 1% %lc: 181 3 1% %lc: 183 3 1% %incarn: 0 0% %sius: 9 0 181 3 1%
+4: ACT_34_0_0__0 OutNet  0 1 : 34 %name: ACT_34_0_0_% %inst: 1% %lc: 193 3 1% %lc: 195 3 1% %incarn: 0 0% %sius: 9 0 193 3 1%
 5: TA_INREVIEW OutNet  : 6 %name: TA_INREVIEW__O_% %inst: 0%
 6: TA_SLEEPING OutNet  : 7 %name: TA_SLEEPING__O_% %inst: 0%
 7: WANT_REVIEW OutNet  : 8 %name: WANT_REVIEW__O_% %inst: 0%
-8: RANDOM1 InNet  : 1 %name: THEN_8_0_% %alias: ACT_36_0_0_ ACT_37_0_0_% %inst: 0% %lc: 24 3 0% %lc: 79 4 2% %lc: 77 6 2% %lc: 86 4 2% %sips: 0 0 23 7 0%
-9: ACT_36_0_0__0 OutNet  8 : 36 %name: ACT_36_0_0_% %inst: 2% %lc: 77 6 2% %lc: 79 4 2% %incarn: 0 0% %sies: 16 0 79 4 2%
-10: ACT_37_0_0__0 OutNet  3 8 : 37 %name: ACT_37_0_0_% %inst: 2% %lc: 79 4 2% %lc: 86 4 2% %incarn: 0 0% %sius: 16 0 79 4 2%
-11: TEST_38_0_0__0_IN DoubleNet TEST_38_0_0__0_OUT  1 8 : 38 %name: TEST_38_0_0_% %inst: 2% %lc: 86 56 2% %lc: 88 5 2% %incarn: 0 0%
-12: TEST_39_0_0__0_IN DoubleNet TEST_39_0_0__0_OUT  11 : 39 %name: TEST_39_0_0_% %alias: ACT_40_0_0_% %inst: 2% %lc: 88 23 2% %lc: 90 18 2% %incarn: 0 0%
-13: ACT_40_0_0__0 OutNet  9 12 : 40 %name: ACT_40_0_0_% %inst: 2% %lc: 90 18 2% %incarn: 0 0%
-14: TEST_41_0_0__0_IN DoubleNet TEST_41_0_0__0_OUT  12 : 41 %name: TEST_41_0_0_% %alias: CONT_57_0_% %inst: 2% %lc: 92 26 2% %lc: 94 6 2% %incarn: 0 0%
-15: RANDOM2 InNet  : 3 %name: THEN_14_0_% %alias: ACT_52_0_0_ ACT_53_0_0_% %inst: 0% %lc: 29 3 0% %lc: 79 4 3% %lc: 77 6 3% %lc: 86 4 3% %sips: 1 0 28 7 0%
-16: ACT_52_0_0__0 OutNet  15 : 52 %name: ACT_52_0_0_% %inst: 3% %lc: 77 6 3% %lc: 79 4 3% %incarn: 0 0% %sies: 16 0 79 4 3%
-17: ACT_53_0_0__0 OutNet  10 15 : 53 %name: ACT_53_0_0_% %inst: 3% %lc: 79 4 3% %lc: 86 4 3% %incarn: 0 0% %sius: 16 0 79 4 3%
-18: RANDOM3 InNet  : 5 %name: THEN_20_0_% %alias: ACT_68_0_0_ ACT_69_0_0_% %inst: 0% %lc: 34 3 0% %lc: 79 4 4% %lc: 77 6 4% %lc: 86 4 4% %sips: 2 0 33 7 0%
-19: ACT_68_0_0__0 OutNet  18 : 68 %name: ACT_68_0_0_% %inst: 4% %lc: 77 6 4% %lc: 79 4 4% %incarn: 0 0% %sies: 16 0 79 4 4%
-20: ACT_69_0_0__0 OutNet  17 18 : 69 %name: ACT_69_0_0_% %inst: 4% %lc: 79 4 4% %lc: 86 4 4% %incarn: 0 0% %sius: 16 0 79 4 4%
-21: TEST_42_0_0__0_IN DoubleNet TEST_42_0_0__0_OUT  14 20 : 42 %name: TEST_42_0_0_% %alias: ACT_43_0_0_% %inst: 2% %lc: 94 28 2% %lc: 96 19 2% %incarn: 0 0%
-22: ACT_43_0_0__0 OutNet  13 21 : 43 %name: ACT_43_0_0_% %inst: 2% %lc: 96 19 2% %incarn: 0 0%
-23: ACT_44_0_0__0 OutNet  22 : 44 %name: ACT_44_0_0_% %inst: 2% %lc: 100 19 2% %incarn: 0 0%
-24: TEST_45_0_0__0_IN DoubleNet TEST_45_0_0__0_OUT  14 20 : 45 %name: TEST_45_0_0_% %alias: ACT_46_0_0_% %inst: 2% %lc: 106 27 2% %lc: 108 19 2% %incarn: 0 0%
-25: ACT_46_0_0__0 OutNet  23 24 : 46 %name: ACT_46_0_0_% %inst: 2% %lc: 108 19 2% %incarn: 0 0%
-26: TEST_47_0_0__0_IN DoubleNet TEST_47_0_0__0_OUT  24 : 47 %name: TEST_47_0_0_% %alias: ACT_48_0_0_% %inst: 2% %lc: 110 51 2% %lc: 112 19 2% %incarn: 0 0%
-27: ACT_48_0_0__0 OutNet  25 26 : 48 %name: ACT_48_0_0_% %inst: 2% %lc: 112 19 2% %incarn: 0 0%
-28: ACT_49_0_0__0 OutNet  4 21 26 : 49 %name: ACT_49_0_0_% %inst: 2% %lc: 123 5 2% %incarn: 0 0% %sius: 9 0 123 5 2%
-29: TEST_54_0_0__0_IN DoubleNet TEST_54_0_0__0_OUT  1 15 : 54 %name: TEST_54_0_0_% %inst: 3% %lc: 86 56 3% %lc: 88 5 3% %incarn: 0 0%
-30: TEST_55_0_0__0_IN DoubleNet TEST_55_0_0__0_OUT  29 : 55 %name: TEST_55_0_0_% %alias: ACT_56_0_0_% %inst: 3% %lc: 88 23 3% %lc: 90 18 3% %incarn: 0 0%
-31: ACT_56_0_0__0 OutNet  16 30 : 56 %name: ACT_56_0_0_% %inst: 3% %lc: 90 18 3% %incarn: 0 0%
-32: TEST_57_0_0__0_IN DoubleNet TEST_57_0_0__0_OUT  30 : 57 %name: TEST_57_0_0_% %alias: CONT_93_0_% %inst: 3% %lc: 92 26 3% %lc: 94 6 3% %incarn: 0 0%
-33: TEST_58_0_0__0_IN DoubleNet TEST_58_0_0__0_OUT  20 32 : 58 %name: TEST_58_0_0_% %alias: ACT_59_0_0_% %inst: 3% %lc: 94 28 3% %lc: 96 19 3% %incarn: 0 0%
-34: ACT_59_0_0__0 OutNet  31 33 : 59 %name: ACT_59_0_0_% %inst: 3% %lc: 96 19 3% %incarn: 0 0%
-35: ACT_60_0_0__0 OutNet  34 : 60 %name: ACT_60_0_0_% %inst: 3% %lc: 100 19 3% %incarn: 0 0%
-36: TEST_61_0_0__0_IN DoubleNet TEST_61_0_0__0_OUT  20 32 : 61 %name: TEST_61_0_0_% %alias: ACT_62_0_0_% %inst: 3% %lc: 106 27 3% %lc: 108 19 3% %incarn: 0 0%
-37: ACT_62_0_0__0 OutNet  35 36 : 62 %name: ACT_62_0_0_% %inst: 3% %lc: 108 19 3% %incarn: 0 0%
-38: TEST_63_0_0__0_IN DoubleNet TEST_63_0_0__0_OUT  36 : 63 %name: TEST_63_0_0_% %alias: ACT_64_0_0_% %inst: 3% %lc: 110 51 3% %lc: 112 19 3% %incarn: 0 0%
-39: ACT_64_0_0__0 OutNet  37 38 : 64 %name: ACT_64_0_0_% %inst: 3% %lc: 112 19 3% %incarn: 0 0%
-40: ACT_65_0_0__0 OutNet  28 33 38 : 65 %name: ACT_65_0_0_% %inst: 3% %lc: 123 5 3% %incarn: 0 0% %sius: 9 0 123 5 3%
-41: TEST_70_0_0__0_IN DoubleNet TEST_70_0_0__0_OUT  1 18 : 70 %name: TEST_70_0_0_% %inst: 4% %lc: 86 56 4% %lc: 88 5 4% %incarn: 0 0%
-42: TEST_71_0_0__0_IN DoubleNet TEST_71_0_0__0_OUT  41 : 71 %name: TEST_71_0_0_% %alias: ACT_72_0_0_% %inst: 4% %lc: 88 23 4% %lc: 90 18 4% %incarn: 0 0%
-43: ACT_72_0_0__0 OutNet  19 42 : 72 %name: ACT_72_0_0_% %inst: 4% %lc: 90 18 4% %incarn: 0 0%
-44: TEST_73_0_0__0_IN DoubleNet TEST_73_0_0__0_OUT  42 : 73 %name: TEST_73_0_0_% %alias: CONT_129_0_% %inst: 4% %lc: 92 26 4% %lc: 94 6 4% %incarn: 0 0%
-45: TEST_74_0_0__0_IN DoubleNet TEST_74_0_0__0_OUT  20 44 : 74 %name: TEST_74_0_0_% %alias: ACT_75_0_0_% %inst: 4% %lc: 94 28 4% %lc: 96 19 4% %incarn: 0 0%
-46: ACT_75_0_0__0 OutNet  43 45 : 75 %name: ACT_75_0_0_% %inst: 4% %lc: 96 19 4% %incarn: 0 0%
-47: ACT_76_0_0__0 OutNet  46 : 76 %name: ACT_76_0_0_% %inst: 4% %lc: 100 19 4% %incarn: 0 0%
-48: TEST_77_0_0__0_IN DoubleNet TEST_77_0_0__0_OUT  20 44 : 77 %name: TEST_77_0_0_% %alias: ACT_78_0_0_% %inst: 4% %lc: 106 27 4% %lc: 108 19 4% %incarn: 0 0%
-49: ACT_78_0_0__0 OutNet  47 48 : 78 %name: ACT_78_0_0_% %inst: 4% %lc: 108 19 4% %incarn: 0 0%
-50: TEST_79_0_0__0_IN DoubleNet TEST_79_0_0__0_OUT  48 : 79 %name: TEST_79_0_0_% %alias: ACT_80_0_0_% %inst: 4% %lc: 110 51 4% %lc: 112 19 4% %incarn: 0 0%
-51: ACT_80_0_0__0 OutNet  49 50 : 80 %name: ACT_80_0_0_% %inst: 4% %lc: 112 19 4% %incarn: 0 0%
-52: ACT_81_0_0__0 OutNet  40 45 50 : 81 %name: ACT_81_0_0_% %inst: 4% %lc: 123 5 4% %incarn: 0 0% %sius: 9 0 123 5 4%
+8: RANDOM1 InNet  : 1 %name: THEN_8_0_% %inst: 0% %lc: 25 3 0% %sips: 0 0 23 7 0%
+9: ACT_36_0_0__0 OutNet  8 : 36 %name: ACT_36_0_0_% %inst: 2% %lc: 90 6 2% %lc: 92 4 2% %incarn: 0 0% %sies: 16 0 92 4 2%
+10: ACT_37_0_0__0 OutNet  3 8 : 37 %name: ACT_37_0_0_% %inst: 2% %lc: 92 4 2% %lc: 99 4 2% %incarn: 0 0% %sius: 16 0 92 4 2%
+11: TEST_38_0_0__0_IN DoubleNet TEST_38_0_0__0_OUT  1 8 : 38 %name: TEST_38_0_0_% %inst: 2% %lc: 99 56 2% %lc: 101 5 2% %incarn: 0 0%
+12: TEST_39_0_0__0_IN DoubleNet TEST_39_0_0__0_OUT  11 : 39 %name: TEST_39_0_0_% %alias: ACT_40_0_0_% %inst: 2% %lc: 101 23 2% %lc: 103 18 2% %incarn: 0 0%
+13: ACT_40_0_0__0 OutNet  9 12 : 40 %name: ACT_40_0_0_% %inst: 2% %lc: 103 18 2% %incarn: 0 0%
+14: TEST_41_0_0__0_IN DoubleNet TEST_41_0_0__0_OUT  12 : 41 %name: TEST_41_0_0_% %alias: CONT_60_0_% %inst: 2% %lc: 105 26 2% %lc: 107 6 2% %incarn: 0 0%
+15: RANDOM2 InNet  : 3 %name: THEN_15_0_% %inst: 0% %lc: 34 2 0% %sips: 1 0 33 7 0%
+16: ACT_52_0_0__0 OutNet  15 : 52 %name: ACT_52_0_0_% %inst: 3% %lc: 90 6 3% %lc: 92 4 3% %incarn: 0 0% %sies: 16 0 92 4 3%
+17: ACT_53_0_0__0 OutNet  10 15 : 53 %name: ACT_53_0_0_% %inst: 3% %lc: 92 4 3% %lc: 99 4 3% %incarn: 0 0% %sius: 16 0 92 4 3%
+18: RANDOM3 InNet  : 5 %name: THEN_22_0_% %inst: 0% %lc: 43 2 0% %sips: 2 0 42 7 0%
+19: ACT_68_0_0__0 OutNet  18 : 68 %name: ACT_68_0_0_% %inst: 4% %lc: 90 6 4% %lc: 92 4 4% %incarn: 0 0% %sies: 16 0 92 4 4%
+20: ACT_69_0_0__0 OutNet  17 18 : 69 %name: ACT_69_0_0_% %inst: 4% %lc: 92 4 4% %lc: 99 4 4% %incarn: 0 0% %sius: 16 0 92 4 4%
+21: TEST_42_0_0__0_IN DoubleNet TEST_42_0_0__0_OUT  14 20 : 42 %name: TEST_42_0_0_% %alias: ACT_43_0_0_% %inst: 2% %lc: 107 28 2% %lc: 109 19 2% %incarn: 0 0%
+22: ACT_43_0_0__0 OutNet  13 21 : 43 %name: ACT_43_0_0_% %inst: 2% %lc: 109 19 2% %incarn: 0 0%
+23: ACT_44_0_0__0 OutNet  22 : 44 %name: ACT_44_0_0_% %inst: 2% %lc: 113 19 2% %incarn: 0 0%
+24: TEST_45_0_0__0_IN DoubleNet TEST_45_0_0__0_OUT  14 20 : 45 %name: TEST_45_0_0_% %alias: ACT_46_0_0_% %inst: 2% %lc: 119 27 2% %lc: 121 19 2% %incarn: 0 0%
+25: ACT_46_0_0__0 OutNet  23 24 : 46 %name: ACT_46_0_0_% %inst: 2% %lc: 121 19 2% %incarn: 0 0%
+26: TEST_47_0_0__0_IN DoubleNet TEST_47_0_0__0_OUT  24 : 47 %name: TEST_47_0_0_% %alias: ACT_48_0_0_% %inst: 2% %lc: 123 51 2% %lc: 125 19 2% %incarn: 0 0%
+27: ACT_48_0_0__0 OutNet  25 26 : 48 %name: ACT_48_0_0_% %inst: 2% %lc: 125 19 2% %incarn: 0 0%
+28: ACT_49_0_0__0 OutNet  4 21 26 : 49 %name: ACT_49_0_0_% %inst: 2% %lc: 136 5 2% %incarn: 0 0% %sius: 9 0 136 5 2%
+29: TEST_54_0_0__0_IN DoubleNet TEST_54_0_0__0_OUT  1 15 : 54 %name: TEST_54_0_0_% %inst: 3% %lc: 99 56 3% %lc: 101 5 3% %incarn: 0 0%
+30: TEST_55_0_0__0_IN DoubleNet TEST_55_0_0__0_OUT  29 : 55 %name: TEST_55_0_0_% %alias: ACT_56_0_0_% %inst: 3% %lc: 101 23 3% %lc: 103 18 3% %incarn: 0 0%
+31: ACT_56_0_0__0 OutNet  16 30 : 56 %name: ACT_56_0_0_% %inst: 3% %lc: 103 18 3% %incarn: 0 0%
+32: TEST_57_0_0__0_IN DoubleNet TEST_57_0_0__0_OUT  30 : 57 %name: TEST_57_0_0_% %alias: CONT_96_0_% %inst: 3% %lc: 105 26 3% %lc: 107 6 3% %incarn: 0 0%
+33: TEST_58_0_0__0_IN DoubleNet TEST_58_0_0__0_OUT  20 32 : 58 %name: TEST_58_0_0_% %alias: ACT_59_0_0_% %inst: 3% %lc: 107 28 3% %lc: 109 19 3% %incarn: 0 0%
+34: ACT_59_0_0__0 OutNet  31 33 : 59 %name: ACT_59_0_0_% %inst: 3% %lc: 109 19 3% %incarn: 0 0%
+35: ACT_60_0_0__0 OutNet  34 : 60 %name: ACT_60_0_0_% %inst: 3% %lc: 113 19 3% %incarn: 0 0%
+36: TEST_61_0_0__0_IN DoubleNet TEST_61_0_0__0_OUT  20 32 : 61 %name: TEST_61_0_0_% %alias: ACT_62_0_0_% %inst: 3% %lc: 119 27 3% %lc: 121 19 3% %incarn: 0 0%
+37: ACT_62_0_0__0 OutNet  35 36 : 62 %name: ACT_62_0_0_% %inst: 3% %lc: 121 19 3% %incarn: 0 0%
+38: TEST_63_0_0__0_IN DoubleNet TEST_63_0_0__0_OUT  36 : 63 %name: TEST_63_0_0_% %alias: ACT_64_0_0_% %inst: 3% %lc: 123 51 3% %lc: 125 19 3% %incarn: 0 0%
+39: ACT_64_0_0__0 OutNet  37 38 : 64 %name: ACT_64_0_0_% %inst: 3% %lc: 125 19 3% %incarn: 0 0%
+40: ACT_65_0_0__0 OutNet  28 33 38 : 65 %name: ACT_65_0_0_% %inst: 3% %lc: 136 5 3% %incarn: 0 0% %sius: 9 0 136 5 3%
+41: TEST_70_0_0__0_IN DoubleNet TEST_70_0_0__0_OUT  1 18 : 70 %name: TEST_70_0_0_% %inst: 4% %lc: 99 56 4% %lc: 101 5 4% %incarn: 0 0%
+42: TEST_71_0_0__0_IN DoubleNet TEST_71_0_0__0_OUT  41 : 71 %name: TEST_71_0_0_% %alias: ACT_72_0_0_% %inst: 4% %lc: 101 23 4% %lc: 103 18 4% %incarn: 0 0%
+43: ACT_72_0_0__0 OutNet  19 42 : 72 %name: ACT_72_0_0_% %inst: 4% %lc: 103 18 4% %incarn: 0 0%
+44: TEST_73_0_0__0_IN DoubleNet TEST_73_0_0__0_OUT  42 : 73 %name: TEST_73_0_0_% %alias: CONT_132_0_% %inst: 4% %lc: 105 26 4% %lc: 107 6 4% %incarn: 0 0%
+45: TEST_74_0_0__0_IN DoubleNet TEST_74_0_0__0_OUT  20 44 : 74 %name: TEST_74_0_0_% %alias: ACT_75_0_0_% %inst: 4% %lc: 107 28 4% %lc: 109 19 4% %incarn: 0 0%
+46: ACT_75_0_0__0 OutNet  43 45 : 75 %name: ACT_75_0_0_% %inst: 4% %lc: 109 19 4% %incarn: 0 0%
+47: ACT_76_0_0__0 OutNet  46 : 76 %name: ACT_76_0_0_% %inst: 4% %lc: 113 19 4% %incarn: 0 0%
+48: TEST_77_0_0__0_IN DoubleNet TEST_77_0_0__0_OUT  20 44 : 77 %name: TEST_77_0_0_% %alias: ACT_78_0_0_% %inst: 4% %lc: 119 27 4% %lc: 121 19 4% %incarn: 0 0%
+49: ACT_78_0_0__0 OutNet  47 48 : 78 %name: ACT_78_0_0_% %inst: 4% %lc: 121 19 4% %incarn: 0 0%
+50: TEST_79_0_0__0_IN DoubleNet TEST_79_0_0__0_OUT  48 : 79 %name: TEST_79_0_0_% %alias: ACT_80_0_0_% %inst: 4% %lc: 123 51 4% %lc: 125 19 4% %incarn: 0 0%
+51: ACT_80_0_0__0 OutNet  49 50 : 80 %name: ACT_80_0_0_% %inst: 4% %lc: 125 19 4% %incarn: 0 0%
+52: ACT_81_0_0__0 OutNet  40 45 50 : 81 %name: ACT_81_0_0_% %inst: 4% %lc: 136 5 4% %incarn: 0 0% %sius: 9 0 136 5 4%
 53: STUD_WANTREVIEW OutNet  21 26 33 38 45 50 : 9 %name: STUD_WANTREVIEW__O_% %inst: 0%
-54: ACT_35_0_0__0 OutNet  52 : 35 %name: ACT_35_0_0_% %inst: 1% %lc: 186 5 1% %incarn: 0 0% %sius: 9 0 186 5 1%
-55: TEST_50_0_0__0_IN DoubleNet TEST_50_0_0__0_OUT  27 : 50 %name: TEST_50_0_0_% %emitted: 24% %alias: GO_80_0_ PRESENT_S24_0_ TRACE_S24_ TO_REG_80_0_% %inst: 2% %lc: 134 26 2% %lc: 135 8 2% %lc: 125 10 2% %lc: 151 4 2% %incarn: 0 0% %sies: 24 0 135 8 2%
-56: ACT_51_0_0__0 OutNet  55 : 51 %name: ACT_51_0_0_% %inst: 2% %lc: 138 19 2% %incarn: 0 0%
-57: TEST_66_0_0__0_IN DoubleNet TEST_66_0_0__0_OUT  39 : 66 %name: TEST_66_0_0_% %emitted: 26% %alias: GO_116_0_ PRESENT_S26_0_ TRACE_S26_ TO_REG_116_0_% %inst: 3% %lc: 134 26 3% %lc: 135 8 3% %lc: 125 10 3% %lc: 151 4 3% %incarn: 0 0% %sies: 26 0 135 8 3%
-58: ACT_67_0_0__0 OutNet  57 : 67 %name: ACT_67_0_0_% %inst: 3% %lc: 138 19 3% %incarn: 0 0%
-59: TEST_82_0_0__0_IN DoubleNet TEST_82_0_0__0_OUT  51 : 82 %name: TEST_82_0_0_% %emitted: 28% %alias: GO_152_0_ PRESENT_S28_0_ TRACE_S28_ TO_REG_152_0_% %inst: 4% %lc: 134 26 4% %lc: 135 8 4% %lc: 125 10 4% %lc: 151 4 4% %incarn: 0 0% %sies: 28 0 135 8 4%
-60: ACT_83_0_0__0 OutNet  59 : 83 %name: ACT_83_0_0_% %inst: 4% %lc: 138 19 4% %incarn: 0 0%
-61: ACT_84_0_0__0 OutNet  2 21 26 33 38 45 50 : 84 %name: ACT_84_0_0_% %inst: 5% %lc: 232 3 5% %incarn: 0 0% %sius: 15 0 232 3 5%
-62: ACT_85_0_0__0 OutNet  61 : 85 %name: ACT_85_0_0_% %inst: 5% %lc: 236 3 5% %incarn: 0 0% %sius: 15 0 236 3 5%
-63: ACT_86_0_0__0 OutNet  62 : 86 %name: ACT_86_0_0_% %inst: 5% %lc: 240 3 5% %incarn: 0 0% %sius: 15 0 240 3 5%
-64: TEST_87_0_0__0_IN DoubleNet TEST_87_0_0__0_OUT  63 : 87 %name: TEST_87_0_0_% %emitted: 12% %alias: PRESENT_S12_0_ RACECONDITION__O_ TRACE_S12_% %inst: 5% %lc: 243 28 5% %lc: 244 3 5% %lc: 10 33 0% %incarn: 0 0% %sies: 12 0 244 3 5%
+54: ACT_35_0_0__0 OutNet  52 : 35 %name: ACT_35_0_0_% %inst: 1% %lc: 198 5 1% %incarn: 0 0% %sius: 9 0 198 5 1%
+55: ACT_50_0_0__0 OutNet  27 : 50 %name: ACT_50_0_0_% %inst: 2% %lc: 146 19 2% %lc: 148 7 2% %incarn: 0 0%
+56: TEST_51_0_0__0_IN DoubleNet TEST_51_0_0__0_OUT  55 : 51 %name: TEST_51_0_0_% %emitted: 24% %alias: GO_83_0_ PRESENT_S24_0_ TRACE_S24_ TO_REG_83_0_% %inst: 2% %lc: 148 26 2% %lc: 149 8 2% %lc: 138 10 2% %lc: 163 4 2% %incarn: 0 0% %sies: 24 0 149 8 2%
+57: ACT_66_0_0__0 OutNet  39 : 66 %name: ACT_66_0_0_% %inst: 3% %lc: 146 19 3% %lc: 148 7 3% %incarn: 0 0%
+58: TEST_67_0_0__0_IN DoubleNet TEST_67_0_0__0_OUT  57 : 67 %name: TEST_67_0_0_% %emitted: 26% %alias: GO_119_0_ PRESENT_S26_0_ TRACE_S26_ TO_REG_119_0_% %inst: 3% %lc: 148 26 3% %lc: 149 8 3% %lc: 138 10 3% %lc: 163 4 3% %incarn: 0 0% %sies: 26 0 149 8 3%
+59: ACT_82_0_0__0 OutNet  51 : 82 %name: ACT_82_0_0_% %inst: 4% %lc: 146 19 4% %lc: 148 7 4% %incarn: 0 0%
+60: TEST_83_0_0__0_IN DoubleNet TEST_83_0_0__0_OUT  59 : 83 %name: TEST_83_0_0_% %emitted: 28% %alias: GO_155_0_ PRESENT_S28_0_ TRACE_S28_ TO_REG_155_0_% %inst: 4% %lc: 148 26 4% %lc: 149 8 4% %lc: 138 10 4% %lc: 163 4 4% %incarn: 0 0% %sies: 28 0 149 8 4%
+61: ACT_84_0_0__0 OutNet  2 21 26 33 38 45 50 : 84 %name: ACT_84_0_0_% %inst: 5% %lc: 244 3 5% %incarn: 0 0% %sius: 15 0 244 3 5%
+62: ACT_85_0_0__0 OutNet  61 : 85 %name: ACT_85_0_0_% %inst: 5% %lc: 248 3 5% %incarn: 0 0% %sius: 15 0 248 3 5%
+63: ACT_86_0_0__0 OutNet  62 : 86 %name: ACT_86_0_0_% %inst: 5% %lc: 252 3 5% %incarn: 0 0% %sius: 15 0 252 3 5%
+64: TEST_87_0_0__0_IN DoubleNet TEST_87_0_0__0_OUT  63 : 87 %name: TEST_87_0_0_% %emitted: 12% %alias: PRESENT_S12_0_ RACECONDITION__O_ TRACE_S12_% %inst: 5% %lc: 255 28 5% %lc: 256 3 5% %lc: 10 33 0% %incarn: 0 0% %sies: 12 0 256 3 5%
 65: STUD_INREVIEW OutNet  : 10 %name: STUD_INREVIEW__O_% %inst: 0%
 66: TA_DISMISS_STUD OutNet  : 11 %name: TA_DISMISS_STUD__O_% %inst: 0%
 67: STUDENTS_WAITING OutNet  54 : 12 %name: STUDENTS_WAITING__O_% %inst: 0%
-68: PRE_ACT_9_0__0 OutNet  55 57 59 64 67 : 33 %name: PRE_ACT_9_0_% %inst: 0%
+68: PRE_ACT_9_0__0 OutNet  56 58 60 64 67 : 33 %name: PRE_ACT_9_0_% %inst: 0%
 69: TA_INSANE OutNet  : 15 %name: TA_INSANE__O_% %inst: 0%
 70: STUD_INSANE OutNet  21 26 33 38 45 50 : 16 %name: STUD_INSANE__O_% %inst: 0%
 71: RACECONDITION OutNet  64 : 17 %name: RACECONDITION__O_% %inst: 0%
@@ -257,25 +257,31 @@ dependencies: 82
 81: STUD_INREVIEW3 OutNet  : 31 %name: STUD_INREVIEW3__O_% %inst: 0%
 end:
 
-registers: 16
+registers: 22
 return: ROOT_RETURN_ 0
 halting: ROOT_HALTING_
 0: PRE_REG_6_0_
 1: PRE_REG_13_0_
-2: BOOT_REGISTER_
-3: PAUSE_REG_6_ halt: 1
-4: PAUSE_REG_12_ halt: 2
-5: PAUSE_REG_18_ halt: 3
-6: PAUSE_REG_26_ halt: 4
-7: PAUSE_REG_31_ halt: 5
-8: PAUSE_REG_45_ halt: 6
-9: PAUSE_REG_77_ halt: 7
-10: PAUSE_REG_80_ halt: 8
-11: PAUSE_REG_113_ halt: 9
-12: PAUSE_REG_116_ halt: 10
-13: PAUSE_REG_149_ halt: 11
-14: PAUSE_REG_152_ halt: 12
-15: PAUSE_REG_183_ halt: 13
+2: PRE_REG_17_0_
+3: PRE_REG_18_0_
+4: PRE_REG_19_0_
+5: PRE_REG_20_0_
+6: PRE_REG_21_0_
+7: PRE_REG_22_0_
+8: BOOT_REGISTER_
+9: PAUSE_REG_6_ halt: 1
+10: PAUSE_REG_13_ halt: 2
+11: PAUSE_REG_20_ halt: 3
+12: PAUSE_REG_29_ halt: 4
+13: PAUSE_REG_34_ halt: 5
+14: PAUSE_REG_48_ halt: 6
+15: PAUSE_REG_80_ halt: 7
+16: PAUSE_REG_83_ halt: 8
+17: PAUSE_REG_116_ halt: 9
+18: PAUSE_REG_119_ halt: 10
+19: PAUSE_REG_152_ halt: 11
+20: PAUSE_REG_155_ halt: 12
+21: PAUSE_REG_186_ halt: 13
 end:
 
 
