@@ -1,5 +1,0 @@
-module tut3_task2:
-	output O : integer;
-	
-	emit O(2); emit O(3)  % order of the statements does matter, last emit is output
-end module
