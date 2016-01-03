@@ -1,0 +1,24 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+C:\Users\hp\Mediencenter\GnatProjects\arm-eabi\car-blinker-rav\car_blinker.gpr
+20140920114002
+C:\Users\hp\Mediencenter\GnatProjects\arm-eabi\common\common.gpr
+20140612195142
+[BOUND OBJECT FILES]
+C:\Users\hp\Mediencenter\GnatProjects\arm-eabi\car-blinker-rav\obj\blinker.o
+C:\Users\hp\Mediencenter\GnatProjects\arm-eabi\common\obj\reg_gio.o
+C:\Users\hp\Mediencenter\GnatProjects\arm-eabi\common\obj\gio.o
+C:\Users\hp\Mediencenter\GnatProjects\arm-eabi\common\obj\reg_het.o
+C:\Users\hp\Mediencenter\GnatProjects\arm-eabi\common\obj\control.o
+C:\Users\hp\Mediencenter\GnatProjects\arm-eabi\car-blinker-rav\obj\bcontrol.o
+C:\Users\hp\Mediencenter\GnatProjects\arm-eabi\car-blinker-rav\obj\main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-LC:\Users\hp\Mediencenter\GnatProjects\arm-eabi\car-blinker-rav\obj\
+-LC:\Users\hp\Mediencenter\GnatProjects\arm-eabi\car-blinker-rav\obj\
+-LC:\Users\hp\Mediencenter\GnatProjects\arm-eabi\common\obj\
+-LC:\GNATPRO\7.3.0w-20140517\lib\gnat\arm-eabi\ravenscar-full-tms570\adalib\

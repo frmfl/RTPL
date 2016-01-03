@@ -1,0 +1,169 @@
+<HTML><HEAD>
+<TITLE>b~main.adb</TITLE>
+<SCRIPT TYPE="text/javascript">
+<!--
+  function listing_onload()
+  {
+    top.listing_onload_common(window, 
+      "b~main.adb-frameset.html", "623", "b~main.adb");
+    top.Update_Message_Status("b~main.adb-frameset.html", "", "b~main.adb")
+  }
+//-->
+</SCRIPT>
+<SCRIPT TYPE="text/javascript">
+<!--
+  function set_src_and_msg_anchors(src_line,
+    msg_anchor, src_id_pfx)
+  {
+    top.set_src_and_msg_anchors_common(src_line, msg_anchor,
+      src_id_pfx, "b~main.adb-frameset.html");
+  }
+//-->
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" onLoad="listing_onload();">
+<CENTER><H3>File Source: b~main.adb</H3></CENTER>
+<PRE>
+<A NAME="E1"></A>     1  pragma Ada_95;
+<A NAME="E2"></A>     2  pragma Source_File_Name (ada_main_for_main, Spec_File_Name =&gt; &quot;b~main.ads&quot;);
+<A NAME="E3"></A>     3  pragma Source_File_Name (ada_main_for_main, Body_File_Name =&gt; &quot;b~main.adb&quot;);
+<A NAME="E4"></A>     4  
+<A NAME="E5"></A>     5  with System.Restrictions;
+<A NAME="E6"></A>     6  with Ada.Exceptions;
+<A NAME="E7"></A>     7  
+        <FONT COLOR="purple"> -- 
+<A NAME="P8"></A>    <A ID="ID_P8" HREF="b~main.adb-msgs.html#1-Ann" onClick="set_src_and_msg_anchors(8, '1-Ann', 'P')" TARGET="messages_623">P/P</A>  --  <B>Subp:</B> ada_main_for_main'Elab_Body
+         -- </FONT>
+<A NAME="E8"></A>     8  package body ada_main_for_main is
+<A NAME="E9"></A>     9     pragma Warnings (Off);
+<A NAME="E10"></A>    10  
+           <FONT COLOR="purple"> -- 
+<A NAME="P11"></A>    <A ID="ID_P11" HREF="b~main.adb-msgs.html#4-Ann" onClick="set_src_and_msg_anchors(11, '4-Ann', 'P')" TARGET="messages_623">P/P</A>     --  <B>Subp:</B> ada_main_for_main.adafinal
+            -- </FONT>
+<A NAME="E11"></A>    11     procedure adafinal is
+<A NAME="E12"></A>    12     begin
+<A NAME="E13"></A>    13        System.Standard_Library.Adafinal;
+<A NAME="E14"></A>    14     end adafinal;
+<A NAME="E15"></A>    15  
+           <FONT COLOR="purple"> -- 
+<A NAME="P16"></A>    <A ID="ID_P16" HREF="b~main.adb-msgs.html#6-Ann" onClick="set_src_and_msg_anchors(16, '6-Ann', 'P')" TARGET="messages_623">P/P</A>     --  <B>Subp:</B> ada_main_for_main.adainit
+            -- 
+            --  <B>Postconditions:</B>
+            --    blinker.cmd_typeS(7) = 65
+            --    blinker.cmd_typeS(1) = 83
+            --    blinker.cmd_typeS(5) = 83
+            --    blinker.id_typeS(3) = 69
+            --    blinker.cmd_typeS(8) = 82
+            --    blinker.id_typeS(1) = 82
+            --    blinker.id_typeS(2) = 76
+            --    blinker.cmd_typeS(2) = 84
+            --    blinker.cmd_typeS(6) = 84
+            --    blinker.cmd_typeS(9) = 84
+            --    <A ID="ID_P16" HREF="b~main.adb-msgs.html#6-Ann" onClick="set_src_and_msg_anchors(16, '6-Ann', 'P')" TARGET="messages_623">...</A>
+            -- </FONT>
+<A NAME="E16"></A>    16     procedure adainit is
+<A NAME="E17"></A>    17     begin
+<A NAME="E18"></A>    18        Ada.Exceptions.Is_Null_Occurrence'Elab_Subp_Body;
+<A NAME="E19"></A>    19        System.Soft_Links'Elab_Spec;
+<A NAME="E20"></A>    20        Ada.Exceptions.Last_Chance_Handler'Elab_Subp_Body;
+<A NAME="E21"></A>    21        System.Exception_Table'Elab_Body;
+<A NAME="E22"></A>    22        Ada.Io_Exceptions'Elab_Spec;
+<A NAME="E23"></A>    23        Ada.Tags'Elab_Spec;
+<A NAME="E24"></A>    24        Ada.Streams'Elab_Spec;
+<A NAME="E25"></A>    25        <A ID="ID_E25" HREF="b~main.adb-msgs.html#337" style="text-decoration:none" onClick="set_src_and_msg_anchors(25, '337', 'E')" TARGET="messages_623"><FONT COLOR="black"><I>Interfaces.C'Elab_Spec;</I></FONT></A>
+<A NAME="E26"></A>    26        <A ID="ID_E26" HREF="b~main.adb-msgs.html#338" style="text-decoration:none" onClick="set_src_and_msg_anchors(26, '338', 'E')" TARGET="messages_623"><FONT COLOR="black"><I>Interfaces.C.Strings'Elab_Spec;</I></FONT></A>
+<A NAME="E27"></A>    27        System.Exceptions'Elab_Spec;
+<A NAME="E28"></A>    28        System.Finalization_Root'Elab_Spec;
+<A NAME="E29"></A>    29        Ada.Finalization'Elab_Spec;
+<A NAME="E30"></A>    30        System.Storage_Pools'Elab_Spec;
+<A NAME="E31"></A>    31        System.Finalization_Masters'Elab_Spec;
+<A NAME="E32"></A>    32        System.Storage_Pools.Subpools'Elab_Spec;
+<A NAME="E33"></A>    33        System.Task_Info'Elab_Spec;
+<A NAME="E34"></A>    34        System.Pool_Global'Elab_Spec;
+<A NAME="E35"></A>    35        System.File_Control_Block'Elab_Spec;
+<A NAME="E36"></A>    36        System.File_Io'Elab_Body;
+<A NAME="E37"></A>    37        System.Finalization_Masters'Elab_Body;
+<A NAME="E38"></A>    38        Ada.Tags'Elab_Body;
+<A NAME="E39"></A>    39        System.Soft_Links'Elab_Body;
+<A NAME="E40"></A>    40        System.Os_Lib'Elab_Body;
+<A NAME="E41"></A>    41        System.Secondary_Stack'Elab_Body;
+<A NAME="E42"></A>    42        System.Address_Image'Elab_Subp_Body;
+<A NAME="E43"></A>    43        System.Tasking.Initialization'Elab_Body;
+<A NAME="E44"></A>    44        System.Tasking.Protected_Objects'Elab_Body;
+<A NAME="E45"></A>    45        Ada.Real_Time'Elab_Spec;
+<A NAME="E46"></A>    46        Ada.Real_Time'Elab_Body;
+<A NAME="E47"></A>    47        Ada.Text_Io'Elab_Spec;
+<A NAME="E48"></A>    48        Ada.Text_Io'Elab_Body;
+<A NAME="E49"></A>    49        System.Tasking.Protected_Objects.Entries'Elab_Spec;
+<A NAME="E50"></A>    50        System.Tasking.Queuing'Elab_Body;
+<A NAME="E51"></A>    51        System.Tasking.Stages'Elab_Body;
+<A NAME="E52"></A>    52        Bcontrol'Elab_Spec;
+<A NAME="E53"></A>    53        Blinker'Elab_Spec;
+<A NAME="E54"></A>    54        Control'Elab_Spec;
+<A NAME="E55"></A>    55        Control'Elab_Body;
+<A NAME="E56"></A>    56        Blinker'Elab_Body;
+<A NAME="E57"></A>    57        Bcontrol'Elab_Body;
+<A NAME="E58"></A>    58        Main'Elab_Subp_Body;
+<A NAME="E59"></A>    59     end adainit;
+<A NAME="E60"></A>    60  
+<A NAME="E61"></A>    61     procedure Ada_Main_Program;
+<A NAME="E62"></A>    62     pragma Import (Ada, Ada_Main_Program, &quot;_ada_main&quot;);
+<A NAME="E63"></A>    63  
+           <FONT COLOR="purple"> -- 
+<A NAME="P64"></A>    <A ID="ID_P64" HREF="b~main.adb-msgs.html#339-Ann" onClick="set_src_and_msg_anchors(64, '339-Ann', 'P')" TARGET="messages_623">P/P</A>     --  <B>Subp:</B> main program main
+            -- 
+            --  <B>Postconditions:</B>
+            --    Command.command = Command.command'Old
+            --    Command.new_command = Command.new_command'Old
+            --    Command.new_command'Initialized
+            -- </FONT>
+<A NAME="E64"></A>    64     procedure call_main_subprogram is 
+<A NAME="E65"></A>    65     begin
+<A NAME="E66"></A>    66        Ada_Main_Program;
+<A NAME="E67"></A>    67     end call_main_subprogram;
+<A NAME="E68"></A>    68  
+           <FONT COLOR="purple"> -- 
+<A NAME="P69"></A>    <A ID="ID_P69" HREF="b~main.adb-msgs.html#348-Ann" onClick="set_src_and_msg_anchors(69, '348-Ann', 'P')" TARGET="messages_623">P/P</A>     --  <B>Subp:</B> ada_main_for_main.main
+            -- 
+            --  <B>Postconditions:</B>
+            --    ada_main_for_main.main'Result'Initialized
+            -- </FONT>
+<A NAME="E69"></A>    69     function main
+<A NAME="E70"></A>    70       (argc : Integer;
+<A NAME="E71"></A>    71        argv : System.Address;
+<A NAME="E72"></A>    72        envp : System.Address)
+<A NAME="E73"></A>    73        return Integer
+<A NAME="E74"></A>    74     is
+<A NAME="E75"></A>    75     begin
+<A NAME="E76"></A>    76        adainit;
+<A NAME="E77"></A>    77        call_main_subprogram;
+<A NAME="E78"></A>    78        adafinal;
+<A NAME="E79"></A>    79        return (gnat_exit_status);
+<A NAME="E80"></A>    80     end;
+<A NAME="E81"></A>    81  
+<A NAME="E82"></A>    82  --  BEGIN Object file/option list
+<A NAME="E83"></A>    83     --   -L/mate/uwa/home/lutz/projects/demo/car-blinker-rav-ql/obj/codepeer/
+<A NAME="E84"></A>    84     --   -L/mate/uwa/home/lutz/projects/demo/car-blinker-rav-ql/obj/codepeer/
+<A NAME="E85"></A>    85     --   -L/mate/uwa/home/lutz/projects/demo/common/obj/codepeer/
+<A NAME="E86"></A>    86     --   -L/opt/codepeer/libexec/codepeer/lib/gcc/i686-pc-linux-gnu/4.7.4/adalib/
+<A NAME="E87"></A>    87     --   -static
+<A NAME="E88"></A>    88     --   -lgnarl
+<A NAME="E89"></A>    89     --   -lgnat
+<A NAME="E90"></A>    90     --   -lpthread
+<A NAME="E91"></A>    91  --  END Object file/option list   
+<A NAME="E92"></A>    92  
+<A NAME="E93"></A>    93  end ada_main_for_main;
+</PRE>
+ <BR><BR> <BR><BR> <BR><BR><BR><BR> 
+<FONT COLOR="navy">CodePeer Build Version : 2.3.2 (rev 303695)</FONT><BR>
+<TABLE>
+  <TR>
+    <TD><FONT COLOR="navy">b~main.adb</FONT></TD>
+    <TD><FONT COLOR = "navy">2014-Oct-11 06:52:16</FONT></TD>
+  </TR>
+  <TR>
+    <TD><FONT COLOR="navy">b~main__body.scil</FONT></TD>
+    <TD><FONT COLOR = "navy">2014-Oct-11 06:52:16</FONT></TD>
+  </TR>
+</TABLE>
+</BODY></HTML>

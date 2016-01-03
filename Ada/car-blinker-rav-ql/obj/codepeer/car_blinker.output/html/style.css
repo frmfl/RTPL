@@ -1,0 +1,87 @@
+td.delta {font-weight: bold;
+          text-align: center}
+td.base {text-align: center}
+td.now_High {text-align: center;
+  background-color : #FFCCCC}
+td.now_Medium {text-align: center;
+  background-color : #FFFFCC}
+td.now_Low {text-align: center;
+  background-color : #CCFFFF}
+
+td.disabled {text-align: center;
+  font-style: italic;
+  color : gray}
+
+td.color_disabled {color : #CCCCCC}
+
+input.nav_btn {
+  font-weight : bold;
+  font-size: 100% }
+
+input.save_restore_btn {
+  font-size: 75% }
+
+
+form {
+    display:inline;
+}
+
+tr.new_pre {
+    color: black;
+}
+
+tr.new_sumption {
+    color: black;
+}
+
+tr.new_post {
+    color: black;
+}
+
+tr.new_unanalyzed {
+    color: black;
+}
+
+tr.new_test_vector {
+    color: black;
+}
+
+tr.dropped_pre {
+    color: black;
+}
+
+tr.dropped_sumption {
+    color: black;
+}
+
+tr.dropped_post {
+    color: black;
+}
+
+tr.dropped_unanalyzed {
+    color: black;
+}
+
+tr.dropped_test_vector {
+    color: black;
+}
+
+tr.unchanged_pre {
+    color: black;
+}
+
+tr.unchanged_sumption {
+    color: black;
+}
+
+tr.unchanged_post {
+    color: black;
+}
+
+tr.unchanged_unanalyzed {
+    color: black;
+}
+
+tr.unchanged_test_vector {
+    color: black;
+}

@@ -1,0 +1,927 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inspection format="3" identifier="11" previous="1">
+  <annotation_category identifier="1" name="Preconditions"/>
+  <annotation_category identifier="2" name="Presumptions"/>
+  <annotation_category identifier="3" name="Postconditions"/>
+  <annotation_category identifier="4" name="Unknown Calls"/>
+  <annotation_category identifier="5" name="Test Vectors"/>
+  <message_category identifier="5" name="subp never returns"/>
+  <message_category identifier="1" name="access check"/>
+  <message_category identifier="7" name="range check"/>
+  <message_category identifier="3" name="precondition"/>
+  <message_category identifier="6" name="loop does not complete normally"/>
+  <message_category identifier="8" name="subp not available"/>
+  <message_category identifier="2" name="unused assignment"/>
+  <message_category identifier="4" name="validity check"/>
+  <file name="/mate/uwa/home/lutz/projects/demo/car-blinker-rav-ql/obj/codepeer/b~main.ads" checks="12">
+    <subprogram line="4" column="1" name="ada_main_for_main'Elab_Spec">
+      <annotation identifier="3" category="3" text="Ada_Main_Program_Name(1) = 95"/>
+      <annotation identifier="4" category="3" text="Ada_Main_Program_Name(5) = 95"/>
+      <annotation identifier="5" category="3" text="Ada_Main_Program_Name(10) = 0"/>
+      <annotation identifier="6" category="3" text="Ada_Main_Program_Name(2) = 97"/>
+      <annotation identifier="7" category="3" text="Ada_Main_Program_Name(4) = 97"/>
+      <annotation identifier="8" category="3" text="Ada_Main_Program_Name(7) = 97"/>
+      <annotation identifier="9" category="3" text="Ada_Main_Program_Name(3) = 100"/>
+      <annotation identifier="10" category="3" text="Ada_Main_Program_Name(6) = 109"/>
+      <annotation identifier="11" category="3" text="Ada_Main_Program_Name(8) = 105"/>
+      <annotation identifier="12" category="3" text="Ada_Main_Program_Name(9) = 110"/>
+      <annotation identifier="13" category="3" text="(Ada_Main_Program_Name'First) = 1"/>
+      <annotation identifier="14" category="3" text="(GNAT_Version'First) = 1"/>
+      <annotation identifier="15" category="3" text="Ada_Main_Program_Name'First = 1"/>
+      <annotation identifier="16" category="3" text="GNAT_Version'First = 1"/>
+      <annotation identifier="17" category="3" text="(Ada_Main_Program_Name'Last) = 10"/>
+      <annotation identifier="18" category="3" text="Ada_Main_Program_Name'Last = 10"/>
+      <annotation identifier="19" category="3" text="(GNAT_Version'Last) = 38"/>
+      <annotation identifier="20" category="3" text="GNAT_Version'Last = 38"/>
+      <annotation identifier="21" category="3" text="Ada_Main_Program_Name'Initialized"/>
+      <annotation identifier="22" category="3" text="GNAT_Version'Initialized"/>
+      <annotation identifier="23" category="3" text="GNAT_Version(1..38) in (0 | 32 | 40..41 | 45..46 | ... | 114..115)"/>
+      <annotation identifier="25" category="3" text="u00002 = 2_814_571_527"/>
+      <annotation identifier="26" category="3" text="u00003 = 769_724_369"/>
+      <annotation identifier="27" category="3" text="u00004 = 1_073_516_056"/>
+      <annotation identifier="28" category="3" text="u00005 = 225_987_072"/>
+      <annotation identifier="29" category="3" text="u00006 = 1_105_074_631"/>
+      <annotation identifier="30" category="3" text="u00007 = 3_410_657_301"/>
+      <annotation identifier="31" category="3" text="u00008 = 3_178_628_693"/>
+      <annotation identifier="32" category="3" text="u00009 = 2_857_847_593"/>
+      <annotation identifier="33" category="3" text="u00010 = 913_384_370"/>
+      <annotation identifier="34" category="3" text="u00011 = 2_269_810_386"/>
+      <annotation identifier="35" category="3" text="u00012 = 4_150_242_637"/>
+      <annotation identifier="36" category="3" text="u00013 = 2_296_412_240"/>
+      <annotation identifier="37" category="3" text="u00014 = 4_157_871_112"/>
+      <annotation identifier="38" category="3" text="u00015 = 7_406_172"/>
+      <annotation identifier="39" category="3" text="u00016 = 951_817_182"/>
+      <annotation identifier="40" category="3" text="u00017 = 664_014_228"/>
+      <annotation identifier="41" category="3" text="u00018 = 194_251_413"/>
+      <annotation identifier="42" category="3" text="u00019 = 393_698_669"/>
+      <annotation identifier="43" category="3" text="u00020 = 2_836_931_067"/>
+      <annotation identifier="44" category="3" text="u00021 = 2_900_569_630"/>
+      <annotation identifier="45" category="3" text="u00022 = 1_203_469_261"/>
+      <annotation identifier="46" category="3" text="u00023 = 1_333_070_651"/>
+      <annotation identifier="47" category="3" text="u00024 = 517_257_849"/>
+      <annotation identifier="48" category="3" text="u00025 = 658_376_139"/>
+      <annotation identifier="49" category="3" text="u00026 = 3_002_045_415"/>
+      <annotation identifier="50" category="3" text="u00027 = 1_449_503_588"/>
+      <annotation identifier="51" category="3" text="u00028 = 1_054_754_907"/>
+      <annotation identifier="52" category="3" text="u00029 = 2_340_269_409"/>
+      <annotation identifier="53" category="3" text="u00030 = 2_615_860_929"/>
+      <annotation identifier="54" category="3" text="u00031 = 2_866_238_817"/>
+      <annotation identifier="55" category="3" text="u00032 = 2_978_533_090"/>
+      <annotation identifier="56" category="3" text="u00033 = 4_184_897_498"/>
+      <annotation identifier="57" category="3" text="u00034 = 17_674_716"/>
+      <annotation identifier="58" category="3" text="u00035 = 468_806_294"/>
+      <annotation identifier="59" category="3" text="u00036 = 1_459_824_072"/>
+      <annotation identifier="60" category="3" text="u00037 = 3_215_845_015"/>
+      <annotation identifier="61" category="3" text="u00038 = 3_700_306_925"/>
+      <annotation identifier="62" category="3" text="u00039 = 3_706_835_488"/>
+      <annotation identifier="63" category="3" text="u00040 = 2_424_145_967"/>
+      <annotation identifier="64" category="3" text="u00041 = 43_853_928"/>
+      <annotation identifier="65" category="3" text="u00042 = 587_126_922"/>
+      <annotation identifier="66" category="3" text="u00043 = 797_705_321"/>
+      <annotation identifier="67" category="3" text="u00044 = 1_635_401_970"/>
+      <annotation identifier="68" category="3" text="u00045 = 476_294_846"/>
+      <annotation identifier="69" category="3" text="u00046 = 1_970_446_266"/>
+      <annotation identifier="70" category="3" text="u00047 = 1_209_087_402"/>
+      <annotation identifier="71" category="3" text="u00048 = 2_913_159_815"/>
+      <annotation identifier="72" category="3" text="u00049 = 4_015_515_668"/>
+      <annotation identifier="73" category="3" text="u00050 = 3_026_419_274"/>
+      <annotation identifier="74" category="3" text="u00051 = 474_883_347"/>
+      <annotation identifier="75" category="3" text="u00052 = 3_944_491_571"/>
+      <annotation identifier="76" category="3" text="u00053 = 809_858_185"/>
+      <annotation identifier="77" category="3" text="u00054 = 555_858_283"/>
+      <annotation identifier="78" category="3" text="u00055 = 1_990_075_878"/>
+      <annotation identifier="79" category="3" text="u00056 = 696_884_558"/>
+      <annotation identifier="80" category="3" text="u00057 = 3_450_981_648"/>
+      <annotation identifier="81" category="3" text="u00058 = 3_952_199_398"/>
+      <annotation identifier="82" category="3" text="u00059 = 3_617_020_451"/>
+      <annotation identifier="83" category="3" text="u00060 = 3_029_474_978"/>
+      <annotation identifier="84" category="3" text="u00061 = 3_268_992_546"/>
+      <annotation identifier="85" category="3" text="u00062 = 3_717_383_152"/>
+      <annotation identifier="86" category="3" text="u00063 = 3_272_491_027"/>
+      <annotation identifier="87" category="3" text="u00064 = 2_419_657_124"/>
+      <annotation identifier="88" category="3" text="u00065 = 3_983_618_566"/>
+      <annotation identifier="89" category="3" text="u00066 = 4_132_804_047"/>
+      <annotation identifier="90" category="3" text="u00067 = 2_245_695_782"/>
+      <annotation identifier="91" category="3" text="u00068 = 584_070_720"/>
+      <annotation identifier="92" category="3" text="u00069 = 229_083_772"/>
+      <annotation identifier="93" category="3" text="u00070 = 641_913_033"/>
+      <annotation identifier="94" category="3" text="u00071 = 1_239_358_703"/>
+      <annotation identifier="95" category="3" text="u00072 = 3_562_782_964"/>
+      <annotation identifier="96" category="3" text="u00073 = 1_028_969_974"/>
+      <annotation identifier="97" category="3" text="u00074 = 3_755_693_256"/>
+      <annotation identifier="98" category="3" text="u00075 = 1_507_175_533"/>
+      <annotation identifier="99" category="3" text="u00076 = 1_547_793_909"/>
+      <annotation identifier="100" category="3" text="u00077 = 962_141_841"/>
+      <annotation identifier="101" category="3" text="u00078 = 1_185_346_729"/>
+      <annotation identifier="102" category="3" text="u00079 = 2_929_192_812"/>
+      <annotation identifier="103" category="3" text="u00080 = 3_411_805_247"/>
+      <annotation identifier="104" category="3" text="u00081 = 3_388_852_578"/>
+      <annotation identifier="105" category="3" text="u00082 = 2_059_203_393"/>
+      <annotation identifier="106" category="3" text="u00083 = 3_740_392_704"/>
+      <annotation identifier="107" category="3" text="u00084 = 2_907_687_156"/>
+      <annotation identifier="108" category="3" text="u00085 = 882_108_096"/>
+      <annotation identifier="109" category="3" text="u00086 = 3_207_194_091"/>
+      <annotation identifier="110" category="3" text="u00087 = 514_526_729"/>
+      <annotation identifier="111" category="3" text="u00088 = 980_536_741"/>
+      <annotation identifier="112" category="3" text="u00089 = 424_463_739"/>
+      <annotation identifier="113" category="3" text="u00090 = 1_214_473_940"/>
+      <annotation identifier="114" category="3" text="u00091 = 137_533_170"/>
+      <annotation identifier="115" category="3" text="u00092 = 2_093_688_487"/>
+      <annotation identifier="116" category="3" text="u00093 = 3_618_292_236"/>
+      <annotation identifier="117" category="3" text="u00094 = 590_672_154"/>
+      <annotation identifier="120" category="3" text="u00097 = 4_140_146_613"/>
+      <annotation identifier="121" category="3" text="u00098 = 1_810_672_845"/>
+      <annotation identifier="122" category="3" text="u00099 = 1_195_426_838"/>
+      <annotation identifier="123" category="3" text="u00100 = 339_934_213"/>
+      <annotation identifier="124" category="3" text="u00101 = 2_038_529_137"/>
+      <annotation identifier="125" category="3" text="u00102 = 3_342_841_624"/>
+      <annotation identifier="126" category="3" text="u00103 = 2_929_920_493"/>
+      <annotation identifier="127" category="3" text="u00104 = 299_282_603"/>
+      <annotation identifier="128" category="3" text="u00105 = 3_086_643_943"/>
+      <annotation identifier="129" category="3" text="u00106 = 275_408_605"/>
+      <annotation identifier="132" category="3" text="u00109 = 1_947_394_350"/>
+      <annotation identifier="133" category="3" text="u00110 = 1_956_797_534"/>
+      <annotation identifier="134" category="3" text="u00111 = 2_109_461_277"/>
+      <annotation identifier="135" category="3" text="u00112 = 1_948_358_695"/>
+      <annotation identifier="136" category="3" text="u00113 = 3_249_467_242"/>
+      <annotation identifier="137" category="3" text="u00114 = 1_953_217_099"/>
+      <annotation identifier="138" category="3" text="u00115 = 627_362_136"/>
+      <annotation identifier="139" category="3" text="u00116 = 3_026_282_709"/>
+      <annotation identifier="140" category="3" text="u00117 = 3_770_132_456"/>
+      <annotation identifier="141" category="3" text="u00118 = 2_511_149_343"/>
+      <annotation identifier="142" category="3" text="u00119 = 91_264_944"/>
+      <annotation identifier="143" category="3" text="u00120 = 741_828_466"/>
+      <annotation identifier="144" category="3" text="u00121 = 2_361_287_173"/>
+      <annotation identifier="145" category="3" text="u00122 = 585_245_075"/>
+      <annotation identifier="146" category="3" text="u00123 = 2_508_291_800"/>
+      <annotation identifier="147" category="3" text="u00124 = 4_068_767_173"/>
+      <annotation identifier="148" category="3" text="u00125 = 2_999_688_143"/>
+      <annotation identifier="149" category="3" text="u00126 = 1_614_552_132"/>
+      <annotation identifier="150" category="3" text="u00127 = 3_602_665_164"/>
+      <annotation identifier="151" category="3" text="u00128 = 3_273_332_430"/>
+      <annotation identifier="152" category="3" text="u00129 = 2_921_736_748"/>
+      <annotation identifier="153" category="3" text="u00130 = 1_289_268_384"/>
+      <annotation identifier="154" category="3" text="u00131 = 178_015_377"/>
+      <annotation identifier="155" category="3" text="u00132 = 2_897_134_940"/>
+      <annotation identifier="156" category="3" text="u00133 = 2_034_556_760"/>
+      <annotation identifier="157" category="3" text="u00134 = 493_699_157"/>
+      <annotation identifier="158" category="3" text="u00135 = 1_470_331_458"/>
+      <annotation identifier="159" category="3" text="u00136 = 479_894_383"/>
+      <annotation identifier="160" category="3" text="u00137 = 1_919_481_874"/>
+      <annotation identifier="161" category="3" text="u00138 = 1_219_459_006"/>
+      <annotation identifier="162" category="3" text="u00139 = 1_833_801_370"/>
+      <annotation identifier="163" category="3" text="u00140 = 2_755_064_596"/>
+      <annotation identifier="164" category="3" text="u00141 = 1_890_814_699"/>
+      <annotation identifier="165" category="3" text="u00142 = 528_685_706"/>
+      <annotation identifier="166" category="3" text="u00143 = 351_713_589"/>
+      <annotation identifier="167" category="3" text="u00144 = 2_013_116_992"/>
+      <annotation identifier="168" category="3" text="u00145 = 4_149_137_383"/>
+      <annotation identifier="169" category="3" text="u00146 = 1_609_623_493"/>
+      <annotation identifier="170" category="3" text="u00147 = 393_728_849"/>
+      <annotation identifier="171" category="3" text="u00148 = 313_192_926"/>
+      <annotation identifier="172" category="3" text="u00149 = 4_166_951_382"/>
+      <annotation identifier="173" category="3" text="u00150 = 1_872_778_961"/>
+      <annotation identifier="174" category="3" text="u00151 = 3_699_089_227"/>
+      <annotation identifier="175" category="3" text="u00152 = 1_791_022_800"/>
+      <annotation identifier="176" category="3" text="u00153 = 399_642_727"/>
+      <annotation identifier="177" category="3" text="u00154 = 816_055_737"/>
+      <annotation identifier="178" category="3" text="u00155 = 4_001_395_338"/>
+      <annotation identifier="179" category="3" text="u00156 = 1_332_440_831"/>
+      <annotation identifier="180" category="3" text="u00157 = 3_366_808_665"/>
+      <annotation identifier="181" category="3" text="u00158 = 1_298_457_526"/>
+      <annotation identifier="182" category="3" text="u00159 = 946_091_708"/>
+      <annotation identifier="183" category="3" text="u00160 = 4_058_055_268"/>
+      <annotation identifier="184" category="3" text="u00161 = 52_291_396"/>
+      <annotation identifier="185" category="3" text="u00162 = 4_060_321_995"/>
+      <annotation identifier="186" category="3" text="u00163 = 67_996_926"/>
+      <annotation identifier="187" category="3" text="u00164 = 1_096_645_147"/>
+      <annotation identifier="188" category="3" text="u00165 = 2_027_863_171"/>
+      <annotation identifier="189" category="3" text="u00166 = 3_843_428_254"/>
+      <annotation identifier="190" category="3" text="u00167 = 945_736_398"/>
+      <annotation identifier="191" category="3" text="u00168 = 1_023_598_899"/>
+      <annotation identifier="192" category="3" text="u00169 = 1_383_124_785"/>
+      <annotation identifier="193" category="3" text="u00170 = 958_938_668"/>
+      <annotation identifier="194" category="3" text="u00171 = 3_178_218_798"/>
+      <annotation identifier="195" category="3" text="u00172 = 866_414_887"/>
+      <annotation identifier="196" category="3" text="u00173 = 2_570_336_045"/>
+      <annotation identifier="197" category="3" text="u00174 = 3_620_945_456"/>
+      <annotation identifier="198" category="3" text="u00175 = 2_306_386_750"/>
+      <annotation identifier="199" category="3" text="u00176 = 3_139_448_011"/>
+      <annotation identifier="1040" lifeage="ADDED" category="3" text="u00001 = 1_575_505_465"/>
+      <annotation identifier="1041" lifeage="ADDED" category="3" text="u00095 = 1_720_781_842"/>
+      <annotation identifier="1042" lifeage="ADDED" category="3" text="u00096 = 218_921_966"/>
+      <annotation identifier="1044" lifeage="ADDED" category="3" text="u00108 = 1_808_100_516"/>
+      <annotation identifier="1045" lifeage="ADDED" category="3" text="u00177 = 1_261_942_153"/>
+      <annotation identifier="1046" lifeage="ADDED" category="3" text="u00178 = 107_758_784"/>
+      <annotation identifier="1091" lifeage="ADDED" category="3" text="u00107 = 1_533_872_890"/>
+      <annotation identifier="24" lifeage="REMOVED" category="3" text="u00001 = 2_257_376_921"/>
+      <annotation identifier="118" lifeage="REMOVED" category="3" text="u00095 = 2_092_031_674"/>
+      <annotation identifier="119" lifeage="REMOVED" category="3" text="u00096 = 625_170_561"/>
+      <annotation identifier="130" lifeage="REMOVED" category="3" text="u00107 = 962_559_766"/>
+      <annotation identifier="131" lifeage="REMOVED" category="3" text="u00108 = 3_038_192_289"/>
+      <annotation identifier="200" lifeage="REMOVED" category="3" text="u00177 = 2_601_421_799"/>
+      <annotation identifier="201" lifeage="REMOVED" category="3" text="u00178 = 2_312_552_149"/>
+      <annotation identifier="202" lifeage="REMOVED" category="3" text="u00179 = 856_484_297"/>
+      <annotation identifier="203" lifeage="REMOVED" category="3" text="u00180 = 1_261_942_153"/>
+      <annotation identifier="204" lifeage="REMOVED" category="3" text="u00181 = 107_758_784"/>
+    </subprogram>
+  </file>
+  <file name="/mate/uwa/home/lutz/projects/demo/common/src/control.ads">
+    <subprogram line="1" column="1" name="control'Elab_Spec">
+    </subprogram>
+  </file>
+  <file name="/mate/uwa/home/lutz/projects/demo/car-blinker-rav-ql/src/blinker.ads" checks="140">
+    <subprogram line="2" column="1" name="blinker.finalize_spec">
+    </subprogram>
+    <subprogram line="2" column="1" name="blinker'Elab_Spec">
+      <annotation identifier="216" category="3" text="blinker.id_typeS(1) = 82"/>
+      <annotation identifier="217" category="3" text="blinker.id_typeS(2) = 76"/>
+      <annotation identifier="218" category="3" text="blinker.id_typeS(3) = 69"/>
+      <annotation identifier="219" category="3" text="blinker.cmd_typeS(1) = 83"/>
+      <annotation identifier="221" category="3" text="blinker.cmd_typeS(2) = 84"/>
+      <annotation identifier="227" category="3" text="(((barrier =&gt; cmd_type_access.receive_B12s'unrestricted_access), (action =&gt; cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access))'First) = 1"/>
+      <annotation identifier="228" category="3" text="(((barrier =&gt; cmd_type_access.receive_B12s'unrestricted_access), (action =&gt; cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access))'Last) = 1"/>
+      <annotation identifier="229" category="3" text="(((barrier =&gt; cmd_type_access.receive_B12s'unrestricted_access), (action =&gt; cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access)))'First = 1"/>
+      <annotation identifier="230" category="3" text="(((barrier =&gt; cmd_type_access.receive_B12s'unrestricted_access), (action =&gt; cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access)))'Last = 1"/>
+      <annotation identifier="231" category="3" text="((1, 2, 3, ...))(0) = 1"/>
+      <annotation identifier="233" category="3" text="(blinker.cmd_typeS'First) = 1"/>
+      <annotation identifier="234" category="3" text="(blinker.cmd_type_accessA'First) = 1"/>
+      <annotation identifier="235" category="3" text="(blinker.cmd_type_accessA'Last) = 1"/>
+      <annotation identifier="236" category="3" text="(blinker.id_typeS'First) = 1"/>
+      <annotation identifier="237" category="3" text="blinker.C48s = 1"/>
+      <annotation identifier="238" category="3" text="blinker.cmd_typeN(0) = 1"/>
+      <annotation identifier="239" category="3" text="blinker.cmd_typeS'First = 1"/>
+      <annotation identifier="240" category="3" text="blinker.cmd_type_accessA'First = 1"/>
+      <annotation identifier="241" category="3" text="blinker.cmd_type_accessA'Last = 1"/>
+      <annotation identifier="242" category="3" text="blinker.id_typeN(0) = 1"/>
+      <annotation identifier="243" category="3" text="blinker.id_typeS'First = 1"/>
+      <annotation identifier="244" category="3" text="(((barrier =&gt; cmd_type_access.receive_B12s'unrestricted_access), (action =&gt; cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access))) = &amp;(((barrier =&gt; cmd_type_access.receive_B12s'unrestricted_access), (action =&gt; cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access)))"/>
+      <annotation identifier="245" category="3" text="(((barrier =&gt; cmd_type_access.receive_B12s'unrestricted_access), (action =&gt; cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access)))(1).Action = blinker.cmd_type_access.receive_E11s'Protected_Type_Op'access"/>
+      <annotation identifier="246" category="3" text="blinker.cmd_type_accessA(1).Action = blinker.cmd_type_access.receive_E11s'Protected_Type_Op'access"/>
+      <annotation identifier="247" category="3" text="(((barrier =&gt; cmd_type_access.receive_B12s'unrestricted_access), (action =&gt; cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access)))(1).Barrier = blinker.cmd_type_access.receive_B12s'access"/>
+      <annotation identifier="248" category="3" text="blinker.cmd_type_accessA(1).Barrier = blinker.cmd_type_access.receive_B12s'access"/>
+      <annotation identifier="249" category="3" text="((1, 2, 3, ...)'First) = 0"/>
+      <annotation identifier="250" category="3" text="((1, 2, 3, ...))'First = 0"/>
+      <annotation identifier="253" category="3" text="(blinker.cmd_typeN'First) = 0"/>
+      <annotation identifier="254" category="3" text="(blinker.id_typeN'First) = 0"/>
+      <annotation identifier="255" category="3" text="Protected_Command.command_is_new = false"/>
+      <annotation identifier="256" category="3" text="Time_Span_Zero = 0"/>
+      <annotation identifier="257" category="3" text="blinker.blinker_typeE = false"/>
+      <annotation identifier="258" category="3" text="blinker.cmd_typeN'First = 0"/>
+      <annotation identifier="259" category="3" text="blinker.id_typeN'First = 0"/>
+      <annotation identifier="260" category="3" text="((1, 2, 3, ...)'Last) = 3"/>
+      <annotation identifier="261" category="3" text="((1, 2, 3, ...))(2) = 3"/>
+      <annotation identifier="262" category="3" text="((1, 2, 3, ...))'Last = 3"/>
+      <annotation identifier="263" category="3" text="(blinker.id_typeN'Last) = 3"/>
+      <annotation identifier="264" category="3" text="(blinker.id_typeS'Last) = 3"/>
+      <annotation identifier="265" category="3" text="Library_Task_Level = 3"/>
+      <annotation identifier="266" category="3" text="blinker.id_typeN(2) = 3"/>
+      <annotation identifier="267" category="3" text="blinker.id_typeN'Last = 3"/>
+      <annotation identifier="268" category="3" text="blinker.id_typeS'Last = 3"/>
+      <annotation identifier="269" category="3" text="((1, 2, 3, ...)) = &amp;((1, 2, 3, ...))"/>
+      <annotation identifier="270" category="3" text="((1, 2, 3, ...))(1) = 2"/>
+      <annotation identifier="273" category="3" text="(blinker.cmd_typeN'Last) = 2"/>
+      <annotation identifier="274" category="3" text="blinker.cmd_typeN'Last = 2"/>
+      <annotation identifier="275" category="3" text="blinker.id_typeN(1) = 2"/>
+      <annotation identifier="276" category="3" text="((1, 2, 3, ...))(3) = 4"/>
+      <annotation identifier="277" category="3" text="blinker.id_typeN(3) = 4"/>
+      <annotation identifier="282" category="3" text="blinker.cmd_typeN(2) = 10"/>
+      <annotation identifier="283" category="3" text="(blinker.cmd_typeS'Last) = 9"/>
+      <annotation identifier="284" category="3" text="blinker.cmd_typeS'Last = 9"/>
+      <annotation identifier="285" category="3" text="Barrier_Function_Pointer__Designated_Subprogram_Table(309_504) = &amp;blinker.cmd_type_access.receive_B12s"/>
+      <annotation identifier="286" category="3" text="Entry_Action_Pointer__Designated_Subprogram_Table(309_760) = &amp;blinker.cmd_type_access.receive_E11s'Protected_Type_Op"/>
+      <annotation identifier="287" category="3" text="Find_Body_Index_Access__Designated_Subprogram_Table(327_168) = &amp;blinker.cmd_type_accessF"/>
+      <annotation identifier="288" category="3" text="Protected_Command._Lock'Initialized"/>
+      <annotation identifier="289" category="3" text="Task_Procedure_Access__Designated_Subprogram_Table(128_256) = &amp;system.tasking.task_procedure_access'Unknown_Designated_Subprogram"/>
+      <annotation identifier="290" category="3" text="Unspecified_Priority = -1"/>
+      <annotation identifier="291" category="3" text="Unspecified_Size = -2**31"/>
+      <annotation identifier="292" category="3" text="blinker.blinker_typeZ = -2**31"/>
+      <annotation identifier="293" category="3" text="Unspecified_Task_Info = null"/>
+      <annotation identifier="294" category="3" text="blinker.cmd_typeN = &amp;blinker.cmd_typeN"/>
+      <annotation identifier="295" category="3" text="blinker.cmd_typeS = &amp;blinker.cmd_typeS"/>
+      <annotation identifier="296" category="3" text="blinker.cmd_type_accessA = &amp;blinker.cmd_type_accessA"/>
+      <annotation identifier="297" category="3" text="blinker.id_typeN = &amp;blinker.id_typeN"/>
+      <annotation identifier="298" category="3" text="blinker.id_typeS = &amp;blinker.id_typeS"/>
+      <annotation identifier="1074" lifeage="ADDED" category="3" text="blinker.cmd_typeS(8) = 82"/>
+      <annotation identifier="1075" lifeage="ADDED" category="3" text="blinker.cmd_typeS(5) = 83"/>
+      <annotation identifier="1076" lifeage="ADDED" category="3" text="blinker.cmd_typeS(6) = 84"/>
+      <annotation identifier="1077" lifeage="ADDED" category="3" text="blinker.cmd_typeS(9) = 84"/>
+      <annotation identifier="1078" lifeage="ADDED" category="3" text="blinker.cmd_typeS(3) = 79"/>
+      <annotation identifier="1079" lifeage="ADDED" category="3" text="blinker.cmd_typeS(4) = 80"/>
+      <annotation identifier="1080" lifeage="ADDED" category="3" text="blinker.cmd_typeS(7) = 65"/>
+      <annotation identifier="1081" lifeage="ADDED" category="3" text="((1, 5, 10))(0) = 1"/>
+      <annotation identifier="1082" lifeage="ADDED" category="3" text="((1, 5, 10)'First) = 0"/>
+      <annotation identifier="1083" lifeage="ADDED" category="3" text="((1, 5, 10))'First = 0"/>
+      <annotation identifier="1084" lifeage="ADDED" category="3" text="((1, 5, 10)'Last) = 2"/>
+      <annotation identifier="1085" lifeage="ADDED" category="3" text="((1, 5, 10))'Last = 2"/>
+      <annotation identifier="1086" lifeage="ADDED" category="3" text="((1, 5, 10)) = &amp;((1, 5, 10))"/>
+      <annotation identifier="1087" lifeage="ADDED" category="3" text="((1, 5, 10))(1) = 5"/>
+      <annotation identifier="1088" lifeage="ADDED" category="3" text="blinker.cmd_typeN(1) = 5"/>
+      <annotation identifier="1089" lifeage="ADDED" category="3" text="((1, 5, 10))(2) = 10"/>
+      <annotation identifier="215" lifeage="REMOVED" category="3" text="blinker.cmd_typeS(4) = 82"/>
+      <annotation identifier="220" lifeage="REMOVED" category="3" text="blinker.cmd_typeS(6) = 83"/>
+      <annotation identifier="222" lifeage="REMOVED" category="3" text="blinker.cmd_typeS(5) = 84"/>
+      <annotation identifier="223" lifeage="REMOVED" category="3" text="blinker.cmd_typeS(7) = 84"/>
+      <annotation identifier="224" lifeage="REMOVED" category="3" text="blinker.cmd_typeS(3) = 65"/>
+      <annotation identifier="225" lifeage="REMOVED" category="3" text="blinker.cmd_typeS(8) = 79"/>
+      <annotation identifier="226" lifeage="REMOVED" category="3" text="blinker.cmd_typeS(9) = 80"/>
+      <annotation identifier="232" lifeage="REMOVED" category="3" text="((1, 6, 10))(0) = 1"/>
+      <annotation identifier="251" lifeage="REMOVED" category="3" text="((1, 6, 10)'First) = 0"/>
+      <annotation identifier="252" lifeage="REMOVED" category="3" text="((1, 6, 10))'First = 0"/>
+      <annotation identifier="271" lifeage="REMOVED" category="3" text="((1, 6, 10)'Last) = 2"/>
+      <annotation identifier="272" lifeage="REMOVED" category="3" text="((1, 6, 10))'Last = 2"/>
+      <annotation identifier="278" lifeage="REMOVED" category="3" text="((1, 6, 10)) = &amp;((1, 6, 10))"/>
+      <annotation identifier="279" lifeage="REMOVED" category="3" text="((1, 6, 10))(1) = 6"/>
+      <annotation identifier="280" lifeage="REMOVED" category="3" text="blinker.cmd_typeN(1) = 6"/>
+      <annotation identifier="281" lifeage="REMOVED" category="3" text="((1, 6, 10))(2) = 10"/>
+    </subprogram>
+    <subprogram line="13" column="4" name="blinker.cmd_type_accessV'Deep_Initialize">
+    </subprogram>
+    <subprogram line="13" column="4" name="blinker.cmd_type_accessV'Deep_Finalize">
+    </subprogram>
+    <subprogram line="13" column="4" name="blinker.cmd_type_accessV'Finalize_Address">
+      <message identifier="305" category="1" rank="SUPPRESSED" line="13" column="4" text="might fail: requires (unchecked_conversion) /= null" is_check="true"/>
+    </subprogram>
+    <subprogram line="13" column="4" name="blinker.cmd_type_accessV'Initialize">
+      <annotation identifier="308" category="3" text="_init.command_is_new = false"/>
+    </subprogram>
+    <subprogram line="13" column="4" name="blinker.cmd_type_accessVIP.F26s">
+    </subprogram>
+    <subprogram line="13" column="19" name="blinker.cmd_type_accessF">
+      <annotation identifier="313" category="3" text="blinker.cmd_type_accessF'Result = $E"/>
+      <annotation identifier="314" category="3" text="blinker.cmd_type_accessF'Result'Initialized"/>
+    </subprogram>
+    <subprogram line="15" column="7" name="blinker.P7s'Initialize">
+      <annotation identifier="317" category="3" text="_init.cmd = null"/>
+    </subprogram>
+    <subprogram line="21" column="4" name="blinker.blinker_typeV'Initialize">
+      <annotation identifier="321" category="3" text="_init._task_id'Initialized"/>
+      <annotation identifier="320" lifeage="REMOVED" category="3" text="_init._priority'Initialized"/>
+      <annotation identifier="322" lifeage="REMOVED" category="3" text="_init.c = c"/>
+      <annotation identifier="323" lifeage="REMOVED" category="3" text="_init.c'Initialized"/>
+    </subprogram>
+  </file>
+  <file name="/mate/uwa/home/lutz/projects/demo/car-blinker-rav-ql/src/bcontrol.adb" checks="322">
+    <subprogram line="5" column="1" name="bcontrol'Elab_Body">
+      <annotation identifier="328" category="3" text="(bcontrol.blinker_controlT1'First) = 1"/>
+      <annotation identifier="329" category="3" text="(bcontrol.left_blinkerT1'First) = 1"/>
+      <annotation identifier="331" category="3" text="(bcontrol.stim_controlT1'First) = 1"/>
+      <annotation identifier="334" category="3" text="bcontrol.blinker_controlT1'First = 1"/>
+      <annotation identifier="335" category="3" text="bcontrol.left_blinkerT1'First = 1"/>
+      <annotation identifier="337" category="3" text="bcontrol.stim_controlT1'First = 1"/>
+      <annotation identifier="339" category="3" text="(bcontrol.blinker_controlT1'Last) = 15"/>
+      <annotation identifier="340" category="3" text="bcontrol.blinker_controlT1'Last = 15"/>
+      <annotation identifier="341" category="3" text="(bcontrol.left_blinkerT1'Last) = 12"/>
+      <annotation identifier="342" category="3" text="(bcontrol.stim_controlT1'Last) = 12"/>
+      <annotation identifier="344" category="3" text="bcontrol.left_blinkerT1'Last = 12"/>
+      <annotation identifier="345" category="3" text="bcontrol.stim_controlT1'Last = 12"/>
+      <annotation identifier="350" category="3" text="Blinker_Control._task_id'Initialized"/>
+      <annotation identifier="352" category="3" text="Left_Blinker._task_id'Initialized"/>
+      <annotation identifier="353" category="3" text="Library_Task_Level = 3"/>
+      <annotation identifier="358" category="3" text="Stim_Control._task_id'Initialized"/>
+      <annotation identifier="362" category="3" text="bcontrol.blinker_controlT1 = &amp;bcontrol.blinker_controlT1"/>
+      <annotation identifier="363" category="3" text="bcontrol.blinker_controlT1'Initialized"/>
+      <annotation identifier="364" category="3" text="bcontrol.blinker_controlT1(1..15) in (95 | 98..99 | 101 | 105 | ... | 116)"/>
+      <annotation identifier="365" category="3" text="bcontrol.blinker_control_typeE'Initialized"/>
+      <annotation identifier="366" category="3" text="bcontrol.left_blinkerT1 = &amp;bcontrol.left_blinkerT1"/>
+      <annotation identifier="367" category="3" text="bcontrol.left_blinkerT1'Initialized"/>
+      <annotation identifier="368" category="3" text="bcontrol.left_blinkerT1(1..12) in (95 | 98 | 101..102 | 105 | ... | 116)"/>
+      <annotation identifier="372" category="3" text="bcontrol.stim_controlT1 = &amp;bcontrol.stim_controlT1"/>
+      <annotation identifier="373" category="3" text="bcontrol.stim_controlT1'Initialized"/>
+      <annotation identifier="374" category="3" text="bcontrol.stim_controlT1(1..12) in (95 | 99 | 105 | 108..111 | 114..116)"/>
+      <annotation identifier="375" category="3" text="bcontrol.stim_control_typeE'Initialized"/>
+      <annotation identifier="330" lifeage="REMOVED" category="3" text="(bcontrol.right_blinkerT1'First) = 1"/>
+      <annotation identifier="332" lifeage="REMOVED" category="3" text="(bcontrol.warn_blinkerT1'First) = 1"/>
+      <annotation identifier="333" lifeage="REMOVED" category="3" text="Left_Blinker.c = L"/>
+      <annotation identifier="336" lifeage="REMOVED" category="3" text="bcontrol.right_blinkerT1'First = 1"/>
+      <annotation identifier="338" lifeage="REMOVED" category="3" text="bcontrol.warn_blinkerT1'First = 1"/>
+      <annotation identifier="343" lifeage="REMOVED" category="3" text="(bcontrol.warn_blinkerT1'Last) = 12"/>
+      <annotation identifier="346" lifeage="REMOVED" category="3" text="bcontrol.warn_blinkerT1'Last = 12"/>
+      <annotation identifier="347" lifeage="REMOVED" category="3" text="(bcontrol.right_blinkerT1'Last) = 13"/>
+      <annotation identifier="348" lifeage="REMOVED" category="3" text="bcontrol.right_blinkerT1'Last = 13"/>
+      <annotation identifier="349" lifeage="REMOVED" category="3" text="Blinker_Control._priority'Initialized"/>
+      <annotation identifier="351" lifeage="REMOVED" category="3" text="Left_Blinker._priority'Initialized"/>
+      <annotation identifier="354" lifeage="REMOVED" category="3" text="Right_Blinker._priority'Initialized"/>
+      <annotation identifier="355" lifeage="REMOVED" category="3" text="Right_Blinker._task_id'Initialized"/>
+      <annotation identifier="356" lifeage="REMOVED" category="3" text="Right_Blinker.c = R"/>
+      <annotation identifier="357" lifeage="REMOVED" category="3" text="Stim_Control._priority'Initialized"/>
+      <annotation identifier="359" lifeage="REMOVED" category="3" text="Warn_Blinker._priority'Initialized"/>
+      <annotation identifier="360" lifeage="REMOVED" category="3" text="Warn_Blinker._task_id'Initialized"/>
+      <annotation identifier="361" lifeage="REMOVED" category="3" text="Warn_Blinker.c = E"/>
+      <annotation identifier="369" lifeage="REMOVED" category="3" text="bcontrol.right_blinkerT1 = &amp;bcontrol.right_blinkerT1"/>
+      <annotation identifier="370" lifeage="REMOVED" category="3" text="bcontrol.right_blinkerT1'Initialized"/>
+      <annotation identifier="371" lifeage="REMOVED" category="3" text="bcontrol.right_blinkerT1(1..13) in (95 | 98 | 101 | 103..105 | ... | 116)"/>
+      <annotation identifier="376" lifeage="REMOVED" category="3" text="bcontrol.warn_blinkerT1 = &amp;bcontrol.warn_blinkerT1"/>
+      <annotation identifier="377" lifeage="REMOVED" category="3" text="bcontrol.warn_blinkerT1'Initialized"/>
+      <annotation identifier="378" lifeage="REMOVED" category="3" text="bcontrol.warn_blinkerT1(1..12) in (95 | 97..98 | 101 | 105 | ... | 119)"/>
+    </subprogram>
+    <subprogram line="8" column="7" name="bcontrol.command_access.sendN">
+      <annotation identifier="381" category="1" text="_object.command'Initialized"/>
+      <annotation identifier="382" category="3" text="_object.command = One-of{_object.command'Old, cmd}"/>
+      <annotation identifier="383" category="3" text="_object.command'Initialized"/>
+      <annotation identifier="384" category="3" text="_object.new_command'Initialized"/>
+      <annotation identifier="385" category="5" text="_object.command - cmd: {-5..-1 | 1..5}, {0}"/>
+    </subprogram>
+    <subprogram line="8" column="7" name="bcontrol.command_access.sendP">
+      <annotation identifier="388" category="3" text="_object.command'Initialized"/>
+      <annotation identifier="389" category="3" text="_object.new_command = One-of{false, true}"/>
+      <annotation identifier="390" category="3" text="_object.new_command'Initialized"/>
+    </subprogram>
+    <subprogram line="8" column="7" name="bcontrol.command_access.sendP._finalizer">
+    </subprogram>
+    <subprogram line="17" column="7" name="bcontrol.command_access.receive_E6s'Protected_Type_Op">
+      <message identifier="396" category="1" rank="SUPPRESSED" line="17" column="7" text="might fail: requires (unchecked_conversion) /= null" is_check="true"/>
+      <message identifier="397" merged_messages="394" category="1" rank="SUPPRESSED" line="17" column="7" text="might fail: requires _object /= null" is_check="true"/>
+      <message identifier="402" category="1" rank="SUPPRESSED" line="19" column="10" text="might fail: requires (unchecked_conversion) /= null" is_check="true"/>
+      <message identifier="403" category="1" rank="SUPPRESSED" line="19" column="10" text="might fail: requires (unchecked_conversion).all.cmd /= null" is_check="true"/>
+      <message identifier="404" category="1" rank="SUPPRESSED" line="19" column="14" text="might fail: requires _object /= null" is_check="true"/>
+    </subprogram>
+    <subprogram line="17" column="50" name="bcontrol.command_access.receive_B7s">
+      <annotation identifier="400" category="3" text="bcontrol.command_access.receive_B7s'Result'Initialized"/>
+    </subprogram>
+    <subprogram line="31" column="4" name="bcontrol.blinker_control_type'Task_Type_Body">
+      <annotation identifier="406" category="5" text="$P.cmd.all: {BLS}, {BLE}, {BRS}, {EMS}"/>
+      <message identifier="410" category="2" rank="SUPPRESSED" line="36" column="7" text="into Cmd"/>
+      <message identifier="411" category="1" rank="SUPPRESSED" line="40" column="17" text="might fail: requires $P.cmd /= null" is_check="true"/>
+      <message identifier="412" category="3" rank="SUPPRESSED" line="46" column="36" text="might fail on blinker.cmd_type_access.sendP: requires (soft) cmd to be initialized" is_check="true"/>
+      <message identifier="413" category="3" rank="SUPPRESSED" line="54" column="36" text="might fail on blinker.cmd_type_access.sendP: requires (soft) cmd to be initialized" is_check="true"/>
+      <message identifier="414" category="3" rank="SUPPRESSED" line="60" column="36" text="might fail on blinker.cmd_type_access.sendP: requires (soft) _object.command_to to be initialized" is_check="true"/>
+      <message identifier="416" category="3" rank="SUPPRESSED" line="60" column="36" text="might fail on blinker.cmd_type_access.sendP: requires (soft) _object.command_to.Cmd to be initialized" is_check="true"/>
+      <message identifier="415" category="3" rank="SUPPRESSED" line="60" column="36" text="might fail on blinker.cmd_type_access.sendP: requires (soft) cmd to be initialized" is_check="true"/>
+      <message identifier="417" category="3" rank="SUPPRESSED" line="65" column="36" text="might fail on blinker.cmd_type_access.sendP: requires (soft) _object.command_to to be initialized" is_check="true"/>
+      <message identifier="419" category="3" rank="SUPPRESSED" line="65" column="36" text="might fail on blinker.cmd_type_access.sendP: requires (soft) _object.command_to.Cmd to be initialized" is_check="true"/>
+      <message identifier="418" category="3" rank="SUPPRESSED" line="65" column="36" text="might fail on blinker.cmd_type_access.sendP: requires (soft) cmd to be initialized" is_check="true"/>
+      <message identifier="420" category="3" rank="SUPPRESSED" line="73" column="36" text="might fail on blinker.cmd_type_access.sendP: requires (soft) cmd to be initialized" is_check="true"/>
+      <message identifier="421" category="3" rank="SUPPRESSED" line="81" column="36" text="might fail on blinker.cmd_type_access.sendP: requires (soft) cmd to be initialized" is_check="true"/>
+    </subprogram>
+    <subprogram line="31" column="4" name="bcontrol.blinker_control_type._finalizer">
+    </subprogram>
+    <subprogram line="94" column="4" name="bcontrol.stim_control_type'Task_Type_Body">
+      <annotation identifier="423" category="5" text="$P.cmd.all: {STR}, {BLE..EMS | STP}"/>
+      <message identifier="427" category="2" rank="SUPPRESSED" line="96" column="7" text="into c"/>
+      <message identifier="437" category="1" rank="SUPPRESSED" line="115" column="17" text="might fail: requires $P.cmd /= null" is_check="true"/>
+    </subprogram>
+    <subprogram line="94" column="4" name="bcontrol.stim_control_type._finalizer">
+    </subprogram>
+    <subprogram line="98" column="7" name="bcontrol.stim_control_type.process_command">
+      <annotation identifier="429" category="3" text="Command.command'Initialized"/>
+      <annotation identifier="430" category="3" text="Command.new_command'Initialized"/>
+      <annotation identifier="431" category="3" text="Next_Time'Initialized"/>
+      <annotation identifier="432" category="3" text="bcontrol.stim_control_type.process_command'Result'Initialized"/>
+      <annotation identifier="433" category="3" text="c'Initialized"/>
+      <annotation identifier="434" category="5" text="$P.cmd.all: {STP}, {BLE..STR}"/>
+      <message identifier="436" category="1" rank="SUPPRESSED" line="100" column="17" text="might fail: requires $P.cmd /= null" is_check="true"/>
+    </subprogram>
+  </file>
+  <file name="/mate/uwa/home/lutz/projects/demo/car-blinker-rav-ql/src/blinker.adb" checks="262">
+    <subprogram line="3" column="1" name="blinker'Elab_Body">
+      <annotation identifier="441" category="3" text="blinker.blinker_typeE = true"/>
+    </subprogram>
+    <subprogram line="6" column="7" name="blinker.cmd_type_access.sendN">
+      <annotation identifier="444" category="1" text="_object.command_to.Cmd'Initialized"/>
+      <annotation identifier="445" category="1" text="cmd.Cmd'Initialized"/>
+      <annotation identifier="446" category="3" text="_object.command_is_new'Initialized"/>
+      <annotation identifier="447" category="3" text="_object.command_to = One-of{_object.command_to'Old, cmd}"/>
+      <annotation identifier="448" category="3" text="_object.command_to.Cmd = One-of{_object.command_to.Cmd'Old, cmd.Cmd}"/>
+      <annotation identifier="449" category="3" text="_object.command_to.Cmd'Initialized"/>
+      <annotation identifier="450" category="5" text="cmd.Cmd - _object.command_to.Cmd: {-1 | 1}, {0}"/>
+    </subprogram>
+    <subprogram line="6" column="7" name="blinker.cmd_type_access.sendP">
+      <annotation identifier="453" category="1" text="cmd.Cmd'Initialized"/>
+      <annotation identifier="454" category="3" text="_object.command_is_new = One-of{false, true}"/>
+      <annotation identifier="455" category="3" text="_object.command_is_new'Initialized"/>
+      <annotation identifier="456" category="3" text="_object.command_to.Cmd'Initialized"/>
+    </subprogram>
+    <subprogram line="6" column="7" name="blinker.cmd_type_access.sendP._finalizer">
+    </subprogram>
+    <subprogram line="15" column="7" name="blinker.cmd_type_access.receive_E11s'Protected_Type_Op">
+      <message identifier="462" category="1" rank="SUPPRESSED" line="15" column="7" text="might fail: requires (unchecked_conversion) /= null" is_check="true"/>
+      <message identifier="468" category="1" rank="SUPPRESSED" line="17" column="10" text="might fail: requires (unchecked_conversion) /= null" is_check="true"/>
+      <message identifier="469" category="1" rank="SUPPRESSED" line="17" column="10" text="might fail: requires (unchecked_conversion).all.cmd /= null" is_check="true"/>
+      <message identifier="470" category="1" rank="SUPPRESSED" line="17" column="14" text="might fail: requires _object /= null" is_check="true"/>
+      <message identifier="523" merged_messages="524" category="1" rank="SUPPRESSED" line="15" column="7" text="might fail: requires _object /= null" is_check="true" from_file="/opt/codepeer/libexec/codepeer/lib/gcc/i686-pc-linux-gnu/4.7.4/adainclude/s-tpobop.ads" from_line="119" from_column="4"/>
+    </subprogram>
+    <subprogram line="15" column="54" name="blinker.cmd_type_access.receive_B12s">
+      <annotation identifier="466" category="3" text="blinker.cmd_type_access.receive_B12s'Result'Initialized"/>
+      <message identifier="460" merged_messages="463" category="1" rank="SUPPRESSED" line="15" column="7" text="might fail: requires _object /= null" is_check="true"/>
+    </subprogram>
+    <subprogram line="21" column="4" name="blinker.blinker_type'Task_Type_Body">
+      <annotation identifier="1007" lifeage="ADDED" category="5" text="Id@28: {R}, {L}, {E}"/>
+      <annotation identifier="473" lifeage="REMOVED" category="5" text="_task.c: {R}, {L}, {E}"/>
+      <message identifier="1090" lifeage="ADDED" category="4" rank="HIGH" line="30" column="25" text="fails here: requires Command.Cmd in STOP..START" is_check="true"/>
+      <message identifier="478" category="4" rank="HIGH" line="30" column="25" text=": Command.Cmd is uninitialized here" is_check="true"/>
+      <message identifier="1008" lifeage="ADDED" category="4" rank="HIGH" line="38" column="62" text="fails here: requires Command.Receiver in R..E" is_check="true"/>
+      <message identifier="477" category="4" rank="HIGH" line="38" column="62" text=": Command.Receiver is uninitialized here" is_check="true"/>
+      <message identifier="1012" lifeage="ADDED" category="4" rank="HIGH" line="40" column="63" text="fails here: requires Command.Receiver in R..E" is_check="true"/>
+      <message identifier="1011" lifeage="ADDED" category="4" rank="HIGH" line="40" column="63" text=": Command.Receiver is uninitialized here" is_check="true"/>
+      <message identifier="472" lifeage="REMOVED" category="1" rank="LOW" line="21" column="4" text="might fail: requires _task /= null" is_check="true"/>
+      <message identifier="479" lifeage="REMOVED" category="4" rank="HIGH" line="31" column="25" text="fails here: requires Command.Cmd in START..STOP" is_check="true"/>
+    </subprogram>
+    <subprogram line="21" column="4" name="blinker.blinker_type._finalizer">
+    </subprogram>
+  </file>
+  <file name="/mate/uwa/home/lutz/projects/demo/car-blinker-rav-ql/src/main.adb" checks="78">
+    <subprogram line="10" column="1" name="main'Elab_Subp_Spec">
+    </subprogram>
+    <subprogram line="10" column="1" name="main">
+      <message identifier="486" category="5" rank="HIGH" line="10" column="1" text=": main"/>
+      <message identifier="515" category="2" rank="SUPPRESSED" line="13" column="4" text="into Stop"/>
+      <message identifier="516" category="6" rank="MEDIUM" line="23" column="9" text=""/>
+      <message identifier="519" category="7" rank="SUPPRESSED" line="27" column="35" text="might fail: requires (value_enumeration_8 (command_typeS, command_typeN'address, 5, ...)) &lt;= 5" is_check="true"/>
+      <message identifier="520" category="3" rank="SUPPRESSED" line="29" column="23" text="might fail on bcontrol.command_access.sendP: requires (soft) _object.command to be initialized" is_check="true"/>
+    </subprogram>
+    <subprogram line="10" column="1" name="main'Elab_Subp_Body">
+      <annotation identifier="489" category="3" text="((1, 4, 7, ...)'First) = 0"/>
+      <annotation identifier="490" category="3" text="((1, 4, 7, ...))'First = 0"/>
+      <annotation identifier="491" category="3" text="(bcontrol.command_typeN'First) = 0"/>
+      <annotation identifier="492" category="3" text="nul = 0"/>
+      <annotation identifier="493" category="3" text="((1, 4, 7, ...)'Last) = 6"/>
+      <annotation identifier="494" category="3" text="((1, 4, 7, ...))'Last = 6"/>
+      <annotation identifier="495" category="3" text="(bcontrol.command_typeN'Last) = 6"/>
+      <annotation identifier="496" category="3" text="((1, 4, 7, ...)) = &amp;((1, 4, 7, ...))"/>
+      <annotation identifier="497" category="3" text="((1, 4, 7, ...))(0) = 1"/>
+      <annotation identifier="498" category="3" text="(bcontrol.command_typeS'First) = 1"/>
+      <annotation identifier="499" category="3" text="bcontrol.command_typeN(0) = 1"/>
+      <annotation identifier="500" category="3" text="((1, 4, 7, ...))(1) = 4"/>
+      <annotation identifier="501" category="3" text="bcontrol.command_typeN(1) = 4"/>
+      <annotation identifier="502" category="3" text="((1, 4, 7, ...))(2) = 7"/>
+      <annotation identifier="503" category="3" text="bcontrol.command_typeN(2) = 7"/>
+      <annotation identifier="504" category="3" text="((1, 4, 7, ...))(3) = 10"/>
+      <annotation identifier="505" category="3" text="bcontrol.command_typeN(3) = 10"/>
+      <annotation identifier="506" category="3" text="((1, 4, 7, ...))(4) = 13"/>
+      <annotation identifier="507" category="3" text="bcontrol.command_typeN(4) = 13"/>
+      <annotation identifier="508" category="3" text="((1, 4, 7, ...))(5) = 16"/>
+      <annotation identifier="509" category="3" text="bcontrol.command_typeN(5) = 16"/>
+      <annotation identifier="510" category="3" text="((1, 4, 7, ...))(6) = 19"/>
+      <annotation identifier="511" category="3" text="bcontrol.command_typeN(6) = 19"/>
+      <annotation identifier="512" category="3" text="(bcontrol.command_typeS'Last) = 18"/>
+      <annotation identifier="513" category="3" text="bcontrol.command_typeS(1..18) in (66 | 69 | 76..77 | 80 | 82..84)"/>
+    </subprogram>
+    <subprogram lifeage="ADDED" line="23" column="9" name="main.L_1.B5b._finalizer">
+    </subprogram>
+    <subprogram lifeage="REMOVED" line="2097151" column="2047" name="main.L_1.B6b._finalizer">
+    </subprogram>
+  </file>
+  <file name="/opt/codepeer/libexec/codepeer/lib/gcc/i686-pc-linux-gnu/4.7.4/adainclude/s-tpobop.ads">
+  </file>
+  <file name="/mate/uwa/home/lutz/projects/demo/common/src/control.adb" checks="68">
+    <subprogram line="2" column="1" name="control'Elab_Body">
+      <annotation identifier="527" category="3" text="nul = 0"/>
+    </subprogram>
+    <subprogram line="3" column="4" name="control.put_line">
+    </subprogram>
+    <subprogram line="8" column="4" name="control.get_line">
+      <annotation identifier="532" category="3" text="not_init'ed(control.get_line'Result())"/>
+      <annotation identifier="533" category="3" text="control.get_line'Result(1)'Initialized"/>
+      <annotation identifier="534" category="3" text="control.get_line'Result(2)'Initialized"/>
+      <annotation identifier="535" category="3" text="control.get_line'Result(3)'Initialized"/>
+      <annotation identifier="536" category="3" text="control.get_line'Result(4) = 0"/>
+      <annotation identifier="537" category="3" text="control.get_line'Result(5) = 0"/>
+      <annotation identifier="538" category="3" text="control.get_line'Result'First = 1"/>
+      <annotation identifier="539" category="3" text="control.get_line'Result'Last = 5"/>
+    </subprogram>
+    <subprogram line="23" column="4" name="control.toggle_ledr">
+    </subprogram>
+    <subprogram line="28" column="4" name="control.toggle_ledl">
+    </subprogram>
+    <subprogram line="33" column="4" name="control.off_ledr">
+    </subprogram>
+    <subprogram line="38" column="4" name="control.off_ledl">
+    </subprogram>
+  </file>
+  <file name="/mate/uwa/home/lutz/projects/demo/car-blinker-rav-ql/src/bcontrol.ads" checks="172">
+    <subprogram line="2" column="1" name="bcontrol.finalize_spec">
+    </subprogram>
+    <subprogram line="2" column="1" name="bcontrol'Elab_Spec">
+      <annotation identifier="554" category="3" text="(((barrier =&gt; command_access.receive_B7s'unrestricted_access), (action =&gt; command_access.receive_E6s'Protected_Type_Op'unrestricted_access))'First) = 1"/>
+      <annotation identifier="555" category="3" text="(((barrier =&gt; command_access.receive_B7s'unrestricted_access), (action =&gt; command_access.receive_E6s'Protected_Type_Op'unrestricted_access))'Last) = 1"/>
+      <annotation identifier="556" category="3" text="(((barrier =&gt; command_access.receive_B7s'unrestricted_access), (action =&gt; command_access.receive_E6s'Protected_Type_Op'unrestricted_access)))'First = 1"/>
+      <annotation identifier="557" category="3" text="(((barrier =&gt; command_access.receive_B7s'unrestricted_access), (action =&gt; command_access.receive_E6s'Protected_Type_Op'unrestricted_access)))'Last = 1"/>
+      <annotation identifier="558" category="3" text="((1, 4, 7, ...))(0) = 1"/>
+      <annotation identifier="559" category="3" text="(bcontrol.command_accessA'First) = 1"/>
+      <annotation identifier="560" category="3" text="(bcontrol.command_accessA'Last) = 1"/>
+      <annotation identifier="561" category="3" text="(bcontrol.command_typeS'First) = 1"/>
+      <annotation identifier="562" category="3" text="bcontrol.C49s = 1"/>
+      <annotation identifier="563" category="3" text="bcontrol.command_accessA'First = 1"/>
+      <annotation identifier="564" category="3" text="bcontrol.command_accessA'Last = 1"/>
+      <annotation identifier="565" category="3" text="bcontrol.command_typeN(0) = 1"/>
+      <annotation identifier="566" category="3" text="bcontrol.command_typeS'First = 1"/>
+      <annotation identifier="567" category="3" text="(((barrier =&gt; command_access.receive_B7s'unrestricted_access), (action =&gt; command_access.receive_E6s'Protected_Type_Op'unrestricted_access))) = &amp;(((barrier =&gt; command_access.receive_B7s'unrestricted_access), (action =&gt; command_access.receive_E6s'Protected_Type_Op'unrestricted_access)))"/>
+      <annotation identifier="568" category="3" text="(((barrier =&gt; command_access.receive_B7s'unrestricted_access), (action =&gt; command_access.receive_E6s'Protected_Type_Op'unrestricted_access)))(1).Action = bcontrol.command_access.receive_E6s'Protected_Type_Op'access"/>
+      <annotation identifier="569" category="3" text="bcontrol.command_accessA(1).Action = bcontrol.command_access.receive_E6s'Protected_Type_Op'access"/>
+      <annotation identifier="570" category="3" text="(((barrier =&gt; command_access.receive_B7s'unrestricted_access), (action =&gt; command_access.receive_E6s'Protected_Type_Op'unrestricted_access)))(1).Barrier = bcontrol.command_access.receive_B7s'access"/>
+      <annotation identifier="571" category="3" text="bcontrol.command_accessA(1).Barrier = bcontrol.command_access.receive_B7s'access"/>
+      <annotation identifier="572" category="3" text="((1, 4, 7, ...)'First) = 0"/>
+      <annotation identifier="573" category="3" text="((1, 4, 7, ...))'First = 0"/>
+      <annotation identifier="574" category="3" text="(bcontrol.command_typeN'First) = 0"/>
+      <annotation identifier="575" category="3" text="Command.new_command = false"/>
+      <annotation identifier="576" category="3" text="Time_Span_Zero = 0"/>
+      <annotation identifier="577" category="3" text="bcontrol.blinker_control_typeE = false"/>
+      <annotation identifier="578" category="3" text="bcontrol.command_typeN'First = 0"/>
+      <annotation identifier="579" category="3" text="bcontrol.stim_control_typeE = false"/>
+      <annotation identifier="580" category="3" text="((1, 4, 7, ...)'Last) = 6"/>
+      <annotation identifier="581" category="3" text="((1, 4, 7, ...))'Last = 6"/>
+      <annotation identifier="582" category="3" text="(bcontrol.command_typeN'Last) = 6"/>
+      <annotation identifier="583" category="3" text="bcontrol.command_typeN'Last = 6"/>
+      <annotation identifier="584" category="3" text="((1, 4, 7, ...)) = &amp;((1, 4, 7, ...))"/>
+      <annotation identifier="585" category="3" text="((1, 4, 7, ...))(1) = 4"/>
+      <annotation identifier="586" category="3" text="bcontrol.command_typeN(1) = 4"/>
+      <annotation identifier="587" category="3" text="((1, 4, 7, ...))(2) = 7"/>
+      <annotation identifier="588" category="3" text="bcontrol.command_typeN(2) = 7"/>
+      <annotation identifier="589" category="3" text="((1, 4, 7, ...))(3) = 10"/>
+      <annotation identifier="590" category="3" text="bcontrol.command_typeN(3) = 10"/>
+      <annotation identifier="591" category="3" text="((1, 4, 7, ...))(4) = 13"/>
+      <annotation identifier="592" category="3" text="bcontrol.command_typeN(4) = 13"/>
+      <annotation identifier="593" category="3" text="((1, 4, 7, ...))(5) = 16"/>
+      <annotation identifier="594" category="3" text="bcontrol.command_typeN(5) = 16"/>
+      <annotation identifier="595" category="3" text="((1, 4, 7, ...))(6) = 19"/>
+      <annotation identifier="596" category="3" text="bcontrol.command_typeN(6) = 19"/>
+      <annotation identifier="597" category="3" text="(bcontrol.command_typeS'Last) = 18"/>
+      <annotation identifier="598" category="3" text="bcontrol.command_typeS'Last = 18"/>
+      <annotation identifier="599" category="3" text="Barrier_Function_Pointer__Designated_Subprogram_Table(57_600) = &amp;bcontrol.command_access.receive_B7s"/>
+      <annotation identifier="600" category="3" text="Command._Lock'Initialized"/>
+      <annotation identifier="601" category="3" text="Entry_Action_Pointer__Designated_Subprogram_Table(57_856) = &amp;bcontrol.command_access.receive_E6s'Protected_Type_Op"/>
+      <annotation identifier="602" category="3" text="Find_Body_Index_Access__Designated_Subprogram_Table(95_744) = &amp;bcontrol.command_accessF"/>
+      <annotation identifier="603" category="3" text="Library_Task_Level = 3"/>
+      <annotation identifier="604" category="3" text="Task_Procedure_Access__Designated_Subprogram_Table(128_256) = &amp;system.tasking.task_procedure_access'Unknown_Designated_Subprogram"/>
+      <annotation identifier="605" category="3" text="Unspecified_Priority = -1"/>
+      <annotation identifier="606" category="3" text="Unspecified_Size = -2**31"/>
+      <annotation identifier="607" category="3" text="bcontrol.blinker_control_typeZ = -2**31"/>
+      <annotation identifier="608" category="3" text="bcontrol.stim_control_typeZ = -2**31"/>
+      <annotation identifier="609" category="3" text="Unspecified_Task_Info = null"/>
+      <annotation identifier="610" category="3" text="bcontrol.command_accessA = &amp;bcontrol.command_accessA"/>
+      <annotation identifier="611" category="3" text="bcontrol.command_typeN = &amp;bcontrol.command_typeN"/>
+      <annotation identifier="612" category="3" text="bcontrol.command_typeS = &amp;bcontrol.command_typeS"/>
+      <annotation identifier="613" category="3" text="bcontrol.command_typeS(1..18) in (66 | 69 | 76..77 | 80 | 82..84)"/>
+    </subprogram>
+    <subprogram line="6" column="4" name="bcontrol.command_accessV'Deep_Initialize">
+    </subprogram>
+    <subprogram line="6" column="4" name="bcontrol.command_accessV'Deep_Finalize">
+    </subprogram>
+    <subprogram line="6" column="4" name="bcontrol.command_accessV'Finalize_Address">
+      <message identifier="620" category="1" rank="SUPPRESSED" line="6" column="4" text="might fail: requires (unchecked_conversion) /= null" is_check="true"/>
+    </subprogram>
+    <subprogram line="6" column="4" name="bcontrol.command_accessV'Initialize">
+      <annotation identifier="623" category="3" text="_init.new_command = false"/>
+    </subprogram>
+    <subprogram line="6" column="4" name="bcontrol.command_accessVIP.F19s">
+    </subprogram>
+    <subprogram line="6" column="19" name="bcontrol.command_accessF">
+      <annotation identifier="628" category="3" text="bcontrol.command_accessF'Result = $E"/>
+      <annotation identifier="629" category="3" text="bcontrol.command_accessF'Result'Initialized"/>
+    </subprogram>
+    <subprogram line="8" column="7" name="bcontrol.P2s'Initialize">
+      <annotation identifier="632" category="3" text="_init.cmd = null"/>
+    </subprogram>
+    <subprogram line="17" column="4" name="bcontrol.blinker_control_typeV'Initialize">
+      <annotation identifier="636" category="3" text="_init._task_id'Initialized"/>
+      <annotation identifier="635" lifeage="REMOVED" category="3" text="_init._priority'Initialized"/>
+    </subprogram>
+    <subprogram line="21" column="4" name="bcontrol.stim_control_typeV'Initialize">
+      <annotation identifier="640" category="3" text="_init._task_id'Initialized"/>
+      <annotation identifier="639" lifeage="REMOVED" category="3" text="_init._priority'Initialized"/>
+    </subprogram>
+  </file>
+  <file name="/mate/uwa/home/lutz/projects/demo/car-blinker-rav-ql/obj/codepeer/b~main.adb" checks="6">
+    <subprogram line="8" column="1" name="ada_main_for_main'Elab_Body">
+    </subprogram>
+    <subprogram line="11" column="4" name="ada_main_for_main.adafinal">
+    </subprogram>
+    <subprogram line="16" column="4" name="ada_main_for_main.adainit">
+      <annotation identifier="650" category="3" text="blinker.cmd_typeS(1) = 83"/>
+      <annotation identifier="652" category="3" text="blinker.id_typeS(3) = 69"/>
+      <annotation identifier="654" category="3" text="blinker.id_typeS(1) = 82"/>
+      <annotation identifier="655" category="3" text="blinker.id_typeS(2) = 76"/>
+      <annotation identifier="656" category="3" text="blinker.cmd_typeS(2) = 84"/>
+      <annotation identifier="661" category="3" text="(((barrier =&gt; cmd_type_access.receive_B12s'unrestricted_access), (action =&gt; cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access))'First) = 1"/>
+      <annotation identifier="662" category="3" text="(((barrier =&gt; cmd_type_access.receive_B12s'unrestricted_access), (action =&gt; cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access))'Last) = 1"/>
+      <annotation identifier="663" category="3" text="(((barrier =&gt; cmd_type_access.receive_B12s'unrestricted_access), (action =&gt; cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access)))'First = 1"/>
+      <annotation identifier="664" category="3" text="(((barrier =&gt; cmd_type_access.receive_B12s'unrestricted_access), (action =&gt; cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access)))'Last = 1"/>
+      <annotation identifier="665" category="3" text="(((barrier =&gt; command_access.receive_B7s'unrestricted_access), (action =&gt; command_access.receive_E6s'Protected_Type_Op'unrestricted_access))'First) = 1"/>
+      <annotation identifier="666" category="3" text="(((barrier =&gt; command_access.receive_B7s'unrestricted_access), (action =&gt; command_access.receive_E6s'Protected_Type_Op'unrestricted_access))'Last) = 1"/>
+      <annotation identifier="667" category="3" text="(((barrier =&gt; command_access.receive_B7s'unrestricted_access), (action =&gt; command_access.receive_E6s'Protected_Type_Op'unrestricted_access)))'First = 1"/>
+      <annotation identifier="668" category="3" text="(((barrier =&gt; command_access.receive_B7s'unrestricted_access), (action =&gt; command_access.receive_E6s'Protected_Type_Op'unrestricted_access)))'Last = 1"/>
+      <annotation identifier="669" category="3" text="((1, 2, 3, ...))(0) = 1"/>
+      <annotation identifier="670" category="3" text="((1, 4, 7, ...))(0) = 1"/>
+      <annotation identifier="672" category="3" text="(bcontrol.blinker_controlT1'First) = 1"/>
+      <annotation identifier="673" category="3" text="(bcontrol.command_accessA'First) = 1"/>
+      <annotation identifier="674" category="3" text="(bcontrol.command_accessA'Last) = 1"/>
+      <annotation identifier="675" category="3" text="(bcontrol.command_typeS'First) = 1"/>
+      <annotation identifier="676" category="3" text="(bcontrol.left_blinkerT1'First) = 1"/>
+      <annotation identifier="678" category="3" text="(bcontrol.stim_controlT1'First) = 1"/>
+      <annotation identifier="680" category="3" text="(blinker.cmd_typeS'First) = 1"/>
+      <annotation identifier="681" category="3" text="(blinker.cmd_type_accessA'First) = 1"/>
+      <annotation identifier="682" category="3" text="(blinker.cmd_type_accessA'Last) = 1"/>
+      <annotation identifier="683" category="3" text="(blinker.id_typeS'First) = 1"/>
+      <annotation identifier="685" category="3" text="bcontrol.C49s = 1"/>
+      <annotation identifier="686" category="3" text="bcontrol.blinker_controlT1'First = 1"/>
+      <annotation identifier="687" category="3" text="bcontrol.command_accessA'First = 1"/>
+      <annotation identifier="688" category="3" text="bcontrol.command_accessA'Last = 1"/>
+      <annotation identifier="689" category="3" text="bcontrol.command_typeN(0) = 1"/>
+      <annotation identifier="690" category="3" text="bcontrol.command_typeS'First = 1"/>
+      <annotation identifier="691" category="3" text="bcontrol.left_blinkerT1'First = 1"/>
+      <annotation identifier="693" category="3" text="bcontrol.stim_controlT1'First = 1"/>
+      <annotation identifier="695" category="3" text="blinker.C48s = 1"/>
+      <annotation identifier="696" category="3" text="blinker.blinker_typeE = true"/>
+      <annotation identifier="697" category="3" text="blinker.cmd_typeN(0) = 1"/>
+      <annotation identifier="698" category="3" text="blinker.cmd_typeS'First = 1"/>
+      <annotation identifier="699" category="3" text="blinker.cmd_type_accessA'First = 1"/>
+      <annotation identifier="700" category="3" text="blinker.cmd_type_accessA'Last = 1"/>
+      <annotation identifier="701" category="3" text="blinker.id_typeN(0) = 1"/>
+      <annotation identifier="702" category="3" text="blinker.id_typeS'First = 1"/>
+      <annotation identifier="703" category="3" text="(((barrier =&gt; cmd_type_access.receive_B12s'unrestricted_access), (action =&gt; cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access))) = &amp;(((barrier =&gt; cmd_type_access.receive_B12s'unrestricted_access), (action =&gt; cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access)))"/>
+      <annotation identifier="704" category="3" text="(((barrier =&gt; cmd_type_access.receive_B12s'unrestricted_access), (action =&gt; cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access)))(1).Action = blinker.cmd_type_access.receive_E11s'Protected_Type_Op'access"/>
+      <annotation identifier="705" category="3" text="blinker.cmd_type_accessA(1).Action = blinker.cmd_type_access.receive_E11s'Protected_Type_Op'access"/>
+      <annotation identifier="706" category="3" text="(((barrier =&gt; cmd_type_access.receive_B12s'unrestricted_access), (action =&gt; cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access)))(1).Barrier = blinker.cmd_type_access.receive_B12s'access"/>
+      <annotation identifier="707" category="3" text="blinker.cmd_type_accessA(1).Barrier = blinker.cmd_type_access.receive_B12s'access"/>
+      <annotation identifier="708" category="3" text="(((barrier =&gt; command_access.receive_B7s'unrestricted_access), (action =&gt; command_access.receive_E6s'Protected_Type_Op'unrestricted_access))) = &amp;(((barrier =&gt; command_access.receive_B7s'unrestricted_access), (action =&gt; command_access.receive_E6s'Protected_Type_Op'unrestricted_access)))"/>
+      <annotation identifier="709" category="3" text="(((barrier =&gt; command_access.receive_B7s'unrestricted_access), (action =&gt; command_access.receive_E6s'Protected_Type_Op'unrestricted_access)))(1).Action = bcontrol.command_access.receive_E6s'Protected_Type_Op'access"/>
+      <annotation identifier="710" category="3" text="bcontrol.command_accessA(1).Action = bcontrol.command_access.receive_E6s'Protected_Type_Op'access"/>
+      <annotation identifier="711" category="3" text="(((barrier =&gt; command_access.receive_B7s'unrestricted_access), (action =&gt; command_access.receive_E6s'Protected_Type_Op'unrestricted_access)))(1).Barrier = bcontrol.command_access.receive_B7s'access"/>
+      <annotation identifier="712" category="3" text="bcontrol.command_accessA(1).Barrier = bcontrol.command_access.receive_B7s'access"/>
+      <annotation identifier="713" category="3" text="((1, 2, 3, ...)'First) = 0"/>
+      <annotation identifier="714" category="3" text="((1, 2, 3, ...))'First = 0"/>
+      <annotation identifier="715" category="3" text="((1, 4, 7, ...)'First) = 0"/>
+      <annotation identifier="716" category="3" text="((1, 4, 7, ...))'First = 0"/>
+      <annotation identifier="719" category="3" text="(bcontrol.command_typeN'First) = 0"/>
+      <annotation identifier="720" category="3" text="(blinker.cmd_typeN'First) = 0"/>
+      <annotation identifier="721" category="3" text="(blinker.id_typeN'First) = 0"/>
+      <annotation identifier="722" category="3" text="Command.new_command = false"/>
+      <annotation identifier="723" category="3" text="Protected_Command.command_is_new = false"/>
+      <annotation identifier="725" category="3" text="Time_Span_Zero = 0"/>
+      <annotation identifier="726" category="3" text="bcontrol.command_typeN'First = 0"/>
+      <annotation identifier="727" category="3" text="blinker.cmd_typeN'First = 0"/>
+      <annotation identifier="728" category="3" text="blinker.id_typeN'First = 0"/>
+      <annotation identifier="729" category="3" text="nul = 0"/>
+      <annotation identifier="730" category="3" text="((1, 2, 3, ...)'Last) = 3"/>
+      <annotation identifier="731" category="3" text="((1, 2, 3, ...))(2) = 3"/>
+      <annotation identifier="732" category="3" text="((1, 2, 3, ...))'Last = 3"/>
+      <annotation identifier="733" category="3" text="(blinker.id_typeN'Last) = 3"/>
+      <annotation identifier="734" category="3" text="(blinker.id_typeS'Last) = 3"/>
+      <annotation identifier="735" category="3" text="Library_Task_Level = 3"/>
+      <annotation identifier="736" category="3" text="blinker.id_typeN(2) = 3"/>
+      <annotation identifier="737" category="3" text="blinker.id_typeN'Last = 3"/>
+      <annotation identifier="738" category="3" text="blinker.id_typeS'Last = 3"/>
+      <annotation identifier="739" category="3" text="((1, 2, 3, ...)) = &amp;((1, 2, 3, ...))"/>
+      <annotation identifier="740" category="3" text="((1, 2, 3, ...))(1) = 2"/>
+      <annotation identifier="743" category="3" text="(blinker.cmd_typeN'Last) = 2"/>
+      <annotation identifier="745" category="3" text="blinker.cmd_typeN'Last = 2"/>
+      <annotation identifier="746" category="3" text="blinker.id_typeN(1) = 2"/>
+      <annotation identifier="747" category="3" text="((1, 2, 3, ...))(3) = 4"/>
+      <annotation identifier="748" category="3" text="((1, 4, 7, ...))(1) = 4"/>
+      <annotation identifier="749" category="3" text="bcontrol.command_typeN(1) = 4"/>
+      <annotation identifier="750" category="3" text="blinker.id_typeN(3) = 4"/>
+      <annotation identifier="751" category="3" text="((1, 4, 7, ...)'Last) = 6"/>
+      <annotation identifier="752" category="3" text="((1, 4, 7, ...))'Last = 6"/>
+      <annotation identifier="754" category="3" text="(bcontrol.command_typeN'Last) = 6"/>
+      <annotation identifier="755" category="3" text="bcontrol.command_typeN'Last = 6"/>
+      <annotation identifier="757" category="3" text="((1, 4, 7, ...)) = &amp;((1, 4, 7, ...))"/>
+      <annotation identifier="758" category="3" text="((1, 4, 7, ...))(2) = 7"/>
+      <annotation identifier="759" category="3" text="bcontrol.command_typeN(2) = 7"/>
+      <annotation identifier="760" category="3" text="((1, 4, 7, ...))(3) = 10"/>
+      <annotation identifier="762" category="3" text="bcontrol.command_typeN(3) = 10"/>
+      <annotation identifier="763" category="3" text="blinker.cmd_typeN(2) = 10"/>
+      <annotation identifier="764" category="3" text="((1, 4, 7, ...))(4) = 13"/>
+      <annotation identifier="766" category="3" text="bcontrol.command_typeN(4) = 13"/>
+      <annotation identifier="768" category="3" text="((1, 4, 7, ...))(5) = 16"/>
+      <annotation identifier="769" category="3" text="bcontrol.command_typeN(5) = 16"/>
+      <annotation identifier="770" category="3" text="((1, 4, 7, ...))(6) = 19"/>
+      <annotation identifier="771" category="3" text="bcontrol.command_typeN(6) = 19"/>
+      <annotation identifier="773" category="3" text="(bcontrol.blinker_controlT1'Last) = 15"/>
+      <annotation identifier="774" category="3" text="bcontrol.blinker_controlT1'Last = 15"/>
+      <annotation identifier="775" category="3" text="(bcontrol.command_typeS'Last) = 18"/>
+      <annotation identifier="776" category="3" text="bcontrol.command_typeS'Last = 18"/>
+      <annotation identifier="777" category="3" text="(bcontrol.left_blinkerT1'Last) = 12"/>
+      <annotation identifier="778" category="3" text="(bcontrol.stim_controlT1'Last) = 12"/>
+      <annotation identifier="780" category="3" text="bcontrol.left_blinkerT1'Last = 12"/>
+      <annotation identifier="781" category="3" text="bcontrol.stim_controlT1'Last = 12"/>
+      <annotation identifier="783" category="3" text="(blinker.cmd_typeS'Last) = 9"/>
+      <annotation identifier="784" category="3" text="blinker.cmd_typeS'Last = 9"/>
+      <annotation identifier="785" category="3" text="Barrier_Function_Pointer__Designated_Subprogram_Table(309_504) = null"/>
+      <annotation identifier="786" category="3" text="Entry_Action_Pointer__Designated_Subprogram_Table(309_760) = null"/>
+      <annotation identifier="787" category="3" text="Find_Body_Index_Access__Designated_Subprogram_Table(327_168) = null"/>
+      <annotation identifier="788" category="3" text="Unspecified_Task_Info = null"/>
+      <annotation identifier="789" category="3" text="Barrier_Function_Pointer__Designated_Subprogram_Table(57_600) = &amp;bcontrol.command_access.receive_B7s"/>
+      <annotation identifier="791" category="3" text="Blinker_Control._task_id'Initialized"/>
+      <annotation identifier="792" category="3" text="Command._Lock'Initialized"/>
+      <annotation identifier="793" category="3" text="Entry_Action_Pointer__Designated_Subprogram_Table(57_856) = &amp;bcontrol.command_access.receive_E6s'Protected_Type_Op"/>
+      <annotation identifier="794" category="3" text="Find_Body_Index_Access__Designated_Subprogram_Table(95_744) = &amp;bcontrol.command_accessF"/>
+      <annotation identifier="798" category="3" text="Left_Blinker._task_id'Initialized"/>
+      <annotation identifier="801" category="3" text="Protected_Command._Lock'Initialized"/>
+      <annotation identifier="803" category="3" text="Stim_Control._task_id'Initialized"/>
+      <annotation identifier="804" category="3" text="Task_Procedure_Access__Designated_Subprogram_Table(128_256) = &amp;system.tasking.task_procedure_access'Unknown_Designated_Subprogram"/>
+      <annotation identifier="805" category="3" text="Unspecified_Priority = -1"/>
+      <annotation identifier="806" category="3" text="Unspecified_Size = -2**31"/>
+      <annotation identifier="807" category="3" text="bcontrol.blinker_control_typeZ = -2**31"/>
+      <annotation identifier="808" category="3" text="bcontrol.stim_control_typeZ = -2**31"/>
+      <annotation identifier="809" category="3" text="blinker.blinker_typeZ = -2**31"/>
+      <annotation identifier="810" category="3" text="bcontrol.blinker_controlT1 = &amp;bcontrol.blinker_controlT1"/>
+      <annotation identifier="811" category="3" text="bcontrol.blinker_controlT1'Initialized"/>
+      <annotation identifier="812" category="3" text="bcontrol.blinker_controlT1(1..15) in (95 | 98..99 | 101 | 105 | ... | 116)"/>
+      <annotation identifier="813" category="3" text="bcontrol.blinker_control_typeE'Initialized"/>
+      <annotation identifier="814" category="3" text="bcontrol.command_accessA = &amp;bcontrol.command_accessA"/>
+      <annotation identifier="815" category="3" text="bcontrol.command_typeN = &amp;bcontrol.command_typeN"/>
+      <annotation identifier="816" category="3" text="bcontrol.command_typeS = &amp;bcontrol.command_typeS"/>
+      <annotation identifier="817" category="3" text="bcontrol.command_typeS(1..18) in (66 | 69 | 76..77 | 80 | 82..84)"/>
+      <annotation identifier="818" category="3" text="bcontrol.left_blinkerT1 = &amp;bcontrol.left_blinkerT1"/>
+      <annotation identifier="819" category="3" text="bcontrol.left_blinkerT1'Initialized"/>
+      <annotation identifier="820" category="3" text="bcontrol.left_blinkerT1(1..12) in (95 | 98 | 101..102 | 105 | ... | 116)"/>
+      <annotation identifier="824" category="3" text="bcontrol.stim_controlT1 = &amp;bcontrol.stim_controlT1"/>
+      <annotation identifier="825" category="3" text="bcontrol.stim_controlT1'Initialized"/>
+      <annotation identifier="826" category="3" text="bcontrol.stim_controlT1(1..12) in (95 | 99 | 105 | 108..111 | 114..116)"/>
+      <annotation identifier="827" category="3" text="bcontrol.stim_control_typeE'Initialized"/>
+      <annotation identifier="831" category="3" text="blinker.cmd_typeN = &amp;blinker.cmd_typeN"/>
+      <annotation identifier="832" category="3" text="blinker.cmd_typeS = &amp;blinker.cmd_typeS"/>
+      <annotation identifier="833" category="3" text="blinker.cmd_type_accessA = &amp;blinker.cmd_type_accessA"/>
+      <annotation identifier="834" category="3" text="blinker.id_typeN = &amp;blinker.id_typeN"/>
+      <annotation identifier="835" category="3" text="blinker.id_typeS = &amp;blinker.id_typeS"/>
+      <annotation identifier="836" category="4" text="call on bcontrol.command_accessV'Initialize"/>
+      <annotation identifier="837" category="4" text="call on bcontrol.command_accessV'Deep_Initialize"/>
+      <annotation identifier="838" category="4" text="call on blinker.cmd_type_accessV'Initialize"/>
+      <annotation identifier="839" category="4" text="call on blinker.cmd_type_accessV'Deep_Initialize"/>
+      <annotation identifier="840" category="4" text="call on bcontrol.blinker_control_typeV'Initialize"/>
+      <annotation identifier="841" category="4" text="call on bcontrol.stim_control_typeV'Initialize"/>
+      <annotation identifier="1047" lifeage="ADDED" category="3" text="blinker.cmd_typeS(7) = 65"/>
+      <annotation identifier="1048" lifeage="ADDED" category="3" text="blinker.cmd_typeS(5) = 83"/>
+      <annotation identifier="1049" lifeage="ADDED" category="3" text="blinker.cmd_typeS(8) = 82"/>
+      <annotation identifier="1050" lifeage="ADDED" category="3" text="blinker.cmd_typeS(6) = 84"/>
+      <annotation identifier="1051" lifeage="ADDED" category="3" text="blinker.cmd_typeS(9) = 84"/>
+      <annotation identifier="1052" lifeage="ADDED" category="3" text="blinker.cmd_typeS(3) = 79"/>
+      <annotation identifier="1053" lifeage="ADDED" category="3" text="blinker.cmd_typeS(4) = 80"/>
+      <annotation identifier="1054" lifeage="ADDED" category="3" text="((1, 5, 10))(0) = 1"/>
+      <annotation identifier="1055" lifeage="ADDED" category="3" text="((1, 5, 10)'First) = 0"/>
+      <annotation identifier="1056" lifeage="ADDED" category="3" text="((1, 5, 10))'First = 0"/>
+      <annotation identifier="1057" lifeage="ADDED" category="3" text="((1, 5, 10)'Last) = 2"/>
+      <annotation identifier="1058" lifeage="ADDED" category="3" text="((1, 5, 10))'Last = 2"/>
+      <annotation identifier="1059" lifeage="ADDED" category="3" text="((1, 5, 10))(2) = 10"/>
+      <annotation identifier="1060" lifeage="ADDED" category="3" text="((1, 5, 10)) = &amp;((1, 5, 10))"/>
+      <annotation identifier="1061" lifeage="ADDED" category="3" text="((1, 5, 10))(1) = 5"/>
+      <annotation identifier="1062" lifeage="ADDED" category="3" text="blinker.cmd_typeN(1) = 5"/>
+      <annotation identifier="649" lifeage="REMOVED" category="3" text="blinker.cmd_typeS(3) = 65"/>
+      <annotation identifier="651" lifeage="REMOVED" category="3" text="blinker.cmd_typeS(6) = 83"/>
+      <annotation identifier="653" lifeage="REMOVED" category="3" text="blinker.cmd_typeS(4) = 82"/>
+      <annotation identifier="657" lifeage="REMOVED" category="3" text="blinker.cmd_typeS(5) = 84"/>
+      <annotation identifier="658" lifeage="REMOVED" category="3" text="blinker.cmd_typeS(7) = 84"/>
+      <annotation identifier="659" lifeage="REMOVED" category="3" text="blinker.cmd_typeS(8) = 79"/>
+      <annotation identifier="660" lifeage="REMOVED" category="3" text="blinker.cmd_typeS(9) = 80"/>
+      <annotation identifier="671" lifeage="REMOVED" category="3" text="((1, 6, 10))(0) = 1"/>
+      <annotation identifier="677" lifeage="REMOVED" category="3" text="(bcontrol.right_blinkerT1'First) = 1"/>
+      <annotation identifier="679" lifeage="REMOVED" category="3" text="(bcontrol.warn_blinkerT1'First) = 1"/>
+      <annotation identifier="684" lifeage="REMOVED" category="3" text="Left_Blinker.c = L"/>
+      <annotation identifier="692" lifeage="REMOVED" category="3" text="bcontrol.right_blinkerT1'First = 1"/>
+      <annotation identifier="694" lifeage="REMOVED" category="3" text="bcontrol.warn_blinkerT1'First = 1"/>
+      <annotation identifier="717" lifeage="REMOVED" category="3" text="((1, 6, 10)'First) = 0"/>
+      <annotation identifier="718" lifeage="REMOVED" category="3" text="((1, 6, 10))'First = 0"/>
+      <annotation identifier="724" lifeage="REMOVED" category="3" text="Right_Blinker.c = R"/>
+      <annotation identifier="741" lifeage="REMOVED" category="3" text="((1, 6, 10)'Last) = 2"/>
+      <annotation identifier="742" lifeage="REMOVED" category="3" text="((1, 6, 10))'Last = 2"/>
+      <annotation identifier="744" lifeage="REMOVED" category="3" text="Warn_Blinker.c = E"/>
+      <annotation identifier="753" lifeage="REMOVED" category="3" text="((1, 6, 10))(1) = 6"/>
+      <annotation identifier="756" lifeage="REMOVED" category="3" text="blinker.cmd_typeN(1) = 6"/>
+      <annotation identifier="761" lifeage="REMOVED" category="3" text="((1, 6, 10))(2) = 10"/>
+      <annotation identifier="765" lifeage="REMOVED" category="3" text="(bcontrol.right_blinkerT1'Last) = 13"/>
+      <annotation identifier="767" lifeage="REMOVED" category="3" text="bcontrol.right_blinkerT1'Last = 13"/>
+      <annotation identifier="772" lifeage="REMOVED" category="3" text="((1, 6, 10)) = &amp;((1, 6, 10))"/>
+      <annotation identifier="779" lifeage="REMOVED" category="3" text="(bcontrol.warn_blinkerT1'Last) = 12"/>
+      <annotation identifier="782" lifeage="REMOVED" category="3" text="bcontrol.warn_blinkerT1'Last = 12"/>
+      <annotation identifier="790" lifeage="REMOVED" category="3" text="Blinker_Control._priority'Initialized"/>
+      <annotation identifier="795" lifeage="REMOVED" category="3" text="Left_Blinker._priority'Initialized"/>
+      <annotation identifier="796" lifeage="REMOVED" category="3" text="Right_Blinker._priority = Left_Blinker._priority"/>
+      <annotation identifier="797" lifeage="REMOVED" category="3" text="Warn_Blinker._priority = Left_Blinker._priority"/>
+      <annotation identifier="799" lifeage="REMOVED" category="3" text="Right_Blinker._task_id = Left_Blinker._task_id"/>
+      <annotation identifier="800" lifeage="REMOVED" category="3" text="Warn_Blinker._task_id = Left_Blinker._task_id"/>
+      <annotation identifier="802" lifeage="REMOVED" category="3" text="Stim_Control._priority'Initialized"/>
+      <annotation identifier="821" lifeage="REMOVED" category="3" text="bcontrol.right_blinkerT1 = &amp;bcontrol.right_blinkerT1"/>
+      <annotation identifier="822" lifeage="REMOVED" category="3" text="bcontrol.right_blinkerT1'Initialized"/>
+      <annotation identifier="823" lifeage="REMOVED" category="3" text="bcontrol.right_blinkerT1(1..13) in (95 | 98 | 101 | 103..105 | ... | 116)"/>
+      <annotation identifier="828" lifeage="REMOVED" category="3" text="bcontrol.warn_blinkerT1 = &amp;bcontrol.warn_blinkerT1"/>
+      <annotation identifier="829" lifeage="REMOVED" category="3" text="bcontrol.warn_blinkerT1'Initialized"/>
+      <annotation identifier="830" lifeage="REMOVED" category="3" text="bcontrol.warn_blinkerT1(1..12) in (95 | 97..98 | 101 | 105 | ... | 119)"/>
+      <message identifier="843" category="8" rank="INFORMATIONAL" line="25" column="19" text="-- call on interfaces__c'Elab_Spec"/>
+      <message identifier="844" category="8" rank="INFORMATIONAL" line="26" column="27" text="-- call on interfaces__c__strings'Elab_Spec"/>
+    </subprogram>
+    <subprogram line="64" column="4" name="main program main">
+      <annotation identifier="846" category="3" text="Command.command = Command.command'Old"/>
+      <annotation identifier="847" category="3" text="Command.new_command = Command.new_command'Old"/>
+      <annotation identifier="848" category="3" text="Command.new_command'Initialized"/>
+    </subprogram>
+    <subprogram line="69" column="4" name="ada_main_for_main.main">
+      <annotation identifier="851" category="3" text="ada_main_for_main.main'Result'Initialized"/>
+      <annotation identifier="852" category="4" text="call on interfaces__c'Elab_Spec"/>
+      <annotation identifier="853" category="4" text="call on interfaces__c__strings'Elab_Spec"/>
+      <annotation identifier="854" category="4" text="call on bcontrol.command_accessV'Initialize"/>
+      <annotation identifier="855" category="4" text="call on bcontrol.command_accessV'Deep_Initialize"/>
+      <annotation identifier="856" category="4" text="call on blinker.cmd_type_accessV'Initialize"/>
+      <annotation identifier="857" category="4" text="call on blinker.cmd_type_accessV'Deep_Initialize"/>
+      <annotation identifier="858" category="4" text="call on bcontrol.blinker_control_typeV'Initialize"/>
+      <annotation identifier="859" category="4" text="call on bcontrol.stim_control_typeV'Initialize"/>
+      <message identifier="861" category="3" rank="SUPPRESSED" line="77" column="7" text="might fail on main program main: requires (soft) Command.command to be initialized" is_check="true"/>
+    </subprogram>
+  </file>
+  <entry_point identifier="1" name="bcontrol.blinker_control_type'Task_Type_Body" file="bcontrol.adb" line="31" column="4"/>
+  <entry_point identifier="2" name="bcontrol.stim_control_type'Task_Type_Body" file="bcontrol.adb" line="94" column="4"/>
+  <entry_point identifier="3" name="blinker.cmd_type_access.receive_E11s'Protected_Type_Op" file="blinker.adb" line="15" column="7"/>
+  <entry_point identifier="4" name="blinker.blinker_type'Task_Type_Body" file="blinker.adb" line="21" column="4"/>
+  <entry_point identifier="5" name="bcontrol.command_access.receive_E6s'Protected_Type_Op" file="bcontrol.adb" line="17" column="7"/>
+  <entry_point identifier="6" name="main program main" file="b~main.adb" line="64" column="4"/>
+</inspection>

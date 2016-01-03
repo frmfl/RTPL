@@ -1,0 +1,481 @@
+--# 1 errors, 361 messages
+--#
+pragma Ada_95;
+pragma Source_File_Name (ada_main_for_main, Spec_File_Name => "b~main.ads");
+pragma Source_File_Name (ada_main_for_main, Body_File_Name => "b~main.adb");
+
+with System.Restrictions;
+with Ada.Exceptions;
+
+package body ada_main_for_main is
+    --#b~main.adb:8:1: module: ada_main_for_main__body
+    --#b~main.adb:8:1: subp: ada_main_for_main'Elab_Body
+    --#b~main.adb:8:1: end of subp: ada_main_for_main'Elab_Body
+   pragma Warnings (Off);
+
+   procedure adafinal is
+    --#b~main.adb:11:4: subp: ada_main_for_main.adafinal
+    --#b~main.adb:11:4: end of subp: ada_main_for_main.adafinal
+   begin
+      System.Standard_Library.Adafinal;
+   end adafinal;
+
+   procedure adainit is
+    --#b~main.adb:16:4: subp: ada_main_for_main.adainit
+    --#output(ada_main_for_main.adainit): (((barrier => cmd_type_access.receive_B12s'unrestricted_access), (action => cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access))'First)
+    --#output(ada_main_for_main.adainit): (((barrier => cmd_type_access.receive_B12s'unrestricted_access), (action => cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access))'Last)
+    --#output(ada_main_for_main.adainit): (((barrier => cmd_type_access.receive_B12s'unrestricted_access), (action => cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access)))
+    --#output(ada_main_for_main.adainit): (((barrier => cmd_type_access.receive_B12s'unrestricted_access), (action => cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access)))(1).Action
+    --#output(ada_main_for_main.adainit): (((barrier => cmd_type_access.receive_B12s'unrestricted_access), (action => cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access)))(1).Barrier
+    --#output(ada_main_for_main.adainit): (((barrier => cmd_type_access.receive_B12s'unrestricted_access), (action => cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access)))._first
+    --#output(ada_main_for_main.adainit): (((barrier => cmd_type_access.receive_B12s'unrestricted_access), (action => cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access)))._last
+    --#output(ada_main_for_main.adainit): (((barrier => command_access.receive_B7s'unrestricted_access), (action => command_access.receive_E6s'Protected_Type_Op'unrestricted_access))'First)
+    --#output(ada_main_for_main.adainit): (((barrier => command_access.receive_B7s'unrestricted_access), (action => command_access.receive_E6s'Protected_Type_Op'unrestricted_access))'Last)
+    --#output(ada_main_for_main.adainit): (((barrier => command_access.receive_B7s'unrestricted_access), (action => command_access.receive_E6s'Protected_Type_Op'unrestricted_access)))
+    --#output(ada_main_for_main.adainit): (((barrier => command_access.receive_B7s'unrestricted_access), (action => command_access.receive_E6s'Protected_Type_Op'unrestricted_access)))(1).Action
+    --#output(ada_main_for_main.adainit): (((barrier => command_access.receive_B7s'unrestricted_access), (action => command_access.receive_E6s'Protected_Type_Op'unrestricted_access)))(1).Barrier
+    --#output(ada_main_for_main.adainit): (((barrier => command_access.receive_B7s'unrestricted_access), (action => command_access.receive_E6s'Protected_Type_Op'unrestricted_access)))._first
+    --#output(ada_main_for_main.adainit): (((barrier => command_access.receive_B7s'unrestricted_access), (action => command_access.receive_E6s'Protected_Type_Op'unrestricted_access)))._last
+    --#output(ada_main_for_main.adainit): ((1, 2, 3, ...)'First)
+    --#output(ada_main_for_main.adainit): ((1, 2, 3, ...)'Last)
+    --#output(ada_main_for_main.adainit): ((1, 2, 3, ...))
+    --#output(ada_main_for_main.adainit): ((1, 2, 3, ...))(0)
+    --#output(ada_main_for_main.adainit): ((1, 2, 3, ...))(1)
+    --#output(ada_main_for_main.adainit): ((1, 2, 3, ...))(2)
+    --#output(ada_main_for_main.adainit): ((1, 2, 3, ...))(3)
+    --#output(ada_main_for_main.adainit): ((1, 2, 3, ...))._first
+    --#output(ada_main_for_main.adainit): ((1, 2, 3, ...))._last
+    --#output(ada_main_for_main.adainit): ((1, 4, 7, ...)'First)
+    --#output(ada_main_for_main.adainit): ((1, 4, 7, ...)'Last)
+    --#output(ada_main_for_main.adainit): ((1, 4, 7, ...))
+    --#output(ada_main_for_main.adainit): ((1, 4, 7, ...))(0)
+    --#output(ada_main_for_main.adainit): ((1, 4, 7, ...))(1)
+    --#output(ada_main_for_main.adainit): ((1, 4, 7, ...))(2)
+    --#output(ada_main_for_main.adainit): ((1, 4, 7, ...))(3)
+    --#output(ada_main_for_main.adainit): ((1, 4, 7, ...))(4)
+    --#output(ada_main_for_main.adainit): ((1, 4, 7, ...))(5)
+    --#output(ada_main_for_main.adainit): ((1, 4, 7, ...))(6)
+    --#output(ada_main_for_main.adainit): ((1, 4, 7, ...))._first
+    --#output(ada_main_for_main.adainit): ((1, 4, 7, ...))._last
+    --#output(ada_main_for_main.adainit): ((1, 5, 10)'First)
+    --#output(ada_main_for_main.adainit): ((1, 5, 10)'Last)
+    --#output(ada_main_for_main.adainit): ((1, 5, 10))
+    --#output(ada_main_for_main.adainit): ((1, 5, 10))(0)
+    --#output(ada_main_for_main.adainit): ((1, 5, 10))(1)
+    --#output(ada_main_for_main.adainit): ((1, 5, 10))(2)
+    --#output(ada_main_for_main.adainit): ((1, 5, 10))._first
+    --#output(ada_main_for_main.adainit): ((1, 5, 10))._last
+    --#output(ada_main_for_main.adainit): (bcontrol.blinker_controlT1'First)
+    --#output(ada_main_for_main.adainit): (bcontrol.blinker_controlT1'Last)
+    --#output(ada_main_for_main.adainit): (bcontrol.command_accessA'First)
+    --#output(ada_main_for_main.adainit): (bcontrol.command_accessA'Last)
+    --#output(ada_main_for_main.adainit): (bcontrol.command_typeN'First)
+    --#output(ada_main_for_main.adainit): (bcontrol.command_typeN'Last)
+    --#output(ada_main_for_main.adainit): (bcontrol.command_typeS'First)
+    --#output(ada_main_for_main.adainit): (bcontrol.command_typeS'Last)
+    --#output(ada_main_for_main.adainit): (bcontrol.left_blinkerT1'First)
+    --#output(ada_main_for_main.adainit): (bcontrol.left_blinkerT1'Last)
+    --#output(ada_main_for_main.adainit): (bcontrol.stim_controlT1'First)
+    --#output(ada_main_for_main.adainit): (bcontrol.stim_controlT1'Last)
+    --#output(ada_main_for_main.adainit): (blinker.cmd_typeN'First)
+    --#output(ada_main_for_main.adainit): (blinker.cmd_typeN'Last)
+    --#output(ada_main_for_main.adainit): (blinker.cmd_typeS'First)
+    --#output(ada_main_for_main.adainit): (blinker.cmd_typeS'Last)
+    --#output(ada_main_for_main.adainit): (blinker.cmd_type_accessA'First)
+    --#output(ada_main_for_main.adainit): (blinker.cmd_type_accessA'Last)
+    --#output(ada_main_for_main.adainit): (blinker.id_typeN'First)
+    --#output(ada_main_for_main.adainit): (blinker.id_typeN'Last)
+    --#output(ada_main_for_main.adainit): (blinker.id_typeS'First)
+    --#output(ada_main_for_main.adainit): (blinker.id_typeS'Last)
+    --#output(ada_main_for_main.adainit): Barrier_Function_Pointer__Designated_Subprogram_Table(309_504)
+    --#output(ada_main_for_main.adainit): Barrier_Function_Pointer__Designated_Subprogram_Table(57_600)
+    --#output(ada_main_for_main.adainit): Blinker_Control._task_id
+    --#output(ada_main_for_main.adainit): Command._Lock
+    --#output(ada_main_for_main.adainit): Command.new_command
+    --#output(ada_main_for_main.adainit): Entry_Action_Pointer__Designated_Subprogram_Table(309_760)
+    --#output(ada_main_for_main.adainit): Entry_Action_Pointer__Designated_Subprogram_Table(57_856)
+    --#output(ada_main_for_main.adainit): Find_Body_Index_Access__Designated_Subprogram_Table(327_168)
+    --#output(ada_main_for_main.adainit): Find_Body_Index_Access__Designated_Subprogram_Table(95_744)
+    --#output(ada_main_for_main.adainit): Left_Blinker._task_id
+    --#output(ada_main_for_main.adainit): Library_Task_Level
+    --#output(ada_main_for_main.adainit): Protected_Command._Lock
+    --#output(ada_main_for_main.adainit): Protected_Command.command_is_new
+    --#output(ada_main_for_main.adainit): Stim_Control._task_id
+    --#output(ada_main_for_main.adainit): Task_Procedure_Access__Designated_Subprogram_Table(128_256)
+    --#output(ada_main_for_main.adainit): Time_Span_Zero
+    --#output(ada_main_for_main.adainit): Unspecified_Priority
+    --#output(ada_main_for_main.adainit): Unspecified_Size
+    --#output(ada_main_for_main.adainit): Unspecified_Task_Info
+    --#output(ada_main_for_main.adainit): bcontrol.C49s
+    --#output(ada_main_for_main.adainit): bcontrol.blinker_controlT1
+    --#output(ada_main_for_main.adainit): bcontrol.blinker_controlT1(1..15)
+    --#output(ada_main_for_main.adainit): bcontrol.blinker_controlT1._first
+    --#output(ada_main_for_main.adainit): bcontrol.blinker_controlT1._last
+    --#output(ada_main_for_main.adainit): bcontrol.blinker_control_typeE
+    --#output(ada_main_for_main.adainit): bcontrol.blinker_control_typeZ
+    --#output(ada_main_for_main.adainit): bcontrol.command_accessA
+    --#output(ada_main_for_main.adainit): bcontrol.command_accessA(1).Action
+    --#output(ada_main_for_main.adainit): bcontrol.command_accessA(1).Barrier
+    --#output(ada_main_for_main.adainit): bcontrol.command_accessA._first
+    --#output(ada_main_for_main.adainit): bcontrol.command_accessA._last
+    --#output(ada_main_for_main.adainit): bcontrol.command_typeN
+    --#output(ada_main_for_main.adainit): bcontrol.command_typeN(0)
+    --#output(ada_main_for_main.adainit): bcontrol.command_typeN(1)
+    --#output(ada_main_for_main.adainit): bcontrol.command_typeN(2)
+    --#output(ada_main_for_main.adainit): bcontrol.command_typeN(3)
+    --#output(ada_main_for_main.adainit): bcontrol.command_typeN(4)
+    --#output(ada_main_for_main.adainit): bcontrol.command_typeN(5)
+    --#output(ada_main_for_main.adainit): bcontrol.command_typeN(6)
+    --#output(ada_main_for_main.adainit): bcontrol.command_typeN._first
+    --#output(ada_main_for_main.adainit): bcontrol.command_typeN._last
+    --#output(ada_main_for_main.adainit): bcontrol.command_typeS
+    --#output(ada_main_for_main.adainit): bcontrol.command_typeS(1..18)
+    --#output(ada_main_for_main.adainit): bcontrol.command_typeS._first
+    --#output(ada_main_for_main.adainit): bcontrol.command_typeS._last
+    --#output(ada_main_for_main.adainit): bcontrol.left_blinkerT1
+    --#output(ada_main_for_main.adainit): bcontrol.left_blinkerT1(1..12)
+    --#output(ada_main_for_main.adainit): bcontrol.left_blinkerT1._first
+    --#output(ada_main_for_main.adainit): bcontrol.left_blinkerT1._last
+    --#output(ada_main_for_main.adainit): bcontrol.stim_controlT1
+    --#output(ada_main_for_main.adainit): bcontrol.stim_controlT1(1..12)
+    --#output(ada_main_for_main.adainit): bcontrol.stim_controlT1._first
+    --#output(ada_main_for_main.adainit): bcontrol.stim_controlT1._last
+    --#output(ada_main_for_main.adainit): bcontrol.stim_control_typeE
+    --#output(ada_main_for_main.adainit): bcontrol.stim_control_typeZ
+    --#output(ada_main_for_main.adainit): blinker.C48s
+    --#output(ada_main_for_main.adainit): blinker.blinker_typeE
+    --#output(ada_main_for_main.adainit): blinker.blinker_typeZ
+    --#output(ada_main_for_main.adainit): blinker.cmd_typeN
+    --#output(ada_main_for_main.adainit): blinker.cmd_typeN(0)
+    --#output(ada_main_for_main.adainit): blinker.cmd_typeN(1)
+    --#output(ada_main_for_main.adainit): blinker.cmd_typeN(2)
+    --#output(ada_main_for_main.adainit): blinker.cmd_typeN._first
+    --#output(ada_main_for_main.adainit): blinker.cmd_typeN._last
+    --#output(ada_main_for_main.adainit): blinker.cmd_typeS
+    --#output(ada_main_for_main.adainit): blinker.cmd_typeS(1)
+    --#output(ada_main_for_main.adainit): blinker.cmd_typeS(2)
+    --#output(ada_main_for_main.adainit): blinker.cmd_typeS(3)
+    --#output(ada_main_for_main.adainit): blinker.cmd_typeS(4)
+    --#output(ada_main_for_main.adainit): blinker.cmd_typeS(5)
+    --#output(ada_main_for_main.adainit): blinker.cmd_typeS(6)
+    --#output(ada_main_for_main.adainit): blinker.cmd_typeS(7)
+    --#output(ada_main_for_main.adainit): blinker.cmd_typeS(8)
+    --#output(ada_main_for_main.adainit): blinker.cmd_typeS(9)
+    --#output(ada_main_for_main.adainit): blinker.cmd_typeS._first
+    --#output(ada_main_for_main.adainit): blinker.cmd_typeS._last
+    --#output(ada_main_for_main.adainit): blinker.cmd_type_accessA
+    --#output(ada_main_for_main.adainit): blinker.cmd_type_accessA(1).Action
+    --#output(ada_main_for_main.adainit): blinker.cmd_type_accessA(1).Barrier
+    --#output(ada_main_for_main.adainit): blinker.cmd_type_accessA._first
+    --#output(ada_main_for_main.adainit): blinker.cmd_type_accessA._last
+    --#output(ada_main_for_main.adainit): blinker.id_typeN
+    --#output(ada_main_for_main.adainit): blinker.id_typeN(0)
+    --#output(ada_main_for_main.adainit): blinker.id_typeN(1)
+    --#output(ada_main_for_main.adainit): blinker.id_typeN(2)
+    --#output(ada_main_for_main.adainit): blinker.id_typeN(3)
+    --#output(ada_main_for_main.adainit): blinker.id_typeN._first
+    --#output(ada_main_for_main.adainit): blinker.id_typeN._last
+    --#output(ada_main_for_main.adainit): blinker.id_typeS
+    --#output(ada_main_for_main.adainit): blinker.id_typeS(1)
+    --#output(ada_main_for_main.adainit): blinker.id_typeS(2)
+    --#output(ada_main_for_main.adainit): blinker.id_typeS(3)
+    --#output(ada_main_for_main.adainit): blinker.id_typeS._first
+    --#output(ada_main_for_main.adainit): blinker.id_typeS._last
+    --#output(ada_main_for_main.adainit): nul
+    --#post(ada_main_for_main.adainit): blinker.cmd_typeS(7) = 65
+    --#post(ada_main_for_main.adainit): blinker.cmd_typeS(1) = 83
+    --#post(ada_main_for_main.adainit): blinker.cmd_typeS(5) = 83
+    --#post(ada_main_for_main.adainit): blinker.id_typeS(3) = 69
+    --#post(ada_main_for_main.adainit): blinker.cmd_typeS(8) = 82
+    --#post(ada_main_for_main.adainit): blinker.id_typeS(1) = 82
+    --#post(ada_main_for_main.adainit): blinker.id_typeS(2) = 76
+    --#post(ada_main_for_main.adainit): blinker.cmd_typeS(2) = 84
+    --#post(ada_main_for_main.adainit): blinker.cmd_typeS(6) = 84
+    --#post(ada_main_for_main.adainit): blinker.cmd_typeS(9) = 84
+    --#post(ada_main_for_main.adainit): blinker.cmd_typeS(3) = 79
+    --#post(ada_main_for_main.adainit): blinker.cmd_typeS(4) = 80
+    --#post(ada_main_for_main.adainit): (((barrier => cmd_type_access.receive_B12s'unrestricted_access), (action => cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access))'First) = 1
+    --#post(ada_main_for_main.adainit): (((barrier => cmd_type_access.receive_B12s'unrestricted_access), (action => cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access))'Last) = 1
+    --#post(ada_main_for_main.adainit): (((barrier => cmd_type_access.receive_B12s'unrestricted_access), (action => cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access)))'First = 1
+    --#post(ada_main_for_main.adainit): (((barrier => cmd_type_access.receive_B12s'unrestricted_access), (action => cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access)))'Last = 1
+    --#post(ada_main_for_main.adainit): (((barrier => command_access.receive_B7s'unrestricted_access), (action => command_access.receive_E6s'Protected_Type_Op'unrestricted_access))'First) = 1
+    --#post(ada_main_for_main.adainit): (((barrier => command_access.receive_B7s'unrestricted_access), (action => command_access.receive_E6s'Protected_Type_Op'unrestricted_access))'Last) = 1
+    --#post(ada_main_for_main.adainit): (((barrier => command_access.receive_B7s'unrestricted_access), (action => command_access.receive_E6s'Protected_Type_Op'unrestricted_access)))'First = 1
+    --#post(ada_main_for_main.adainit): (((barrier => command_access.receive_B7s'unrestricted_access), (action => command_access.receive_E6s'Protected_Type_Op'unrestricted_access)))'Last = 1
+    --#post(ada_main_for_main.adainit): ((1, 2, 3, ...))(0) = 1
+    --#post(ada_main_for_main.adainit): ((1, 4, 7, ...))(0) = 1
+    --#post(ada_main_for_main.adainit): ((1, 5, 10))(0) = 1
+    --#post(ada_main_for_main.adainit): (bcontrol.blinker_controlT1'First) = 1
+    --#post(ada_main_for_main.adainit): (bcontrol.command_accessA'First) = 1
+    --#post(ada_main_for_main.adainit): (bcontrol.command_accessA'Last) = 1
+    --#post(ada_main_for_main.adainit): (bcontrol.command_typeS'First) = 1
+    --#post(ada_main_for_main.adainit): (bcontrol.left_blinkerT1'First) = 1
+    --#post(ada_main_for_main.adainit): (bcontrol.stim_controlT1'First) = 1
+    --#post(ada_main_for_main.adainit): (blinker.cmd_typeS'First) = 1
+    --#post(ada_main_for_main.adainit): (blinker.cmd_type_accessA'First) = 1
+    --#post(ada_main_for_main.adainit): (blinker.cmd_type_accessA'Last) = 1
+    --#post(ada_main_for_main.adainit): (blinker.id_typeS'First) = 1
+    --#post(ada_main_for_main.adainit): bcontrol.C49s = 1
+    --#post(ada_main_for_main.adainit): bcontrol.blinker_controlT1'First = 1
+    --#post(ada_main_for_main.adainit): bcontrol.command_accessA'First = 1
+    --#post(ada_main_for_main.adainit): bcontrol.command_accessA'Last = 1
+    --#post(ada_main_for_main.adainit): bcontrol.command_typeN(0) = 1
+    --#post(ada_main_for_main.adainit): bcontrol.command_typeS'First = 1
+    --#post(ada_main_for_main.adainit): bcontrol.left_blinkerT1'First = 1
+    --#post(ada_main_for_main.adainit): bcontrol.stim_controlT1'First = 1
+    --#post(ada_main_for_main.adainit): blinker.C48s = 1
+    --#post(ada_main_for_main.adainit): blinker.blinker_typeE = true
+    --#post(ada_main_for_main.adainit): blinker.cmd_typeN(0) = 1
+    --#post(ada_main_for_main.adainit): blinker.cmd_typeS'First = 1
+    --#post(ada_main_for_main.adainit): blinker.cmd_type_accessA'First = 1
+    --#post(ada_main_for_main.adainit): blinker.cmd_type_accessA'Last = 1
+    --#post(ada_main_for_main.adainit): blinker.id_typeN(0) = 1
+    --#post(ada_main_for_main.adainit): blinker.id_typeS'First = 1
+    --#post(ada_main_for_main.adainit): (((barrier => cmd_type_access.receive_B12s'unrestricted_access), (action => cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access))) = &(((barrier => cmd_type_access.receive_B12s'unrestricted_access), (action => cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access)))
+    --#post(ada_main_for_main.adainit): (((barrier => cmd_type_access.receive_B12s'unrestricted_access), (action => cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access)))(1).Action = blinker.cmd_type_access.receive_E11s'Protected_Type_Op'access
+    --#post(ada_main_for_main.adainit): blinker.cmd_type_accessA(1).Action = blinker.cmd_type_access.receive_E11s'Protected_Type_Op'access
+    --#post(ada_main_for_main.adainit): (((barrier => cmd_type_access.receive_B12s'unrestricted_access), (action => cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access)))(1).Barrier = blinker.cmd_type_access.receive_B12s'access
+    --#post(ada_main_for_main.adainit): blinker.cmd_type_accessA(1).Barrier = blinker.cmd_type_access.receive_B12s'access
+    --#post(ada_main_for_main.adainit): (((barrier => command_access.receive_B7s'unrestricted_access), (action => command_access.receive_E6s'Protected_Type_Op'unrestricted_access))) = &(((barrier => command_access.receive_B7s'unrestricted_access), (action => command_access.receive_E6s'Protected_Type_Op'unrestricted_access)))
+    --#post(ada_main_for_main.adainit): (((barrier => command_access.receive_B7s'unrestricted_access), (action => command_access.receive_E6s'Protected_Type_Op'unrestricted_access)))(1).Action = bcontrol.command_access.receive_E6s'Protected_Type_Op'access
+    --#post(ada_main_for_main.adainit): bcontrol.command_accessA(1).Action = bcontrol.command_access.receive_E6s'Protected_Type_Op'access
+    --#post(ada_main_for_main.adainit): (((barrier => command_access.receive_B7s'unrestricted_access), (action => command_access.receive_E6s'Protected_Type_Op'unrestricted_access)))(1).Barrier = bcontrol.command_access.receive_B7s'access
+    --#post(ada_main_for_main.adainit): bcontrol.command_accessA(1).Barrier = bcontrol.command_access.receive_B7s'access
+    --#post(ada_main_for_main.adainit): ((1, 2, 3, ...)'First) = 0
+    --#post(ada_main_for_main.adainit): ((1, 2, 3, ...))'First = 0
+    --#post(ada_main_for_main.adainit): ((1, 4, 7, ...)'First) = 0
+    --#post(ada_main_for_main.adainit): ((1, 4, 7, ...))'First = 0
+    --#post(ada_main_for_main.adainit): ((1, 5, 10)'First) = 0
+    --#post(ada_main_for_main.adainit): ((1, 5, 10))'First = 0
+    --#post(ada_main_for_main.adainit): (bcontrol.command_typeN'First) = 0
+    --#post(ada_main_for_main.adainit): (blinker.cmd_typeN'First) = 0
+    --#post(ada_main_for_main.adainit): (blinker.id_typeN'First) = 0
+    --#post(ada_main_for_main.adainit): Command.new_command = false
+    --#post(ada_main_for_main.adainit): Protected_Command.command_is_new = false
+    --#post(ada_main_for_main.adainit): Time_Span_Zero = 0
+    --#post(ada_main_for_main.adainit): bcontrol.command_typeN'First = 0
+    --#post(ada_main_for_main.adainit): blinker.cmd_typeN'First = 0
+    --#post(ada_main_for_main.adainit): blinker.id_typeN'First = 0
+    --#post(ada_main_for_main.adainit): nul = 0
+    --#post(ada_main_for_main.adainit): ((1, 2, 3, ...)'Last) = 3
+    --#post(ada_main_for_main.adainit): ((1, 2, 3, ...))(2) = 3
+    --#post(ada_main_for_main.adainit): ((1, 2, 3, ...))'Last = 3
+    --#post(ada_main_for_main.adainit): (blinker.id_typeN'Last) = 3
+    --#post(ada_main_for_main.adainit): (blinker.id_typeS'Last) = 3
+    --#post(ada_main_for_main.adainit): Library_Task_Level = 3
+    --#post(ada_main_for_main.adainit): blinker.id_typeN(2) = 3
+    --#post(ada_main_for_main.adainit): blinker.id_typeN'Last = 3
+    --#post(ada_main_for_main.adainit): blinker.id_typeS'Last = 3
+    --#post(ada_main_for_main.adainit): ((1, 2, 3, ...)) = &((1, 2, 3, ...))
+    --#post(ada_main_for_main.adainit): ((1, 2, 3, ...))(1) = 2
+    --#post(ada_main_for_main.adainit): ((1, 5, 10)'Last) = 2
+    --#post(ada_main_for_main.adainit): ((1, 5, 10))'Last = 2
+    --#post(ada_main_for_main.adainit): (blinker.cmd_typeN'Last) = 2
+    --#post(ada_main_for_main.adainit): blinker.cmd_typeN'Last = 2
+    --#post(ada_main_for_main.adainit): blinker.id_typeN(1) = 2
+    --#post(ada_main_for_main.adainit): ((1, 2, 3, ...))(3) = 4
+    --#post(ada_main_for_main.adainit): ((1, 4, 7, ...))(1) = 4
+    --#post(ada_main_for_main.adainit): bcontrol.command_typeN(1) = 4
+    --#post(ada_main_for_main.adainit): blinker.id_typeN(3) = 4
+    --#post(ada_main_for_main.adainit): ((1, 4, 7, ...)'Last) = 6
+    --#post(ada_main_for_main.adainit): ((1, 4, 7, ...))'Last = 6
+    --#post(ada_main_for_main.adainit): (bcontrol.command_typeN'Last) = 6
+    --#post(ada_main_for_main.adainit): bcontrol.command_typeN'Last = 6
+    --#post(ada_main_for_main.adainit): ((1, 4, 7, ...)) = &((1, 4, 7, ...))
+    --#post(ada_main_for_main.adainit): ((1, 4, 7, ...))(2) = 7
+    --#post(ada_main_for_main.adainit): bcontrol.command_typeN(2) = 7
+    --#post(ada_main_for_main.adainit): ((1, 4, 7, ...))(3) = 10
+    --#post(ada_main_for_main.adainit): ((1, 5, 10))(2) = 10
+    --#post(ada_main_for_main.adainit): bcontrol.command_typeN(3) = 10
+    --#post(ada_main_for_main.adainit): blinker.cmd_typeN(2) = 10
+    --#post(ada_main_for_main.adainit): ((1, 4, 7, ...))(4) = 13
+    --#post(ada_main_for_main.adainit): bcontrol.command_typeN(4) = 13
+    --#post(ada_main_for_main.adainit): ((1, 4, 7, ...))(5) = 16
+    --#post(ada_main_for_main.adainit): bcontrol.command_typeN(5) = 16
+    --#post(ada_main_for_main.adainit): ((1, 4, 7, ...))(6) = 19
+    --#post(ada_main_for_main.adainit): bcontrol.command_typeN(6) = 19
+    --#post(ada_main_for_main.adainit): ((1, 5, 10)) = &((1, 5, 10))
+    --#post(ada_main_for_main.adainit): ((1, 5, 10))(1) = 5
+    --#post(ada_main_for_main.adainit): blinker.cmd_typeN(1) = 5
+    --#post(ada_main_for_main.adainit): (bcontrol.blinker_controlT1'Last) = 15
+    --#post(ada_main_for_main.adainit): bcontrol.blinker_controlT1'Last = 15
+    --#post(ada_main_for_main.adainit): (bcontrol.command_typeS'Last) = 18
+    --#post(ada_main_for_main.adainit): bcontrol.command_typeS'Last = 18
+    --#post(ada_main_for_main.adainit): (bcontrol.left_blinkerT1'Last) = 12
+    --#post(ada_main_for_main.adainit): (bcontrol.stim_controlT1'Last) = 12
+    --#post(ada_main_for_main.adainit): bcontrol.left_blinkerT1'Last = 12
+    --#post(ada_main_for_main.adainit): bcontrol.stim_controlT1'Last = 12
+    --#post(ada_main_for_main.adainit): (blinker.cmd_typeS'Last) = 9
+    --#post(ada_main_for_main.adainit): blinker.cmd_typeS'Last = 9
+    --#post(ada_main_for_main.adainit): Barrier_Function_Pointer__Designated_Subprogram_Table(309_504) = null
+    --#post(ada_main_for_main.adainit): Entry_Action_Pointer__Designated_Subprogram_Table(309_760) = null
+    --#post(ada_main_for_main.adainit): Find_Body_Index_Access__Designated_Subprogram_Table(327_168) = null
+    --#post(ada_main_for_main.adainit): Unspecified_Task_Info = null
+    --#post(ada_main_for_main.adainit): Barrier_Function_Pointer__Designated_Subprogram_Table(57_600) = &bcontrol.command_access.receive_B7s
+    --#post(ada_main_for_main.adainit): Blinker_Control._task_id'Initialized
+    --#post(ada_main_for_main.adainit): Command._Lock'Initialized
+    --#post(ada_main_for_main.adainit): Entry_Action_Pointer__Designated_Subprogram_Table(57_856) = &bcontrol.command_access.receive_E6s'Protected_Type_Op
+    --#post(ada_main_for_main.adainit): Find_Body_Index_Access__Designated_Subprogram_Table(95_744) = &bcontrol.command_accessF
+    --#post(ada_main_for_main.adainit): Left_Blinker._task_id'Initialized
+    --#post(ada_main_for_main.adainit): Protected_Command._Lock'Initialized
+    --#post(ada_main_for_main.adainit): Stim_Control._task_id'Initialized
+    --#post(ada_main_for_main.adainit): Task_Procedure_Access__Designated_Subprogram_Table(128_256) = &system.tasking.task_procedure_access'Unknown_Designated_Subprogram
+    --#post(ada_main_for_main.adainit): Unspecified_Priority = -1
+    --#post(ada_main_for_main.adainit): Unspecified_Size = -2_147_483_648
+    --#post(ada_main_for_main.adainit): bcontrol.blinker_control_typeZ = -2_147_483_648
+    --#post(ada_main_for_main.adainit): bcontrol.stim_control_typeZ = -2_147_483_648
+    --#post(ada_main_for_main.adainit): blinker.blinker_typeZ = -2_147_483_648
+    --#post(ada_main_for_main.adainit): bcontrol.blinker_controlT1 = &bcontrol.blinker_controlT1
+    --#post(ada_main_for_main.adainit): bcontrol.blinker_controlT1'Initialized
+    --#post(ada_main_for_main.adainit): bcontrol.blinker_controlT1(1..15) in (95 | 98..99 | 101 | 105 | ... | 116)
+    --#post(ada_main_for_main.adainit): bcontrol.blinker_control_typeE'Initialized
+    --#post(ada_main_for_main.adainit): bcontrol.command_accessA = &bcontrol.command_accessA
+    --#post(ada_main_for_main.adainit): bcontrol.command_typeN = &bcontrol.command_typeN
+    --#post(ada_main_for_main.adainit): bcontrol.command_typeS = &bcontrol.command_typeS
+    --#post(ada_main_for_main.adainit): bcontrol.command_typeS(1..18) in (66 | 69 | 76..77 | 80 | 82..84)
+    --#post(ada_main_for_main.adainit): bcontrol.left_blinkerT1 = &bcontrol.left_blinkerT1
+    --#post(ada_main_for_main.adainit): bcontrol.left_blinkerT1'Initialized
+    --#post(ada_main_for_main.adainit): bcontrol.left_blinkerT1(1..12) in (95 | 98 | 101..102 | 105 | ... | 116)
+    --#post(ada_main_for_main.adainit): bcontrol.stim_controlT1 = &bcontrol.stim_controlT1
+    --#post(ada_main_for_main.adainit): bcontrol.stim_controlT1'Initialized
+    --#post(ada_main_for_main.adainit): bcontrol.stim_controlT1(1..12) in (95 | 99 | 105 | 108..111 | 114..116)
+    --#post(ada_main_for_main.adainit): bcontrol.stim_control_typeE'Initialized
+    --#post(ada_main_for_main.adainit): blinker.cmd_typeN = &blinker.cmd_typeN
+    --#post(ada_main_for_main.adainit): blinker.cmd_typeS = &blinker.cmd_typeS
+    --#post(ada_main_for_main.adainit): blinker.cmd_type_accessA = &blinker.cmd_type_accessA
+    --#post(ada_main_for_main.adainit): blinker.id_typeN = &blinker.id_typeN
+    --#post(ada_main_for_main.adainit): blinker.id_typeS = &blinker.id_typeS
+    --#unanalyzed(ada_main_for_main.adainit): Effects-of-calling:bcontrol.command_accessV'Initialize
+    --#unanalyzed(ada_main_for_main.adainit): Effects-of-calling:bcontrol.command_accessV'Deep_Initialize
+    --#unanalyzed(ada_main_for_main.adainit): Effects-of-calling:blinker.cmd_type_accessV'Initialize
+    --#unanalyzed(ada_main_for_main.adainit): Effects-of-calling:blinker.cmd_type_accessV'Deep_Initialize
+    --#unanalyzed(ada_main_for_main.adainit): Effects-of-calling:bcontrol.blinker_control_typeV'Initialize
+    --#unanalyzed(ada_main_for_main.adainit): Effects-of-calling:bcontrol.stim_control_typeV'Initialize
+    --#b~main.adb:16:4: end of subp: ada_main_for_main.adainit
+   begin
+      Ada.Exceptions.Is_Null_Occurrence'Elab_Subp_Body;
+      System.Soft_Links'Elab_Spec;
+      Ada.Exceptions.Last_Chance_Handler'Elab_Subp_Body;
+      System.Exception_Table'Elab_Body;
+      Ada.Io_Exceptions'Elab_Spec;
+      Ada.Tags'Elab_Spec;
+      Ada.Streams'Elab_Spec;
+      Interfaces.C'Elab_Spec;
+    --#b~main.adb:25:19: Warning: subp not available
+    --#    -- call on interfaces__c'Elab_Spec
+    --#    severity: INFORMATIONAL
+    --#    module: ada_main_for_main__body
+    --#    subp: ada_main_for_main.adainit
+    --#    unanalyzed callee: interfaces__c'Elab_Spec
+      Interfaces.C.Strings'Elab_Spec;
+    --#b~main.adb:26:27: Warning: subp not available
+    --#    -- call on interfaces__c__strings'Elab_Spec
+    --#    severity: INFORMATIONAL
+    --#    module: ada_main_for_main__body
+    --#    subp: ada_main_for_main.adainit
+    --#    unanalyzed callee: interfaces__c__strings'Elab_Spec
+      System.Exceptions'Elab_Spec;
+      System.Finalization_Root'Elab_Spec;
+      Ada.Finalization'Elab_Spec;
+      System.Storage_Pools'Elab_Spec;
+      System.Finalization_Masters'Elab_Spec;
+      System.Storage_Pools.Subpools'Elab_Spec;
+      System.Task_Info'Elab_Spec;
+      System.Pool_Global'Elab_Spec;
+      System.File_Control_Block'Elab_Spec;
+      System.File_Io'Elab_Body;
+      System.Finalization_Masters'Elab_Body;
+      Ada.Tags'Elab_Body;
+      System.Soft_Links'Elab_Body;
+      System.Os_Lib'Elab_Body;
+      System.Secondary_Stack'Elab_Body;
+      System.Address_Image'Elab_Subp_Body;
+      System.Tasking.Initialization'Elab_Body;
+      System.Tasking.Protected_Objects'Elab_Body;
+      Ada.Real_Time'Elab_Spec;
+      Ada.Real_Time'Elab_Body;
+      Ada.Text_Io'Elab_Spec;
+      Ada.Text_Io'Elab_Body;
+      System.Tasking.Protected_Objects.Entries'Elab_Spec;
+      System.Tasking.Queuing'Elab_Body;
+      System.Tasking.Stages'Elab_Body;
+      Bcontrol'Elab_Spec;
+      Blinker'Elab_Spec;
+      Control'Elab_Spec;
+      Control'Elab_Body;
+      Blinker'Elab_Body;
+      Bcontrol'Elab_Body;
+      Main'Elab_Subp_Body;
+   end adainit;
+
+   procedure Ada_Main_Program;
+   pragma Import (Ada, Ada_Main_Program, "_ada_main");
+
+   procedure call_main_subprogram is 
+    --#b~main.adb:64:4: subp: main program main
+    --#input(main program main): Command.new_command
+    --#input(main program main): nul
+    --#output(main program main): Command.command
+    --#output(main program main): Command.new_command
+    --#post(main program main): Command.command = Command.command'Old
+    --#post(main program main): Command.new_command = Command.new_command'Old
+    --#post(main program main): Command.new_command'Initialized
+    --#b~main.adb:64:4: end of subp: main program main
+   begin
+      Ada_Main_Program;
+   end call_main_subprogram;
+
+   function main
+    --#b~main.adb:69:4: subp: ada_main_for_main.main
+    --#output(ada_main_for_main.main): ada_main_for_main.main'Result
+    --#post(ada_main_for_main.main): ada_main_for_main.main'Result'Initialized
+    --#unanalyzed(ada_main_for_main.main): Effects-of-calling:interfaces__c'Elab_Spec
+    --#unanalyzed(ada_main_for_main.main): Effects-of-calling:interfaces__c__strings'Elab_Spec
+    --#unanalyzed(ada_main_for_main.main): Effects-of-calling:bcontrol.command_accessV'Initialize
+    --#unanalyzed(ada_main_for_main.main): Effects-of-calling:bcontrol.command_accessV'Deep_Initialize
+    --#unanalyzed(ada_main_for_main.main): Effects-of-calling:blinker.cmd_type_accessV'Initialize
+    --#unanalyzed(ada_main_for_main.main): Effects-of-calling:blinker.cmd_type_accessV'Deep_Initialize
+    --#unanalyzed(ada_main_for_main.main): Effects-of-calling:bcontrol.blinker_control_typeV'Initialize
+    --#unanalyzed(ada_main_for_main.main): Effects-of-calling:bcontrol.stim_control_typeV'Initialize
+    --#b~main.adb:69:4: end of subp: ada_main_for_main.main
+     (argc : Integer;
+      argv : System.Address;
+      envp : System.Address)
+      return Integer
+   is
+   begin
+      adainit;
+      call_main_subprogram;
+    --#b~main.adb:77:7: ?!precondition
+    --#    on main program main: requires (soft) Command.command'Initialized
+    --#    severity: SUPPRESSED
+    --#    module: ada_main_for_main__body
+    --#    subp: ada_main_for_main.main
+    --#    basic block: bb_3
+    --#    assertion: (soft) undefined'Initialized
+    --#    callee: main program main
+    --#    callee assertion: (soft) Command.command'Initialized
+    --#    callee file: b~main.adb
+    --#    callee precondition index: [2147483647]
+    --#    callee srcpos: 64
+    --#    VN: undefined
+    --#    Expected: {-Inf..+Inf}
+    --#    Bad: {Invalid}
+    --#    Attribs:  Int  Soft  Bad only invalid
+      adafinal;
+      return (gnat_exit_status);
+   end;
+
+--  BEGIN Object file/option list
+   --   -L/mate/uwa/home/lutz/projects/demo/car-blinker-rav-ql/obj/codepeer/
+   --   -L/mate/uwa/home/lutz/projects/demo/car-blinker-rav-ql/obj/codepeer/
+   --   -L/mate/uwa/home/lutz/projects/demo/common/obj/codepeer/
+   --   -L/opt/codepeer/libexec/codepeer/lib/gcc/i686-pc-linux-gnu/4.7.4/adalib/
+   --   -static
+   --   -lgnarl
+   --   -lgnat
+   --   -lpthread
+--  END Object file/option list   
+
+end ada_main_for_main;
+    --#b~main.adb:: end of module: ada_main_for_main__body

@@ -1,0 +1,19 @@
+-------- Test Vectors --------
+
+blinker.cmd_type_access.sendN
+  cmd.Cmd - _object.command_to.Cmd: {-1 | 1}, {0}
+
+blinker.blinker_type'Task_Type_Body
+  Id@28: {R}, {L}, {E}
+
+bcontrol.command_access.sendN
+  _object.command - cmd: {-5..-1 | 1..5}, {0}
+
+bcontrol.blinker_control_type'Task_Type_Body
+  $P.cmd.all: {BLS}, {BLE}, {BRS}, {EMS}
+
+bcontrol.stim_control_type'Task_Type_Body
+  $P.cmd.all: {STR}, {BLE..EMS | STP}
+
+bcontrol.stim_control_type.process_command
+  $P.cmd.all: {STP}, {BLE..STR}

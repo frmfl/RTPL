@@ -1,0 +1,98 @@
+<HTML><HEAD>
+<TITLE>bcontrol.ads</TITLE>
+<SCRIPT TYPE="text/javascript">
+<!--
+  function listing_onload()
+  {
+    top.listing_onload_common(window, 
+      "bcontrol.ads-frameset.html", "623", "bcontrol.ads");
+    top.Update_Message_Status("bcontrol.ads-frameset.html", "", "bcontrol.ads")
+  }
+//-->
+</SCRIPT>
+<SCRIPT TYPE="text/javascript">
+<!--
+  function set_src_and_msg_anchors(src_line,
+    msg_anchor, src_id_pfx)
+  {
+    top.set_src_and_msg_anchors_common(src_line, msg_anchor,
+      src_id_pfx, "bcontrol.ads-frameset.html");
+  }
+//-->
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" onLoad="listing_onload();">
+<CENTER><H3>File Source: bcontrol.ads</H3></CENTER>
+<PRE>
+<A NAME="E1"></A>     1  with System;use System;
+        <FONT COLOR="purple"> -- 
+<A NAME="P2"></A>    <A ID="ID_P2" HREF="bcontrol.ads-msgs.html#1-Ann" onClick="set_src_and_msg_anchors(2, '1-Ann', 'P')" TARGET="messages_623">P/P</A>  --  <B>Subp:</B> bcontrol'Elab_Spec
+         -- 
+         --  <B>Postconditions:</B>
+         --    (bcontrol.command_accessA'First) = 1
+         --    (bcontrol.command_accessA'Last) = 1
+         --    (bcontrol.command_typeS'First) = 1
+         --    bcontrol.C49s = 1
+         --    bcontrol.command_accessA'First = 1
+         --    bcontrol.command_accessA'Last = 1
+         --    bcontrol.command_typeN(0) = 1
+         --    bcontrol.command_typeS'First = 1
+         --    bcontrol.command_accessA(1).Action = bcontrol.command_access.receive_E6s'Protected_Type_Op'access
+         --    bcontrol.command_accessA(1).Barrier = bcontrol.command_access.receive_B7s'access
+         --    <A ID="ID_P2" HREF="bcontrol.ads-msgs.html#1-Ann" onClick="set_src_and_msg_anchors(2, '1-Ann', 'P')" TARGET="messages_623">...</A>
+         -- </FONT>
+<A NAME="E2"></A>     2  package Bcontrol is
+<A NAME="E3"></A>     3     --type Command_Type is new String(1..3);
+<A NAME="E4"></A>     4     type Command_Type is (BLE, BLS, BRS, EMS, STR, STP);
+<A NAME="E5"></A>     5  
+           <FONT COLOR="purple"> -- 
+<A NAME="P6"></A>    <A ID="ID_P6" HREF="bcontrol.ads-msgs.html#127-Ann" onClick="set_src_and_msg_anchors(6, '127-Ann', 'P')" TARGET="messages_623">P/P</A>     --  <B>Subp:</B> bcontrol.command_accessF
+            -- 
+            --  <B>Postconditions:</B>
+            --    bcontrol.command_accessF'Result'Initialized
+            -- </FONT>
+<A NAME="E6"></A>     6     protected type Command_Access is
+<A NAME="E7"></A>     7        procedure Send( Cmd: Command_Type);
+<A NAME="E8"></A>     8        entry Receive(Cmd : out Command_Type);
+<A NAME="E9"></A>     9     private
+<A NAME="E10"></A>    10        Command : Command_Type;
+<A NAME="E11"></A>    11        New_Command : Boolean := False;
+<A NAME="E12"></A>    12     end Command_Access;
+<A NAME="E13"></A>    13  
+<A NAME="E14"></A>    14  
+<A NAME="E15"></A>    15     Command : Command_Access;
+<A NAME="E16"></A>    16  
+<A NAME="E17"></A>    17     task type Blinker_Control_Type is
+<A NAME="E18"></A>    18        --pragma Priority (System.Priority'Last - 1);
+<A NAME="E19"></A>    19     end Blinker_Control_Type;
+<A NAME="E20"></A>    20  
+<A NAME="E21"></A>    21     task type Stim_Control_Type is
+<A NAME="E22"></A>    22        --pragma Priority (System.Priority'Last - 1);
+<A NAME="E23"></A>    23     end Stim_Control_Type;
+<A NAME="E24"></A>    24     --      entry Blink_Left;
+<A NAME="E25"></A>    25  --      entry Blink_Right;
+<A NAME="E26"></A>    26  --      entry Blink_Emergency;
+<A NAME="E27"></A>    27  --      entry Blink_Stop;
+<A NAME="E28"></A>    28  end Bcontrol;
+</PRE>
+ <BR><BR> <BR><BR> <BR><BR><BR><BR> 
+<FONT COLOR="navy">CodePeer Build Version : 2.3.2 (rev 303695)</FONT><BR>
+<TABLE>
+  <TR>
+    <TD><FONT COLOR="navy">bcontrol.ads</FONT></TD>
+    <TD><FONT COLOR = "navy">2014-Oct-10 16:11:46</FONT></TD>
+  </TR>
+  <TR>
+    <TD><FONT COLOR="navy">bcontrol.scil</FONT></TD>
+    <TD><FONT COLOR = "navy">2014-Oct-11 06:52:16</FONT></TD>
+  </TR>
+  <TR>
+    <TD><FONT COLOR="navy">bcontrol__body.scil</FONT></TD>
+    <TD><FONT COLOR = "navy">2014-Oct-11 06:52:16</FONT></TD>
+  </TR>
+  <TR>
+    <TD><FONT COLOR="navy">main__body.scil</FONT></TD>
+    <TD><FONT COLOR = "navy">2014-Oct-11 06:52:16</FONT></TD>
+  </TR>
+</TABLE>
+</BODY></HTML>

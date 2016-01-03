@@ -1,0 +1,139 @@
+<HTML><HEAD>
+<TITLE>blinker.adb</TITLE>
+<SCRIPT TYPE="text/javascript">
+<!--
+  function listing_onload()
+  {
+    top.listing_onload_common(window, 
+      "blinker.adb-frameset.html", "623", "blinker.adb");
+    top.Update_Message_Status("blinker.adb-frameset.html", "", "blinker.adb")
+  }
+//-->
+</SCRIPT>
+<SCRIPT TYPE="text/javascript">
+<!--
+  function set_src_and_msg_anchors(src_line,
+    msg_anchor, src_id_pfx)
+  {
+    top.set_src_and_msg_anchors_common(src_line, msg_anchor,
+      src_id_pfx, "blinker.adb-frameset.html");
+  }
+//-->
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" onLoad="listing_onload();">
+<CENTER><H3>File Source: blinker.adb</H3></CENTER>
+<PRE>
+<A NAME="E1"></A>     1  with Control;
+<A NAME="E2"></A>     2  with Ada.Real_Time;use Ada.Real_Time;
+        <FONT COLOR="purple"> -- 
+<A NAME="P3"></A>    <A ID="ID_P3" HREF="blinker.adb-msgs.html#1-Ann" onClick="set_src_and_msg_anchors(3, '1-Ann', 'P')" TARGET="messages_623">P/P</A>  --  <B>Subp:</B> blinker'Elab_Body
+         -- 
+         --  <B>Postconditions:</B>
+         --    blinker.blinker_typeE = true
+         -- </FONT>
+<A NAME="E3"></A>     3  package body Blinker is
+<A NAME="E4"></A>     4  
+<A NAME="E5"></A>     5     protected body Cmd_Type_Access is
+              <FONT COLOR="purple"> -- 
+<A NAME="P6"></A>    <A ID="ID_P6" HREF="blinker.adb-msgs.html#6-Ann" onClick="set_src_and_msg_anchors(6, '6-Ann', 'P')" TARGET="messages_623">P/P</A>        --  <B>Subp:</B> blinker.cmd_type_access.sendN
+               -- 
+               --  <B>Preconditions:</B>
+               --    _object.command_to.Cmd'Initialized
+               --    cmd.Cmd'Initialized
+               -- 
+               --  <B>Postconditions:</B>
+               --    _object.command_is_new'Initialized
+               --    _object.command_to = One-of{_object.command_to'Old, cmd}
+               --    _object.command_to.Cmd = One-of{_object.command_to.Cmd'Old, cmd.Cmd}
+               --    _object.command_to.Cmd'Initialized
+               -- 
+               --  <B>Test Vectors:</B>
+               --    cmd.Cmd - _object.command_to.Cmd: {-1 | 1}, {0}
+               -- </FONT>
+<A NAME="E6"></A>     6        procedure Send( Cmd : Command_To_Type ) is --binary semaphore
+<A NAME="E7"></A>     7        begin
+<A NAME="E8"></A>     8           Command_Is_New := False;
+<A NAME="E9"></A>     9           if Command_To.Cmd /= Cmd.Cmd then
+<A NAME="E10"></A>    10              Command_To := Cmd;
+<A NAME="E11"></A>    11              Command_Is_New := True;
+<A NAME="E12"></A>    12           end if;
+<A NAME="E13"></A>    13        end Send;
+<A NAME="E14"></A>    14  
+              <FONT COLOR="purple"> -- 
+<A NAME="P15"></A>    <A ID="ID_P15" HREF="blinker.adb-msgs.html#39-Ann" onClick="set_src_and_msg_anchors(15, '39-Ann', 'P')" TARGET="messages_623">P/P</A>        --  <B>Subp:</B> blinker.cmd_type_access.receive_E11s'Protected_Type_Op
+               -- </FONT>
+<A NAME="E15"></A>    15        entry Receive( Cmd : out Command_To_Type) when Command_Is_New is
+<A NAME="E16"></A>    16        begin
+<A NAME="E17"></A>    17           Cmd := Command_To;
+<A NAME="E18"></A>    18        end Receive;
+<A NAME="E19"></A>    19     end Cmd_Type_Access;
+<A NAME="E20"></A>    20  
+           <FONT COLOR="purple"> -- 
+<A NAME="P21"></A>    <A ID="ID_P21" HREF="blinker.adb-msgs.html#54-Ann" onClick="set_src_and_msg_anchors(21, '54-Ann', 'P')" TARGET="messages_623">P/P</A>     --  <B>Subp:</B> blinker.blinker_type'Task_Type_Body
+            -- 
+            --  <B>Test Vectors:</B>
+            --    Id@28: {R}, {L}, {E}
+            -- </FONT>
+<A NAME="E21"></A>    21     task body Blinker_Type is
+<A NAME="E22"></A>    22        Next_Time : Time := Clock + Milliseconds(250);
+<A NAME="E23"></A>    23        Blinker_Stopped: Boolean := False;
+<A NAME="E24"></A>    24        On : Boolean := False;
+<A NAME="E25"></A>    25        Command : Command_To_Type;
+<A NAME="E26"></A>    26     begin
+<A NAME="E27"></A>    27        loop
+<A NAME="E28"></A>    28           Protected_Command.Receive(Command);
+<A NAME="E29"></A>    29           --if Command.Receiver = Id then
+<A NAME="E30"></A><FONT COLOR="black"><B>+</B></FONT>   30              <A ID="ID_E30" HREF="blinker.adb-msgs.html#59" onClick="set_src_and_msg_anchors(30, '59', 'E')" TARGET="messages_623"><FONT COLOR="red"><B>case Command.Cmd is</B></FONT></A>
+<A NAME="E31"></A>    31              --when QUIT =&gt;
+<A NAME="E32"></A>    32              --   Control.Put_Line(&quot;Quit&quot;);
+<A NAME="E33"></A>    33              --   exit;
+<A NAME="E34"></A>    34              when START =&gt;
+<A NAME="E35"></A>    35                 Blinker_Stopped := False;
+<A NAME="E36"></A>    36                 On := not On;
+<A NAME="E37"></A>    37                 if On then
+<A NAME="E38"></A><FONT COLOR="black"><B>+</B></FONT>   38                    <A ID="ID_E38" HREF="blinker.adb-msgs.html#61" onClick="set_src_and_msg_anchors(38, '61', 'E')" TARGET="messages_623"><FONT COLOR="red"><B>Control.Put_Line(&quot;B&quot;&amp; Id_Type'Image(Command.Receiver) &amp; &quot;S&quot;);</B></FONT></A>
+<A NAME="E39"></A>    39                 else
+<A NAME="E40"></A><FONT COLOR="black"><B>+</B></FONT>   40                    <A ID="ID_E40" HREF="blinker.adb-msgs.html#63" onClick="set_src_and_msg_anchors(40, '63', 'E')" TARGET="messages_623"><FONT COLOR="red"><B>Control.Put_Line(&quot;B&quot; &amp; Id_Type'Image(Command.Receiver) &amp; &quot;E&quot;);</B></FONT></A>
+<A NAME="E41"></A>    41                 end if;
+<A NAME="E42"></A>    42                 case Id is
+<A NAME="E43"></A>    43                 when R =&gt; Control.Toggle_LedR;
+<A NAME="E44"></A>    44                 when L =&gt; Control.Toggle_LedL;
+<A NAME="E45"></A>    45                 when E =&gt; Control.Toggle_LedL;
+<A NAME="E46"></A>    46                    Control.Toggle_LedR;
+<A NAME="E47"></A>    47                 when others =&gt; null;
+<A NAME="E48"></A>    48                 end case;
+<A NAME="E49"></A>    49  
+<A NAME="E50"></A>    50  
+<A NAME="E51"></A>    51              when STOP =&gt;
+<A NAME="E52"></A>    52                 if not Blinker_Stopped then
+<A NAME="E53"></A>    53                    Control.Put_Line(&quot;ABS&quot;);
+<A NAME="E54"></A>    54                    Blinker_Stopped := True;
+<A NAME="E55"></A>    55                    Control.Off_LedL;
+<A NAME="E56"></A>    56                    Control.Off_LedR;
+<A NAME="E57"></A>    57  
+<A NAME="E58"></A>    58                 end if;
+<A NAME="E59"></A>    59  
+<A NAME="E60"></A>    60              end case;
+<A NAME="E61"></A>    61           --end if;
+<A NAME="E62"></A>    62           Next_Time := Next_Time + Milliseconds(250);
+<A NAME="E63"></A>    63           delay until Next_Time;
+<A NAME="E64"></A>    64  
+<A NAME="E65"></A>    65        end loop;
+<A NAME="E66"></A>    66  
+<A NAME="E67"></A>    67     end Blinker_Type;
+<A NAME="E68"></A>    68  end Blinker;
+</PRE>
+ <BR><BR> <BR><BR> <BR><BR><BR><BR> 
+<FONT COLOR="navy">CodePeer Build Version : 2.3.2 (rev 303695)</FONT><BR>
+<TABLE>
+  <TR>
+    <TD><FONT COLOR="navy">blinker.adb</FONT></TD>
+    <TD><FONT COLOR = "navy">2014-Oct-10 19:28:25</FONT></TD>
+  </TR>
+  <TR>
+    <TD><FONT COLOR="navy">blinker__body.scil</FONT></TD>
+    <TD><FONT COLOR = "navy">2014-Oct-11 06:52:16</FONT></TD>
+  </TR>
+</TABLE>
+</BODY></HTML>

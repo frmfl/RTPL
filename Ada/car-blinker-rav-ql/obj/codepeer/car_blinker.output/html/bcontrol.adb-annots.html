@@ -1,0 +1,334 @@
+<HTML><HEAD><TITLE>bcontrol.adb</TITLE>
+<LINK rel="stylesheet" type="text/css"  href="style.css"/>
+</HEAD>
+<STYLE TYPE="text/css">
+body, th, td, select
+  {font-size: 90%}
+</STYLE>
+<BODY BGCOLOR="#FFFFFF" onLoad="opener.annotation_file_onload(window,'bcontrol.adb-annots.html', '6', 'TRUE')">
+<SCRIPT TYPE="text/javascript">
+<!--
+  function go_to_source(src_line, msg_anchor, src_id_pfx, file)
+  {
+    top.opener.top.push_src_and_msg_view(src_line, msg_anchor, src_id_pfx, file);
+    top.opener.top.focus();
+  }
+//-->
+</SCRIPT>
+<TABLE WIDTH="100%" BORDER="0"> 
+  <TR>
+    <TD align="left" rowspan="3"><H2>bcontrol.adb</H2></TD>
+  </TR>
+  <TR>
+    <TD align="right">
+    </TD>
+  </TR>
+</TABLE>
+<BR>
+<TABLE WIDTH="90%" BORDER="0">
+<TR><TD>
+<FONT SIZE="-1"><B>current code review = </B> 2014-10-11 08:52:17 (id #11)</FONT>
+</TD>
+  <TD align="right"><FONT SIZE="-1"><B>base = </B>2014-10-08 18:02:27  (id #1)</FONT></TD>
+ </TD> </TR>
+</TABLE><BR>
+<TABLE BORDER="0" WIDTH="90%">
+  <TR>
+    <TD align="left">
+      <TABLE BORDER="3">
+        <FORM name="filter">
+        <TR>
+          <TD>
+            <CAPTION>Filter Options</CAPTION>
+          </TD>
+        </TR>
+        <TR>
+          <TD>History:<BR> 
+            <TABLE BORDER="0">
+              <TR>
+                <TD>
+<INPUT type="checkbox" name="annotation_lineage" value="+" 
+  title="added since base code review" 
+  onClick="opener.Annot_Filter('annotation_lineage', this.checked, this.value, '6')" CHECKED>+</TD>
+                <TD><I>added</I></TD>
+              </TR>
+              <TR>
+                <TD>
+<INPUT type="checkbox" name="annotation_lineage" value="-" 
+  title="dropped since base code review" 
+  onClick="opener.Annot_Filter('annotation_lineage', this.checked, this.value, '6')" CHECKED >-</TD>
+                <TD><I>dropped</I></TD>
+              </TR>
+              <TR>
+                <TD>
+<INPUT type="checkbox" name="annotation_lineage" value="U" 
+  title="unchanged since base code review" 
+  onClick="opener.Annot_Filter('annotation_lineage', this.checked, this.value, '6')" CHECKED>U</TD>
+                <TD><I>unchanged</I></TD>
+              </TR>
+            </TABLE>
+          </TD>
+          <TD> Annotation Kind:<BR> 
+            <TABLE BORDER="0">
+              <TR>
+                <TD>
+<INPUT type="checkbox" name="annotation_kind" value="pre" 
+  onClick="opener.Annot_Filter('annotation_kind', this.checked, this.value, '6')" CHECKED >pre</TD>
+              </TR>
+              <TR>
+                <TD>
+<INPUT type="checkbox" name="annotation_kind" value="presumption" 
+  onClick="opener.Annot_Filter('annotation_kind', this.checked, this.value, '6')" CHECKED >presumption</TD>
+              </TR>
+              <TR>
+                <TD>
+<INPUT type="checkbox" name="annotation_kind" value="post" 
+  onClick="opener.Annot_Filter('annotation_kind', this.checked, this.value, '6')" CHECKED >post</TD>
+              </TR>
+              <TR>
+                <TD>
+<INPUT type="checkbox" name="annotation_kind" value="unanalyzed" 
+  onClick="opener.Annot_Filter('annotation_kind', this.checked, this.value, '6')" CHECKED >unanalyzed</TD>
+              </TR>
+              <TR>
+                <TD>
+<INPUT type="checkbox" name="annotation_kind" value="test" 
+  onClick="opener.Annot_Filter('annotation_kind', this.checked, this.value, '6')" CHECKED >test</TD>
+              </TR>
+            </TABLE>
+          </TD>
+        </TR>
+        </FORM>
+      </TABLE>
+    
+ <BR>          </TD>
+        </TR>
+      </TABLE>
+    </TD>
+  </TR>
+</TABLE>
+<BR>
+<LI>    <A HREF="bcontrol.adb-frameset.html"      TARGET="main_frame_623"     onClick=
+      "go_to_source(5,'Ann_L5','P','bcontrol.adb-frameset.html');"> bcontrol'Elab_Body     </A>
+</LI><BR><table id="method_table1" width="90%" border="1">
+
+<TR><TH> -/+ </TH>
+<TH> Kind </TH>
+<TH> Annotation Text </TH>
+<TH> Date</TH></TR><TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>(bcontrol.<wbr>blinker_<wbr>controlT1'First) = 1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>(bcontrol.<wbr>blinker_<wbr>controlT1'Last) = 15</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>(bcontrol.<wbr>left_<wbr>blinkerT1'First) = 1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>(bcontrol.<wbr>left_<wbr>blinkerT1'Last) = 12</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>(bcontrol.<wbr>right_<wbr>blinkerT1'First) = 1</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>(bcontrol.<wbr>right_<wbr>blinkerT1'Last) = 13</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>(bcontrol.<wbr>stim_<wbr>controlT1'First) = 1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>(bcontrol.<wbr>stim_<wbr>controlT1'Last) = 12</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>(bcontrol.<wbr>warn_<wbr>blinkerT1'First) = 1</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>(bcontrol.<wbr>warn_<wbr>blinkerT1'Last) = 12</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>Blinker_Control.<wbr>_<wbr>priority'Initialized</td><td align="center">2014-10-10 21:26:16</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>Blinker_Control.<wbr>_<wbr>task_<wbr>id'Initialized</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>Left_Blinker.<wbr>_<wbr>priority'Initialized</td><td align="center">2014-10-10 21:26:16</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>Left_Blinker.<wbr>_<wbr>task_<wbr>id'Initialized</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>Left_Blinker.c = L</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>Library_Task_<wbr>Level = 3</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>Right_Blinker.<wbr>_<wbr>priority'Initialized</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>Right_Blinker.<wbr>_<wbr>task_<wbr>id'Initialized</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>Right_Blinker.c = R</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>Stim_Control.<wbr>_<wbr>priority'Initialized</td><td align="center">2014-10-10 21:26:16</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>Stim_Control.<wbr>_<wbr>task_<wbr>id'Initialized</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>Warn_Blinker.<wbr>_<wbr>priority'Initialized</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>Warn_Blinker.<wbr>_<wbr>task_<wbr>id'Initialized</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>Warn_Blinker.c = E</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>blinker_<wbr>controlT1 = &amp;bcontrol.<wbr>blinker_<wbr> controlT1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>blinker_<wbr>controlT1'First = 1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>blinker_<wbr>controlT1'Initialized</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>blinker_<wbr>controlT1'Last = 15</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>blinker_<wbr>controlT1(<wbr>1.<wbr>.<wbr>15) in (<wbr>95 | 98.<wbr>.<wbr>99 | 101 | 105 | .<wbr>.<wbr>. | 116)</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>blinker_<wbr>control_<wbr>typeE'Initialized</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>left_<wbr>blinkerT1 = &amp;bcontrol.<wbr>left_<wbr>blinkerT1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>left_<wbr>blinkerT1'First = 1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>left_<wbr>blinkerT1'Initialized</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>left_<wbr>blinkerT1'Last = 12</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>left_<wbr>blinkerT1(<wbr>1.<wbr>.12) in (<wbr>95 | 98 | 101.<wbr>.<wbr>102 | 105 | .<wbr>.<wbr>. | 116)</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>bcontrol.<wbr>right_<wbr>blinkerT1 = &amp;bcontrol.<wbr>right_<wbr> blinkerT1</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>bcontrol.<wbr>right_<wbr>blinkerT1'First = 1</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>bcontrol.<wbr>right_<wbr>blinkerT1'Initialized</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>bcontrol.<wbr>right_<wbr>blinkerT1'Last = 13</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>bcontrol.<wbr>right_<wbr>blinkerT1(<wbr>1.<wbr>.13) in (<wbr>95 | 98 | 101 | 103.<wbr>.<wbr>105 | .<wbr>.<wbr>. | 116)</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>stim_<wbr>controlT1 = &amp;bcontrol.<wbr>stim_<wbr>controlT1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>stim_<wbr>controlT1'First = 1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>stim_<wbr>controlT1'Initialized</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>stim_<wbr>controlT1'Last = 12</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>stim_<wbr>controlT1(<wbr>1.<wbr>.12) in (<wbr>95 | 99 | 105 | 108.<wbr>.<wbr>111 | 114..116)</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>stim_<wbr>control_<wbr>typeE'Initialized</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>bcontrol.<wbr>warn_<wbr>blinkerT1 = &amp;bcontrol.<wbr>warn_<wbr>blinkerT1</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>bcontrol.<wbr>warn_<wbr>blinkerT1'First = 1</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>bcontrol.<wbr>warn_<wbr>blinkerT1'Initialized</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>bcontrol.<wbr>warn_<wbr>blinkerT1'Last = 12</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>bcontrol.<wbr>warn_<wbr>blinkerT1(<wbr>1.<wbr>.12) in (<wbr>95 | 97.<wbr>.<wbr>98 | 101 | 105 | .<wbr>.<wbr>. | 119)</td><td align="center">2014-10-10 18:06:50</td></tr>
+</table>
+<BR>
+<LI>    <A HREF="bcontrol.adb-frameset.html"      TARGET="main_frame_623"     onClick=
+      "go_to_source(31,'Ann_L31','P','bcontrol.adb-frameset.html');"> bcontrol.<wbr>blinker_<wbr>control_<wbr>type'Task_<wbr>Type_Body     </A>
+</LI><BR><table id="method_table2" width="90%" border="1">
+
+<TR><TH> -/+ </TH>
+<TH> Kind </TH>
+<TH> Annotation Text </TH>
+<TH> Date</TH></TR><TR class="unchanged_test_vector">
+<TD align="center">U</TD>
+<td align="center">test_vector</td><td>$P.cmd.all:<wbr> {BLS},<wbr> {BLE},<wbr> {BRS}, {EMS}</td><td align="center">2014-10-08 18:02:27</td></tr>
+</table>
+<BR>
+<LI>    <A HREF="bcontrol.adb-frameset.html"      TARGET="main_frame_623"     onClick=
+      "go_to_source(17,'Ann_L17','P','bcontrol.adb-frameset.html');"> bcontrol.<wbr>command_<wbr>access.<wbr>receive_<wbr>E6s'Protected_Type_Op     </A>
+</LI><BR><table id="method_table3" width="90%" border="1">
+
+<TR><TH> -/+ </TH>
+<TH> Kind </TH>
+<TH> Annotation Text </TH>
+<TH> Date</TH></TR></table>
+<BR>
+<LI>    <A HREF="bcontrol.adb-frameset.html"      TARGET="main_frame_623"     onClick=
+      "go_to_source(8,'Ann_L8','P','bcontrol.adb-frameset.html');"> bcontrol.<wbr>command_<wbr>access.sendN     </A>
+</LI><BR><table id="method_table4" width="90%" border="1">
+
+<TR><TH> -/+ </TH>
+<TH> Kind </TH>
+<TH> Annotation Text </TH>
+<TH> Date</TH></TR><TR class="unchanged_pre">
+<TD align="center">U</TD>
+<td align="center">pre</td><td>_object.command'Initialized</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>_object.command = One-of{_<wbr>object.<wbr>command'Old, cmd}</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>_object.command'Initialized</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>_object.new_<wbr>command'Initialized</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_test_vector">
+<TD align="center">U</TD>
+<td align="center">test_vector</td><td>_object.command - cmd:<wbr> {-5.<wbr>.<wbr>-1 | 1.<wbr>.5}, {0}</td><td align="center">2014-10-08 18:02:27</td></tr>
+</table>
+<BR>
+<LI>    <A HREF="bcontrol.adb-frameset.html"      TARGET="main_frame_623"     onClick=
+      "go_to_source(94,'Ann_L94','P','bcontrol.adb-frameset.html');"> bcontrol.<wbr>stim_<wbr>control_<wbr>type'Task_<wbr>Type_Body     </A>
+</LI><BR><table id="method_table5" width="90%" border="1">
+
+<TR><TH> -/+ </TH>
+<TH> Kind </TH>
+<TH> Annotation Text </TH>
+<TH> Date</TH></TR><TR class="unchanged_test_vector">
+<TD align="center">U</TD>
+<td align="center">test_vector</td><td>$P.cmd.all:<wbr> {STR},<wbr> {BLE.<wbr>.<wbr>EMS | STP}</td><td align="center">2014-10-08 18:02:27</td></tr>
+</table>
+<BR>
+<LI>    <A HREF="bcontrol.adb-frameset.html"      TARGET="main_frame_623"     onClick=
+      "go_to_source(98,'Ann_L98','P','bcontrol.adb-frameset.html');"> bcontrol.<wbr>stim_<wbr>control_<wbr>type.<wbr>process_command     </A>
+</LI><BR><table id="method_table6" width="90%" border="1">
+
+<TR><TH> -/+ </TH>
+<TH> Kind </TH>
+<TH> Annotation Text </TH>
+<TH> Date</TH></TR><TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>Command.command'Initialized</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>Command.new_<wbr>command'Initialized</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>Next_Time'Initialized</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>stim_<wbr>control_<wbr>type.<wbr>process_<wbr>command'Result'I nitialized</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>c'Initialized</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_test_vector">
+<TD align="center">U</TD>
+<td align="center">test_vector</td><td>$P.cmd.all:<wbr> {STP},<wbr> {BLE..STR}</td><td align="center">2014-10-08 18:02:27</td></tr>
+</table>
+  
+</BODY>
+</HTML>

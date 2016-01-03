@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<objs_in_trouble  ptn="0">
+  <thread_entry_points  ptn="0">
+        <entry_info name="blinker.blinker_type'Task_Type_Body" type="Reentrant" 
+          frameset ="blinker.adb-frameset.html" line="21" column="4"/>
+        <entry_info name="bcontrol.stim_control_type'Task_Type_Body" type="Reentrant" 
+          frameset ="bcontrol.adb-frameset.html" line="94" column="4"/>
+        <entry_info name="bcontrol.command_access.receive_E6s'Protected_Type_Op" type="Reentrant" 
+          frameset ="bcontrol.adb-frameset.html" line="17" column="7"/>
+        <entry_info name="blinker.cmd_type_access.receive_E11s'Protected_Type_Op" type="Reentrant" 
+          frameset ="blinker.adb-frameset.html" line="15" column="7"/>
+        <entry_info name="bcontrol.blinker_control_type'Task_Type_Body" type="Reentrant" 
+          frameset ="bcontrol.adb-frameset.html" line="31" column="4"/>
+        <entry_info name="main program main" type="Daemon" 
+          frameset ="b~main.adb-frameset.html" line="64" column="4"/>
+  </thread_entry_points>  
+</objs_in_trouble>  

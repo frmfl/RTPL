@@ -1,0 +1,257 @@
+--# 1 errors, 219 messages
+--#
+with System;use System;
+package Blinker is
+    --#blinker.ads:2:1: module: blinker
+    --#blinker.ads:2:1: subp: blinker.finalize_spec
+    --#input(blinker.finalize_spec): blinker.C48s
+    --#blinker.ads:2:1: end of subp: blinker.finalize_spec
+    --#blinker.ads:2:1: subp: blinker'Elab_Spec
+    --#output(blinker'Elab_Spec): (((barrier => cmd_type_access.receive_B12s'unrestricted_access), (action => cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access))'First)
+    --#output(blinker'Elab_Spec): (((barrier => cmd_type_access.receive_B12s'unrestricted_access), (action => cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access))'Last)
+    --#output(blinker'Elab_Spec): (((barrier => cmd_type_access.receive_B12s'unrestricted_access), (action => cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access)))
+    --#output(blinker'Elab_Spec): (((barrier => cmd_type_access.receive_B12s'unrestricted_access), (action => cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access)))(1).Action
+    --#output(blinker'Elab_Spec): (((barrier => cmd_type_access.receive_B12s'unrestricted_access), (action => cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access)))(1).Barrier
+    --#output(blinker'Elab_Spec): (((barrier => cmd_type_access.receive_B12s'unrestricted_access), (action => cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access)))._first
+    --#output(blinker'Elab_Spec): (((barrier => cmd_type_access.receive_B12s'unrestricted_access), (action => cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access)))._last
+    --#output(blinker'Elab_Spec): ((1, 2, 3, ...)'First)
+    --#output(blinker'Elab_Spec): ((1, 2, 3, ...)'Last)
+    --#output(blinker'Elab_Spec): ((1, 2, 3, ...))
+    --#output(blinker'Elab_Spec): ((1, 2, 3, ...))(0)
+    --#output(blinker'Elab_Spec): ((1, 2, 3, ...))(1)
+    --#output(blinker'Elab_Spec): ((1, 2, 3, ...))(2)
+    --#output(blinker'Elab_Spec): ((1, 2, 3, ...))(3)
+    --#output(blinker'Elab_Spec): ((1, 2, 3, ...))._first
+    --#output(blinker'Elab_Spec): ((1, 2, 3, ...))._last
+    --#output(blinker'Elab_Spec): ((1, 5, 10)'First)
+    --#output(blinker'Elab_Spec): ((1, 5, 10)'Last)
+    --#output(blinker'Elab_Spec): ((1, 5, 10))
+    --#output(blinker'Elab_Spec): ((1, 5, 10))(0)
+    --#output(blinker'Elab_Spec): ((1, 5, 10))(1)
+    --#output(blinker'Elab_Spec): ((1, 5, 10))(2)
+    --#output(blinker'Elab_Spec): ((1, 5, 10))._first
+    --#output(blinker'Elab_Spec): ((1, 5, 10))._last
+    --#output(blinker'Elab_Spec): (blinker.cmd_typeN'First)
+    --#output(blinker'Elab_Spec): (blinker.cmd_typeN'Last)
+    --#output(blinker'Elab_Spec): (blinker.cmd_typeS'First)
+    --#output(blinker'Elab_Spec): (blinker.cmd_typeS'Last)
+    --#output(blinker'Elab_Spec): (blinker.cmd_type_accessA'First)
+    --#output(blinker'Elab_Spec): (blinker.cmd_type_accessA'Last)
+    --#output(blinker'Elab_Spec): (blinker.id_typeN'First)
+    --#output(blinker'Elab_Spec): (blinker.id_typeN'Last)
+    --#output(blinker'Elab_Spec): (blinker.id_typeS'First)
+    --#output(blinker'Elab_Spec): (blinker.id_typeS'Last)
+    --#output(blinker'Elab_Spec): Barrier_Function_Pointer__Designated_Subprogram_Table(309_504)
+    --#output(blinker'Elab_Spec): Entry_Action_Pointer__Designated_Subprogram_Table(309_760)
+    --#output(blinker'Elab_Spec): Find_Body_Index_Access__Designated_Subprogram_Table(327_168)
+    --#output(blinker'Elab_Spec): Library_Task_Level
+    --#output(blinker'Elab_Spec): Protected_Command._Lock
+    --#output(blinker'Elab_Spec): Protected_Command.command_is_new
+    --#output(blinker'Elab_Spec): Task_Procedure_Access__Designated_Subprogram_Table(128_256)
+    --#output(blinker'Elab_Spec): Time_Span_Zero
+    --#output(blinker'Elab_Spec): Unspecified_Priority
+    --#output(blinker'Elab_Spec): Unspecified_Size
+    --#output(blinker'Elab_Spec): Unspecified_Task_Info
+    --#output(blinker'Elab_Spec): blinker.C48s
+    --#output(blinker'Elab_Spec): blinker.blinker_typeE
+    --#output(blinker'Elab_Spec): blinker.blinker_typeZ
+    --#output(blinker'Elab_Spec): blinker.cmd_typeN
+    --#output(blinker'Elab_Spec): blinker.cmd_typeN(0)
+    --#output(blinker'Elab_Spec): blinker.cmd_typeN(1)
+    --#output(blinker'Elab_Spec): blinker.cmd_typeN(2)
+    --#output(blinker'Elab_Spec): blinker.cmd_typeN._first
+    --#output(blinker'Elab_Spec): blinker.cmd_typeN._last
+    --#output(blinker'Elab_Spec): blinker.cmd_typeS
+    --#output(blinker'Elab_Spec): blinker.cmd_typeS(1)
+    --#output(blinker'Elab_Spec): blinker.cmd_typeS(2)
+    --#output(blinker'Elab_Spec): blinker.cmd_typeS(3)
+    --#output(blinker'Elab_Spec): blinker.cmd_typeS(4)
+    --#output(blinker'Elab_Spec): blinker.cmd_typeS(5)
+    --#output(blinker'Elab_Spec): blinker.cmd_typeS(6)
+    --#output(blinker'Elab_Spec): blinker.cmd_typeS(7)
+    --#output(blinker'Elab_Spec): blinker.cmd_typeS(8)
+    --#output(blinker'Elab_Spec): blinker.cmd_typeS(9)
+    --#output(blinker'Elab_Spec): blinker.cmd_typeS._first
+    --#output(blinker'Elab_Spec): blinker.cmd_typeS._last
+    --#output(blinker'Elab_Spec): blinker.cmd_type_accessA
+    --#output(blinker'Elab_Spec): blinker.cmd_type_accessA(1).Action
+    --#output(blinker'Elab_Spec): blinker.cmd_type_accessA(1).Barrier
+    --#output(blinker'Elab_Spec): blinker.cmd_type_accessA._first
+    --#output(blinker'Elab_Spec): blinker.cmd_type_accessA._last
+    --#output(blinker'Elab_Spec): blinker.id_typeN
+    --#output(blinker'Elab_Spec): blinker.id_typeN(0)
+    --#output(blinker'Elab_Spec): blinker.id_typeN(1)
+    --#output(blinker'Elab_Spec): blinker.id_typeN(2)
+    --#output(blinker'Elab_Spec): blinker.id_typeN(3)
+    --#output(blinker'Elab_Spec): blinker.id_typeN._first
+    --#output(blinker'Elab_Spec): blinker.id_typeN._last
+    --#output(blinker'Elab_Spec): blinker.id_typeS
+    --#output(blinker'Elab_Spec): blinker.id_typeS(1)
+    --#output(blinker'Elab_Spec): blinker.id_typeS(2)
+    --#output(blinker'Elab_Spec): blinker.id_typeS(3)
+    --#output(blinker'Elab_Spec): blinker.id_typeS._first
+    --#output(blinker'Elab_Spec): blinker.id_typeS._last
+    --#post(blinker'Elab_Spec): blinker.cmd_typeS(8) = 82
+    --#post(blinker'Elab_Spec): blinker.id_typeS(1) = 82
+    --#post(blinker'Elab_Spec): blinker.id_typeS(2) = 76
+    --#post(blinker'Elab_Spec): blinker.id_typeS(3) = 69
+    --#post(blinker'Elab_Spec): blinker.cmd_typeS(1) = 83
+    --#post(blinker'Elab_Spec): blinker.cmd_typeS(5) = 83
+    --#post(blinker'Elab_Spec): blinker.cmd_typeS(2) = 84
+    --#post(blinker'Elab_Spec): blinker.cmd_typeS(6) = 84
+    --#post(blinker'Elab_Spec): blinker.cmd_typeS(9) = 84
+    --#post(blinker'Elab_Spec): blinker.cmd_typeS(3) = 79
+    --#post(blinker'Elab_Spec): blinker.cmd_typeS(4) = 80
+    --#post(blinker'Elab_Spec): blinker.cmd_typeS(7) = 65
+    --#post(blinker'Elab_Spec): (((barrier => cmd_type_access.receive_B12s'unrestricted_access), (action => cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access))'First) = 1
+    --#post(blinker'Elab_Spec): (((barrier => cmd_type_access.receive_B12s'unrestricted_access), (action => cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access))'Last) = 1
+    --#post(blinker'Elab_Spec): (((barrier => cmd_type_access.receive_B12s'unrestricted_access), (action => cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access)))'First = 1
+    --#post(blinker'Elab_Spec): (((barrier => cmd_type_access.receive_B12s'unrestricted_access), (action => cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access)))'Last = 1
+    --#post(blinker'Elab_Spec): ((1, 2, 3, ...))(0) = 1
+    --#post(blinker'Elab_Spec): ((1, 5, 10))(0) = 1
+    --#post(blinker'Elab_Spec): (blinker.cmd_typeS'First) = 1
+    --#post(blinker'Elab_Spec): (blinker.cmd_type_accessA'First) = 1
+    --#post(blinker'Elab_Spec): (blinker.cmd_type_accessA'Last) = 1
+    --#post(blinker'Elab_Spec): (blinker.id_typeS'First) = 1
+    --#post(blinker'Elab_Spec): blinker.C48s = 1
+    --#post(blinker'Elab_Spec): blinker.cmd_typeN(0) = 1
+    --#post(blinker'Elab_Spec): blinker.cmd_typeS'First = 1
+    --#post(blinker'Elab_Spec): blinker.cmd_type_accessA'First = 1
+    --#post(blinker'Elab_Spec): blinker.cmd_type_accessA'Last = 1
+    --#post(blinker'Elab_Spec): blinker.id_typeN(0) = 1
+    --#post(blinker'Elab_Spec): blinker.id_typeS'First = 1
+    --#post(blinker'Elab_Spec): (((barrier => cmd_type_access.receive_B12s'unrestricted_access), (action => cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access))) = &(((barrier => cmd_type_access.receive_B12s'unrestricted_access), (action => cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access)))
+    --#post(blinker'Elab_Spec): (((barrier => cmd_type_access.receive_B12s'unrestricted_access), (action => cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access)))(1).Action = blinker.cmd_type_access.receive_E11s'Protected_Type_Op'access
+    --#post(blinker'Elab_Spec): blinker.cmd_type_accessA(1).Action = blinker.cmd_type_access.receive_E11s'Protected_Type_Op'access
+    --#post(blinker'Elab_Spec): (((barrier => cmd_type_access.receive_B12s'unrestricted_access), (action => cmd_type_access.receive_E11s'Protected_Type_Op'unrestricted_access)))(1).Barrier = blinker.cmd_type_access.receive_B12s'access
+    --#post(blinker'Elab_Spec): blinker.cmd_type_accessA(1).Barrier = blinker.cmd_type_access.receive_B12s'access
+    --#post(blinker'Elab_Spec): ((1, 2, 3, ...)'First) = 0
+    --#post(blinker'Elab_Spec): ((1, 2, 3, ...))'First = 0
+    --#post(blinker'Elab_Spec): ((1, 5, 10)'First) = 0
+    --#post(blinker'Elab_Spec): ((1, 5, 10))'First = 0
+    --#post(blinker'Elab_Spec): (blinker.cmd_typeN'First) = 0
+    --#post(blinker'Elab_Spec): (blinker.id_typeN'First) = 0
+    --#post(blinker'Elab_Spec): Protected_Command.command_is_new = false
+    --#post(blinker'Elab_Spec): Time_Span_Zero = 0
+    --#post(blinker'Elab_Spec): blinker.blinker_typeE = false
+    --#post(blinker'Elab_Spec): blinker.cmd_typeN'First = 0
+    --#post(blinker'Elab_Spec): blinker.id_typeN'First = 0
+    --#post(blinker'Elab_Spec): ((1, 2, 3, ...)'Last) = 3
+    --#post(blinker'Elab_Spec): ((1, 2, 3, ...))(2) = 3
+    --#post(blinker'Elab_Spec): ((1, 2, 3, ...))'Last = 3
+    --#post(blinker'Elab_Spec): (blinker.id_typeN'Last) = 3
+    --#post(blinker'Elab_Spec): (blinker.id_typeS'Last) = 3
+    --#post(blinker'Elab_Spec): Library_Task_Level = 3
+    --#post(blinker'Elab_Spec): blinker.id_typeN(2) = 3
+    --#post(blinker'Elab_Spec): blinker.id_typeN'Last = 3
+    --#post(blinker'Elab_Spec): blinker.id_typeS'Last = 3
+    --#post(blinker'Elab_Spec): ((1, 2, 3, ...)) = &((1, 2, 3, ...))
+    --#post(blinker'Elab_Spec): ((1, 2, 3, ...))(1) = 2
+    --#post(blinker'Elab_Spec): ((1, 5, 10)'Last) = 2
+    --#post(blinker'Elab_Spec): ((1, 5, 10))'Last = 2
+    --#post(blinker'Elab_Spec): (blinker.cmd_typeN'Last) = 2
+    --#post(blinker'Elab_Spec): blinker.cmd_typeN'Last = 2
+    --#post(blinker'Elab_Spec): blinker.id_typeN(1) = 2
+    --#post(blinker'Elab_Spec): ((1, 2, 3, ...))(3) = 4
+    --#post(blinker'Elab_Spec): blinker.id_typeN(3) = 4
+    --#post(blinker'Elab_Spec): ((1, 5, 10)) = &((1, 5, 10))
+    --#post(blinker'Elab_Spec): ((1, 5, 10))(1) = 5
+    --#post(blinker'Elab_Spec): blinker.cmd_typeN(1) = 5
+    --#post(blinker'Elab_Spec): ((1, 5, 10))(2) = 10
+    --#post(blinker'Elab_Spec): blinker.cmd_typeN(2) = 10
+    --#post(blinker'Elab_Spec): (blinker.cmd_typeS'Last) = 9
+    --#post(blinker'Elab_Spec): blinker.cmd_typeS'Last = 9
+    --#post(blinker'Elab_Spec): Barrier_Function_Pointer__Designated_Subprogram_Table(309_504) = &blinker.cmd_type_access.receive_B12s
+    --#post(blinker'Elab_Spec): Entry_Action_Pointer__Designated_Subprogram_Table(309_760) = &blinker.cmd_type_access.receive_E11s'Protected_Type_Op
+    --#post(blinker'Elab_Spec): Find_Body_Index_Access__Designated_Subprogram_Table(327_168) = &blinker.cmd_type_accessF
+    --#post(blinker'Elab_Spec): Protected_Command._Lock'Initialized
+    --#post(blinker'Elab_Spec): Task_Procedure_Access__Designated_Subprogram_Table(128_256) = &system.tasking.task_procedure_access'Unknown_Designated_Subprogram
+    --#post(blinker'Elab_Spec): Unspecified_Priority = -1
+    --#post(blinker'Elab_Spec): Unspecified_Size = -2_147_483_648
+    --#post(blinker'Elab_Spec): blinker.blinker_typeZ = -2_147_483_648
+    --#post(blinker'Elab_Spec): Unspecified_Task_Info = null
+    --#post(blinker'Elab_Spec): blinker.cmd_typeN = &blinker.cmd_typeN
+    --#post(blinker'Elab_Spec): blinker.cmd_typeS = &blinker.cmd_typeS
+    --#post(blinker'Elab_Spec): blinker.cmd_type_accessA = &blinker.cmd_type_accessA
+    --#post(blinker'Elab_Spec): blinker.id_typeN = &blinker.id_typeN
+    --#post(blinker'Elab_Spec): blinker.id_typeS = &blinker.id_typeS
+    --#blinker.ads:2:1: end of subp: blinker'Elab_Spec
+--   type Cmd_Type is (START, STOP, QUIT);
+   type Cmd_Type is (STOP, START);
+   type Id_Type is ( R, L, E);
+   type Command_To_Type is record
+      Cmd : Cmd_Type;
+      Receiver : Id_Type;
+   end record;
+   Id : Id_Type;
+--   type Cmd_Ptr_Type is access all Cmd_Type;
+--   Cmd_Ptr : constant Cmd_Ptr_Type := Command'Access;
+   protected type Cmd_Type_Access is
+    --#blinker.ads:13:4: subp: blinker.cmd_type_accessV'Deep_Initialize
+    --#blinker.ads:13:4: end of subp: blinker.cmd_type_accessV'Deep_Initialize
+    --#blinker.ads:13:4: subp: blinker.cmd_type_accessV'Deep_Finalize
+    --#input(blinker.cmd_type_accessV'Deep_Finalize): v
+    --#blinker.ads:13:4: end of subp: blinker.cmd_type_accessV'Deep_Finalize
+    --#blinker.ads:13:4: subp: blinker.cmd_type_accessV'Finalize_Address
+    --#blinker.ads:13:4: ?access check
+    --#    (unchecked_conversion) /= null
+    --#    severity: SUPPRESSED
+    --#    module: blinker
+    --#    subp: blinker.cmd_type_accessV'Finalize_Address
+    --#    basic block: bb_4
+    --#    assertion: (unchecked_conversion) /= null
+    --#    VN: Unchecked_Conversion_0.@13
+    --#    Expected: Inverse{null} or Invalid
+    --#    Bad: Addr_Set{null}
+    --#    Attribs:  Ptr  null in Bad  Uncertain
+    --#input(blinker.cmd_type_accessV'Finalize_Address): v
+    --#blinker.ads:13:4: end of subp: blinker.cmd_type_accessV'Finalize_Address
+    --#blinker.ads:13:4: subp: blinker.cmd_type_accessV'Initialize
+    --#input(blinker.cmd_type_accessV'Initialize): Unspecified_Priority
+    --#input(blinker.cmd_type_accessV'Initialize): _init
+    --#output(blinker.cmd_type_accessV'Initialize): _init.command_is_new
+    --#post(blinker.cmd_type_accessV'Initialize): _init.command_is_new = false
+    --#blinker.ads:13:4: end of subp: blinker.cmd_type_accessV'Initialize
+    --#blinker.ads:13:4: subp: blinker.cmd_type_accessVIP.F26s
+    --#input(blinker.cmd_type_accessVIP.F26s): $C1
+    --#input(blinker.cmd_type_accessVIP.F26s): v
+    --#blinker.ads:13:4: end of subp: blinker.cmd_type_accessVIP.F26s
+    --#blinker.ads:13:19: subp: blinker.cmd_type_accessF
+    --#input(blinker.cmd_type_accessF): $E
+    --#output(blinker.cmd_type_accessF): blinker.cmd_type_accessF'Result
+    --#post(blinker.cmd_type_accessF): blinker.cmd_type_accessF'Result = $E
+    --#post(blinker.cmd_type_accessF): blinker.cmd_type_accessF'Result'Initialized
+    --#blinker.ads:13:19: end of subp: blinker.cmd_type_accessF
+      procedure Send( Cmd : Command_To_Type );
+      entry Receive( Cmd : out COmmand_To_Type);
+    --#blinker.ads:15:7: subp: blinker.P7s'Initialize
+    --#input(blinker.P7s'Initialize): _init
+    --#output(blinker.P7s'Initialize): _init.cmd
+    --#post(blinker.P7s'Initialize): _init.cmd = null
+    --#blinker.ads:15:7: end of subp: blinker.P7s'Initialize
+   private
+      Command_To : Command_To_Type;
+      Command_Is_New : Boolean := False;
+   end Cmd_Type_Access;
+
+   task type Blinker_Type is
+    --#blinker.ads:21:4: subp: blinker.blinker_typeV'Initialize
+    --#input(blinker.blinker_typeV'Initialize): Library_Task_Level
+    --#input(blinker.blinker_typeV'Initialize): Time_Span_Zero
+    --#input(blinker.blinker_typeV'Initialize): Unspecified_Priority
+    --#input(blinker.blinker_typeV'Initialize): Unspecified_Task_Info
+    --#input(blinker.blinker_typeV'Initialize): _chain
+    --#input(blinker.blinker_typeV'Initialize): _init
+    --#input(blinker.blinker_typeV'Initialize): _task_name
+    --#input(blinker.blinker_typeV'Initialize): _task_name._first
+    --#input(blinker.blinker_typeV'Initialize): _task_name._last
+    --#input(blinker.blinker_typeV'Initialize): blinker.blinker_typeZ
+    --#output(blinker.blinker_typeV'Initialize): _init._task_id
+    --#post(blinker.blinker_typeV'Initialize): _init._task_id'Initialized
+    --#blinker.ads:21:4: end of subp: blinker.blinker_typeV'Initialize
+      --pragma Priority (System.Priority'Last);
+   end Blinker_Type;
+
+   Protected_Command : Cmd_Type_Access;
+end Blinker;
+    --#blinker.ads:: end of module: blinker

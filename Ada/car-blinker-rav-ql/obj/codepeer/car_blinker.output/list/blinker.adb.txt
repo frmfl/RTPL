@@ -1,0 +1,255 @@
+--# 12 errors, 65 messages
+--#
+with Control;
+with Ada.Real_Time;use Ada.Real_Time;
+package body Blinker is
+    --#blinker.adb:3:1: module: blinker__body
+    --#blinker.adb:3:1: subp: blinker'Elab_Body
+    --#output(blinker'Elab_Body): blinker.blinker_typeE
+    --#post(blinker'Elab_Body): blinker.blinker_typeE = true
+    --#blinker.adb:3:1: end of subp: blinker'Elab_Body
+
+   protected body Cmd_Type_Access is
+      procedure Send( Cmd : Command_To_Type ) is --binary semaphore
+    --#blinker.adb:6:7: subp: blinker.cmd_type_access.sendN
+    --#input(blinker.cmd_type_access.sendN): _object
+    --#input(blinker.cmd_type_access.sendN): _object.command_to
+    --#input(blinker.cmd_type_access.sendN): _object.command_to.Cmd
+    --#input(blinker.cmd_type_access.sendN): cmd
+    --#input(blinker.cmd_type_access.sendN): cmd.Cmd
+    --#output(blinker.cmd_type_access.sendN): _object.command_is_new
+    --#output(blinker.cmd_type_access.sendN): _object.command_to
+    --#output(blinker.cmd_type_access.sendN): _object.command_to.Cmd
+    --#pre[3] (blinker.cmd_type_access.sendN): _object.command_to.Cmd'Initialized
+    --#pre[7] (blinker.cmd_type_access.sendN): cmd.Cmd'Initialized
+    --#post(blinker.cmd_type_access.sendN): _object.command_is_new'Initialized
+    --#post(blinker.cmd_type_access.sendN): _object.command_to = One-of{_object.command_to'Old, cmd}
+    --#post(blinker.cmd_type_access.sendN): _object.command_to.Cmd = One-of{_object.command_to.Cmd'Old, cmd.Cmd}
+    --#post(blinker.cmd_type_access.sendN): _object.command_to.Cmd'Initialized
+    --#test_vector(blinker.cmd_type_access.sendN): cmd.Cmd - _object.command_to.Cmd: {-1 | 1}, {0}
+    --#blinker.adb:6:7: end of subp: blinker.cmd_type_access.sendN
+    --#blinker.adb:6:7: subp: blinker.cmd_type_access.sendP
+    --#input(blinker.cmd_type_access.sendP): _object
+    --#input(blinker.cmd_type_access.sendP): _object.command_to
+    --#input(blinker.cmd_type_access.sendP): cmd
+    --#input(blinker.cmd_type_access.sendP): cmd.Cmd
+    --#output(blinker.cmd_type_access.sendP): _object.command_is_new
+    --#output(blinker.cmd_type_access.sendP): _object.command_to
+    --#output(blinker.cmd_type_access.sendP): _object.command_to.Cmd
+    --#pre[7] (blinker.cmd_type_access.sendP): cmd.Cmd'Initialized
+    --#post(blinker.cmd_type_access.sendP): _object.command_is_new = One-of{false, true}
+    --#post(blinker.cmd_type_access.sendP): _object.command_is_new'Initialized
+    --#post(blinker.cmd_type_access.sendP): _object.command_to.Cmd'Initialized
+    --#blinker.adb:6:7: end of subp: blinker.cmd_type_access.sendP
+    --#blinker.adb:6:7: subp: blinker.cmd_type_access.sendP._finalizer
+    --#input(blinker.cmd_type_access.sendP._finalizer): _object
+    --#blinker.adb:6:7: end of subp: blinker.cmd_type_access.sendP._finalizer
+      begin
+         Command_Is_New := False;
+         if Command_To.Cmd /= Cmd.Cmd then
+            Command_To := Cmd;
+            Command_Is_New := True;
+         end if;
+      end Send;
+
+      entry Receive( Cmd : out Command_To_Type) when Command_Is_New is
+    --#blinker.adb:15:7: ?access check
+    --#    _object /= null
+    --#    severity: SUPPRESSED
+    --#    module: blinker__body
+    --#    subp: blinker.cmd_type_access.receive_B12s
+    --#    basic block: Entry_BB_1
+    --#    assertion: _object /= null
+    --#    VN: Unchecked_Conversion_0.@15
+    --#    Expected: Inverse{null}
+    --#    Bad: Addr_Set{null}
+    --#    Attribs:  Ptr  null in Bad  Uncertain
+    --#blinker.adb:15:7: subp: blinker.cmd_type_access.receive_E11s'Protected_Type_Op
+    --#blinker.adb:15:7: ?access check
+    --#    (unchecked_conversion) /= null
+    --#    severity: SUPPRESSED
+    --#    module: blinker__body
+    --#    subp: blinker.cmd_type_access.receive_E11s'Protected_Type_Op
+    --#    basic block: Entry_BB_1
+    --#    assertion: (unchecked_conversion) /= null
+    --#    VN: Unchecked_Conversion_2.@15
+    --#    Expected: Inverse{null}
+    --#    Bad: Addr_Set{null}
+    --#    Attribs:  Ptr  null in Bad  Uncertain
+    --#blinker.adb:15:7: ?access check
+    --#    _object /= null
+    --#    severity: SUPPRESSED
+    --#    module: blinker__body
+    --#    subp: blinker.cmd_type_access.receive_E11s'Protected_Type_Op
+    --#    basic block: bb_5
+    --#    assertion: _object /= null
+    --#    VN: Unchecked_Conversion_3.@15
+    --#    Expected: Inverse{null}
+    --#    Bad: Addr_Set{null}
+    --#    Attribs:  Ptr  null in Bad  Uncertain
+    --#input(blinker.cmd_type_access.receive_E11s'Protected_Type_Op): $P
+    --#input(blinker.cmd_type_access.receive_E11s'Protected_Type_Op): 'Constrained
+    --#blinker.adb:15:7: end of subp: blinker.cmd_type_access.receive_E11s'Protected_Type_Op
+    --#blinker.adb:15:54: subp: blinker.cmd_type_access.receive_B12s
+    --#input(blinker.cmd_type_access.receive_B12s): 'Constrained
+    --#output(blinker.cmd_type_access.receive_B12s): blinker.cmd_type_access.receive_B12s'Result
+    --#post(blinker.cmd_type_access.receive_B12s): blinker.cmd_type_access.receive_B12s'Result'Initialized
+    --#blinker.adb:15:54: end of subp: blinker.cmd_type_access.receive_B12s
+      begin
+         Cmd := Command_To;
+    --#blinker.adb:17:10: ?access check
+    --#    (unchecked_conversion) /= null
+    --#    severity: SUPPRESSED
+    --#    module: blinker__body
+    --#    subp: blinker.cmd_type_access.receive_E11s'Protected_Type_Op
+    --#    basic block: bb_6
+    --#    assertion: (unchecked_conversion) /= null
+    --#    VN: Unchecked_Conversion_4.@17
+    --#    Expected: Inverse{null}
+    --#    Bad: Addr_Set{null}
+    --#    Attribs:  Ptr  null in Bad  Uncertain
+    --#blinker.adb:17:10: ?access check
+    --#    (unchecked_conversion).all.cmd /= null
+    --#    severity: SUPPRESSED
+    --#    module: blinker__body
+    --#    subp: blinker.cmd_type_access.receive_E11s'Protected_Type_Op
+    --#    basic block: bb_6
+    --#    assertion: (unchecked_conversion).all.cmd /= null
+    --#    VN: (unchecked_conversion).cmd@17
+    --#    Expected: Inverse{null}
+    --#    Bad: Addr_Set{null}
+    --#    Attribs:  Ptr  null in Bad  Uncertain
+    --#blinker.adb:17:14: ?access check
+    --#    _object /= null
+    --#    severity: SUPPRESSED
+    --#    module: blinker__body
+    --#    subp: blinker.cmd_type_access.receive_E11s'Protected_Type_Op
+    --#    basic block: bb_6
+    --#    assertion: _object /= null
+    --#    VN: _object
+    --#    Expected: Inverse{null}
+    --#    Bad: Addr_Set{null}
+    --#    Attribs:  Ptr  null in Bad  Uncertain
+      end Receive;
+   end Cmd_Type_Access;
+
+   task body Blinker_Type is
+    --#blinker.adb:21:4: subp: blinker.blinker_type'Task_Type_Body
+    --#test_vector(blinker.blinker_type'Task_Type_Body): Id@28: {R}, {L}, {E}
+    --#blinker.adb:21:4: end of subp: blinker.blinker_type'Task_Type_Body
+    --#blinker.adb:21:4: subp: blinker.blinker_type._finalizer
+    --#blinker.adb:21:4: end of subp: blinker.blinker_type._finalizer
+      Next_Time : Time := Clock + Milliseconds(250);
+      Blinker_Stopped: Boolean := False;
+      On : Boolean := False;
+      Command : Command_To_Type;
+   begin
+      loop
+         Protected_Command.Receive(Command);
+         --if Command.Receiver = Id then
+            case Command.Cmd is
+    --#blinker.adb:30:25: ?!validity check
+    --#    Command.Cmd'Initialized
+    --#    severity: HIGH
+    --#    module: blinker__body
+    --#    subp: blinker.blinker_type'Task_Type_Body
+    --#    basic block: bb_5
+    --#    assertion: Command.Cmd'Initialized
+    --#    VN: undefined
+    --#    Expected: {-Inf..+Inf}
+    --#    Bad: {Invalid}
+    --#    Attribs:  Int  Bad only invalid
+    --#blinker.adb:30:25: ?!raise Constraint_Error
+    --#    Command.Cmd in STOP..START
+    --#    severity: HIGH
+    --#    module: blinker__body
+    --#    subp: blinker.blinker_type'Task_Type_Body
+    --#    basic block: bb_5
+    --#    assertion: Command.Cmd in STOP..START
+    --#    VN: undefined
+    --#    Expected: {STOP..START}
+    --#    Bad: {Invalid}
+    --#    Attribs:  Int  Exp in +/-1000  Bad only invalid
+            --when QUIT =>
+            --   Control.Put_Line("Quit");
+            --   exit;
+            when START =>
+               Blinker_Stopped := False;
+               On := not On;
+               if On then
+                  Control.Put_Line("B"& Id_Type'Image(Command.Receiver) & "S");
+    --#blinker.adb:38:62: ?!validity check
+    --#    Command.Receiver'Initialized
+    --#    severity: HIGH
+    --#    module: blinker__body
+    --#    subp: blinker.blinker_type'Task_Type_Body
+    --#    basic block: bb_10
+    --#    assertion: Command.Receiver'Initialized
+    --#    VN: undefined
+    --#    Expected: {-Inf..+Inf}
+    --#    Bad: {Invalid}
+    --#    Attribs:  Int  Bad only invalid
+    --#blinker.adb:38:62: ?!raise Constraint_Error
+    --#    Command.Receiver in R..E
+    --#    severity: HIGH
+    --#    module: blinker__body
+    --#    subp: blinker.blinker_type'Task_Type_Body
+    --#    basic block: bb_10
+    --#    assertion: Command.Receiver in R..E
+    --#    VN: undefined
+    --#    Expected: {R..E}
+    --#    Bad: {Invalid}
+    --#    Attribs:  Int  Exp in +/-1000  Bad only invalid
+               else
+                  Control.Put_Line("B" & Id_Type'Image(Command.Receiver) & "E");
+    --#blinker.adb:40:63: ?!validity check
+    --#    Command.Receiver'Initialized
+    --#    severity: HIGH
+    --#    module: blinker__body
+    --#    subp: blinker.blinker_type'Task_Type_Body
+    --#    basic block: bb_12
+    --#    assertion: Command.Receiver'Initialized
+    --#    VN: undefined
+    --#    Expected: {-Inf..+Inf}
+    --#    Bad: {Invalid}
+    --#    Attribs:  Int  Bad only invalid
+    --#blinker.adb:40:63: ?!raise Constraint_Error
+    --#    Command.Receiver in R..E
+    --#    severity: HIGH
+    --#    module: blinker__body
+    --#    subp: blinker.blinker_type'Task_Type_Body
+    --#    basic block: bb_12
+    --#    assertion: Command.Receiver in R..E
+    --#    VN: undefined
+    --#    Expected: {R..E}
+    --#    Bad: {Invalid}
+    --#    Attribs:  Int  Exp in +/-1000  Bad only invalid
+               end if;
+               case Id is
+               when R => Control.Toggle_LedR;
+               when L => Control.Toggle_LedL;
+               when E => Control.Toggle_LedL;
+                  Control.Toggle_LedR;
+               when others => null;
+               end case;
+
+
+            when STOP =>
+               if not Blinker_Stopped then
+                  Control.Put_Line("ABS");
+                  Blinker_Stopped := True;
+                  Control.Off_LedL;
+                  Control.Off_LedR;
+
+               end if;
+
+            end case;
+         --end if;
+         Next_Time := Next_Time + Milliseconds(250);
+         delay until Next_Time;
+
+      end loop;
+
+   end Blinker_Type;
+end Blinker;
+    --#blinker.adb:: end of module: blinker__body

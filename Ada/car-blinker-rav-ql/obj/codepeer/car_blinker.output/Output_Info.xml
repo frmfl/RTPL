@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<Output_Record 
+Message_Patterns_File="/opt/codepeer/share/doc/codepeer/MessagePatterns.xml"
+Cutoff_Id="-1"
+Messages="NORMAL"
+>
+</Output_Record> 

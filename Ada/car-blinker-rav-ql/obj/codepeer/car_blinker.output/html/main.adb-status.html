@@ -1,0 +1,257 @@
+<HTML><HEAD><TITLE>Message Status</TITLE>
+<LINK rel="stylesheet" type="text/css"  href="style.css"/>
+</HEAD>
+<STYLE TYPE="text/css">
+body, th, td, select
+  {font-size: 90%}
+</STYLE>
+<BODY onLoad="opener.msg_status_onload(window, 'main.adb-frameset.html', 6)">
+<SCRIPT TYPE="text/javascript">
+<!--
+  function set_msg_status_anchors(src_line, msg_anchor, src_id_pfx, file)
+  {
+    opener.push_src_and_msg_view(src_line, msg_anchor, src_id_pfx, file);
+    opener.focus();
+  }
+//-->
+</SCRIPT>
+<TABLE WIDTH="90%" BORDER="0">
+  <TR>
+    <TH align="left"><H2>main.adb</H2></TH>
+  </TR>
+  <TR>
+    <TD align="left">
+<FONT SIZE="-1"><B>current code review = </B> 2014-10-11 08:52:17 (id #11)</FONT>
+    </TD>
+  <TD align="right"><FONT SIZE="-1"><B>base = </B>2014-10-08 18:02:27  (id #1)</FONT></TD>
+  </TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="90%">
+  <TR>
+    <TD align="left">
+      <TABLE BORDER="3">
+        <FORM name="filter">
+        <TR>
+          <TD>
+            <CAPTION>Filter Options</CAPTION>
+          </TD>
+        </TR>
+        <TR>
+          <TD>History:<BR> 
+            <TABLE BORDER="0">
+              <TR>
+                <TD>
+<INPUT type="checkbox" name="lineage" value="+" 
+  title="added since base code review" 
+  onClick="opener.Filter('lineage', this.checked, this.value)" CHECKED DISABLED>+</TD>
+                <TD><I>added</I></TD>
+              </TR>
+              <TR>
+                <TD>
+<INPUT type="checkbox" name="lineage" value="-" 
+  title="dropped since base code review" 
+  onClick="opener.Filter('lineage', this.checked, this.value)" CHECKED DISABLED>-</TD>
+                <TD><I>dropped</I></TD>
+              </TR>
+              <TR>
+                <TD>
+<INPUT type="checkbox" name="lineage" value="U" 
+  title="unchanged since base code review" 
+  onClick="opener.Filter('lineage', this.checked, this.value)" CHECKED DISABLED>U</TD>
+                <TD><I>unchanged</I></TD>
+              </TR>
+            </TABLE>
+          </TD>
+          <TD>Ranking:<BR> 
+            <TABLE BORDER="0">
+              <TR>
+                <TD>
+<INPUT type="checkbox" name="ranking" value="High" 
+  onClick="opener.Filter('ranking', this.checked, this.value)" CHECKED DISABLED>High</TD>
+              </TR>
+              <TR>
+                <TD>
+<INPUT type="checkbox" name="ranking" value="Medium" 
+  onClick="opener.Filter('ranking', this.checked, this.value)" CHECKED DISABLED>Medium</TD>
+              </TR>
+              <TR>
+                <TD>
+<INPUT type="checkbox" name="ranking" value="Low" 
+  onClick="opener.Filter('ranking', this.checked, this.value)" CHECKED DISABLED>Low</TD>
+              </TR>
+              <TR>
+                <TD>
+<INPUT type="checkbox" name="ranking" value="Informational" 
+  onClick="opener.Filter('ranking', this.checked, this.value)" CHECKED DISABLED>Informational</TD>
+              </TR>
+              <TR>
+                <TD>
+<INPUT type="checkbox" name="ranking" value="Suppressed" 
+  onClick="opener.Filter('ranking', this.checked, this.value)" CHECKED DISABLED>Suppressed</TD>
+              </TR>
+            </TABLE>
+          </TD>
+        </TR>
+        </FORM>
+      </TABLE>
+    </TD>
+      <TD align="right">
+        <TABLE BORDER="0">
+          <TR>
+            <TD align="right">
+          </TD>
+        </TR>
+      </TABLE>
+    </TD>
+  </TR>
+</TABLE>
+<BR>
+<TABLE ID="mytable" WIDTH="90%" BORDER="1">
+<TR>
+  <TH><A HREF = "#" title="Sort by Status"  onClick="return opener.sortTable(this)">Status</A></TH>
+  <TH><A HREF = "#" title="Sort by History"  onClick="return opener.sortTable(this)">+/-</A></TH>
+  <TH><A HREF = "#" title="Sort by Id"  onClick="return opener.sortTable(this)">Msg Id</A></TH>
+  <TH><A HREF = "#" title="Sort by Method"  onClick="return opener.sortTable(this)">Method</A></TH>
+  <TH><A HREF = "#" title="Sort by Line"  onClick="return opener.sortTable(this)">Line</A></TH>
+  <TH><A HREF = "#" title="Sort by Message_Category"  onClick="return opener.sortTable(this)">Message Category</A></TH>
+  <TH>Message Text</TH>
+  <TH>Date</TH>
+</TR>
+<TR>
+<TD align="center">
+  <A NAME ="id_515"></A>
+  <TABLE>
+    <TR>
+      <TD align="center" ID="msg_id_515">Suppressed</TD>
+    </TR>
+    <TR>
+      <TD align="center">
+        <FORM style="display:none" name="msg_status_515">
+          <INPUT 
+            onClick="opener.Popup_Edit_Message_Status(515, 'change_hist_win_623', 'main.adb-frameset.html', '', 'main.adb', 'Suppressed', 'no_audit_trail')" name="edit" title="Edit Msg/View Change History" value="Review" type="button">
+        </FORM>
+      </TD>
+    </TR>
+  </TABLE>
+</TD>
+<TD align="center">U</TD>
+<TD>
+<A HREF="main.adb-frameset.html" TARGET="main_frame_623" onClick="set_msg_status_anchors(13,'69','E','main.adb-frameset.html')">515</A></TD>
+<TD align="center">
+  <FORM>
+    <INPUT TYPE="hidden"
+     NAME="file_name" 
+     VALUE="main.adb-frameset.html" 
+    </INPUT>
+  </FORM>
+main
+</TD>
+<TD align="center">13</TD>
+<TD align="center">unused assignment</TD>
+<TD align="center">into Stop</TD>
+<TD align="center">2014-10-08 18:02:27</TD>
+</TR>
+<TR>
+<TD align="center">
+  <A NAME ="id_516"></A>
+  <TABLE>
+    <TR>
+      <TD align="center" ID="msg_id_516">Medium</TD>
+    </TR>
+    <TR>
+      <TD align="center">
+        <FORM style="display:none" name="msg_status_516">
+          <INPUT 
+            onClick="opener.Popup_Edit_Message_Status(516, 'change_hist_win_623', 'main.adb-frameset.html', '', 'main.adb', 'Medium', 'no_audit_trail')" name="edit" title="Edit Msg/View Change History" value="Review" type="button">
+        </FORM>
+      </TD>
+    </TR>
+  </TABLE>
+</TD>
+<TD align="center">U</TD>
+<TD>
+<A HREF="main.adb-frameset.html" TARGET="main_frame_623" onClick="set_msg_status_anchors(23,'70','E','main.adb-frameset.html')">516</A></TD>
+<TD align="center">
+  <FORM>
+    <INPUT TYPE="hidden"
+     NAME="file_name" 
+     VALUE="main.adb-frameset.html" 
+    </INPUT>
+  </FORM>
+main
+</TD>
+<TD align="center">23</TD>
+<TD align="center">loop does not complete normally</TD>
+<TD align="center"></TD>
+<TD align="center">2014-10-08 18:02:27</TD>
+</TR>
+<TR>
+<TD align="center">
+  <A NAME ="id_519"></A>
+  <TABLE>
+    <TR>
+      <TD align="center" ID="msg_id_519">Suppressed</TD>
+    </TR>
+    <TR>
+      <TD align="center">
+        <FORM style="display:none" name="msg_status_519">
+          <INPUT 
+            onClick="opener.Popup_Edit_Message_Status(519, 'change_hist_win_623', 'main.adb-frameset.html', '', 'main.adb', 'Suppressed', 'no_audit_trail')" name="edit" title="Edit Msg/View Change History" value="Review" type="button">
+        </FORM>
+      </TD>
+    </TR>
+  </TABLE>
+</TD>
+<TD align="center">U</TD>
+<TD>
+<A HREF="main.adb-frameset.html" TARGET="main_frame_623" onClick="set_msg_status_anchors(27,'73','E','main.adb-frameset.html')">519</A></TD>
+<TD align="center">
+  <FORM>
+    <INPUT TYPE="hidden"
+     NAME="file_name" 
+     VALUE="main.adb-frameset.html" 
+    </INPUT>
+  </FORM>
+main
+</TD>
+<TD align="center">27</TD>
+<TD align="center">range check</TD>
+<TD align="center">(value_enumeration_<wbr>8 (<wbr>command_<wbr>typeS,<wbr> command_<wbr>typeN'address,<wbr> 5,<wbr> .<wbr>.<wbr>.)) <= 5</TD>
+<TD align="center">2014-10-08 18:02:27</TD>
+</TR>
+<TR>
+<TD align="center">
+  <A NAME ="id_520"></A>
+  <TABLE>
+    <TR>
+      <TD align="center" ID="msg_id_520">Suppressed</TD>
+    </TR>
+    <TR>
+      <TD align="center">
+        <FORM style="display:none" name="msg_status_520">
+          <INPUT 
+            onClick="opener.Popup_Edit_Message_Status(520, 'change_hist_win_623', 'main.adb-frameset.html', '', 'main.adb', 'Suppressed', 'no_audit_trail')" name="edit" title="Edit Msg/View Change History" value="Review" type="button">
+        </FORM>
+      </TD>
+    </TR>
+  </TABLE>
+</TD>
+<TD align="center">U</TD>
+<TD>
+<A HREF="main.adb-frameset.html" TARGET="main_frame_623" onClick="set_msg_status_anchors(29,'74','E','main.adb-frameset.html')">520</A></TD>
+<TD align="center">
+  <FORM>
+    <INPUT TYPE="hidden"
+     NAME="file_name" 
+     VALUE="main.adb-frameset.html" 
+    </INPUT>
+  </FORM>
+main
+</TD>
+<TD align="center">29</TD>
+<TD align="center">precondition</TD>
+<TD align="center">on bcontrol.<wbr>command_<wbr>access.<wbr>sendP:<wbr> requires (<wbr>soft) _<wbr>object.<wbr>command'Initialized</TD>
+<TD align="center">2014-10-08 18:02:27</TD>
+</TR>
+</TABLE><BR>
+</HTML>

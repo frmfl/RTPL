@@ -1,0 +1,17 @@
+version:11
+Seg: 1;Root: 71507;Pages: 25;Sublib: 1;Filename:bcontrol.scil
+Refs:
+Seg: 2;Root: 140832;Pages: 39;Sublib: 1;Filename:bcontrol__body.scil
+Refs: 1
+Seg: 3;Root: 201551;Pages: 21;Sublib: 1;Filename:main__body.scil
+Refs: 4
+Seg: 4;Root: 262670;Pages: 4;Sublib: 1;Filename:main.scil
+Refs:
+Seg: 5;Root: 333866;Pages: 25;Sublib: 1;Filename:blinker.scil
+Refs:
+Seg: 6;Root: 401712;Pages: 35;Sublib: 1;Filename:blinker__body.scil
+Refs: 5
+Seg: 7;Root: 463618;Pages: 19;Sublib: 1;Filename:b~main.scil
+Refs:
+Seg: 8;Root: 526338;Pages: 8;Sublib: 1;Filename:b~main__body.scil
+Refs: 7

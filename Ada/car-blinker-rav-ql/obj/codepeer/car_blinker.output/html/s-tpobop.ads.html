@@ -1,0 +1,257 @@
+<HTML><HEAD>
+<TITLE>s-tpobop.ads</TITLE>
+<SCRIPT TYPE="text/javascript">
+<!--
+  function listing_onload()
+  {
+    top.listing_onload_common(window, 
+      "s-tpobop.ads-frameset.html", "623", "s-tpobop.ads");
+    top.Update_Message_Status("s-tpobop.ads-frameset.html", "", "s-tpobop.ads")
+  }
+//-->
+</SCRIPT>
+<SCRIPT TYPE="text/javascript">
+<!--
+  function set_src_and_msg_anchors(src_line,
+    msg_anchor, src_id_pfx)
+  {
+    top.set_src_and_msg_anchors_common(src_line, msg_anchor,
+      src_id_pfx, "s-tpobop.ads-frameset.html");
+  }
+//-->
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" onLoad="listing_onload();">
+<CENTER><H3>File Source: s-tpobop.ads</H3></CENTER>
+<PRE>
+<A NAME="E1"></A>     1  ------------------------------------------------------------------------------
+<A NAME="E2"></A>     2  --                                                                          --
+<A NAME="E3"></A>     3  --                 GNAT RUN-TIME LIBRARY (GNARL) COMPONENTS                 --
+<A NAME="E4"></A>     4  --                                                                          --
+<A NAME="E5"></A>     5  --               SYSTEM.TASKING.PROTECTED_OBJECTS.OPERATIONS                --
+<A NAME="E6"></A>     6  --                                                                          --
+<A NAME="E7"></A>     7  --                                  S p e c                                 --
+<A NAME="E8"></A>     8  --                                                                          --
+<A NAME="E9"></A>     9  --          Copyright (C) 1992-2009, Free Software Foundation, Inc.         --
+<A NAME="E10"></A>    10  --                                                                          --
+<A NAME="E11"></A>    11  -- GNARL is free software; you can  redistribute it  and/or modify it under --
+<A NAME="E12"></A>    12  -- terms of the  GNU General Public License as published  by the Free Soft- --
+<A NAME="E13"></A>    13  -- ware  Foundation;  either version 3,  or (at your option) any later ver- --
+<A NAME="E14"></A>    14  -- sion.  GNAT is distributed in the hope that it will be useful, but WITH- --
+<A NAME="E15"></A>    15  -- OUT ANY WARRANTY;  without even the  implied warranty of MERCHANTABILITY --
+<A NAME="E16"></A>    16  -- or FITNESS FOR A PARTICULAR PURPOSE.                                     --
+<A NAME="E17"></A>    17  --                                                                          --
+<A NAME="E18"></A>    18  -- As a special exception under Section 7 of GPL version 3, you are granted --
+<A NAME="E19"></A>    19  -- additional permissions described in the GCC Runtime Library Exception,   --
+<A NAME="E20"></A>    20  -- version 3.1, as published by the Free Software Foundation.               --
+<A NAME="E21"></A>    21  --                                                                          --
+<A NAME="E22"></A>    22  -- In particular,  you can freely  distribute your programs  built with the --
+<A NAME="E23"></A>    23  -- GNAT Pro compiler, including any required library run-time units,  using --
+<A NAME="E24"></A>    24  -- any licensing terms  of your choosing.  See the AdaCore Software License --
+<A NAME="E25"></A>    25  -- for full details.                                                        --
+<A NAME="E26"></A>    26  --                                                                          --
+<A NAME="E27"></A>    27  -- GNARL was developed by the GNARL team at Florida State University.       --
+<A NAME="E28"></A>    28  -- Extensive contributions were provided by Ada Core Technologies, Inc.     --
+<A NAME="E29"></A>    29  --                                                                          --
+<A NAME="E30"></A>    30  ------------------------------------------------------------------------------
+<A NAME="E31"></A>    31  
+<A NAME="E32"></A>    32  --  This package contains all the extended primitives related to protected
+<A NAME="E33"></A>    33  --  objects with entries.
+<A NAME="E34"></A>    34  
+<A NAME="E35"></A>    35  --  The handling of protected objects with no entries is done in
+<A NAME="E36"></A>    36  --  System.Tasking.Protected_Objects, the simple routines for protected
+<A NAME="E37"></A>    37  --  objects with entries in System.Tasking.Protected_Objects.Entries. The
+<A NAME="E38"></A>    38  --  split between Entries and Operations is needed to break circular
+<A NAME="E39"></A>    39  --  dependencies inside the run time.
+<A NAME="E40"></A>    40  
+<A NAME="E41"></A>    41  --  Note: the compiler generates direct calls to this interface, via Rtsfind.
+<A NAME="E42"></A>    42  --  Any changes to this interface may require corresponding compiler changes.
+<A NAME="E43"></A>    43  
+<A NAME="E44"></A>    44  with Ada.Exceptions;
+<A NAME="E45"></A>    45  
+<A NAME="E46"></A>    46  with System.Tasking.Protected_Objects.Entries;
+<A NAME="E47"></A>    47  
+<A NAME="E48"></A>    48  package System.Tasking.Protected_Objects.Operations is
+<A NAME="E49"></A>    49     pragma Elaborate_Body;
+<A NAME="E50"></A>    50  
+<A NAME="E51"></A>    51     type Communication_Block is private;
+<A NAME="E52"></A>    52     --  Objects of this type are passed between GNARL calls to allow RTS
+<A NAME="E53"></A>    53     --  information to be preserved.
+<A NAME="E54"></A>    54  
+<A NAME="E55"></A>    55     procedure Protected_Entry_Call
+<A NAME="E56"></A>    56       (Object             : Entries.Protection_Entries_Access;
+<A NAME="E57"></A>    57        E                  : Protected_Entry_Index;
+<A NAME="E58"></A>    58        Uninterpreted_Data : System.Address;
+<A NAME="E59"></A>    59        Mode               : Call_Modes;
+<A NAME="E60"></A>    60        Block              : out Communication_Block);
+<A NAME="E61"></A>    61     --  Make a protected entry call to the specified object.
+<A NAME="E62"></A>    62     --  Pend a protected entry call on the protected object represented
+<A NAME="E63"></A>    63     --  by Object. A pended call is not queued; it may be executed immediately
+<A NAME="E64"></A>    64     --  or queued, depending on the state of the entry barrier.
+<A NAME="E65"></A>    65     --
+<A NAME="E66"></A>    66     --    E
+<A NAME="E67"></A>    67     --      The index representing the entry to be called.
+<A NAME="E68"></A>    68     --
+<A NAME="E69"></A>    69     --    Uninterpreted_Data
+<A NAME="E70"></A>    70     --      This will be returned by Next_Entry_Call when this call is serviced.
+<A NAME="E71"></A>    71     --      It can be used by the compiler to pass information between the
+<A NAME="E72"></A>    72     --      caller and the server, in particular entry parameters.
+<A NAME="E73"></A>    73     --
+<A NAME="E74"></A>    74     --    Mode
+<A NAME="E75"></A>    75     --      The kind of call to be pended
+<A NAME="E76"></A>    76     --
+<A NAME="E77"></A>    77     --    Block
+<A NAME="E78"></A>    78     --      Information passed between runtime calls by the compiler
+<A NAME="E79"></A>    79  
+<A NAME="E80"></A>    80     procedure Timed_Protected_Entry_Call
+<A NAME="E81"></A>    81       (Object                : Entries.Protection_Entries_Access;
+<A NAME="E82"></A>    82        E                     : Protected_Entry_Index;
+<A NAME="E83"></A>    83        Uninterpreted_Data    : System.Address;
+<A NAME="E84"></A>    84        Timeout               : Duration;
+<A NAME="E85"></A>    85        Mode                  : Delay_Modes;
+<A NAME="E86"></A>    86        Entry_Call_Successful : out Boolean);
+<A NAME="E87"></A>    87     --  Same as the Protected_Entry_Call but with time-out specified.
+<A NAME="E88"></A>    88     --  This routines is used when we do not use ATC mechanism to implement
+<A NAME="E89"></A>    89     --  timed entry calls.
+<A NAME="E90"></A>    90  
+<A NAME="E91"></A>    91     procedure Service_Entries (Object : Entries.Protection_Entries_Access);
+<A NAME="E92"></A>    92     pragma Inline (Service_Entries);
+<A NAME="E93"></A>    93  
+<A NAME="E94"></A>    94     procedure PO_Service_Entries
+<A NAME="E95"></A>    95       (Self_ID       : Task_Id;
+<A NAME="E96"></A>    96        Object        : Entries.Protection_Entries_Access;
+<A NAME="E97"></A>    97        Unlock_Object : Boolean := True);
+<A NAME="E98"></A>    98     --  Service all entry queues of the specified object, executing the
+<A NAME="E99"></A>    99     --  corresponding bodies of any queued entry calls that are waiting
+<A NAME="E100"></A>   100     --  on True barriers. This is used when the state of a protected
+<A NAME="E101"></A>   101     --  object may have changed, in particular after the execution of
+<A NAME="E102"></A>   102     --  the statement sequence of a protected procedure.
+<A NAME="E103"></A>   103     --
+<A NAME="E104"></A>   104     --  Note that servicing an entry may change the value of one or more
+<A NAME="E105"></A>   105     --  barriers, so this routine keeps checking barriers until all of
+<A NAME="E106"></A>   106     --  them are closed.
+<A NAME="E107"></A>   107     --
+<A NAME="E108"></A>   108     --  This must be called with abort deferred and with the corresponding
+<A NAME="E109"></A>   109     --  object locked.
+<A NAME="E110"></A>   110     --
+<A NAME="E111"></A>   111     --  If Unlock_Object is set True, then Object is unlocked on return,
+<A NAME="E112"></A>   112     --  otherwise Object remains locked and the caller is responsible for
+<A NAME="E113"></A>   113     --  the required unlock.
+<A NAME="E114"></A>   114  
+<A NAME="E115"></A>   115     procedure Complete_Entry_Body (Object : Entries.Protection_Entries_Access);
+<A NAME="E116"></A>   116     --  Called from within an entry body procedure, indicates that the
+<A NAME="E117"></A>   117     --  corresponding entry call has been serviced.
+<A NAME="E118"></A>   118  
+<A NAME="E119"></A>   119     procedure Exceptional_Complete_Entry_Body
+<A NAME="E120"></A>   120       (Object : Entries.Protection_Entries_Access;
+<A NAME="E121"></A>   121        Ex     : Ada.Exceptions.Exception_Id);
+<A NAME="E122"></A>   122     --  Perform all of the functions of Complete_Entry_Body. In addition,
+<A NAME="E123"></A>   123     --  report in Ex the exception whose propagation terminated the entry
+<A NAME="E124"></A>   124     --  body to the runtime system.
+<A NAME="E125"></A>   125  
+<A NAME="E126"></A>   126     procedure Cancel_Protected_Entry_Call (Block : in out Communication_Block);
+<A NAME="E127"></A>   127     --  Attempt to cancel the most recent protected entry call. If the call is
+<A NAME="E128"></A>   128     --  not queued abortably, wait until it is or until it has completed.
+<A NAME="E129"></A>   129     --  If the call is actually cancelled, the called object will be
+<A NAME="E130"></A>   130     --  locked on return from this call. Get_Cancelled (Block) can be
+<A NAME="E131"></A>   131     --  used to determine if the cancellation took place; there
+<A NAME="E132"></A>   132     --  may be entries needing service in this case.
+<A NAME="E133"></A>   133     --
+<A NAME="E134"></A>   134     --  Block passes information between this and other runtime calls.
+<A NAME="E135"></A>   135  
+<A NAME="E136"></A>   136     function Enqueued (Block : Communication_Block) return Boolean;
+<A NAME="E137"></A>   137     --  Returns True if the Protected_Entry_Call which returned the
+<A NAME="E138"></A>   138     --  specified Block object was queued; False otherwise.
+<A NAME="E139"></A>   139  
+<A NAME="E140"></A>   140     function Cancelled (Block : Communication_Block) return Boolean;
+<A NAME="E141"></A>   141     --  Returns True if the Protected_Entry_Call which returned the
+<A NAME="E142"></A>   142     --  specified Block object was cancelled, False otherwise.
+<A NAME="E143"></A>   143  
+<A NAME="E144"></A>   144     procedure Requeue_Protected_Entry
+<A NAME="E145"></A>   145       (Object     : Entries.Protection_Entries_Access;
+<A NAME="E146"></A>   146        New_Object : Entries.Protection_Entries_Access;
+<A NAME="E147"></A>   147        E          : Protected_Entry_Index;
+<A NAME="E148"></A>   148        With_Abort : Boolean);
+<A NAME="E149"></A>   149     --  If Object = New_Object, queue the protected entry call on Object
+<A NAME="E150"></A>   150     --   currently being serviced on the queue corresponding to the entry
+<A NAME="E151"></A>   151     --   represented by E.
+<A NAME="E152"></A>   152     --
+<A NAME="E153"></A>   153     --  If Object /= New_Object, transfer the call to New_Object.E,
+<A NAME="E154"></A>   154     --   executing or queuing it as appropriate.
+<A NAME="E155"></A>   155     --
+<A NAME="E156"></A>   156     --  With_Abort---True if the call is to be queued abortably, false
+<A NAME="E157"></A>   157     --   otherwise.
+<A NAME="E158"></A>   158  
+<A NAME="E159"></A>   159     procedure Requeue_Task_To_Protected_Entry
+<A NAME="E160"></A>   160       (New_Object : Entries.Protection_Entries_Access;
+<A NAME="E161"></A>   161        E          : Protected_Entry_Index;
+<A NAME="E162"></A>   162        With_Abort : Boolean);
+<A NAME="E163"></A>   163     --  Transfer task entry call currently being serviced to entry E
+<A NAME="E164"></A>   164     --   on New_Object.
+<A NAME="E165"></A>   165     --
+<A NAME="E166"></A>   166     --  With_Abort---True if the call is to be queued abortably, false
+<A NAME="E167"></A>   167     --   otherwise.
+<A NAME="E168"></A>   168  
+<A NAME="E169"></A>   169     function Protected_Count
+<A NAME="E170"></A>   170       (Object : Entries.Protection_Entries'Class;
+<A NAME="E171"></A>   171        E      : Protected_Entry_Index)
+<A NAME="E172"></A>   172        return   Natural;
+<A NAME="E173"></A>   173     --  Return the number of entry calls to E on Object
+<A NAME="E174"></A>   174  
+<A NAME="E175"></A>   175     function Protected_Entry_Caller
+<A NAME="E176"></A>   176       (Object : Entries.Protection_Entries'Class) return Task_Id;
+<A NAME="E177"></A>   177     --  Return value of E'Caller, where E is the protected entry currently
+<A NAME="E178"></A>   178     --  being handled. This will only work if called from within an entry
+<A NAME="E179"></A>   179     --  body, as required by the LRM (C.7.1(14)).
+<A NAME="E180"></A>   180  
+<A NAME="E181"></A>   181     --  For internal use only
+<A NAME="E182"></A>   182  
+<A NAME="E183"></A>   183     procedure PO_Do_Or_Queue
+<A NAME="E184"></A>   184       (Self_ID    : Task_Id;
+<A NAME="E185"></A>   185        Object     : Entries.Protection_Entries_Access;
+<A NAME="E186"></A>   186        Entry_Call : Entry_Call_Link);
+<A NAME="E187"></A>   187     --  This procedure either executes or queues an entry call, depending
+<A NAME="E188"></A>   188     --  on the status of the corresponding barrier. It assumes that abort
+<A NAME="E189"></A>   189     --  is deferred and that the specified object is locked.
+<A NAME="E190"></A>   190  
+<A NAME="E191"></A>   191  private
+<A NAME="E192"></A>   192     type Communication_Block is record
+<A NAME="E193"></A>   193        Self      : Task_Id;
+<A NAME="E194"></A>   194        Enqueued  : Boolean := True;
+<A NAME="E195"></A>   195        Cancelled : Boolean := False;
+<A NAME="E196"></A>   196     end record;
+<A NAME="E197"></A>   197     pragma Volatile (Communication_Block);
+<A NAME="E198"></A>   198  
+<A NAME="E199"></A>   199     --  When a program contains limited interfaces, the compiler generates the
+<A NAME="E200"></A>   200     --  predefined primitives associated with dispatching selects. One of the
+<A NAME="E201"></A>   201     --  parameters of these routines is of type Communication_Block. Even if
+<A NAME="E202"></A>   202     --  the program lacks implementing concurrent types, the tasking runtime is
+<A NAME="E203"></A>   203     --  dragged in unconditionally because of Communication_Block. To avoid this
+<A NAME="E204"></A>   204     --  case, the compiler uses type Dummy_Communication_Block which defined in
+<A NAME="E205"></A>   205     --  System.Soft_Links. If the structure of Communication_Block is changed,
+<A NAME="E206"></A>   206     --  the corresponding dummy type must be changed as well.
+<A NAME="E207"></A>   207  
+<A NAME="E208"></A>   208     --  The Communication_Block seems to be a relic. At the moment, the
+<A NAME="E209"></A>   209     --  compiler seems to be generating unnecessary conditional code based on
+<A NAME="E210"></A>   210     --  this block. See the code generated for async. select with task entry
+<A NAME="E211"></A>   211     --  call for another way of solving this ???
+<A NAME="E212"></A>   212  
+<A NAME="E213"></A>   213  end System.Tasking.Protected_Objects.Operations;
+</PRE>
+ <BR><BR> <BR><BR> <BR><BR><BR><BR> 
+<FONT COLOR="navy">CodePeer Build Version : 2.3.2 (rev 303695)</FONT><BR>
+<TABLE>
+  <TR>
+    <TD><FONT COLOR="navy">s-tpobop.ads</FONT></TD>
+    <TD><FONT COLOR = "navy">2010-Oct-26 13:48:03</FONT></TD>
+  </TR>
+  <TR>
+    <TD><FONT COLOR="navy">bcontrol__body.scil</FONT></TD>
+    <TD><FONT COLOR = "navy">2014-Oct-11 06:52:16</FONT></TD>
+  </TR>
+  <TR>
+    <TD><FONT COLOR="navy">blinker__body.scil</FONT></TD>
+    <TD><FONT COLOR = "navy">2014-Oct-11 06:52:16</FONT></TD>
+  </TR>
+</TABLE>
+</BODY></HTML>

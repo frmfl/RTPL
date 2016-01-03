@@ -1,0 +1,84 @@
+--# 0 errors, 40 messages
+--#
+with Text_IO;
+package body Control is
+    --#control.adb:2:1: module: control__body
+    --#control.adb:2:1: subp: control'Elab_Body
+    --#output(control'Elab_Body): nul
+    --#post(control'Elab_Body): nul = 0
+    --#control.adb:2:1: end of subp: control'Elab_Body
+   procedure Put_Line (S: String) is
+    --#control.adb:3:4: subp: control.put_line
+    --#input(control.put_line): S
+    --#input(control.put_line): S._first
+    --#input(control.put_line): S._last
+    --#control.adb:3:4: end of subp: control.put_line
+   begin
+      Text_IO.Put_Line(S);
+   end Put_Line;
+
+   function Get_Line return String is
+    --#control.adb:8:4: subp: control.get_line
+    --#input(control.get_line): control.get_line'Result
+    --#input(control.get_line): nul
+    --#output(control.get_line): control.get_line'Result
+    --#output(control.get_line): control.get_line'Result()
+    --#output(control.get_line): control.get_line'Result(1)
+    --#output(control.get_line): control.get_line'Result(2)
+    --#output(control.get_line): control.get_line'Result(3)
+    --#output(control.get_line): control.get_line'Result(4)
+    --#output(control.get_line): control.get_line'Result(5)
+    --#output(control.get_line): control.get_line'Result._first
+    --#output(control.get_line): control.get_line'Result._last
+    --#post(control.get_line): not_init'ed(control.get_line'Result())
+    --#post(control.get_line): control.get_line'Result(1)'Initialized
+    --#post(control.get_line): control.get_line'Result(2)'Initialized
+    --#post(control.get_line): control.get_line'Result(3)'Initialized
+    --#post(control.get_line): control.get_line'Result(4) = 0
+    --#post(control.get_line): control.get_line'Result(5) = 0
+    --#post(control.get_line): control.get_line'Result'First = 1
+    --#post(control.get_line): control.get_line'Result'Last = 5
+    --#control.adb:8:4: end of subp: control.get_line
+      S: String(1..5) := (others => ASCII.NUL);
+      Char : Character;
+   begin
+      for I in 1 .. 3 loop
+         Text_IO.Get(Char);
+         Text_IO.Put(Char);
+         S(I) := Char;
+      end loop;
+
+
+      --S := Text_IO.Get_Line;
+      return S;
+   end Get_Line;
+
+   procedure Toggle_LedR is
+    --#control.adb:23:4: subp: control.toggle_ledr
+    --#control.adb:23:4: end of subp: control.toggle_ledr
+   begin
+      null;
+   end;
+
+   procedure Toggle_LedL is
+    --#control.adb:28:4: subp: control.toggle_ledl
+    --#control.adb:28:4: end of subp: control.toggle_ledl
+   begin
+      null;
+   end;
+
+   procedure Off_LedR is
+    --#control.adb:33:4: subp: control.off_ledr
+    --#control.adb:33:4: end of subp: control.off_ledr
+   begin
+      null;
+   end;
+
+   procedure Off_LedL is
+    --#control.adb:38:4: subp: control.off_ledl
+    --#control.adb:38:4: end of subp: control.off_ledl
+   begin
+      null;
+   end;
+end Control;
+    --#control.adb:: end of module: control__body

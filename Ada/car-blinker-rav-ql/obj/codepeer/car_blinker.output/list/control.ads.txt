@@ -1,0 +1,15 @@
+--# 0 errors, 4 messages
+--#
+package Control is
+    --#control.ads:1:1: module: control
+    --#control.ads:1:1: subp: control'Elab_Spec
+    --#control.ads:1:1: end of subp: control'Elab_Spec
+   procedure Put_Line(S : String);
+   function Get_Line return String;
+
+   procedure Toggle_LedR;
+   procedure Toggle_LedL;
+   procedure Off_LedR;
+   procedure Off_LedL;
+end Control;
+    --#control.ads:: end of module: control

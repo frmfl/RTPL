@@ -1,0 +1,116 @@
+<HTML><HEAD>
+<TITLE>control.adb</TITLE>
+<SCRIPT TYPE="text/javascript">
+<!--
+  function listing_onload()
+  {
+    top.listing_onload_common(window, 
+      "control.adb-frameset.html", "623", "control.adb");
+    top.Update_Message_Status("control.adb-frameset.html", "", "control.adb")
+  }
+//-->
+</SCRIPT>
+<SCRIPT TYPE="text/javascript">
+<!--
+  function set_src_and_msg_anchors(src_line,
+    msg_anchor, src_id_pfx)
+  {
+    top.set_src_and_msg_anchors_common(src_line, msg_anchor,
+      src_id_pfx, "control.adb-frameset.html");
+  }
+//-->
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" onLoad="listing_onload();">
+<CENTER><H3>File Source: control.adb</H3></CENTER>
+<PRE>
+<A NAME="E1"></A>     1  with Text_IO;
+        <FONT COLOR="purple"> -- 
+<A NAME="P2"></A>    <A ID="ID_P2" HREF="control.adb-msgs.html#1-Ann" onClick="set_src_and_msg_anchors(2, '1-Ann', 'P')" TARGET="messages_623">P/P</A>  --  <B>Subp:</B> control'Elab_Body
+         -- 
+         --  <B>Postconditions:</B>
+         --    nul = 0
+         -- </FONT>
+<A NAME="E2"></A>     2  package body Control is
+           <FONT COLOR="purple"> -- 
+<A NAME="P3"></A>    <A ID="ID_P3" HREF="control.adb-msgs.html#6-Ann" onClick="set_src_and_msg_anchors(3, '6-Ann', 'P')" TARGET="messages_623">P/P</A>     --  <B>Subp:</B> control.put_line
+            -- </FONT>
+<A NAME="E3"></A>     3     procedure Put_Line (S: String) is
+<A NAME="E4"></A>     4     begin
+<A NAME="E5"></A>     5        Text_IO.Put_Line(S);
+<A NAME="E6"></A>     6     end Put_Line;
+<A NAME="E7"></A>     7  
+           <FONT COLOR="purple"> -- 
+<A NAME="P8"></A>    <A ID="ID_P8" HREF="control.adb-msgs.html#11-Ann" onClick="set_src_and_msg_anchors(8, '11-Ann', 'P')" TARGET="messages_623">P/P</A>     --  <B>Subp:</B> control.get_line
+            -- 
+            --  <B>Postconditions:</B>
+            --    not_init'ed(control.get_line'Result())
+            --    control.get_line'Result(1)'Initialized
+            --    control.get_line'Result(2)'Initialized
+            --    control.get_line'Result(3)'Initialized
+            --    control.get_line'Result(4) = 0
+            --    control.get_line'Result(5) = 0
+            --    control.get_line'Result'First = 1
+            --    control.get_line'Result'Last = 5
+            -- </FONT>
+<A NAME="E8"></A>     8     function Get_Line return String is
+<A NAME="E9"></A>     9        S: String(1..5) := (others =&gt; ASCII.NUL);
+<A NAME="E10"></A>    10        Char : Character;
+<A NAME="E11"></A>    11     begin
+<A NAME="E12"></A>    12        for I in 1 .. 3 loop
+<A NAME="E13"></A>    13           Text_IO.Get(Char);
+<A NAME="E14"></A>    14           Text_IO.Put(Char);
+<A NAME="E15"></A>    15           S(I) := Char;
+<A NAME="E16"></A>    16        end loop;
+<A NAME="E17"></A>    17  
+<A NAME="E18"></A>    18  
+<A NAME="E19"></A>    19        --S := Text_IO.Get_Line;
+<A NAME="E20"></A>    20        return S;
+<A NAME="E21"></A>    21     end Get_Line;
+<A NAME="E22"></A>    22  
+           <FONT COLOR="purple"> -- 
+<A NAME="P23"></A>    <A ID="ID_P23" HREF="control.adb-msgs.html#32-Ann" onClick="set_src_and_msg_anchors(23, '32-Ann', 'P')" TARGET="messages_623">P/P</A>     --  <B>Subp:</B> control.toggle_ledr
+            -- </FONT>
+<A NAME="E23"></A>    23     procedure Toggle_LedR is
+<A NAME="E24"></A>    24     begin
+<A NAME="E25"></A>    25        null;
+<A NAME="E26"></A>    26     end;
+<A NAME="E27"></A>    27  
+           <FONT COLOR="purple"> -- 
+<A NAME="P28"></A>    <A ID="ID_P28" HREF="control.adb-msgs.html#34-Ann" onClick="set_src_and_msg_anchors(28, '34-Ann', 'P')" TARGET="messages_623">P/P</A>     --  <B>Subp:</B> control.toggle_ledl
+            -- </FONT>
+<A NAME="E28"></A>    28     procedure Toggle_LedL is
+<A NAME="E29"></A>    29     begin
+<A NAME="E30"></A>    30        null;
+<A NAME="E31"></A>    31     end;
+<A NAME="E32"></A>    32  
+           <FONT COLOR="purple"> -- 
+<A NAME="P33"></A>    <A ID="ID_P33" HREF="control.adb-msgs.html#36-Ann" onClick="set_src_and_msg_anchors(33, '36-Ann', 'P')" TARGET="messages_623">P/P</A>     --  <B>Subp:</B> control.off_ledr
+            -- </FONT>
+<A NAME="E33"></A>    33     procedure Off_LedR is
+<A NAME="E34"></A>    34     begin
+<A NAME="E35"></A>    35        null;
+<A NAME="E36"></A>    36     end;
+<A NAME="E37"></A>    37  
+           <FONT COLOR="purple"> -- 
+<A NAME="P38"></A>    <A ID="ID_P38" HREF="control.adb-msgs.html#38-Ann" onClick="set_src_and_msg_anchors(38, '38-Ann', 'P')" TARGET="messages_623">P/P</A>     --  <B>Subp:</B> control.off_ledl
+            -- </FONT>
+<A NAME="E38"></A>    38     procedure Off_LedL is
+<A NAME="E39"></A>    39     begin
+<A NAME="E40"></A>    40        null;
+<A NAME="E41"></A>    41     end;
+<A NAME="E42"></A>    42  end Control;
+</PRE>
+ <BR><BR> <BR><BR> <BR><BR><BR><BR> 
+<FONT COLOR="navy">CodePeer Build Version : 2.3.2 (rev 303695)</FONT><BR>
+<TABLE>
+  <TR>
+    <TD><FONT COLOR="navy">control.adb</FONT></TD>
+    <TD><FONT COLOR = "navy">2014-Oct-04 21:23:03</FONT></TD>
+  </TR>
+  <TR>
+    <TD><FONT COLOR="navy">control__body.scil</FONT></TD>
+    <TD><FONT COLOR = "navy">2014-Oct-08 16:02:26</FONT></TD>
+  </TR>
+</TABLE>
+</BODY></HTML>

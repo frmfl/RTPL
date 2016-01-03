@@ -1,0 +1,597 @@
+<HTML><HEAD><TITLE>Message Status</TITLE>
+<LINK rel="stylesheet" type="text/css"  href="style.css"/>
+</HEAD>
+<STYLE TYPE="text/css">
+body, th, td, select
+  {font-size: 90%}
+</STYLE>
+<BODY onLoad="opener.msg_status_onload(window, 'blinker.adb-frameset.html', 5)">
+<SCRIPT TYPE="text/javascript">
+<!--
+  function set_msg_status_anchors(src_line, msg_anchor, src_id_pfx, file)
+  {
+    opener.push_src_and_msg_view(src_line, msg_anchor, src_id_pfx, file);
+    opener.focus();
+  }
+//-->
+</SCRIPT>
+<TABLE WIDTH="90%" BORDER="0">
+  <TR>
+    <TH align="left"><H2>blinker.adb</H2></TH>
+  </TR>
+  <TR>
+    <TD align="left">
+<FONT SIZE="-1"><B>current code review = </B> 2014-10-11 08:52:17 (id #11)</FONT>
+    </TD>
+  <TD align="right"><FONT SIZE="-1"><B>base = </B>2014-10-08 18:02:27  (id #1)</FONT></TD>
+  </TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="90%">
+  <TR>
+    <TD align="left">
+      <TABLE BORDER="3">
+        <FORM name="filter">
+        <TR>
+          <TD>
+            <CAPTION>Filter Options</CAPTION>
+          </TD>
+        </TR>
+        <TR>
+          <TD>History:<BR> 
+            <TABLE BORDER="0">
+              <TR>
+                <TD>
+<INPUT type="checkbox" name="lineage" value="+" 
+  title="added since base code review" 
+  onClick="opener.Filter('lineage', this.checked, this.value)" CHECKED DISABLED>+</TD>
+                <TD><I>added</I></TD>
+              </TR>
+              <TR>
+                <TD>
+<INPUT type="checkbox" name="lineage" value="-" 
+  title="dropped since base code review" 
+  onClick="opener.Filter('lineage', this.checked, this.value)" CHECKED DISABLED>-</TD>
+                <TD><I>dropped</I></TD>
+              </TR>
+              <TR>
+                <TD>
+<INPUT type="checkbox" name="lineage" value="U" 
+  title="unchanged since base code review" 
+  onClick="opener.Filter('lineage', this.checked, this.value)" CHECKED DISABLED>U</TD>
+                <TD><I>unchanged</I></TD>
+              </TR>
+            </TABLE>
+          </TD>
+          <TD>Ranking:<BR> 
+            <TABLE BORDER="0">
+              <TR>
+                <TD>
+<INPUT type="checkbox" name="ranking" value="High" 
+  onClick="opener.Filter('ranking', this.checked, this.value)" CHECKED DISABLED>High</TD>
+              </TR>
+              <TR>
+                <TD>
+<INPUT type="checkbox" name="ranking" value="Medium" 
+  onClick="opener.Filter('ranking', this.checked, this.value)" CHECKED DISABLED>Medium</TD>
+              </TR>
+              <TR>
+                <TD>
+<INPUT type="checkbox" name="ranking" value="Low" 
+  onClick="opener.Filter('ranking', this.checked, this.value)" CHECKED DISABLED>Low</TD>
+              </TR>
+              <TR>
+                <TD>
+<INPUT type="checkbox" name="ranking" value="Informational" 
+  onClick="opener.Filter('ranking', this.checked, this.value)" CHECKED DISABLED>Informational</TD>
+              </TR>
+              <TR>
+                <TD>
+<INPUT type="checkbox" name="ranking" value="Suppressed" 
+  onClick="opener.Filter('ranking', this.checked, this.value)" CHECKED DISABLED>Suppressed</TD>
+              </TR>
+            </TABLE>
+          </TD>
+        </TR>
+        </FORM>
+      </TABLE>
+    </TD>
+      <TD align="right">
+        <TABLE BORDER="0">
+          <TR>
+            <TD align="right">
+          </TD>
+        </TR>
+      </TABLE>
+    </TD>
+  </TR>
+</TABLE>
+<BR>
+<TABLE ID="mytable" WIDTH="90%" BORDER="1">
+<TR>
+  <TH><A HREF = "#" title="Sort by Status"  onClick="return opener.sortTable(this)">Status</A></TH>
+  <TH><A HREF = "#" title="Sort by History"  onClick="return opener.sortTable(this)">+/-</A></TH>
+  <TH><A HREF = "#" title="Sort by Id"  onClick="return opener.sortTable(this)">Msg Id</A></TH>
+  <TH><A HREF = "#" title="Sort by Method"  onClick="return opener.sortTable(this)">Method</A></TH>
+  <TH><A HREF = "#" title="Sort by Line"  onClick="return opener.sortTable(this)">Line</A></TH>
+  <TH><A HREF = "#" title="Sort by Message_Category"  onClick="return opener.sortTable(this)">Message Category</A></TH>
+  <TH>Message Text</TH>
+  <TH>Date</TH>
+</TR>
+<TR>
+<TD align="center">
+  <A NAME ="id_460"></A>
+  <TABLE>
+    <TR>
+      <TD align="center" ID="msg_id_460">Suppressed</TD>
+    </TR>
+    <TR>
+      <TD align="center">
+        <FORM style="display:none" name="msg_status_460">
+          <INPUT 
+            onClick="opener.Popup_Edit_Message_Status(460, 'change_hist_win_623', 'blinker.adb-frameset.html', '', 'blinker.adb', 'Suppressed', 'no_audit_trail')" name="edit" title="Edit Msg/View Change History" value="Review" type="button">
+        </FORM>
+      </TD>
+    </TR>
+  </TABLE>
+</TD>
+<TD align="center">U</TD>
+<TD>
+<A HREF="blinker.adb-frameset.html" TARGET="main_frame_623" onClick="set_msg_status_anchors(15,'39','E','blinker.adb-frameset.html')">460</A></TD>
+<TD align="center">
+  <FORM>
+    <INPUT TYPE="hidden"
+     NAME="file_name" 
+     VALUE="blinker.adb-frameset.html" 
+    </INPUT>
+  </FORM>
+blinker.cmd_<wbr>type_<wbr>access.<wbr>receive_B12s
+</TD>
+<TD align="center">15</TD>
+<TD align="center">access check</TD>
+<TD align="center">_object /= null</TD>
+<TD align="center">2014-10-08 18:02:27</TD>
+</TR>
+<TR>
+<TD align="center">
+  <A NAME ="id_462"></A>
+  <TABLE>
+    <TR>
+      <TD align="center" ID="msg_id_462">Suppressed</TD>
+    </TR>
+    <TR>
+      <TD align="center">
+        <FORM style="display:none" name="msg_status_462">
+          <INPUT 
+            onClick="opener.Popup_Edit_Message_Status(462, 'change_hist_win_623', 'blinker.adb-frameset.html', '', 'blinker.adb', 'Suppressed', 'no_audit_trail')" name="edit" title="Edit Msg/View Change History" value="Review" type="button">
+        </FORM>
+      </TD>
+    </TR>
+  </TABLE>
+</TD>
+<TD align="center">U</TD>
+<TD>
+<A HREF="blinker.adb-frameset.html" TARGET="main_frame_623" onClick="set_msg_status_anchors(15,'39','E','blinker.adb-frameset.html')">462</A></TD>
+<TD align="center">
+  <FORM>
+    <INPUT TYPE="hidden"
+     NAME="file_name" 
+     VALUE="blinker.adb-frameset.html" 
+    </INPUT>
+  </FORM>
+blinker.cmd_<wbr>type_<wbr>access.<wbr>receive_<wbr>E11s'Protected_Type_Op
+</TD>
+<TD align="center">15</TD>
+<TD align="center">access check</TD>
+<TD align="center">(unchecked_<wbr>conversion) /= null</TD>
+<TD align="center">2014-10-08 18:02:27</TD>
+</TR>
+<TR>
+<TD align="center">
+  <A NAME ="id_463"></A>
+  <TABLE>
+    <TR>
+      <TD align="center" ID="msg_id_463">Suppressed</TD>
+    </TR>
+    <TR>
+      <TD align="center">
+        <FORM style="display:none" name="msg_status_463">
+          <INPUT 
+            onClick="opener.Popup_Edit_Message_Status(463, 'change_hist_win_623', 'blinker.adb-frameset.html', '', 'blinker.adb', 'Suppressed', 'no_audit_trail')" name="edit" title="Edit Msg/View Change History" value="Review" type="button">
+        </FORM>
+      </TD>
+    </TR>
+  </TABLE>
+</TD>
+<TD align="center">U</TD>
+<TD>
+<A HREF="blinker.adb-frameset.html" TARGET="main_frame_623" onClick="set_msg_status_anchors(15,'39','E','blinker.adb-frameset.html')">463</A></TD>
+<TD align="center">
+  <FORM>
+    <INPUT TYPE="hidden"
+     NAME="file_name" 
+     VALUE="blinker.adb-frameset.html" 
+    </INPUT>
+  </FORM>
+blinker.cmd_<wbr>type_<wbr>access.<wbr>receive_<wbr>E11s'Protected_Type_Op
+</TD>
+<TD align="center">15</TD>
+<TD align="center">access check</TD>
+<TD align="center">_object /= null</TD>
+<TD align="center">2014-10-08 18:02:27</TD>
+</TR>
+<TR>
+<TD align="center">
+  <A NAME ="id_468"></A>
+  <TABLE>
+    <TR>
+      <TD align="center" ID="msg_id_468">Suppressed</TD>
+    </TR>
+    <TR>
+      <TD align="center">
+        <FORM style="display:none" name="msg_status_468">
+          <INPUT 
+            onClick="opener.Popup_Edit_Message_Status(468, 'change_hist_win_623', 'blinker.adb-frameset.html', '', 'blinker.adb', 'Suppressed', 'no_audit_trail')" name="edit" title="Edit Msg/View Change History" value="Review" type="button">
+        </FORM>
+      </TD>
+    </TR>
+  </TABLE>
+</TD>
+<TD align="center">U</TD>
+<TD>
+<A HREF="blinker.adb-frameset.html" TARGET="main_frame_623" onClick="set_msg_status_anchors(17,'51','E','blinker.adb-frameset.html')">468</A></TD>
+<TD align="center">
+  <FORM>
+    <INPUT TYPE="hidden"
+     NAME="file_name" 
+     VALUE="blinker.adb-frameset.html" 
+    </INPUT>
+  </FORM>
+blinker.cmd_<wbr>type_<wbr>access.<wbr>receive_<wbr>E11s'Protected_Type_Op
+</TD>
+<TD align="center">17</TD>
+<TD align="center">access check</TD>
+<TD align="center">(unchecked_<wbr>conversion) /= null</TD>
+<TD align="center">2014-10-08 18:02:27</TD>
+</TR>
+<TR>
+<TD align="center">
+  <A NAME ="id_469"></A>
+  <TABLE>
+    <TR>
+      <TD align="center" ID="msg_id_469">Suppressed</TD>
+    </TR>
+    <TR>
+      <TD align="center">
+        <FORM style="display:none" name="msg_status_469">
+          <INPUT 
+            onClick="opener.Popup_Edit_Message_Status(469, 'change_hist_win_623', 'blinker.adb-frameset.html', '', 'blinker.adb', 'Suppressed', 'no_audit_trail')" name="edit" title="Edit Msg/View Change History" value="Review" type="button">
+        </FORM>
+      </TD>
+    </TR>
+  </TABLE>
+</TD>
+<TD align="center">U</TD>
+<TD>
+<A HREF="blinker.adb-frameset.html" TARGET="main_frame_623" onClick="set_msg_status_anchors(17,'51','E','blinker.adb-frameset.html')">469</A></TD>
+<TD align="center">
+  <FORM>
+    <INPUT TYPE="hidden"
+     NAME="file_name" 
+     VALUE="blinker.adb-frameset.html" 
+    </INPUT>
+  </FORM>
+blinker.cmd_<wbr>type_<wbr>access.<wbr>receive_<wbr>E11s'Protected_Type_Op
+</TD>
+<TD align="center">17</TD>
+<TD align="center">access check</TD>
+<TD align="center">(unchecked_<wbr>conversion).<wbr>all.<wbr>cmd /= null</TD>
+<TD align="center">2014-10-08 18:02:27</TD>
+</TR>
+<TR>
+<TD align="center">
+  <A NAME ="id_470"></A>
+  <TABLE>
+    <TR>
+      <TD align="center" ID="msg_id_470">Suppressed</TD>
+    </TR>
+    <TR>
+      <TD align="center">
+        <FORM style="display:none" name="msg_status_470">
+          <INPUT 
+            onClick="opener.Popup_Edit_Message_Status(470, 'change_hist_win_623', 'blinker.adb-frameset.html', '', 'blinker.adb', 'Suppressed', 'no_audit_trail')" name="edit" title="Edit Msg/View Change History" value="Review" type="button">
+        </FORM>
+      </TD>
+    </TR>
+  </TABLE>
+</TD>
+<TD align="center">U</TD>
+<TD>
+<A HREF="blinker.adb-frameset.html" TARGET="main_frame_623" onClick="set_msg_status_anchors(17,'51','E','blinker.adb-frameset.html')">470</A></TD>
+<TD align="center">
+  <FORM>
+    <INPUT TYPE="hidden"
+     NAME="file_name" 
+     VALUE="blinker.adb-frameset.html" 
+    </INPUT>
+  </FORM>
+blinker.cmd_<wbr>type_<wbr>access.<wbr>receive_<wbr>E11s'Protected_Type_Op
+</TD>
+<TD align="center">17</TD>
+<TD align="center">access check</TD>
+<TD align="center">_object /= null</TD>
+<TD align="center">2014-10-08 18:02:27</TD>
+</TR>
+<TR>
+<TD align="center">
+  <A NAME ="id_478"></A>
+  <TABLE>
+    <TR>
+      <TD align="center" ID="msg_id_478">High</TD>
+    </TR>
+    <TR>
+      <TD align="center">
+        <FORM style="display:none" name="msg_status_478">
+          <INPUT 
+            onClick="opener.Popup_Edit_Message_Status(478, 'change_hist_win_623', 'blinker.adb-frameset.html', '', 'blinker.adb', 'High', 'no_audit_trail')" name="edit" title="Edit Msg/View Change History" value="Review" type="button">
+        </FORM>
+      </TD>
+    </TR>
+  </TABLE>
+</TD>
+<TD align="center">U</TD>
+<TD>
+<A HREF="blinker.adb-frameset.html" TARGET="main_frame_623" onClick="set_msg_status_anchors(30,'59','E','blinker.adb-frameset.html')">478</A></TD>
+<TD align="center">
+  <FORM>
+    <INPUT TYPE="hidden"
+     NAME="file_name" 
+     VALUE="blinker.adb-frameset.html" 
+    </INPUT>
+  </FORM>
+blinker.blinker_<wbr>type'Task_<wbr>Type_Body
+</TD>
+<TD align="center">30</TD>
+<TD align="center">validity check</TD>
+<TD align="center">Command.Cmd'Initialized</TD>
+<TD align="center">2014-10-08 18:02:27</TD>
+</TR>
+<TR>
+<TD align="center">
+  <A NAME ="id_1090"></A>
+  <TABLE>
+    <TR>
+      <TD align="center" ID="msg_id_1090">High</TD>
+    </TR>
+    <TR>
+      <TD align="center">
+        <FORM style="display:none" name="msg_status_1090">
+          <INPUT 
+            onClick="opener.Popup_Edit_Message_Status(1090, 'change_hist_win_623', 'blinker.adb-frameset.html', '', 'blinker.adb', 'High', 'no_audit_trail')" name="edit" title="Edit Msg/View Change History" value="Review" type="button">
+        </FORM>
+      </TD>
+    </TR>
+  </TABLE>
+</TD>
+<TD align="center">+</TD>
+<TD>
+<A HREF="blinker.adb-frameset.html" TARGET="main_frame_623" onClick="set_msg_status_anchors(30,'59','E','blinker.adb-frameset.html')">1090</A></TD>
+<TD align="center">
+  <FORM>
+    <INPUT TYPE="hidden"
+     NAME="file_name" 
+     VALUE="blinker.adb-frameset.html" 
+    </INPUT>
+  </FORM>
+blinker.blinker_<wbr>type'Task_<wbr>Type_Body
+</TD>
+<TD align="center">30</TD>
+<TD align="center">validity check</TD>
+<TD align="center">Command.Cmd in STOP..START</TD>
+<TD align="center">2014-10-10 21:27:06</TD>
+</TR>
+<TR>
+<TD align="center">
+  <A NAME ="id_477"></A>
+  <TABLE>
+    <TR>
+      <TD align="center" ID="msg_id_477">High</TD>
+    </TR>
+    <TR>
+      <TD align="center">
+        <FORM style="display:none" name="msg_status_477">
+          <INPUT 
+            onClick="opener.Popup_Edit_Message_Status(477, 'change_hist_win_623', 'blinker.adb-frameset.html', '', 'blinker.adb', 'High', 'no_audit_trail')" name="edit" title="Edit Msg/View Change History" value="Review" type="button">
+        </FORM>
+      </TD>
+    </TR>
+  </TABLE>
+</TD>
+<TD align="center">U</TD>
+<TD>
+<A HREF="blinker.adb-frameset.html" TARGET="main_frame_623" onClick="set_msg_status_anchors(38,'61','E','blinker.adb-frameset.html')">477</A></TD>
+<TD align="center">
+  <FORM>
+    <INPUT TYPE="hidden"
+     NAME="file_name" 
+     VALUE="blinker.adb-frameset.html" 
+    </INPUT>
+  </FORM>
+blinker.blinker_<wbr>type'Task_<wbr>Type_Body
+</TD>
+<TD align="center">38</TD>
+<TD align="center">validity check</TD>
+<TD align="center">Command.Receiver'Initialized</TD>
+<TD align="center">2014-10-08 18:02:27</TD>
+</TR>
+<TR>
+<TD align="center">
+  <A NAME ="id_1008"></A>
+  <TABLE>
+    <TR>
+      <TD align="center" ID="msg_id_1008">High</TD>
+    </TR>
+    <TR>
+      <TD align="center">
+        <FORM style="display:none" name="msg_status_1008">
+          <INPUT 
+            onClick="opener.Popup_Edit_Message_Status(1008, 'change_hist_win_623', 'blinker.adb-frameset.html', '', 'blinker.adb', 'High', 'no_audit_trail')" name="edit" title="Edit Msg/View Change History" value="Review" type="button">
+        </FORM>
+      </TD>
+    </TR>
+  </TABLE>
+</TD>
+<TD align="center">+</TD>
+<TD>
+<A HREF="blinker.adb-frameset.html" TARGET="main_frame_623" onClick="set_msg_status_anchors(38,'61','E','blinker.adb-frameset.html')">1008</A></TD>
+<TD align="center">
+  <FORM>
+    <INPUT TYPE="hidden"
+     NAME="file_name" 
+     VALUE="blinker.adb-frameset.html" 
+    </INPUT>
+  </FORM>
+blinker.blinker_<wbr>type'Task_<wbr>Type_Body
+</TD>
+<TD align="center">38</TD>
+<TD align="center">validity check</TD>
+<TD align="center">Command.Receiver in R..E</TD>
+<TD align="center">2014-10-10 18:07:58</TD>
+</TR>
+<TR>
+<TD align="center">
+  <A NAME ="id_1011"></A>
+  <TABLE>
+    <TR>
+      <TD align="center" ID="msg_id_1011">High</TD>
+    </TR>
+    <TR>
+      <TD align="center">
+        <FORM style="display:none" name="msg_status_1011">
+          <INPUT 
+            onClick="opener.Popup_Edit_Message_Status(1011, 'change_hist_win_623', 'blinker.adb-frameset.html', '', 'blinker.adb', 'High', 'no_audit_trail')" name="edit" title="Edit Msg/View Change History" value="Review" type="button">
+        </FORM>
+      </TD>
+    </TR>
+  </TABLE>
+</TD>
+<TD align="center">+</TD>
+<TD>
+<A HREF="blinker.adb-frameset.html" TARGET="main_frame_623" onClick="set_msg_status_anchors(40,'63','E','blinker.adb-frameset.html')">1011</A></TD>
+<TD align="center">
+  <FORM>
+    <INPUT TYPE="hidden"
+     NAME="file_name" 
+     VALUE="blinker.adb-frameset.html" 
+    </INPUT>
+  </FORM>
+blinker.blinker_<wbr>type'Task_<wbr>Type_Body
+</TD>
+<TD align="center">40</TD>
+<TD align="center">validity check</TD>
+<TD align="center">Command.Receiver'Initialized</TD>
+<TD align="center">2014-10-10 18:07:58</TD>
+</TR>
+<TR>
+<TD align="center">
+  <A NAME ="id_1012"></A>
+  <TABLE>
+    <TR>
+      <TD align="center" ID="msg_id_1012">High</TD>
+    </TR>
+    <TR>
+      <TD align="center">
+        <FORM style="display:none" name="msg_status_1012">
+          <INPUT 
+            onClick="opener.Popup_Edit_Message_Status(1012, 'change_hist_win_623', 'blinker.adb-frameset.html', '', 'blinker.adb', 'High', 'no_audit_trail')" name="edit" title="Edit Msg/View Change History" value="Review" type="button">
+        </FORM>
+      </TD>
+    </TR>
+  </TABLE>
+</TD>
+<TD align="center">+</TD>
+<TD>
+<A HREF="blinker.adb-frameset.html" TARGET="main_frame_623" onClick="set_msg_status_anchors(40,'63','E','blinker.adb-frameset.html')">1012</A></TD>
+<TD align="center">
+  <FORM>
+    <INPUT TYPE="hidden"
+     NAME="file_name" 
+     VALUE="blinker.adb-frameset.html" 
+    </INPUT>
+  </FORM>
+blinker.blinker_<wbr>type'Task_<wbr>Type_Body
+</TD>
+<TD align="center">40</TD>
+<TD align="center">validity check</TD>
+<TD align="center">Command.Receiver in R..E</TD>
+<TD align="center">2014-10-10 18:07:58</TD>
+</TR>
+<TR>
+<TD align="center">
+  <A NAME ="id_472"></A>
+  <TABLE>
+    <TR>
+      <TD align="center" ID="msg_id_472">Low</TD>
+    </TR>
+    <TR>
+      <TD align="center">
+        <FORM style="display:none" name="msg_status_472">
+          <INPUT 
+            onClick="opener.Popup_Edit_Message_Status(472, 'change_hist_win_623', 'blinker.adb-frameset.html', '', 'blinker.adb', 'Low', 'no_audit_trail')" name="edit" title="Edit Msg/View Change History" value="Review" type="button">
+        </FORM>
+      </TD>
+    </TR>
+  </TABLE>
+</TD>
+<TD align="center">-</TD>
+<TD class="disabled">
+<A NAME="zzz">472</A></TD>
+<TD align="center">
+  <FORM>
+    <INPUT TYPE="hidden"
+     NAME="file_name" 
+     VALUE="blinker.adb-frameset.html" 
+    </INPUT>
+  </FORM>
+blinker.blinker_<wbr>type'Task_<wbr>Type_Body
+</TD>
+<TD class="disabled">21</TD>
+<TD align="center">access check</TD>
+<TD align="center">_task /= null</TD>
+<TD align="center">2014-10-10 18:06:50</TD>
+</TR>
+<TR>
+<TD align="center">
+  <A NAME ="id_479"></A>
+  <TABLE>
+    <TR>
+      <TD align="center" ID="msg_id_479">High</TD>
+    </TR>
+    <TR>
+      <TD align="center">
+        <FORM style="display:none" name="msg_status_479">
+          <INPUT 
+            onClick="opener.Popup_Edit_Message_Status(479, 'change_hist_win_623', 'blinker.adb-frameset.html', '', 'blinker.adb', 'High', 'no_audit_trail')" name="edit" title="Edit Msg/View Change History" value="Review" type="button">
+        </FORM>
+      </TD>
+    </TR>
+  </TABLE>
+</TD>
+<TD align="center">-</TD>
+<TD class="disabled">
+<A NAME="zzz">479</A></TD>
+<TD align="center">
+  <FORM>
+    <INPUT TYPE="hidden"
+     NAME="file_name" 
+     VALUE="blinker.adb-frameset.html" 
+    </INPUT>
+  </FORM>
+blinker.blinker_<wbr>type'Task_<wbr>Type_Body
+</TD>
+<TD class="disabled">31</TD>
+<TD align="center">validity check</TD>
+<TD align="center">Command.Cmd in START..STOP</TD>
+<TD align="center">2014-10-10 21:26:16</TD>
+</TR>
+</TABLE><BR>
+</HTML>

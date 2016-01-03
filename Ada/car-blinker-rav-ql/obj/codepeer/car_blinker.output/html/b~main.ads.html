@@ -1,0 +1,633 @@
+<HTML><HEAD>
+<TITLE>b~main.ads</TITLE>
+<SCRIPT TYPE="text/javascript">
+<!--
+  function listing_onload()
+  {
+    top.listing_onload_common(window, 
+      "b~main.ads-frameset.html", "623", "b~main.ads");
+    top.Update_Message_Status("b~main.ads-frameset.html", "", "b~main.ads")
+  }
+//-->
+</SCRIPT>
+<SCRIPT TYPE="text/javascript">
+<!--
+  function set_src_and_msg_anchors(src_line,
+    msg_anchor, src_id_pfx)
+  {
+    top.set_src_and_msg_anchors_common(src_line, msg_anchor,
+      src_id_pfx, "b~main.ads-frameset.html");
+  }
+//-->
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" onLoad="listing_onload();">
+<CENTER><H3>File Source: b~main.ads</H3></CENTER>
+<PRE>
+<A NAME="E1"></A>     1  pragma Ada_95;
+<A NAME="E2"></A>     2  with System;
+<A NAME="E3"></A>     3  with System.Standard_Library;
+        <FONT COLOR="purple"> -- 
+<A NAME="P4"></A>    <A ID="ID_P4" HREF="b~main.ads-msgs.html#1-Ann" onClick="set_src_and_msg_anchors(4, '1-Ann', 'P')" TARGET="messages_623">P/P</A>  --  <B>Subp:</B> ada_main_for_main'Elab_Spec
+         -- 
+         --  <B>Postconditions:</B>
+         --    Ada_Main_Program_Name(1) = 95
+         --    Ada_Main_Program_Name(5) = 95
+         --    Ada_Main_Program_Name(10) = 0
+         --    Ada_Main_Program_Name(2) = 97
+         --    Ada_Main_Program_Name(4) = 97
+         --    Ada_Main_Program_Name(7) = 97
+         --    Ada_Main_Program_Name(3) = 100
+         --    Ada_Main_Program_Name(6) = 109
+         --    Ada_Main_Program_Name(8) = 105
+         --    Ada_Main_Program_Name(9) = 110
+         --    <A ID="ID_P4" HREF="b~main.ads-msgs.html#1-Ann" onClick="set_src_and_msg_anchors(4, '1-Ann', 'P')" TARGET="messages_623">...</A>
+         -- </FONT>
+<A NAME="E4"></A>     4  package ada_main_for_main is
+<A NAME="E5"></A>     5     pragma Warnings (Off);
+<A NAME="E6"></A>     6  
+<A NAME="E7"></A>     7     gnat_argc : Integer;
+<A NAME="E8"></A>     8     gnat_argv : System.Address;
+<A NAME="E9"></A>     9     gnat_envp : System.Address;
+<A NAME="E10"></A>    10  
+<A NAME="E11"></A>    11     pragma Import (C, gnat_argc);
+<A NAME="E12"></A>    12     pragma Import (C, gnat_argv);
+<A NAME="E13"></A>    13     pragma Import (C, gnat_envp);
+<A NAME="E14"></A>    14  
+<A NAME="E15"></A>    15     gnat_exit_status : Integer;
+<A NAME="E16"></A>    16     pragma Import (C, gnat_exit_status);
+<A NAME="E17"></A>    17  
+<A NAME="E18"></A>    18     GNAT_Version : constant String :=
+<A NAME="E19"></A>    19                      &quot;GNAT Version: Pro 7.2.2 (20140525-47)&quot; &amp; ASCII.NUL;
+<A NAME="E20"></A>    20     pragma Export (C, GNAT_Version, &quot;__gnat_version&quot;);
+<A NAME="E21"></A>    21  
+<A NAME="E22"></A>    22     Ada_Main_Program_Name : constant String := &quot;_ada_main&quot; &amp; ASCII.NUL;
+<A NAME="E23"></A>    23     pragma Export (C, Ada_Main_Program_Name, &quot;__gnat_ada_main_program_name&quot;);
+<A NAME="E24"></A>    24  
+<A NAME="E25"></A>    25     procedure adainit;
+<A NAME="E26"></A>    26     pragma Export (C, adainit, &quot;adainit&quot;);
+<A NAME="E27"></A>    27  
+<A NAME="E28"></A>    28     procedure adafinal;
+<A NAME="E29"></A>    29     pragma Export (C, adafinal, &quot;adafinal&quot;);
+<A NAME="E30"></A>    30  
+<A NAME="E31"></A>    31     function main
+<A NAME="E32"></A>    32       (argc : Integer;
+<A NAME="E33"></A>    33        argv : System.Address;
+<A NAME="E34"></A>    34        envp : System.Address)
+<A NAME="E35"></A>    35        return Integer;
+<A NAME="E36"></A>    36     pragma Export (C, main, &quot;main&quot;);
+<A NAME="E37"></A>    37  
+<A NAME="E38"></A>    38     type Version_32 is mod 2 ** 32;
+<A NAME="E39"></A>    39     u00001 : constant Version_32 := 16#5de84e39#;
+<A NAME="E40"></A>    40     pragma Export (C, u00001, &quot;mainB&quot;);
+<A NAME="E41"></A>    41     u00002 : constant Version_32 := 16#a7c2f407#;
+<A NAME="E42"></A>    42     pragma Export (C, u00002, &quot;system__standard_libraryB&quot;);
+<A NAME="E43"></A>    43     u00003 : constant Version_32 := 16#2de10fd1#;
+<A NAME="E44"></A>    44     pragma Export (C, u00003, &quot;system__standard_libraryS&quot;);
+<A NAME="E45"></A>    45     u00004 : constant Version_32 := 16#3ffc8e18#;
+<A NAME="E46"></A>    46     pragma Export (C, u00004, &quot;adaS&quot;);
+<A NAME="E47"></A>    47     u00005 : constant Version_32 := 16#0d784a00#;
+<A NAME="E48"></A>    48     pragma Export (C, u00005, &quot;ada__real_timeB&quot;);
+<A NAME="E49"></A>    49     u00006 : constant Version_32 := 16#41de19c7#;
+<A NAME="E50"></A>    50     pragma Export (C, u00006, &quot;ada__real_timeS&quot;);
+<A NAME="E51"></A>    51     u00007 : constant Version_32 := 16#cb4a8015#;
+<A NAME="E52"></A>    52     pragma Export (C, u00007, &quot;interfacesS&quot;);
+<A NAME="E53"></A>    53     u00008 : constant Version_32 := 16#bd760655#;
+<A NAME="E54"></A>    54     pragma Export (C, u00008, &quot;systemS&quot;);
+<A NAME="E55"></A>    55     u00009 : constant Version_32 := 16#aa574b29#;
+<A NAME="E56"></A>    56     pragma Export (C, u00009, &quot;system__arith_64B&quot;);
+<A NAME="E57"></A>    57     u00010 : constant Version_32 := 16#367123b2#;
+<A NAME="E58"></A>    58     pragma Export (C, u00010, &quot;system__arith_64S&quot;);
+<A NAME="E59"></A>    59     u00011 : constant Version_32 := 16#874a8ed2#;
+<A NAME="E60"></A>    60     pragma Export (C, u00011, &quot;ada__exceptionsB&quot;);
+<A NAME="E61"></A>    61     u00012 : constant Version_32 := 16#f75fad4d#;
+<A NAME="E62"></A>    62     pragma Export (C, u00012, &quot;ada__exceptionsS&quot;);
+<A NAME="E63"></A>    63     u00013 : constant Version_32 := 16#88e07850#;
+<A NAME="E64"></A>    64     pragma Export (C, u00013, &quot;ada__exceptions__last_chance_handlerB&quot;);
+<A NAME="E65"></A>    65     u00014 : constant Version_32 := 16#f7d41408#;
+<A NAME="E66"></A>    66     pragma Export (C, u00014, &quot;ada__exceptions__last_chance_handlerS&quot;);
+<A NAME="E67"></A>    67     u00015 : constant Version_32 := 16#0071025c#;
+<A NAME="E68"></A>    68     pragma Export (C, u00015, &quot;system__soft_linksB&quot;);
+<A NAME="E69"></A>    69     u00016 : constant Version_32 := 16#38bb93de#;
+<A NAME="E70"></A>    70     pragma Export (C, u00016, &quot;system__soft_linksS&quot;);
+<A NAME="E71"></A>    71     u00017 : constant Version_32 := 16#27940d94#;
+<A NAME="E72"></A>    72     pragma Export (C, u00017, &quot;system__parametersB&quot;);
+<A NAME="E73"></A>    73     u00018 : constant Version_32 := 16#0b940a95#;
+<A NAME="E74"></A>    74     pragma Export (C, u00018, &quot;system__parametersS&quot;);
+<A NAME="E75"></A>    75     u00019 : constant Version_32 := 16#17775d6d#;
+<A NAME="E76"></A>    76     pragma Export (C, u00019, &quot;system__secondary_stackB&quot;);
+<A NAME="E77"></A>    77     u00020 : constant Version_32 := 16#a91821fb#;
+<A NAME="E78"></A>    78     pragma Export (C, u00020, &quot;system__secondary_stackS&quot;);
+<A NAME="E79"></A>    79     u00021 : constant Version_32 := 16#ace32e1e#;
+<A NAME="E80"></A>    80     pragma Export (C, u00021, &quot;system__storage_elementsB&quot;);
+<A NAME="E81"></A>    81     u00022 : constant Version_32 := 16#47bb7bcd#;
+<A NAME="E82"></A>    82     pragma Export (C, u00022, &quot;system__storage_elementsS&quot;);
+<A NAME="E83"></A>    83     u00023 : constant Version_32 := 16#4f750b3b#;
+<A NAME="E84"></A>    84     pragma Export (C, u00023, &quot;system__stack_checkingB&quot;);
+<A NAME="E85"></A>    85     u00024 : constant Version_32 := 16#1ed4ba79#;
+<A NAME="E86"></A>    86     pragma Export (C, u00024, &quot;system__stack_checkingS&quot;);
+<A NAME="E87"></A>    87     u00025 : constant Version_32 := 16#273e05cb#;
+<A NAME="E88"></A>    88     pragma Export (C, u00025, &quot;system__exception_tableB&quot;);
+<A NAME="E89"></A>    89     u00026 : constant Version_32 := 16#b2ef93e7#;
+<A NAME="E90"></A>    90     pragma Export (C, u00026, &quot;system__exception_tableS&quot;);
+<A NAME="E91"></A>    91     u00027 : constant Version_32 := 16#5665ab64#;
+<A NAME="E92"></A>    92     pragma Export (C, u00027, &quot;system__htableB&quot;);
+<A NAME="E93"></A>    93     u00028 : constant Version_32 := 16#3ede485b#;
+<A NAME="E94"></A>    94     pragma Export (C, u00028, &quot;system__htableS&quot;);
+<A NAME="E95"></A>    95     u00029 : constant Version_32 := 16#8b7dad61#;
+<A NAME="E96"></A>    96     pragma Export (C, u00029, &quot;system__string_hashB&quot;);
+<A NAME="E97"></A>    97     u00030 : constant Version_32 := 16#9beadec1#;
+<A NAME="E98"></A>    98     pragma Export (C, u00030, &quot;system__string_hashS&quot;);
+<A NAME="E99"></A>    99     u00031 : constant Version_32 := 16#aad75561#;
+<A NAME="E100"></A>   100     pragma Export (C, u00031, &quot;system__exceptionsB&quot;);
+<A NAME="E101"></A>   101     u00032 : constant Version_32 := 16#b188cee2#;
+<A NAME="E102"></A>   102     pragma Export (C, u00032, &quot;system__exceptionsS&quot;);
+<A NAME="E103"></A>   103     u00033 : constant Version_32 := 16#f97077da#;
+<A NAME="E104"></A>   104     pragma Export (C, u00033, &quot;system__exceptions__machineS&quot;);
+<A NAME="E105"></A>   105     u00034 : constant Version_32 := 16#010db1dc#;
+<A NAME="E106"></A>   106     pragma Export (C, u00034, &quot;system__exceptions_debugB&quot;);
+<A NAME="E107"></A>   107     u00035 : constant Version_32 := 16#1bf16a96#;
+<A NAME="E108"></A>   108     pragma Export (C, u00035, &quot;system__exceptions_debugS&quot;);
+<A NAME="E109"></A>   109     u00036 : constant Version_32 := 16#570325c8#;
+<A NAME="E110"></A>   110     pragma Export (C, u00036, &quot;system__img_intB&quot;);
+<A NAME="E111"></A>   111     u00037 : constant Version_32 := 16#bfade697#;
+<A NAME="E112"></A>   112     pragma Export (C, u00037, &quot;system__img_intS&quot;);
+<A NAME="E113"></A>   113     u00038 : constant Version_32 := 16#dc8e33ed#;
+<A NAME="E114"></A>   114     pragma Export (C, u00038, &quot;system__tracebackB&quot;);
+<A NAME="E115"></A>   115     u00039 : constant Version_32 := 16#dcf1d220#;
+<A NAME="E116"></A>   116     pragma Export (C, u00039, &quot;system__tracebackS&quot;);
+<A NAME="E117"></A>   117     u00040 : constant Version_32 := 16#907d882f#;
+<A NAME="E118"></A>   118     pragma Export (C, u00040, &quot;system__wch_conB&quot;);
+<A NAME="E119"></A>   119     u00041 : constant Version_32 := 16#029d2868#;
+<A NAME="E120"></A>   120     pragma Export (C, u00041, &quot;system__wch_conS&quot;);
+<A NAME="E121"></A>   121     u00042 : constant Version_32 := 16#22fed88a#;
+<A NAME="E122"></A>   122     pragma Export (C, u00042, &quot;system__wch_stwB&quot;);
+<A NAME="E123"></A>   123     u00043 : constant Version_32 := 16#2f8c0469#;
+<A NAME="E124"></A>   124     pragma Export (C, u00043, &quot;system__wch_stwS&quot;);
+<A NAME="E125"></A>   125     u00044 : constant Version_32 := 16#617a40f2#;
+<A NAME="E126"></A>   126     pragma Export (C, u00044, &quot;system__wch_cnvB&quot;);
+<A NAME="E127"></A>   127     u00045 : constant Version_32 := 16#1c63aebe#;
+<A NAME="E128"></A>   128     pragma Export (C, u00045, &quot;system__wch_cnvS&quot;);
+<A NAME="E129"></A>   129     u00046 : constant Version_32 := 16#75729fba#;
+<A NAME="E130"></A>   130     pragma Export (C, u00046, &quot;system__wch_jisB&quot;);
+<A NAME="E131"></A>   131     u00047 : constant Version_32 := 16#481135aa#;
+<A NAME="E132"></A>   132     pragma Export (C, u00047, &quot;system__wch_jisS&quot;);
+<A NAME="E133"></A>   133     u00048 : constant Version_32 := 16#ada34a87#;
+<A NAME="E134"></A>   134     pragma Export (C, u00048, &quot;system__traceback_entriesB&quot;);
+<A NAME="E135"></A>   135     u00049 : constant Version_32 := 16#ef57e814#;
+<A NAME="E136"></A>   136     pragma Export (C, u00049, &quot;system__traceback_entriesS&quot;);
+<A NAME="E137"></A>   137     u00050 : constant Version_32 := 16#b4637e4a#;
+<A NAME="E138"></A>   138     pragma Export (C, u00050, &quot;system__taskingB&quot;);
+<A NAME="E139"></A>   139     u00051 : constant Version_32 := 16#1c4e2513#;
+<A NAME="E140"></A>   140     pragma Export (C, u00051, &quot;system__taskingS&quot;);
+<A NAME="E141"></A>   141     u00052 : constant Version_32 := 16#eb1c2a33#;
+<A NAME="E142"></A>   142     pragma Export (C, u00052, &quot;system__task_primitivesS&quot;);
+<A NAME="E143"></A>   143     u00053 : constant Version_32 := 16#30457489#;
+<A NAME="E144"></A>   144     pragma Export (C, u00053, &quot;system__os_interfaceB&quot;);
+<A NAME="E145"></A>   145     u00054 : constant Version_32 := 16#2121b96b#;
+<A NAME="E146"></A>   146     pragma Export (C, u00054, &quot;system__os_interfaceS&quot;);
+<A NAME="E147"></A>   147     u00055 : constant Version_32 := 16#769e25e6#;
+<A NAME="E148"></A>   148     pragma Export (C, u00055, &quot;interfaces__cB&quot;);
+<A NAME="E149"></A>   149     u00056 : constant Version_32 := 16#29899d4e#;
+<A NAME="E150"></A>   150     pragma Export (C, u00056, &quot;interfaces__cS&quot;);
+<A NAME="E151"></A>   151     u00057 : constant Version_32 := 16#cdb1cd10#;
+<A NAME="E152"></A>   152     pragma Export (C, u00057, &quot;system__linuxS&quot;);
+<A NAME="E153"></A>   153     u00058 : constant Version_32 := 16#eb91c6e6#;
+<A NAME="E154"></A>   154     pragma Export (C, u00058, &quot;system__os_constantsS&quot;);
+<A NAME="E155"></A>   155     u00059 : constant Version_32 := 16#d7975a23#;
+<A NAME="E156"></A>   156     pragma Export (C, u00059, &quot;system__unsigned_typesS&quot;);
+<A NAME="E157"></A>   157     u00060 : constant Version_32 := 16#b4921ea2#;
+<A NAME="E158"></A>   158     pragma Export (C, u00060, &quot;system__task_primitives__operationsB&quot;);
+<A NAME="E159"></A>   159     u00061 : constant Version_32 := 16#c2d8de22#;
+<A NAME="E160"></A>   160     pragma Export (C, u00061, &quot;system__task_primitives__operationsS&quot;);
+<A NAME="E161"></A>   161     u00062 : constant Version_32 := 16#dd92c3f0#;
+<A NAME="E162"></A>   162     pragma Export (C, u00062, &quot;system__bit_opsB&quot;);
+<A NAME="E163"></A>   163     u00063 : constant Version_32 := 16#c30e4013#;
+<A NAME="E164"></A>   164     pragma Export (C, u00063, &quot;system__bit_opsS&quot;);
+<A NAME="E165"></A>   165     u00064 : constant Version_32 := 16#903909a4#;
+<A NAME="E166"></A>   166     pragma Export (C, u00064, &quot;system__interrupt_managementB&quot;);
+<A NAME="E167"></A>   167     u00065 : constant Version_32 := 16#ed713206#;
+<A NAME="E168"></A>   168     pragma Export (C, u00065, &quot;system__interrupt_managementS&quot;);
+<A NAME="E169"></A>   169     u00066 : constant Version_32 := 16#f65595cf#;
+<A NAME="E170"></A>   170     pragma Export (C, u00066, &quot;system__multiprocessorsB&quot;);
+<A NAME="E171"></A>   171     u00067 : constant Version_32 := 16#85da9926#;
+<A NAME="E172"></A>   172     pragma Export (C, u00067, &quot;system__multiprocessorsS&quot;);
+<A NAME="E173"></A>   173     u00068 : constant Version_32 := 16#22d03640#;
+<A NAME="E174"></A>   174     pragma Export (C, u00068, &quot;system__os_primitivesB&quot;);
+<A NAME="E175"></A>   175     u00069 : constant Version_32 := 16#0da78a7c#;
+<A NAME="E176"></A>   176     pragma Export (C, u00069, &quot;system__os_primitivesS&quot;);
+<A NAME="E177"></A>   177     u00070 : constant Version_32 := 16#2642d0c9#;
+<A NAME="E178"></A>   178     pragma Export (C, u00070, &quot;system__stack_checking__operationsB&quot;);
+<A NAME="E179"></A>   179     u00071 : constant Version_32 := 16#49df1cef#;
+<A NAME="E180"></A>   180     pragma Export (C, u00071, &quot;system__stack_checking__operationsS&quot;);
+<A NAME="E181"></A>   181     u00072 : constant Version_32 := 16#d45bc0f4#;
+<A NAME="E182"></A>   182     pragma Export (C, u00072, &quot;system__crtlS&quot;);
+<A NAME="E183"></A>   183     u00073 : constant Version_32 := 16#3d54d5f6#;
+<A NAME="E184"></A>   184     pragma Export (C, u00073, &quot;system__task_infoB&quot;);
+<A NAME="E185"></A>   185     u00074 : constant Version_32 := 16#dfdb54c8#;
+<A NAME="E186"></A>   186     pragma Export (C, u00074, &quot;system__task_infoS&quot;);
+<A NAME="E187"></A>   187     u00075 : constant Version_32 := 16#59d5ac6d#;
+<A NAME="E188"></A>   188     pragma Export (C, u00075, &quot;system__tasking__debugB&quot;);
+<A NAME="E189"></A>   189     u00076 : constant Version_32 := 16#5c4175f5#;
+<A NAME="E190"></A>   190     pragma Export (C, u00076, &quot;system__tasking__debugS&quot;);
+<A NAME="E191"></A>   191     u00077 : constant Version_32 := 16#39591e91#;
+<A NAME="E192"></A>   192     pragma Export (C, u00077, &quot;system__concat_2B&quot;);
+<A NAME="E193"></A>   193     u00078 : constant Version_32 := 16#46a6f4a9#;
+<A NAME="E194"></A>   194     pragma Export (C, u00078, &quot;system__concat_2S&quot;);
+<A NAME="E195"></A>   195     u00079 : constant Version_32 := 16#ae97ef6c#;
+<A NAME="E196"></A>   196     pragma Export (C, u00079, &quot;system__concat_3B&quot;);
+<A NAME="E197"></A>   197     u00080 : constant Version_32 := 16#cb5c043f#;
+<A NAME="E198"></A>   198     pragma Export (C, u00080, &quot;system__concat_3S&quot;);
+<A NAME="E199"></A>   199     u00081 : constant Version_32 := 16#c9fdc962#;
+<A NAME="E200"></A>   200     pragma Export (C, u00081, &quot;system__concat_6B&quot;);
+<A NAME="E201"></A>   201     u00082 : constant Version_32 := 16#7abcf341#;
+<A NAME="E202"></A>   202     pragma Export (C, u00082, &quot;system__concat_6S&quot;);
+<A NAME="E203"></A>   203     u00083 : constant Version_32 := 16#def1dd00#;
+<A NAME="E204"></A>   204     pragma Export (C, u00083, &quot;system__concat_5B&quot;);
+<A NAME="E205"></A>   205     u00084 : constant Version_32 := 16#ad4fc8f4#;
+<A NAME="E206"></A>   206     pragma Export (C, u00084, &quot;system__concat_5S&quot;);
+<A NAME="E207"></A>   207     u00085 : constant Version_32 := 16#3493e6c0#;
+<A NAME="E208"></A>   208     pragma Export (C, u00085, &quot;system__concat_4B&quot;);
+<A NAME="E209"></A>   209     u00086 : constant Version_32 := 16#bf29e5eb#;
+<A NAME="E210"></A>   210     pragma Export (C, u00086, &quot;system__concat_4S&quot;);
+<A NAME="E211"></A>   211     u00087 : constant Version_32 := 16#1eab0e09#;
+<A NAME="E212"></A>   212     pragma Export (C, u00087, &quot;system__img_enum_newB&quot;);
+<A NAME="E213"></A>   213     u00088 : constant Version_32 := 16#3a71cda5#;
+<A NAME="E214"></A>   214     pragma Export (C, u00088, &quot;system__img_enum_newS&quot;);
+<A NAME="E215"></A>   215     u00089 : constant Version_32 := 16#194ccd7b#;
+<A NAME="E216"></A>   216     pragma Export (C, u00089, &quot;system__img_unsB&quot;);
+<A NAME="E217"></A>   217     u00090 : constant Version_32 := 16#486366d4#;
+<A NAME="E218"></A>   218     pragma Export (C, u00090, &quot;system__img_unsS&quot;);
+<A NAME="E219"></A>   219     u00091 : constant Version_32 := 16#083296f2#;
+<A NAME="E220"></A>   220     pragma Export (C, u00091, &quot;system__stack_usageB&quot;);
+<A NAME="E221"></A>   221     u00092 : constant Version_32 := 16#7ccb26a7#;
+<A NAME="E222"></A>   222     pragma Export (C, u00092, &quot;system__stack_usageS&quot;);
+<A NAME="E223"></A>   223     u00093 : constant Version_32 := 16#d7aac20c#;
+<A NAME="E224"></A>   224     pragma Export (C, u00093, &quot;system__ioB&quot;);
+<A NAME="E225"></A>   225     u00094 : constant Version_32 := 16#2334f11a#;
+<A NAME="E226"></A>   226     pragma Export (C, u00094, &quot;system__ioS&quot;);
+<A NAME="E227"></A>   227     u00095 : constant Version_32 := 16#66910c12#;
+<A NAME="E228"></A>   228     pragma Export (C, u00095, &quot;bcontrolB&quot;);
+<A NAME="E229"></A>   229     u00096 : constant Version_32 := 16#0d0c7bee#;
+<A NAME="E230"></A>   230     pragma Export (C, u00096, &quot;bcontrolS&quot;);
+<A NAME="E231"></A>   231     u00097 : constant Version_32 := 16#f6c59fb5#;
+<A NAME="E232"></A>   232     pragma Export (C, u00097, &quot;ada__real_time__delaysB&quot;);
+<A NAME="E233"></A>   233     u00098 : constant Version_32 := 16#6becaccd#;
+<A NAME="E234"></A>   234     pragma Export (C, u00098, &quot;ada__real_time__delaysS&quot;);
+<A NAME="E235"></A>   235     u00099 : constant Version_32 := 16#4740c416#;
+<A NAME="E236"></A>   236     pragma Export (C, u00099, &quot;ada__tagsB&quot;);
+<A NAME="E237"></A>   237     u00100 : constant Version_32 := 16#1442fc05#;
+<A NAME="E238"></A>   238     pragma Export (C, u00100, &quot;ada__tagsS&quot;);
+<A NAME="E239"></A>   239     u00101 : constant Version_32 := 16#79817c71#;
+<A NAME="E240"></A>   240     pragma Export (C, u00101, &quot;system__val_unsB&quot;);
+<A NAME="E241"></A>   241     u00102 : constant Version_32 := 16#c73fb718#;
+<A NAME="E242"></A>   242     pragma Export (C, u00102, &quot;system__val_unsS&quot;);
+<A NAME="E243"></A>   243     u00103 : constant Version_32 := 16#aea309ed#;
+<A NAME="E244"></A>   244     pragma Export (C, u00103, &quot;system__val_utilB&quot;);
+<A NAME="E245"></A>   245     u00104 : constant Version_32 := 16#11d6b0ab#;
+<A NAME="E246"></A>   246     pragma Export (C, u00104, &quot;system__val_utilS&quot;);
+<A NAME="E247"></A>   247     u00105 : constant Version_32 := 16#b7fa72e7#;
+<A NAME="E248"></A>   248     pragma Export (C, u00105, &quot;system__case_utilB&quot;);
+<A NAME="E249"></A>   249     u00106 : constant Version_32 := 16#106a66dd#;
+<A NAME="E250"></A>   250     pragma Export (C, u00106, &quot;system__case_utilS&quot;);
+<A NAME="E251"></A>   251     u00107 : constant Version_32 := 16#5b6d0afa#;
+<A NAME="E252"></A>   252     pragma Export (C, u00107, &quot;blinkerB&quot;);
+<A NAME="E253"></A>   253     u00108 : constant Version_32 := 16#6bc56ca4#;
+<A NAME="E254"></A>   254     pragma Export (C, u00108, &quot;blinkerS&quot;);
+<A NAME="E255"></A>   255     u00109 : constant Version_32 := 16#7412e12e#;
+<A NAME="E256"></A>   256     pragma Export (C, u00109, &quot;controlB&quot;);
+<A NAME="E257"></A>   257     u00110 : constant Version_32 := 16#74a25c5e#;
+<A NAME="E258"></A>   258     pragma Export (C, u00110, &quot;controlS&quot;);
+<A NAME="E259"></A>   259     u00111 : constant Version_32 := 16#7dbbd31d#;
+<A NAME="E260"></A>   260     pragma Export (C, u00111, &quot;text_ioS&quot;);
+<A NAME="E261"></A>   261     u00112 : constant Version_32 := 16#74219827#;
+<A NAME="E262"></A>   262     pragma Export (C, u00112, &quot;ada__text_ioB&quot;);
+<A NAME="E263"></A>   263     u00113 : constant Version_32 := 16#c1aeef6a#;
+<A NAME="E264"></A>   264     pragma Export (C, u00113, &quot;ada__text_ioS&quot;);
+<A NAME="E265"></A>   265     u00114 : constant Version_32 := 16#746bba4b#;
+<A NAME="E266"></A>   266     pragma Export (C, u00114, &quot;ada__streamsB&quot;);
+<A NAME="E267"></A>   267     u00115 : constant Version_32 := 16#2564c958#;
+<A NAME="E268"></A>   268     pragma Export (C, u00115, &quot;ada__streamsS&quot;);
+<A NAME="E269"></A>   269     u00116 : constant Version_32 := 16#b46168d5#;
+<A NAME="E270"></A>   270     pragma Export (C, u00116, &quot;ada__io_exceptionsS&quot;);
+<A NAME="E271"></A>   271     u00117 : constant Version_32 := 16#e0b7a7e8#;
+<A NAME="E272"></A>   272     pragma Export (C, u00117, &quot;interfaces__c_streamsB&quot;);
+<A NAME="E273"></A>   273     u00118 : constant Version_32 := 16#95ad191f#;
+<A NAME="E274"></A>   274     pragma Export (C, u00118, &quot;interfaces__c_streamsS&quot;);
+<A NAME="E275"></A>   275     u00119 : constant Version_32 := 16#057097b0#;
+<A NAME="E276"></A>   276     pragma Export (C, u00119, &quot;system__file_ioB&quot;);
+<A NAME="E277"></A>   277     u00120 : constant Version_32 := 16#2c376772#;
+<A NAME="E278"></A>   278     pragma Export (C, u00120, &quot;system__file_ioS&quot;);
+<A NAME="E279"></A>   279     u00121 : constant Version_32 := 16#8cbe6205#;
+<A NAME="E280"></A>   280     pragma Export (C, u00121, &quot;ada__finalizationB&quot;);
+<A NAME="E281"></A>   281     u00122 : constant Version_32 := 16#22e22193#;
+<A NAME="E282"></A>   282     pragma Export (C, u00122, &quot;ada__finalizationS&quot;);
+<A NAME="E283"></A>   283     u00123 : constant Version_32 := 16#95817ed8#;
+<A NAME="E284"></A>   284     pragma Export (C, u00123, &quot;system__finalization_rootB&quot;);
+<A NAME="E285"></A>   285     u00124 : constant Version_32 := 16#f28475c5#;
+<A NAME="E286"></A>   286     pragma Export (C, u00124, &quot;system__finalization_rootS&quot;);
+<A NAME="E287"></A>   287     u00125 : constant Version_32 := 16#b2cb9bcf#;
+<A NAME="E288"></A>   288     pragma Export (C, u00125, &quot;interfaces__c__stringsB&quot;);
+<A NAME="E289"></A>   289     u00126 : constant Version_32 := 16#603c1c44#;
+<A NAME="E290"></A>   290     pragma Export (C, u00126, &quot;interfaces__c__stringsS&quot;);
+<A NAME="E291"></A>   291     u00127 : constant Version_32 := 16#d6bc4ecc#;
+<A NAME="E292"></A>   292     pragma Export (C, u00127, &quot;system__crtl__runtimeS&quot;);
+<A NAME="E293"></A>   293     u00128 : constant Version_32 := 16#c31b16ce#;
+<A NAME="E294"></A>   294     pragma Export (C, u00128, &quot;system__os_libB&quot;);
+<A NAME="E295"></A>   295     u00129 : constant Version_32 := 16#ae262a2c#;
+<A NAME="E296"></A>   296     pragma Export (C, u00129, &quot;system__os_libS&quot;);
+<A NAME="E297"></A>   297     u00130 : constant Version_32 := 16#4cd8aca0#;
+<A NAME="E298"></A>   298     pragma Export (C, u00130, &quot;system__stringsB&quot;);
+<A NAME="E299"></A>   299     u00131 : constant Version_32 := 16#0a9c4c91#;
+<A NAME="E300"></A>   300     pragma Export (C, u00131, &quot;system__stringsS&quot;);
+<A NAME="E301"></A>   301     u00132 : constant Version_32 := 16#acaec55c#;
+<A NAME="E302"></A>   302     pragma Export (C, u00132, &quot;system__file_control_blockS&quot;);
+<A NAME="E303"></A>   303     u00133 : constant Version_32 := 16#7944df58#;
+<A NAME="E304"></A>   304     pragma Export (C, u00133, &quot;system__finalization_mastersB&quot;);
+<A NAME="E305"></A>   305     u00134 : constant Version_32 := 16#1d6d4055#;
+<A NAME="E306"></A>   306     pragma Export (C, u00134, &quot;system__finalization_mastersS&quot;);
+<A NAME="E307"></A>   307     u00135 : constant Version_32 := 16#57a37a42#;
+<A NAME="E308"></A>   308     pragma Export (C, u00135, &quot;system__address_imageB&quot;);
+<A NAME="E309"></A>   309     u00136 : constant Version_32 := 16#1c9a9b6f#;
+<A NAME="E310"></A>   310     pragma Export (C, u00136, &quot;system__address_imageS&quot;);
+<A NAME="E311"></A>   311     u00137 : constant Version_32 := 16#7268f812#;
+<A NAME="E312"></A>   312     pragma Export (C, u00137, &quot;system__img_boolB&quot;);
+<A NAME="E313"></A>   313     u00138 : constant Version_32 := 16#48af77be#;
+<A NAME="E314"></A>   314     pragma Export (C, u00138, &quot;system__img_boolS&quot;);
+<A NAME="E315"></A>   315     u00139 : constant Version_32 := 16#6d4d969a#;
+<A NAME="E316"></A>   316     pragma Export (C, u00139, &quot;system__storage_poolsB&quot;);
+<A NAME="E317"></A>   317     u00140 : constant Version_32 := 16#a436f314#;
+<A NAME="E318"></A>   318     pragma Export (C, u00140, &quot;system__storage_poolsS&quot;);
+<A NAME="E319"></A>   319     u00141 : constant Version_32 := 16#70b38aeb#;
+<A NAME="E320"></A>   320     pragma Export (C, u00141, &quot;system__pool_globalB&quot;);
+<A NAME="E321"></A>   321     u00142 : constant Version_32 := 16#1f831a8a#;
+<A NAME="E322"></A>   322     pragma Export (C, u00142, &quot;system__pool_globalS&quot;);
+<A NAME="E323"></A>   323     u00143 : constant Version_32 := 16#14f6b935#;
+<A NAME="E324"></A>   324     pragma Export (C, u00143, &quot;system__memoryB&quot;);
+<A NAME="E325"></A>   325     u00144 : constant Version_32 := 16#77fdba40#;
+<A NAME="E326"></A>   326     pragma Export (C, u00144, &quot;system__memoryS&quot;);
+<A NAME="E327"></A>   327     u00145 : constant Version_32 := 16#f74ecfe7#;
+<A NAME="E328"></A>   328     pragma Export (C, u00145, &quot;system__storage_pools__subpoolsB&quot;);
+<A NAME="E329"></A>   329     u00146 : constant Version_32 := 16#5ff0e7c5#;
+<A NAME="E330"></A>   330     pragma Export (C, u00146, &quot;system__storage_pools__subpoolsS&quot;);
+<A NAME="E331"></A>   331     u00147 : constant Version_32 := 16#1777d351#;
+<A NAME="E332"></A>   332     pragma Export (C, u00147, &quot;system__storage_pools__subpools__finalizationB&quot;);
+<A NAME="E333"></A>   333     u00148 : constant Version_32 := 16#12aaf1de#;
+<A NAME="E334"></A>   334     pragma Export (C, u00148, &quot;system__storage_pools__subpools__finalizationS&quot;);
+<A NAME="E335"></A>   335     u00149 : constant Version_32 := 16#f85ea1d6#;
+<A NAME="E336"></A>   336     pragma Export (C, u00149, &quot;system__tasking__protected_objectsB&quot;);
+<A NAME="E337"></A>   337     u00150 : constant Version_32 := 16#6fa056d1#;
+<A NAME="E338"></A>   338     pragma Export (C, u00150, &quot;system__tasking__protected_objectsS&quot;);
+<A NAME="E339"></A>   339     u00151 : constant Version_32 := 16#dc7b9f4b#;
+<A NAME="E340"></A>   340     pragma Export (C, u00151, &quot;system__soft_links__taskingB&quot;);
+<A NAME="E341"></A>   341     u00152 : constant Version_32 := 16#6ac0d6d0#;
+<A NAME="E342"></A>   342     pragma Export (C, u00152, &quot;system__soft_links__taskingS&quot;);
+<A NAME="E343"></A>   343     u00153 : constant Version_32 := 16#17d21067#;
+<A NAME="E344"></A>   344     pragma Export (C, u00153, &quot;ada__exceptions__is_null_occurrenceB&quot;);
+<A NAME="E345"></A>   345     u00154 : constant Version_32 := 16#30a405b9#;
+<A NAME="E346"></A>   346     pragma Export (C, u00154, &quot;ada__exceptions__is_null_occurrenceS&quot;);
+<A NAME="E347"></A>   347     u00155 : constant Version_32 := 16#ee80728a#;
+<A NAME="E348"></A>   348     pragma Export (C, u00155, &quot;system__tracesB&quot;);
+<A NAME="E349"></A>   349     u00156 : constant Version_32 := 16#4f6b6eff#;
+<A NAME="E350"></A>   350     pragma Export (C, u00156, &quot;system__tracesS&quot;);
+<A NAME="E351"></A>   351     u00157 : constant Version_32 := 16#c8ad6c59#;
+<A NAME="E352"></A>   352     pragma Export (C, u00157, &quot;system__tasking__protected_objects__entriesB&quot;);
+<A NAME="E353"></A>   353     u00158 : constant Version_32 := 16#4d64e3b6#;
+<A NAME="E354"></A>   354     pragma Export (C, u00158, &quot;system__tasking__protected_objects__entriesS&quot;);
+<A NAME="E355"></A>   355     u00159 : constant Version_32 := 16#386436bc#;
+<A NAME="E356"></A>   356     pragma Export (C, u00159, &quot;system__restrictionsB&quot;);
+<A NAME="E357"></A>   357     u00160 : constant Version_32 := 16#f1e10264#;
+<A NAME="E358"></A>   358     pragma Export (C, u00160, &quot;system__restrictionsS&quot;);
+<A NAME="E359"></A>   359     u00161 : constant Version_32 := 16#031de744#;
+<A NAME="E360"></A>   360     pragma Export (C, u00161, &quot;system__tasking__initializationB&quot;);
+<A NAME="E361"></A>   361     u00162 : constant Version_32 := 16#f20398cb#;
+<A NAME="E362"></A>   362     pragma Export (C, u00162, &quot;system__tasking__initializationS&quot;);
+<A NAME="E363"></A>   363     u00163 : constant Version_32 := 16#040d8cfe#;
+<A NAME="E364"></A>   364     pragma Export (C, u00163, &quot;system__tasking__protected_objects__operationsB&quot;);
+<A NAME="E365"></A>   365     u00164 : constant Version_32 := 16#415d7a1b#;
+<A NAME="E366"></A>   366     pragma Export (C, u00164, &quot;system__tasking__protected_objects__operationsS&quot;);
+<A NAME="E367"></A>   367     u00165 : constant Version_32 := 16#78debc83#;
+<A NAME="E368"></A>   368     pragma Export (C, u00165, &quot;system__tasking__entry_callsB&quot;);
+<A NAME="E369"></A>   369     u00166 : constant Version_32 := 16#e5160f9e#;
+<A NAME="E370"></A>   370     pragma Export (C, u00166, &quot;system__tasking__entry_callsS&quot;);
+<A NAME="E371"></A>   371     u00167 : constant Version_32 := 16#385ecace#;
+<A NAME="E372"></A>   372     pragma Export (C, u00167, &quot;system__tasking__queuingB&quot;);
+<A NAME="E373"></A>   373     u00168 : constant Version_32 := 16#3d02e133#;
+<A NAME="E374"></A>   374     pragma Export (C, u00168, &quot;system__tasking__queuingS&quot;);
+<A NAME="E375"></A>   375     u00169 : constant Version_32 := 16#5270cf31#;
+<A NAME="E376"></A>   376     pragma Export (C, u00169, &quot;system__tasking__utilitiesB&quot;);
+<A NAME="E377"></A>   377     u00170 : constant Version_32 := 16#39283e2c#;
+<A NAME="E378"></A>   378     pragma Export (C, u00170, &quot;system__tasking__utilitiesS&quot;);
+<A NAME="E379"></A>   379     u00171 : constant Version_32 := 16#bd6fc52e#;
+<A NAME="E380"></A>   380     pragma Export (C, u00171, &quot;system__traces__taskingB&quot;);
+<A NAME="E381"></A>   381     u00172 : constant Version_32 := 16#33a47127#;
+<A NAME="E382"></A>   382     pragma Export (C, u00172, &quot;system__traces__taskingS&quot;);
+<A NAME="E383"></A>   383     u00173 : constant Version_32 := 16#9934372d#;
+<A NAME="E384"></A>   384     pragma Export (C, u00173, &quot;system__tasking__rendezvousB&quot;);
+<A NAME="E385"></A>   385     u00174 : constant Version_32 := 16#d7d33e30#;
+<A NAME="E386"></A>   386     pragma Export (C, u00174, &quot;system__tasking__rendezvousS&quot;);
+<A NAME="E387"></A>   387     u00175 : constant Version_32 := 16#8978ab3e#;
+<A NAME="E388"></A>   388     pragma Export (C, u00175, &quot;system__tasking__stagesB&quot;);
+<A NAME="E389"></A>   389     u00176 : constant Version_32 := 16#bb202ccb#;
+<A NAME="E390"></A>   390     pragma Export (C, u00176, &quot;system__tasking__stagesS&quot;);
+<A NAME="E391"></A>   391     u00177 : constant Version_32 := 16#4b37b589#;
+<A NAME="E392"></A>   392     pragma Export (C, u00177, &quot;system__val_enumB&quot;);
+<A NAME="E393"></A>   393     u00178 : constant Version_32 := 16#066c44c0#;
+<A NAME="E394"></A>   394     pragma Export (C, u00178, &quot;system__val_enumS&quot;);
+<A NAME="E395"></A>   395     --  BEGIN ELABORATION ORDER
+<A NAME="E396"></A>   396     --  ada%s
+<A NAME="E397"></A>   397     --  interfaces%s
+<A NAME="E398"></A>   398     --  system%s
+<A NAME="E399"></A>   399     --  system.arith_64%s
+<A NAME="E400"></A>   400     --  system.case_util%s
+<A NAME="E401"></A>   401     --  system.case_util%b
+<A NAME="E402"></A>   402     --  system.htable%s
+<A NAME="E403"></A>   403     --  system.img_bool%s
+<A NAME="E404"></A>   404     --  system.img_bool%b
+<A NAME="E405"></A>   405     --  system.img_enum_new%s
+<A NAME="E406"></A>   406     --  system.img_enum_new%b
+<A NAME="E407"></A>   407     --  system.img_int%s
+<A NAME="E408"></A>   408     --  system.img_int%b
+<A NAME="E409"></A>   409     --  system.io%s
+<A NAME="E410"></A>   410     --  system.io%b
+<A NAME="E411"></A>   411     --  system.linux%s
+<A NAME="E412"></A>   412     --  system.multiprocessors%s
+<A NAME="E413"></A>   413     --  system.os_primitives%s
+<A NAME="E414"></A>   414     --  system.os_primitives%b
+<A NAME="E415"></A>   415     --  system.parameters%s
+<A NAME="E416"></A>   416     --  system.parameters%b
+<A NAME="E417"></A>   417     --  system.crtl%s
+<A NAME="E418"></A>   418     --  interfaces.c_streams%s
+<A NAME="E419"></A>   419     --  interfaces.c_streams%b
+<A NAME="E420"></A>   420     --  system.restrictions%s
+<A NAME="E421"></A>   421     --  system.restrictions%b
+<A NAME="E422"></A>   422     --  system.standard_library%s
+<A NAME="E423"></A>   423     --  system.exceptions_debug%s
+<A NAME="E424"></A>   424     --  system.exceptions_debug%b
+<A NAME="E425"></A>   425     --  system.storage_elements%s
+<A NAME="E426"></A>   426     --  system.storage_elements%b
+<A NAME="E427"></A>   427     --  system.stack_checking%s
+<A NAME="E428"></A>   428     --  system.stack_checking%b
+<A NAME="E429"></A>   429     --  system.stack_checking.operations%s
+<A NAME="E430"></A>   430     --  system.stack_usage%s
+<A NAME="E431"></A>   431     --  system.stack_usage%b
+<A NAME="E432"></A>   432     --  system.string_hash%s
+<A NAME="E433"></A>   433     --  system.string_hash%b
+<A NAME="E434"></A>   434     --  system.htable%b
+<A NAME="E435"></A>   435     --  system.strings%s
+<A NAME="E436"></A>   436     --  system.strings%b
+<A NAME="E437"></A>   437     --  system.os_lib%s
+<A NAME="E438"></A>   438     --  system.traceback_entries%s
+<A NAME="E439"></A>   439     --  system.traceback_entries%b
+<A NAME="E440"></A>   440     --  ada.exceptions%s
+<A NAME="E441"></A>   441     --  system.arith_64%b
+<A NAME="E442"></A>   442     --  ada.exceptions.is_null_occurrence%s
+<A NAME="E443"></A>   443     --  ada.exceptions.is_null_occurrence%b
+<A NAME="E444"></A>   444     --  system.soft_links%s
+<A NAME="E445"></A>   445     --  system.stack_checking.operations%b
+<A NAME="E446"></A>   446     --  system.traces%s
+<A NAME="E447"></A>   447     --  system.traces%b
+<A NAME="E448"></A>   448     --  system.unsigned_types%s
+<A NAME="E449"></A>   449     --  system.img_uns%s
+<A NAME="E450"></A>   450     --  system.img_uns%b
+<A NAME="E451"></A>   451     --  system.val_enum%s
+<A NAME="E452"></A>   452     --  system.val_uns%s
+<A NAME="E453"></A>   453     --  system.val_util%s
+<A NAME="E454"></A>   454     --  system.val_util%b
+<A NAME="E455"></A>   455     --  system.val_uns%b
+<A NAME="E456"></A>   456     --  system.val_enum%b
+<A NAME="E457"></A>   457     --  system.wch_con%s
+<A NAME="E458"></A>   458     --  system.wch_con%b
+<A NAME="E459"></A>   459     --  system.wch_cnv%s
+<A NAME="E460"></A>   460     --  system.wch_jis%s
+<A NAME="E461"></A>   461     --  system.wch_jis%b
+<A NAME="E462"></A>   462     --  system.wch_cnv%b
+<A NAME="E463"></A>   463     --  system.wch_stw%s
+<A NAME="E464"></A>   464     --  system.wch_stw%b
+<A NAME="E465"></A>   465     --  ada.exceptions.last_chance_handler%s
+<A NAME="E466"></A>   466     --  ada.exceptions.last_chance_handler%b
+<A NAME="E467"></A>   467     --  system.address_image%s
+<A NAME="E468"></A>   468     --  system.bit_ops%s
+<A NAME="E469"></A>   469     --  system.bit_ops%b
+<A NAME="E470"></A>   470     --  system.concat_2%s
+<A NAME="E471"></A>   471     --  system.concat_2%b
+<A NAME="E472"></A>   472     --  system.concat_3%s
+<A NAME="E473"></A>   473     --  system.concat_3%b
+<A NAME="E474"></A>   474     --  system.concat_4%s
+<A NAME="E475"></A>   475     --  system.concat_4%b
+<A NAME="E476"></A>   476     --  system.concat_5%s
+<A NAME="E477"></A>   477     --  system.concat_5%b
+<A NAME="E478"></A>   478     --  system.concat_6%s
+<A NAME="E479"></A>   479     --  system.concat_6%b
+<A NAME="E480"></A>   480     --  system.exception_table%s
+<A NAME="E481"></A>   481     --  system.exception_table%b
+<A NAME="E482"></A>   482     --  ada.io_exceptions%s
+<A NAME="E483"></A>   483     --  ada.tags%s
+<A NAME="E484"></A>   484     --  ada.streams%s
+<A NAME="E485"></A>   485     --  ada.streams%b
+<A NAME="E486"></A>   486     --  interfaces.c%s
+<A NAME="E487"></A>   487     --  system.multiprocessors%b
+<A NAME="E488"></A>   488     --  interfaces.c.strings%s
+<A NAME="E489"></A>   489     --  system.crtl.runtime%s
+<A NAME="E490"></A>   490     --  system.exceptions%s
+<A NAME="E491"></A>   491     --  system.exceptions%b
+<A NAME="E492"></A>   492     --  system.exceptions.machine%s
+<A NAME="E493"></A>   493     --  system.finalization_root%s
+<A NAME="E494"></A>   494     --  system.finalization_root%b
+<A NAME="E495"></A>   495     --  ada.finalization%s
+<A NAME="E496"></A>   496     --  ada.finalization%b
+<A NAME="E497"></A>   497     --  system.os_constants%s
+<A NAME="E498"></A>   498     --  system.os_interface%s
+<A NAME="E499"></A>   499     --  system.os_interface%b
+<A NAME="E500"></A>   500     --  system.interrupt_management%s
+<A NAME="E501"></A>   501     --  system.storage_pools%s
+<A NAME="E502"></A>   502     --  system.storage_pools%b
+<A NAME="E503"></A>   503     --  system.finalization_masters%s
+<A NAME="E504"></A>   504     --  system.storage_pools.subpools%s
+<A NAME="E505"></A>   505     --  system.storage_pools.subpools.finalization%s
+<A NAME="E506"></A>   506     --  system.storage_pools.subpools.finalization%b
+<A NAME="E507"></A>   507     --  system.task_info%s
+<A NAME="E508"></A>   508     --  system.task_info%b
+<A NAME="E509"></A>   509     --  system.task_primitives%s
+<A NAME="E510"></A>   510     --  system.interrupt_management%b
+<A NAME="E511"></A>   511     --  system.tasking%s
+<A NAME="E512"></A>   512     --  system.task_primitives.operations%s
+<A NAME="E513"></A>   513     --  system.tasking%b
+<A NAME="E514"></A>   514     --  system.tasking.debug%s
+<A NAME="E515"></A>   515     --  system.tasking.debug%b
+<A NAME="E516"></A>   516     --  system.task_primitives.operations%b
+<A NAME="E517"></A>   517     --  system.traces.tasking%s
+<A NAME="E518"></A>   518     --  system.traces.tasking%b
+<A NAME="E519"></A>   519     --  system.memory%s
+<A NAME="E520"></A>   520     --  system.memory%b
+<A NAME="E521"></A>   521     --  system.standard_library%b
+<A NAME="E522"></A>   522     --  system.pool_global%s
+<A NAME="E523"></A>   523     --  system.pool_global%b
+<A NAME="E524"></A>   524     --  system.file_control_block%s
+<A NAME="E525"></A>   525     --  system.file_io%s
+<A NAME="E526"></A>   526     --  system.secondary_stack%s
+<A NAME="E527"></A>   527     --  system.file_io%b
+<A NAME="E528"></A>   528     --  system.storage_pools.subpools%b
+<A NAME="E529"></A>   529     --  system.finalization_masters%b
+<A NAME="E530"></A>   530     --  interfaces.c.strings%b
+<A NAME="E531"></A>   531     --  interfaces.c%b
+<A NAME="E532"></A>   532     --  ada.tags%b
+<A NAME="E533"></A>   533     --  system.soft_links%b
+<A NAME="E534"></A>   534     --  system.os_lib%b
+<A NAME="E535"></A>   535     --  system.secondary_stack%b
+<A NAME="E536"></A>   536     --  system.address_image%b
+<A NAME="E537"></A>   537     --  system.soft_links.tasking%s
+<A NAME="E538"></A>   538     --  system.soft_links.tasking%b
+<A NAME="E539"></A>   539     --  system.tasking.entry_calls%s
+<A NAME="E540"></A>   540     --  system.tasking.initialization%s
+<A NAME="E541"></A>   541     --  system.tasking.initialization%b
+<A NAME="E542"></A>   542     --  system.tasking.protected_objects%s
+<A NAME="E543"></A>   543     --  system.tasking.protected_objects%b
+<A NAME="E544"></A>   544     --  system.tasking.utilities%s
+<A NAME="E545"></A>   545     --  system.traceback%s
+<A NAME="E546"></A>   546     --  ada.exceptions%b
+<A NAME="E547"></A>   547     --  system.traceback%b
+<A NAME="E548"></A>   548     --  ada.real_time%s
+<A NAME="E549"></A>   549     --  ada.real_time%b
+<A NAME="E550"></A>   550     --  ada.real_time.delays%s
+<A NAME="E551"></A>   551     --  ada.real_time.delays%b
+<A NAME="E552"></A>   552     --  ada.text_io%s
+<A NAME="E553"></A>   553     --  ada.text_io%b
+<A NAME="E554"></A>   554     --  system.tasking.protected_objects.entries%s
+<A NAME="E555"></A>   555     --  system.tasking.protected_objects.entries%b
+<A NAME="E556"></A>   556     --  system.tasking.queuing%s
+<A NAME="E557"></A>   557     --  system.tasking.queuing%b
+<A NAME="E558"></A>   558     --  system.tasking.utilities%b
+<A NAME="E559"></A>   559     --  system.tasking.rendezvous%s
+<A NAME="E560"></A>   560     --  system.tasking.protected_objects.operations%s
+<A NAME="E561"></A>   561     --  system.tasking.protected_objects.operations%b
+<A NAME="E562"></A>   562     --  system.tasking.rendezvous%b
+<A NAME="E563"></A>   563     --  system.tasking.entry_calls%b
+<A NAME="E564"></A>   564     --  system.tasking.stages%s
+<A NAME="E565"></A>   565     --  system.tasking.stages%b
+<A NAME="E566"></A>   566     --  text_io%s
+<A NAME="E567"></A>   567     --  bcontrol%s
+<A NAME="E568"></A>   568     --  blinker%s
+<A NAME="E569"></A>   569     --  control%s
+<A NAME="E570"></A>   570     --  control%b
+<A NAME="E571"></A>   571     --  blinker%b
+<A NAME="E572"></A>   572     --  bcontrol%b
+<A NAME="E573"></A>   573     --  main%b
+<A NAME="E574"></A>   574     --  END ELABORATION ORDER
+<A NAME="E575"></A>   575  
+<A NAME="E576"></A>   576  
+<A NAME="E577"></A>   577  end ada_main_for_main;
+</PRE>
+ <BR><BR> <BR><BR> <BR><BR><BR><BR> 
+<FONT COLOR="navy">CodePeer Build Version : 2.3.2 (rev 303695)</FONT><BR>
+<TABLE>
+  <TR>
+    <TD><FONT COLOR="navy">b~main.ads</FONT></TD>
+    <TD><FONT COLOR = "navy">2014-Oct-11 06:52:16</FONT></TD>
+  </TR>
+  <TR>
+    <TD><FONT COLOR="navy">b~main.scil</FONT></TD>
+    <TD><FONT COLOR = "navy">2014-Oct-11 06:52:16</FONT></TD>
+  </TR>
+</TABLE>
+</BODY></HTML>

@@ -1,0 +1,106 @@
+V "GNAT Lib v7.2"
+M P W=b
+A -g
+A -g
+A -gnatc
+A -gnatC
+A -gnatA
+P DB LC TF  SS ZX
+
+RN
+RR SIMPLE_BARRIERS
+RR NO_ABORT_STATEMENTS
+RR NO_ASYNCHRONOUS_CONTROL
+RR NO_CALENDAR
+RR NO_DYNAMIC_ATTACHMENT
+RR NO_DYNAMIC_PRIORITIES
+RR NO_ENTRY_QUEUE
+RR NO_IMPLICIT_HEAP_ALLOCATIONS
+RR NO_LOCAL_PROTECTED_OBJECTS
+RR NO_PROTECTED_TYPE_ALLOCATORS
+RR NO_RELATIVE_DELAY
+RR NO_REQUEUE_STATEMENTS
+RR NO_SELECT_STATEMENTS
+RR NO_TASK_ALLOCATORS
+RR NO_TASK_ATTRIBUTES_PACKAGE
+RR NO_TASK_HIERARCHY
+RR NO_TASK_TERMINATION
+RR NO_TERMINATE_ALTERNATIVES
+RV NO_ELABORATION_CODE
+RR MAX_PROTECTED_ENTRIES=1
+RR MAX_SELECT_ALTERNATIVES=0
+RR MAX_TASK_ENTRIES=0
+RR MAX_ASYNCHRONOUS_SELECT_NESTING=0
+R ada.execution_time.group_budgets
+R ada.execution_time.timers
+R system.multiprocessors.dispatching_domains
+
+U main%b		main.adb		5de84e39 OO SU
+W ada%s			ada.ads			ada.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W bcontrol%s		bcontrol.adb		bcontrol.ali
+W control%s		control.adb		control.ali
+W interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.val_enum%s	s-valenu.adb		s-valenu.ali
+
+D ada.ads		20060709122605 3ffc8e18
+D a-except.ads		20131014212419 f86a4103
+D a-reatim.ads		20101026134803 63f07669
+D a-unccon.ads		20060709122605 f9eb8f06
+D bcontrol.ads		20141010161146 b07a7dbb
+D control.ads		20141003211803 74a25c5e
+D interfac.ads		20130317214846 cb4a8015
+D i-c.ads		20101110140309 5421119b
+D main.adb		20141010164157 47b61fe0
+D system.ads		20120706154652 bd760655
+D s-atacco.ads		20120408201645 4c36d12f
+D s-exctab.ads		20101026134803 66e51330
+D s-linux.ads		20110824173634 70c7cb45
+D s-multip.ads		20100727005505 38ac9f73
+D s-oscons.ads		20140526162349 02c6d128
+D s-osinte.ads		20130803171754 439c3bce
+D s-parame.ads		20110802094037 b6e20cc0
+D s-secsta.ads		20110608115309 eea35a36
+D s-soflin.ads		20120413115406 24c8153c
+D s-stache.ads		20101026134803 596fc1b4
+D s-stausa.ads		20110325145855 017a0a05
+D s-stalib.ads		20131014174839 697c8682
+D s-stoele.ads		20131014174839 facd7d98
+D s-tasinf.ads		20120716211755 21316953
+D s-taspri.ads		20111025161526 15f617a8
+D s-taprop.ads		20111204221430 1dd2e1b6
+D s-taskin.ads		20131016111723 3f821f32
+D s-taprob.ads		20110915211910 502249e3
+D s-tposen.ads		20131016125307 94c79adf
+D s-tasres.ads		20101026134803 0c8ef6fb
+D s-tarest.ads		20121011201941 128b2dbd
+D s-traent.ads		20101026134803 5221ee41
+D s-valenu.ads		20101026134803 bb1a4295
+X 1 ada.ads
+16K9*Ada 19e8 9|9r6 9r24
+X 3 a-reatim.ads
+39K13*Real_Time 139e18 9|9w10 9r28
+X 5 bcontrol.ads
+2K9*Bcontrol 28e13 9|2w6 2r19 16r10 27r14 29r7
+4E9*Command_Type 4e55 9|16r19 27r23
+7U17 Send 9|29s24
+15w4*Command{6W19} 9|29r16
+X 6 control.ads
+1K9*Control 9e12 9|3w6 3r19 23r12 24r7 25r7
+2U14*Put_Line 9|24s15 25s15
+3V13*Get_Line{string} 9|23s20
+X 9 main.adb
+10U11*Main 10b11 34t4
+13b4 Stop{boolean}
+14a4 S{string} 23m7 25r24 27r42
+16e4 CMD{5|4E9} 27m7 29r29
+X 10 system.ads
+37K9*System 9|6w6 6r18 10|152e11
+X 21 s-stausa.ads
+203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
+268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+X 31 s-tarest.ads
+222U14*Activate_All_Tasks_Sequential 223i<c,__gnat_activate_all_tasks>22
+

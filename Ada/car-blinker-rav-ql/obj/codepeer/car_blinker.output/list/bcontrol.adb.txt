@@ -1,0 +1,535 @@
+--# 19 errors, 149 messages
+--#
+with Blinker;use Blinker;
+with Text_IO;
+with Ada.Real_Time;use Ada.Real_Time;
+with Control;
+package body Bcontrol is
+    --#bcontrol.adb:5:1: module: bcontrol__body
+    --#bcontrol.adb:5:1: subp: bcontrol'Elab_Body
+    --#input(bcontrol'Elab_Body): Time_Span_Zero
+    --#input(bcontrol'Elab_Body): Unspecified_Priority
+    --#input(bcontrol'Elab_Body): Unspecified_Task_Info
+    --#input(bcontrol'Elab_Body): bcontrol.blinker_control_typeZ
+    --#input(bcontrol'Elab_Body): bcontrol.stim_control_typeZ
+    --#input(bcontrol'Elab_Body): blinker.blinker_typeZ
+    --#output(bcontrol'Elab_Body): (bcontrol.blinker_controlT1'First)
+    --#output(bcontrol'Elab_Body): (bcontrol.blinker_controlT1'Last)
+    --#output(bcontrol'Elab_Body): (bcontrol.left_blinkerT1'First)
+    --#output(bcontrol'Elab_Body): (bcontrol.left_blinkerT1'Last)
+    --#output(bcontrol'Elab_Body): (bcontrol.stim_controlT1'First)
+    --#output(bcontrol'Elab_Body): (bcontrol.stim_controlT1'Last)
+    --#output(bcontrol'Elab_Body): Blinker_Control._task_id
+    --#output(bcontrol'Elab_Body): Left_Blinker._task_id
+    --#output(bcontrol'Elab_Body): Library_Task_Level
+    --#output(bcontrol'Elab_Body): Stim_Control._task_id
+    --#output(bcontrol'Elab_Body): bcontrol.blinker_controlT1
+    --#output(bcontrol'Elab_Body): bcontrol.blinker_controlT1(1..15)
+    --#output(bcontrol'Elab_Body): bcontrol.blinker_controlT1._first
+    --#output(bcontrol'Elab_Body): bcontrol.blinker_controlT1._last
+    --#output(bcontrol'Elab_Body): bcontrol.blinker_control_typeE
+    --#output(bcontrol'Elab_Body): bcontrol.left_blinkerT1
+    --#output(bcontrol'Elab_Body): bcontrol.left_blinkerT1(1..12)
+    --#output(bcontrol'Elab_Body): bcontrol.left_blinkerT1._first
+    --#output(bcontrol'Elab_Body): bcontrol.left_blinkerT1._last
+    --#output(bcontrol'Elab_Body): bcontrol.stim_controlT1
+    --#output(bcontrol'Elab_Body): bcontrol.stim_controlT1(1..12)
+    --#output(bcontrol'Elab_Body): bcontrol.stim_controlT1._first
+    --#output(bcontrol'Elab_Body): bcontrol.stim_controlT1._last
+    --#output(bcontrol'Elab_Body): bcontrol.stim_control_typeE
+    --#post(bcontrol'Elab_Body): (bcontrol.blinker_controlT1'First) = 1
+    --#post(bcontrol'Elab_Body): (bcontrol.left_blinkerT1'First) = 1
+    --#post(bcontrol'Elab_Body): (bcontrol.stim_controlT1'First) = 1
+    --#post(bcontrol'Elab_Body): bcontrol.blinker_controlT1'First = 1
+    --#post(bcontrol'Elab_Body): bcontrol.left_blinkerT1'First = 1
+    --#post(bcontrol'Elab_Body): bcontrol.stim_controlT1'First = 1
+    --#post(bcontrol'Elab_Body): (bcontrol.blinker_controlT1'Last) = 15
+    --#post(bcontrol'Elab_Body): bcontrol.blinker_controlT1'Last = 15
+    --#post(bcontrol'Elab_Body): (bcontrol.left_blinkerT1'Last) = 12
+    --#post(bcontrol'Elab_Body): (bcontrol.stim_controlT1'Last) = 12
+    --#post(bcontrol'Elab_Body): bcontrol.left_blinkerT1'Last = 12
+    --#post(bcontrol'Elab_Body): bcontrol.stim_controlT1'Last = 12
+    --#post(bcontrol'Elab_Body): Blinker_Control._task_id'Initialized
+    --#post(bcontrol'Elab_Body): Left_Blinker._task_id'Initialized
+    --#post(bcontrol'Elab_Body): Library_Task_Level = 3
+    --#post(bcontrol'Elab_Body): Stim_Control._task_id'Initialized
+    --#post(bcontrol'Elab_Body): bcontrol.blinker_controlT1 = &bcontrol.blinker_controlT1
+    --#post(bcontrol'Elab_Body): bcontrol.blinker_controlT1'Initialized
+    --#post(bcontrol'Elab_Body): bcontrol.blinker_controlT1(1..15) in (95 | 98..99 | 101 | 105 | ... | 116)
+    --#post(bcontrol'Elab_Body): bcontrol.blinker_control_typeE'Initialized
+    --#post(bcontrol'Elab_Body): bcontrol.left_blinkerT1 = &bcontrol.left_blinkerT1
+    --#post(bcontrol'Elab_Body): bcontrol.left_blinkerT1'Initialized
+    --#post(bcontrol'Elab_Body): bcontrol.left_blinkerT1(1..12) in (95 | 98 | 101..102 | 105 | ... | 116)
+    --#post(bcontrol'Elab_Body): bcontrol.stim_controlT1 = &bcontrol.stim_controlT1
+    --#post(bcontrol'Elab_Body): bcontrol.stim_controlT1'Initialized
+    --#post(bcontrol'Elab_Body): bcontrol.stim_controlT1(1..12) in (95 | 99 | 105 | 108..111 | 114..116)
+    --#post(bcontrol'Elab_Body): bcontrol.stim_control_typeE'Initialized
+    --#bcontrol.adb:5:1: end of subp: bcontrol'Elab_Body
+
+   protected body Command_Access is
+      procedure Send( Cmd: Command_Type) is
+    --#bcontrol.adb:8:7: subp: bcontrol.command_access.sendN
+    --#input(bcontrol.command_access.sendN): _object
+    --#input(bcontrol.command_access.sendN): _object.command
+    --#input(bcontrol.command_access.sendN): cmd
+    --#output(bcontrol.command_access.sendN): _object.command
+    --#output(bcontrol.command_access.sendN): _object.new_command
+    --#pre[2] (bcontrol.command_access.sendN): _object.command'Initialized
+    --#post(bcontrol.command_access.sendN): _object.command = One-of{_object.command'Old, cmd}
+    --#post(bcontrol.command_access.sendN): _object.command'Initialized
+    --#post(bcontrol.command_access.sendN): _object.new_command'Initialized
+    --#test_vector(bcontrol.command_access.sendN): _object.command - cmd: {-5..-1 | 1..5}, {0}
+    --#bcontrol.adb:8:7: end of subp: bcontrol.command_access.sendN
+    --#bcontrol.adb:8:7: subp: bcontrol.command_access.sendP
+    --#input(bcontrol.command_access.sendP): _object
+    --#input(bcontrol.command_access.sendP): cmd
+    --#output(bcontrol.command_access.sendP): _object.command
+    --#output(bcontrol.command_access.sendP): _object.new_command
+    --#post(bcontrol.command_access.sendP): _object.command'Initialized
+    --#post(bcontrol.command_access.sendP): _object.new_command = One-of{false, true}
+    --#post(bcontrol.command_access.sendP): _object.new_command'Initialized
+    --#bcontrol.adb:8:7: end of subp: bcontrol.command_access.sendP
+    --#bcontrol.adb:8:7: subp: bcontrol.command_access.sendP._finalizer
+    --#input(bcontrol.command_access.sendP._finalizer): _object
+    --#bcontrol.adb:8:7: end of subp: bcontrol.command_access.sendP._finalizer
+      begin
+         New_Command := False;
+         if Command /= Cmd then
+            New_Command := True;
+            Command := Cmd;
+         end if;
+
+      end Send;
+      entry Receive(Cmd : out Command_Type) when New_Command is
+    --#bcontrol.adb:17:7: ?access check
+    --#    _object /= null
+    --#    severity: SUPPRESSED
+    --#    module: bcontrol__body
+    --#    subp: bcontrol.command_access.receive_B7s
+    --#    basic block: Entry_BB_1
+    --#    assertion: _object /= null
+    --#    VN: Unchecked_Conversion_0.@17
+    --#    Expected: Inverse{null}
+    --#    Bad: Addr_Set{null}
+    --#    Attribs:  Ptr  null in Bad  Uncertain
+    --#bcontrol.adb:17:7: subp: bcontrol.command_access.receive_E6s'Protected_Type_Op
+    --#bcontrol.adb:17:7: ?access check
+    --#    (unchecked_conversion) /= null
+    --#    severity: SUPPRESSED
+    --#    module: bcontrol__body
+    --#    subp: bcontrol.command_access.receive_E6s'Protected_Type_Op
+    --#    basic block: Entry_BB_1
+    --#    assertion: (unchecked_conversion) /= null
+    --#    VN: Unchecked_Conversion_2.@17
+    --#    Expected: Inverse{null}
+    --#    Bad: Addr_Set{null}
+    --#    Attribs:  Ptr  null in Bad  Uncertain
+    --#bcontrol.adb:17:7: ?access check
+    --#    _object /= null
+    --#    severity: SUPPRESSED
+    --#    module: bcontrol__body
+    --#    subp: bcontrol.command_access.receive_E6s'Protected_Type_Op
+    --#    basic block: bb_5
+    --#    assertion: _object /= null
+    --#    VN: Unchecked_Conversion_3.@17
+    --#    Expected: Inverse{null}
+    --#    Bad: Addr_Set{null}
+    --#    Attribs:  Ptr  null in Bad  Uncertain
+    --#input(bcontrol.command_access.receive_E6s'Protected_Type_Op): $P
+    --#input(bcontrol.command_access.receive_E6s'Protected_Type_Op): 'Constrained
+    --#bcontrol.adb:17:7: end of subp: bcontrol.command_access.receive_E6s'Protected_Type_Op
+    --#bcontrol.adb:17:50: subp: bcontrol.command_access.receive_B7s
+    --#input(bcontrol.command_access.receive_B7s): 'Constrained
+    --#output(bcontrol.command_access.receive_B7s): bcontrol.command_access.receive_B7s'Result
+    --#post(bcontrol.command_access.receive_B7s): bcontrol.command_access.receive_B7s'Result'Initialized
+    --#bcontrol.adb:17:50: end of subp: bcontrol.command_access.receive_B7s
+      begin
+         Cmd := Command;
+    --#bcontrol.adb:19:10: ?access check
+    --#    (unchecked_conversion) /= null
+    --#    severity: SUPPRESSED
+    --#    module: bcontrol__body
+    --#    subp: bcontrol.command_access.receive_E6s'Protected_Type_Op
+    --#    basic block: bb_6
+    --#    assertion: (unchecked_conversion) /= null
+    --#    VN: Unchecked_Conversion_4.@19
+    --#    Expected: Inverse{null}
+    --#    Bad: Addr_Set{null}
+    --#    Attribs:  Ptr  null in Bad  Uncertain
+    --#bcontrol.adb:19:10: ?access check
+    --#    (unchecked_conversion).all.cmd /= null
+    --#    severity: SUPPRESSED
+    --#    module: bcontrol__body
+    --#    subp: bcontrol.command_access.receive_E6s'Protected_Type_Op
+    --#    basic block: bb_6
+    --#    assertion: (unchecked_conversion).all.cmd /= null
+    --#    VN: (unchecked_conversion).cmd@19
+    --#    Expected: Inverse{null}
+    --#    Bad: Addr_Set{null}
+    --#    Attribs:  Ptr  null in Bad  Uncertain
+    --#bcontrol.adb:19:14: ?access check
+    --#    _object /= null
+    --#    severity: SUPPRESSED
+    --#    module: bcontrol__body
+    --#    subp: bcontrol.command_access.receive_E6s'Protected_Type_Op
+    --#    basic block: bb_6
+    --#    assertion: _object /= null
+    --#    VN: _object
+    --#    Expected: Inverse{null}
+    --#    Bad: Addr_Set{null}
+    --#    Attribs:  Ptr  null in Bad  Uncertain
+      end;
+   end Command_Access;
+
+
+   Left_Blinker : Blinker.Blinker_Type;
+   --Right_Blinker: Blinker.Blinker_Type(Blinker.R);
+   --Warn_Blinker: Blinker.Blinker_Type(Blinker.E);
+
+   Blinker_Control : Blinker_Control_Type;
+   Stim_Control : Stim_Control_Type;
+
+   task body Blinker_Control_Type is
+    --#bcontrol.adb:31:4: subp: bcontrol.blinker_control_type'Task_Type_Body
+    --#input(bcontrol.blinker_control_type'Task_Type_Body): Protected_Command.command_is_new
+    --#input(bcontrol.blinker_control_type'Task_Type_Body): Protected_Command.command_to
+    --#output(bcontrol.blinker_control_type'Task_Type_Body): Protected_Command.command_is_new
+    --#output(bcontrol.blinker_control_type'Task_Type_Body): Protected_Command.command_to
+    --#output(bcontrol.blinker_control_type'Task_Type_Body): Protected_Command.command_to.Cmd
+    --#output(bcontrol.blinker_control_type'Task_Type_Body): Protected_Command.command_to.Receiver
+    --#test_vector(bcontrol.blinker_control_type'Task_Type_Body): $P.cmd.all: {BLS}, {BLE}, {BRS}, {EMS}
+    --#bcontrol.adb:31:4: end of subp: bcontrol.blinker_control_type'Task_Type_Body
+    --#bcontrol.adb:31:4: subp: bcontrol.blinker_control_type._finalizer
+    --#bcontrol.adb:31:4: end of subp: bcontrol.blinker_control_type._finalizer
+      Blinker_Left_Started : Boolean := False;
+      Blinker_Right_Started : Boolean := False;
+      Blinker_Warn_Started : Boolean := False;
+      Next_Time : Time := Clock + Milliseconds(100);
+      Cmd : Bcontrol.Command_Type := BLE;
+    --#bcontrol.adb:36:7: Warning: unused assignment
+    --#    into Cmd
+    --#    severity: SUPPRESSED
+    --#    module: bcontrol__body
+    --#    subp: bcontrol.blinker_control_type'Task_Type_Body
+    --#    Attribs:  Uncertain
+      Cmd_To : Blinker.Command_To_Type;
+   begin
+      loop
+         Command.Receive(Cmd => Cmd);
+    --#bcontrol.adb:40:17: ?access check
+    --#    $P.cmd /= null
+    --#    severity: SUPPRESSED
+    --#    module: bcontrol__body
+    --#    subp: bcontrol.blinker_control_type'Task_Type_Body
+    --#    basic block: bb_5
+    --#    assertion: $P.cmd /= null
+    --#    VN: $P.cmd
+    --#    Expected: Inverse{null}
+    --#    Bad: Addr_Set{null}
+    --#    Attribs:  Ptr  null in Bad  Uncertain
+         case Cmd is
+            when BLS =>
+               Cmd_To.Cmd := START;
+               if not Blinker_Left_Started then
+                  Cmd_To.Receiver := Blinker.L;
+                  Protected_Command.Send(Cmd_To);
+    --#bcontrol.adb:46:36: ?!precondition
+    --#    on blinker.cmd_type_access.sendP: requires (soft) cmd'Initialized
+    --#    severity: SUPPRESSED
+    --#    module: bcontrol__body
+    --#    subp: bcontrol.blinker_control_type'Task_Type_Body
+    --#    basic block: bb_8
+    --#    assertion: (soft) undefined init'ed
+    --#    callee: blinker.cmd_type_access.sendP
+    --#    callee assertion: (soft) cmd'Initialized
+    --#    callee file: blinker.adb
+    --#    callee precondition index: [2147483647]
+    --#    callee srcpos: 6
+    --#    VN: undefined
+    --#    Expected: Univ-VN-Set
+    --#    Bad: {Invalid}
+    --#    Attribs:  Ptr  Soft  Bad only invalid
+                  --Text_Io.Put_Line("execute Command " & String(Cmd.All));
+                  Blinker_Left_Started := True;
+               end if;
+            when BLE =>
+               Cmd_To.Cmd := Stop;
+               if Blinker_Left_Started then
+                  Cmd_To.Receiver := Blinker.L;
+                  Protected_Command.Send(Cmd_To);
+    --#bcontrol.adb:54:36: ?!precondition
+    --#    on blinker.cmd_type_access.sendP: requires (soft) cmd'Initialized
+    --#    severity: SUPPRESSED
+    --#    module: bcontrol__body
+    --#    subp: bcontrol.blinker_control_type'Task_Type_Body
+    --#    basic block: bb_12
+    --#    assertion: (soft) undefined init'ed
+    --#    callee: blinker.cmd_type_access.sendP
+    --#    callee assertion: (soft) cmd'Initialized
+    --#    callee file: blinker.adb
+    --#    callee precondition index: [2147483647]
+    --#    callee srcpos: 6
+    --#    VN: undefined
+    --#    Expected: Univ-VN-Set
+    --#    Bad: {Invalid}
+    --#    Attribs:  Ptr  Soft  Bad only invalid
+                  --Text_Io.Put_Line("execute Command " & String(Cmd.All));
+                  Blinker_Left_Started := False;
+               end if;
+               if Blinker_Right_Started then
+                  Cmd_To.Receiver := Blinker.R;
+                  Protected_Command.Send(Cmd_To);
+    --#bcontrol.adb:60:36: ?precondition
+    --#    on blinker.cmd_type_access.sendP: requires (soft) _object.command_to'Initialized
+    --#    severity: SUPPRESSED
+    --#    module: bcontrol__body
+    --#    subp: bcontrol.blinker_control_type'Task_Type_Body
+    --#    basic block: bb_14
+    --#    assertion: (soft) blinker.cmd_type_access.sendP._object.command_to'Initialized
+    --#    callee: blinker.cmd_type_access.sendP
+    --#    callee assertion: (soft) _object.command_to'Initialized
+    --#    callee file: blinker.adb
+    --#    callee precondition index: [2147483647]
+    --#    callee srcpos: 6
+    --#    VN: blinker.cmd_type_access.sendP._object.command_to
+    --#    Expected: Univ-VN-Set
+    --#    Bad: {Invalid}
+    --#    Attribs:  Ptr  Soft  Bad only invalid
+    --#bcontrol.adb:60:36: ?!precondition
+    --#    on blinker.cmd_type_access.sendP: requires (soft) cmd'Initialized
+    --#    severity: SUPPRESSED
+    --#    module: bcontrol__body
+    --#    subp: bcontrol.blinker_control_type'Task_Type_Body
+    --#    basic block: bb_14
+    --#    assertion: (soft) undefined init'ed
+    --#    callee: blinker.cmd_type_access.sendP
+    --#    callee assertion: (soft) cmd'Initialized
+    --#    callee file: blinker.adb
+    --#    callee precondition index: [2147483647]
+    --#    callee srcpos: 6
+    --#    VN: undefined
+    --#    Expected: Univ-VN-Set
+    --#    Bad: {Invalid}
+    --#    Attribs:  Ptr  Soft  Bad only invalid
+    --#bcontrol.adb:60:36: ?precondition
+    --#    on blinker.cmd_type_access.sendP: requires (soft) _object.command_to.Cmd'Initialized
+    --#    severity: SUPPRESSED
+    --#    module: bcontrol__body
+    --#    subp: bcontrol.blinker_control_type'Task_Type_Body
+    --#    basic block: bb_14
+    --#    assertion: (soft) blinker.cmd_type_access.sendP._object.command_to.Cmd'Initialized
+    --#    callee: blinker.cmd_type_access.sendP
+    --#    callee assertion: (soft) _object.command_to.Cmd'Initialized
+    --#    callee file: blinker.adb
+    --#    callee precondition index: [2147483647]
+    --#    callee srcpos: 6
+    --#    VN: blinker.cmd_type_access.sendP._object.command_to.Cmd
+    --#    Expected: {-Inf..+Inf}
+    --#    Bad: {Invalid}
+    --#    Attribs:  Int  Soft  Bad only invalid
+                  Blinker_Right_Started := False;
+               end if;
+               if Blinker_Warn_Started then
+                  Cmd_To.Receiver := Blinker.E;
+                  Protected_Command.Send(Cmd_To);
+    --#bcontrol.adb:65:36: ?precondition
+    --#    on blinker.cmd_type_access.sendP: requires (soft) _object.command_to'Initialized
+    --#    severity: SUPPRESSED
+    --#    module: bcontrol__body
+    --#    subp: bcontrol.blinker_control_type'Task_Type_Body
+    --#    basic block: bb_16
+    --#    assertion: (soft) blinker.cmd_type_access.sendP._object.command_to'Initialized
+    --#    callee: blinker.cmd_type_access.sendP
+    --#    callee assertion: (soft) _object.command_to'Initialized
+    --#    callee file: blinker.adb
+    --#    callee precondition index: [2147483647]
+    --#    callee srcpos: 6
+    --#    VN: blinker.cmd_type_access.sendP._object.command_to
+    --#    Expected: Univ-VN-Set
+    --#    Bad: {Invalid}
+    --#    Attribs:  Ptr  Soft  Bad only invalid
+    --#bcontrol.adb:65:36: ?!precondition
+    --#    on blinker.cmd_type_access.sendP: requires (soft) cmd'Initialized
+    --#    severity: SUPPRESSED
+    --#    module: bcontrol__body
+    --#    subp: bcontrol.blinker_control_type'Task_Type_Body
+    --#    basic block: bb_16
+    --#    assertion: (soft) undefined init'ed
+    --#    callee: blinker.cmd_type_access.sendP
+    --#    callee assertion: (soft) cmd'Initialized
+    --#    callee file: blinker.adb
+    --#    callee precondition index: [2147483647]
+    --#    callee srcpos: 6
+    --#    VN: undefined
+    --#    Expected: Univ-VN-Set
+    --#    Bad: {Invalid}
+    --#    Attribs:  Ptr  Soft  Bad only invalid
+    --#bcontrol.adb:65:36: ?precondition
+    --#    on blinker.cmd_type_access.sendP: requires (soft) _object.command_to.Cmd'Initialized
+    --#    severity: SUPPRESSED
+    --#    module: bcontrol__body
+    --#    subp: bcontrol.blinker_control_type'Task_Type_Body
+    --#    basic block: bb_16
+    --#    assertion: (soft) blinker.cmd_type_access.sendP._object.command_to.Cmd'Initialized
+    --#    callee: blinker.cmd_type_access.sendP
+    --#    callee assertion: (soft) _object.command_to.Cmd'Initialized
+    --#    callee file: blinker.adb
+    --#    callee precondition index: [2147483647]
+    --#    callee srcpos: 6
+    --#    VN: blinker.cmd_type_access.sendP._object.command_to.Cmd
+    --#    Expected: {-Inf..+Inf}
+    --#    Bad: {Invalid}
+    --#    Attribs:  Int  Soft  Bad only invalid
+                  --Text_Io.Put_Line("execute Command " & String(Cmd.All));
+                  Blinker_Warn_Started := False;
+               end if;
+            when BRS =>
+               Cmd_To.Cmd := START;
+               if not Blinker_Right_Started then
+                  Cmd_To.Receiver := Blinker.R;
+                  Protected_Command.Send(Cmd_To);
+    --#bcontrol.adb:73:36: ?!precondition
+    --#    on blinker.cmd_type_access.sendP: requires (soft) cmd'Initialized
+    --#    severity: SUPPRESSED
+    --#    module: bcontrol__body
+    --#    subp: bcontrol.blinker_control_type'Task_Type_Body
+    --#    basic block: bb_19
+    --#    assertion: (soft) undefined init'ed
+    --#    callee: blinker.cmd_type_access.sendP
+    --#    callee assertion: (soft) cmd'Initialized
+    --#    callee file: blinker.adb
+    --#    callee precondition index: [2147483647]
+    --#    callee srcpos: 6
+    --#    VN: undefined
+    --#    Expected: Univ-VN-Set
+    --#    Bad: {Invalid}
+    --#    Attribs:  Ptr  Soft  Bad only invalid
+                  --Text_Io.Put_Line("execute Command " & String(Cmd.All));
+                  Blinker_Right_Started := True;
+               end if;
+            when EMS =>
+              Cmd_To.Cmd := START;
+              if not Blinker_Warn_Started then
+                  Cmd_To.Receiver := Blinker.E;
+                  Protected_Command.Send(Cmd_To);
+    --#bcontrol.adb:81:36: ?!precondition
+    --#    on blinker.cmd_type_access.sendP: requires (soft) cmd'Initialized
+    --#    severity: SUPPRESSED
+    --#    module: bcontrol__body
+    --#    subp: bcontrol.blinker_control_type'Task_Type_Body
+    --#    basic block: bb_22
+    --#    assertion: (soft) undefined init'ed
+    --#    callee: blinker.cmd_type_access.sendP
+    --#    callee assertion: (soft) cmd'Initialized
+    --#    callee file: blinker.adb
+    --#    callee precondition index: [2147483647]
+    --#    callee srcpos: 6
+    --#    VN: undefined
+    --#    Expected: Univ-VN-Set
+    --#    Bad: {Invalid}
+    --#    Attribs:  Ptr  Soft  Bad only invalid
+                  --Text_Io.Put_Line("execute Command " & String(Cmd.All));
+                  Blinker_Warn_Started := True;
+               end if;
+            when others => null;
+         end case;
+         delay until Next_Time;
+         Next_Time := Next_Time + Milliseconds(100);
+
+      end loop;
+
+   end Blinker_Control_Type;
+
+   task body Stim_Control_Type is
+    --#bcontrol.adb:94:4: subp: bcontrol.stim_control_type'Task_Type_Body
+    --#input(bcontrol.stim_control_type'Task_Type_Body): Command.new_command
+    --#output(bcontrol.stim_control_type'Task_Type_Body): Command.command
+    --#output(bcontrol.stim_control_type'Task_Type_Body): Command.new_command
+    --#test_vector(bcontrol.stim_control_type'Task_Type_Body): $P.cmd.all: {STR}, {BLE..EMS | STP}
+    --#bcontrol.adb:94:4: end of subp: bcontrol.stim_control_type'Task_Type_Body
+    --#bcontrol.adb:94:4: subp: bcontrol.stim_control_type._finalizer
+    --#bcontrol.adb:94:4: end of subp: bcontrol.stim_control_type._finalizer
+      Next_Time : Time := Clock;
+      c :Command_Type := stp;
+    --#bcontrol.adb:96:7: Warning: unused assignment
+    --#    into c
+    --#    severity: SUPPRESSED
+    --#    module: bcontrol__body
+    --#    subp: bcontrol.stim_control_type'Task_Type_Body
+    --#    Attribs:  Uncertain
+
+      function Process_Command(cmd_par : BControl.Command_Type) return Boolean is
+    --#bcontrol.adb:98:7: subp: bcontrol.stim_control_type.process_command
+    --#input(bcontrol.stim_control_type.process_command): Next_Time
+    --#input(bcontrol.stim_control_type.process_command): cmd_par
+    --#output(bcontrol.stim_control_type.process_command): Command.command
+    --#output(bcontrol.stim_control_type.process_command): Command.new_command
+    --#output(bcontrol.stim_control_type.process_command): Next_Time
+    --#output(bcontrol.stim_control_type.process_command): bcontrol.stim_control_type.process_command'Result
+    --#output(bcontrol.stim_control_type.process_command): c
+    --#post(bcontrol.stim_control_type.process_command): Command.command'Initialized
+    --#post(bcontrol.stim_control_type.process_command): Command.new_command'Initialized
+    --#post(bcontrol.stim_control_type.process_command): Next_Time'Initialized
+    --#post(bcontrol.stim_control_type.process_command): bcontrol.stim_control_type.process_command'Result'Initialized
+    --#post(bcontrol.stim_control_type.process_command): c'Initialized
+    --#test_vector(bcontrol.stim_control_type.process_command): $P.cmd.all: {STP}, {BLE..STR}
+    --#bcontrol.adb:98:7: end of subp: bcontrol.stim_control_type.process_command
+      begin
+         Command.Receive(c);
+    --#bcontrol.adb:100:17: ?access check
+    --#    $P.cmd /= null
+    --#    severity: SUPPRESSED
+    --#    module: bcontrol__body
+    --#    subp: bcontrol.stim_control_type.process_command
+    --#    basic block: bb_4
+    --#    assertion: $P.cmd /= null
+    --#    VN: $P.cmd
+    --#    Expected: Inverse{null}
+    --#    Bad: Addr_Set{null}
+    --#    Attribs:  Ptr  null in Bad  Uncertain
+         if c = STP then
+            Command.Send(BLE);
+            return TRUE;
+         end if;
+
+         --   Blinker_Control.Blink_Left;
+         Next_Time := Next_Time + Seconds(3);
+         Command.Send( cmd_par );
+         delay until Next_Time;
+         return FALSE;
+      end Process_Command;
+
+   begin
+      loop
+         Command.Receive(c);
+    --#bcontrol.adb:115:17: ?access check
+    --#    $P.cmd /= null
+    --#    severity: SUPPRESSED
+    --#    module: bcontrol__body
+    --#    subp: bcontrol.stim_control_type'Task_Type_Body
+    --#    basic block: bb_5
+    --#    assertion: $P.cmd /= null
+    --#    VN: $P.cmd
+    --#    Expected: Inverse{null}
+    --#    Bad: Addr_Set{null}
+    --#    Attribs:  Ptr  null in Bad  Uncertain
+         if c = STR then
+            loop
+               exit when Process_Command(BLS);
+               exit when Process_Command(BLE);
+               exit when Process_Command(BRS);
+               exit when Process_Command(BLE);
+               exit when Process_Command(EMS);
+               exit when Process_Command(BLE);
+            end loop;
+         end if;
+
+
+         Next_Time := Clock + Seconds(1);
+         delay until Next_Time;
+      end loop;
+   end Stim_Control_Type;
+end Bcontrol;
+
+
+    --#bcontrol.adb:: end of module: bcontrol__body

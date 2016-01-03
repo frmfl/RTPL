@@ -1,0 +1,157 @@
+V "GNAT Lib v7.2"
+A -g
+A -g
+A -gnatc
+A -gnatC
+A -gnatA
+P ZX
+
+RN
+RV NO_ELABORATION_CODE
+
+U bcontrol%b		bcontrol.adb		66910c12 OO PK
+W ada%s			ada.ads			ada.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.real_time.delays%s  a-retide.adb		a-retide.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W blinker%s		blinker.adb		blinker.ali
+W control%s		control.adb		control.ali
+W interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+W system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
+W system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
+W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+W text_io%s		text_io.ads		text_io.ali
+
+U bcontrol%s		bcontrol.ads		0d0c7bee EE OO PF PK
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W system%s		system.ads		system.ali
+W system.parameters%s	s-parame.adb		s-parame.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.task_info%s	s-tasinf.adb		s-tasinf.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+W system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
+W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+
+D ada.ads		20060709122605 3ffc8e18
+D a-except.ads		20131014212419 f86a4103
+D a-finali.ads		20111103145731 52ecdc1b
+D a-ioexce.ads		20090919133921 8b9de6cd
+D a-reatim.ads		20101026134803 63f07669
+D a-retide.ads		20101026134803 081cdaa4
+D a-stream.ads		20130909153055 1a984740
+D a-tags.ads		20111201172145 6c0509d0
+D a-textio.ads		20131014174830 386df5d4
+D a-unccon.ads		20060709122605 f9eb8f06
+D bcontrol.ads		20141010161146 b07a7dbb
+D bcontrol.adb		20141010164210 52dc17a6
+D blinker.ads		20141010192430 d6b36af1
+D control.ads		20141003211803 74a25c5e
+D interfac.ads		20130317214846 cb4a8015
+D i-c.ads		20101110140309 5421119b
+D i-cstrea.ads		20130217161902 8128536b
+D system.ads		20120706154652 bd760655
+D s-atacco.ads		20120408201645 4c36d12f
+D s-crtl.ads		20130216180205 dfcfca61
+D s-exctab.ads		20101026134803 66e51330
+D s-ficobl.ads		20120526014244 55a71d43
+D s-finmas.ads		20111011182005 b95bb341
+D s-finroo.ads		20120402200032 4ff27390
+D s-linux.ads		20110824173634 70c7cb45
+D s-multip.ads		20100727005505 38ac9f73
+D s-oscons.ads		20140526162349 02c6d128
+D s-osinte.ads		20130803171754 439c3bce
+D s-parame.ads		20110802094037 b6e20cc0
+D s-pooglo.ads		20110224134916 542f33d0
+D s-soflin.ads		20120413115406 24c8153c
+D s-stache.ads		20101026134803 596fc1b4
+D s-stausa.ads		20110325145855 017a0a05
+D s-stalib.ads		20131014174839 697c8682
+D s-stoele.ads		20131014174839 facd7d98
+D s-stopoo.ads		20130510054206 b16154c2
+D s-tasinf.ads		20120716211755 21316953
+D s-taspri.ads		20111025161526 15f617a8
+D s-taprop.ads		20111204221430 1dd2e1b6
+D s-taskin.ads		20131016111723 3f821f32
+D s-taprob.ads		20110915211910 502249e3
+D s-tpoben.ads		20121005212445 b641f948
+D s-tpobop.ads		20101026134803 5f548bb3
+D s-tassta.ads		20121003180515 70812003
+D s-traent.ads		20101026134803 5221ee41
+D s-wchcon.ads		20101026134803 bfeb2e3d
+D text_io.ads		20060709122605 45d626c9
+X 1 ada.ads
+16K9*Ada 19e8 12|3r6 3r24
+X 5 a-reatim.ads
+39K13*Real_Time 139e18 12|3w10 3r28
+41O9*Time<duration> 12|35r19 95r19
+46O9*Time_Span<duration>
+53V13*Clock{41O9} 12|35s27 95s27 128s23
+55V14*"+"{41O9} 12|35s33 88s33 107s33 128s29
+85V13*Milliseconds{46O9} 12|35s35 88s35
+87V13*Seconds{46O9} 12|107s35 128s31
+X 11 bcontrol.ads
+2K9*Bcontrol 28l5 28e13 12|5b14 36r13 98r42 132l5 132t13
+4E9*Command_Type 4e55 7r28 8r31 10r17 12|8r28 17r31 36r22 96r10 98r51
+4n26*BLE{4E9} 12|36r38 50r18 102r26 119r42 121r42 123r42
+4n31*BLS{4E9} 12|42r18 118r42
+4n36*BRS{4E9} 12|69r18 120r42
+4n41*EMS{4E9} 12|77r18 122r42
+4n46*STR{4E9} 12|116r17
+4n51*STP{4E9} 12|96r26 101r17
+6W19*Command_Access 10E7 12l8 12e22 15r14 12|7b19 21l8 21t22
+7U17 Send 7>23 12|8b17 16l11 16t15 102s21 108s18
+7e23 Cmd{4E9} 12|8b23 11r24 13r24
+8Y13 Receive 8<21 12|17b13 20t10 40s18 100s18 115s18
+8e21 Cmd{4E9} 12|19m10 40r26
+10e7 Command{4E9} 12|11r13 13r13 19r17
+11b7 New_Command{boolean} 12|10r10 12r13 17r50
+15w4*Command{6W19} 12|40r10 100r10 102r13 108r10 115r10
+17T14*Blinker_Control_Type 19l8 19e28 12|28r22 31b14 92l8 92t28
+21T14*Stim_Control_Type 23l8 23e25 12|29r19 94b14 131l8 131t25
+X 12 bcontrol.adb
+17e21 Cmd{11|4E9}
+24t4 Left_Blinker{13|21T14}
+28t4 Blinker_Control{11|17T14}
+29t4 Stim_Control{11|21T14}
+32b7 Blinker_Left_Started{boolean} 44r23 48m19 52r19 56m19
+33b7 Blinker_Right_Started{boolean} 58r19 61m19 71r23 75m19
+34b7 Blinker_Warn_Started{boolean} 63r19 67m19 79r22 83m19
+35o7 Next_Time{5|41O9} 87r22 88m10 88r23
+36e7 Cmd{11|4E9} 40m33 41r15
+37r7 Cmd_To{13|6R9} 43m16 45m19 46r42 51m16 53m19 54r42 59m19 60r42 64m19
+. 65r42 70m16 72m19 73r42 78m15 80m19 81r42
+95o7 Next_Time{5|41O9} 107m10 107r23 109r22 128m10 129r22
+96e7 c{11|4E9} 100m26 101r13 115m26 116r13
+98V16 Process_Command{boolean} 98b16 98>32 111l11 111t26 118s26 119s26 120s26
+. 121s26 122s26 123s26
+98e32 cmd_par{11|4E9} 108r24
+X 13 blinker.ads
+2K9*Blinker 12|1w6 1r18 24r19 37r16 45r38 53r38 59r38 64r38 72r38 80r38 13|26e12
+4n22*STOP{4E9} 12|51r30
+4n28*START{4E9} 12|43r30 70r30 78r29
+5n22*R{5E9} 12|59r46 72r46
+5n25*L{5E9} 12|45r46 53r46
+5n28*E{5E9} 12|64r46 80r46
+6R9*Command_To_Type 12|37r24 13|9e14
+7e7*Cmd{4E9} 12|43m23 51m23 70m23 78m22
+8e7*Receiver{5E9} 12|45m26 53m26 59m26 64m26 72m26 80m26
+14U17 Send 12|46s37 54s37 60s37 65s37 73s37 81s37
+21T14*Blinker_Type 12|24r27 13|23e20
+25w4*Protected_Command{13W19} 12|46r19 54r19 60r19 65r19 73r19 81r19
+X 14 control.ads
+1K9*Control 12|4w6 14|9e12
+X 18 system.ads
+37K9*System 11|1w6 1r17 18|152e11
+X 33 s-stausa.ads
+203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
+268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+X 47 text_io.ads
+24K9*Text_IO=24:29 12|2w6
+

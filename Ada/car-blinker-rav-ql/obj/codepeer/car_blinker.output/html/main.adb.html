@@ -1,0 +1,82 @@
+<HTML><HEAD>
+<TITLE>main.adb</TITLE>
+<SCRIPT TYPE="text/javascript">
+<!--
+  function listing_onload()
+  {
+    top.listing_onload_common(window, 
+      "main.adb-frameset.html", "623", "main.adb");
+    top.Update_Message_Status("main.adb-frameset.html", "", "main.adb")
+  }
+//-->
+</SCRIPT>
+<SCRIPT TYPE="text/javascript">
+<!--
+  function set_src_and_msg_anchors(src_line,
+    msg_anchor, src_id_pfx)
+  {
+    top.set_src_and_msg_anchors_common(src_line, msg_anchor,
+      src_id_pfx, "main.adb-frameset.html");
+  }
+//-->
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" onLoad="listing_onload();">
+<CENTER><H3>File Source: main.adb</H3></CENTER>
+<PRE>
+<A NAME="E1"></A>     1  pragma Profile(Ravenscar);
+<A NAME="E2"></A>     2  with Bcontrol;use Bcontrol;
+<A NAME="E3"></A>     3  with Control; use Control;
+<A NAME="E4"></A>     4  --with Gio;
+<A NAME="E5"></A>     5  --with Reg_Het;
+<A NAME="E6"></A>     6  with System; use System;
+<A NAME="E7"></A>     7  
+<A NAME="E8"></A>     8  
+<A NAME="E9"></A>     9  with Ada.Real_Time;use Ada.Real_Time;
+        <FONT COLOR="purple"> -- 
+<A NAME="P10"></A>    <A ID="ID_P10" HREF="main.adb-msgs.html#1-Ann" onClick="set_src_and_msg_anchors(10, '1-Ann', 'P')" TARGET="messages_623">P/P</A>  --  <B>Subp:</B> main
+         --    main <i>does not return</i>
+         -- </FONT>
+<A NAME="E10"></A>    10  procedure Main is
+<A NAME="E11"></A>    11     --pragma Priority(Priority'Last);
+<A NAME="E12"></A>    12  
+<A NAME="E13"></A>    13     Stop : Boolean := False;
+<A NAME="E14"></A>    14     S: String(1..5) := (others =&gt; ASCII.NUL);
+<A NAME="E15"></A>    15     --CMD : BControl.Command_Type := (1 =&gt; 'b', 2 =&gt; 'l', 3 =&gt; 's');
+<A NAME="E16"></A>    16     CMD : BControl.Command_Type;
+<A NAME="E17"></A>    17  begin
+<A NAME="E18"></A>    18  --   Init;
+<A NAME="E19"></A>    19  --   Gio.Gio_Set_Direction(Reg_Het.hetPort1'Access, 16#FFFFFFFF#);
+<A NAME="E20"></A>    20  
+<A NAME="E21"></A>    21     loop
+<A NAME="E22"></A>    22        --Control.Put_Line(&quot;Before Get_Line&quot;);
+<A NAME="E23"></A>    23        <A ID="ID_E23" HREF="main.adb-msgs.html#70" onClick="set_src_and_msg_anchors(23, '70', 'E')" TARGET="messages_623"><FONT COLOR="#FF9900"><B>S := Control.Get_Line;</B></FONT></A>
+<A NAME="E24"></A>    24        Control.Put_Line(&quot;Got Data&quot;);
+<A NAME="E25"></A>    25        Control.Put_Line(S);
+<A NAME="E26"></A>    26        --CMD := Bcontrol.Command_Type(S(1..3));
+<A NAME="E27"></A>    27        CMD := BControl.Command_Type'Value(S(1..3));
+<A NAME="E28"></A>    28  
+<A NAME="E29"></A>    29        Bcontrol.Command.Send(CMD);
+<A NAME="E30"></A>    30     end loop;
+<A NAME="E31"></A>    31  
+<A NAME="E32"></A>    32  
+<A NAME="E33"></A>    33     --     Blinker_Control.Blink_Stop;
+<A NAME="E34"></A>    34  end;
+</PRE>
+ <BR><BR> <BR><BR> <BR><BR><BR><BR> 
+<FONT COLOR="navy">CodePeer Build Version : 2.3.2 (rev 303695)</FONT><BR>
+<TABLE>
+  <TR>
+    <TD><FONT COLOR="navy">main.adb</FONT></TD>
+    <TD><FONT COLOR = "navy">2014-Oct-10 16:41:57</FONT></TD>
+  </TR>
+  <TR>
+    <TD><FONT COLOR="navy">main.scil</FONT></TD>
+    <TD><FONT COLOR = "navy">2014-Oct-11 06:52:16</FONT></TD>
+  </TR>
+  <TR>
+    <TD><FONT COLOR="navy">main__body.scil</FONT></TD>
+    <TD><FONT COLOR = "navy">2014-Oct-11 06:52:16</FONT></TD>
+  </TR>
+</TABLE>
+</BODY></HTML>

@@ -1,0 +1,133 @@
+V "GNAT Lib v7.2"
+A -g
+A -g
+A -gnatc
+A -gnatC
+A -gnatA
+P ZX
+
+RN
+RV NO_ELABORATION_CODE
+
+U blinker%b		blinker.adb		5b6d0afa OO PK
+W ada%s			ada.ads			ada.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.real_time.delays%s  a-retide.adb		a-retide.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W control%s		control.adb		control.ali
+W interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+W system.concat_3%s	s-conca3.adb		s-conca3.ali
+W system.img_enum_new%s	s-imenne.adb		s-imenne.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+W system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
+W system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
+W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+
+U blinker%s		blinker.ads		6bc56ca4 EE OO PF PK
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W system%s		system.ads		system.ali
+W system.parameters%s	s-parame.adb		s-parame.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.task_info%s	s-tasinf.adb		s-tasinf.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+W system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
+W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+
+D ada.ads		20060709122605 3ffc8e18
+D a-except.ads		20131014212419 f86a4103
+D a-finali.ads		20111103145731 52ecdc1b
+D a-reatim.ads		20101026134803 63f07669
+D a-retide.ads		20101026134803 081cdaa4
+D a-stream.ads		20130909153055 1a984740
+D a-tags.ads		20111201172145 6c0509d0
+D a-unccon.ads		20060709122605 f9eb8f06
+D blinker.ads		20141010192430 d6b36af1
+D blinker.adb		20141010192825 9a8c4a3c
+D control.ads		20141003211803 74a25c5e
+D interfac.ads		20130317214846 cb4a8015
+D i-c.ads		20101110140309 5421119b
+D system.ads		20120706154652 bd760655
+D s-atacco.ads		20120408201645 4c36d12f
+D s-conca3.ads		20101026134803 762a026a
+D s-exctab.ads		20101026134803 66e51330
+D s-finmas.ads		20111011182005 b95bb341
+D s-finroo.ads		20120402200032 4ff27390
+D s-imenne.ads		20101226180403 8707cbf0
+D s-linux.ads		20110824173634 70c7cb45
+D s-multip.ads		20100727005505 38ac9f73
+D s-oscons.ads		20140526162349 02c6d128
+D s-osinte.ads		20130803171754 439c3bce
+D s-parame.ads		20110802094037 b6e20cc0
+D s-pooglo.ads		20110224134916 542f33d0
+D s-soflin.ads		20120413115406 24c8153c
+D s-stache.ads		20101026134803 596fc1b4
+D s-stausa.ads		20110325145855 017a0a05
+D s-stalib.ads		20131014174839 697c8682
+D s-stoele.ads		20131014174839 facd7d98
+D s-stopoo.ads		20130510054206 b16154c2
+D s-tasinf.ads		20120716211755 21316953
+D s-taspri.ads		20111025161526 15f617a8
+D s-taprop.ads		20111204221430 1dd2e1b6
+D s-taskin.ads		20131016111723 3f821f32
+D s-taprob.ads		20110915211910 502249e3
+D s-tpoben.ads		20121005212445 b641f948
+D s-tpobop.ads		20101026134803 5f548bb3
+D s-tassta.ads		20121003180515 70812003
+D s-traent.ads		20101026134803 5221ee41
+X 1 ada.ads
+16K9*Ada 19e8 10|2r6 2r24
+X 4 a-reatim.ads
+39K13*Real_Time 139e18 10|2w10 2r28
+41O9*Time<duration> 10|22r19
+46O9*Time_Span<duration>
+53V13*Clock{41O9} 10|22s27
+55V14*"+"{41O9} 10|22s33 62s33
+85V13*Milliseconds{46O9} 10|22s35 62s35
+X 9 blinker.ads
+2K9*Blinker 26l5 26e12 10|3b14 68l5 68t12
+4E9*Cmd_Type 4e34 7r13
+4n22*STOP{4E9} 10|51r18
+4n28*START{4E9} 10|34r18
+5E9*Id_Type 5e30 8r18 10r9 10|38r41 40r42
+5n22*R{5E9} 10|43r21
+5n25*L{5E9} 10|44r21
+5n28*E{5E9} 10|45r21
+6R9*Command_To_Type 9e14 14r29 15r32 17r20 10|6r29 15r32 25r17
+7e7*Cmd{4E9} 10|9r24 9r35 30r26
+8e7*Receiver{5E9} 10|38r63 40r64
+10e4*Id{5E9} 10|42r21
+13W19*Cmd_Type_Access 17E7 19l8 19e23 25r24 10|5b19 19l8 19t23
+14U17 Send 14>23 10|6b17 13l11 13t15
+14r23 Cmd{6R9} 10|6b23 9r31 10r27
+15Y13 Receive 15<22 10|15b13 18l11 18t18 28s28
+15r22 Cmd{6R9} 10|17m10
+17r7 Command_To{6R9} 10|9r13 10r13 17r17
+18b7 Command_Is_New{boolean} 10|8r10 11r13 15r54
+21T14*Blinker_Type 23l8 23e20 10|21b14 67l8 67t20
+25w4*Protected_Command{13W19} 10|28r10
+X 10 blinker.adb
+15r22 Cmd{9|6R9}
+22o7 Next_Time{4|41O9} 62m10 62r23 63r22
+23b7 Blinker_Stopped{boolean} 35m16 52r23 54m19
+24b7 On{boolean} 36m16 36r26 37r19
+25r7 Command{9|6R9} 28m36 30r18 38r55 40r56
+X 11 control.ads
+1K9*Control 10|1w6 38r19 40r19 43r26 44r26 45r26 46r19 53r19 55r19 56r19
+. 11|9e12
+2U14*Put_Line 10|38s27 40s27 53s27
+5U14*Toggle_LedR 10|43s34 46s27
+6U14*Toggle_LedL 10|44s34 45s34
+7U14*Off_LedR 10|56s27
+8U14*Off_LedL 10|55s27
+X 14 system.ads
+37K9*System 9|1w6 1r17 14|152e11
+X 29 s-stausa.ads
+203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
+268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+

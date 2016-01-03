@@ -1,0 +1,18 @@
+CodePeer 2.3.2 (rev 303695) of 20140525 on linux-k8uv (Linux 32 bits). Starting at 2014-10-11 08:52:17.
+Command line arguments : 
+-dbg-on ide_progress_bar -all -lib "/mate/uwa/home/lutz/projects/demo/car-blinker-rav-ql/obj/codepeer/car_blinker.library" 
+Starting Analysis
+10 .scil files processed
+Inspection ended with Error_Status of 0 at 2014-10-11 08:52:20
+Inspection succeeded
+Lister arguments : 
+"/mate/uwa/home/lutz/projects/demo/car-blinker-rav-ql/obj/codepeer/car_blinker.output"  
+Generating Output and Updating Database at 2014-10-11 08:52:20.
+Generating text listings
+Done updating database at 2014-10-11 08:52:21.
+Generating html listings at 2014-10-11 08:52:21.
+Generating Annotation report at 2014-10-11 08:52:21
+After Preparing Annotation report at 2014-10-11 08:52:21
+Annotation report done at 2014-10-11 08:52:21
+Done at 2014-10-11 08:52:21
+Inspected approximately 3264 lines

@@ -1,0 +1,627 @@
+<HTML><HEAD><TITLE>b~main.adb</TITLE>
+<LINK rel="stylesheet" type="text/css"  href="style.css"/>
+</HEAD>
+<STYLE TYPE="text/css">
+body, th, td, select
+  {font-size: 90%}
+</STYLE>
+<BODY BGCOLOR="#FFFFFF" onLoad="opener.annotation_file_onload(window,'b~main.adb-annots.html', '5', 'TRUE')">
+<SCRIPT TYPE="text/javascript">
+<!--
+  function go_to_source(src_line, msg_anchor, src_id_pfx, file)
+  {
+    top.opener.top.push_src_and_msg_view(src_line, msg_anchor, src_id_pfx, file);
+    top.opener.top.focus();
+  }
+//-->
+</SCRIPT>
+<TABLE WIDTH="100%" BORDER="0"> 
+  <TR>
+    <TD align="left" rowspan="3"><H2>b~main.adb</H2></TD>
+  </TR>
+  <TR>
+    <TD align="right">
+    </TD>
+  </TR>
+</TABLE>
+<BR>
+<TABLE WIDTH="90%" BORDER="0">
+<TR><TD>
+<FONT SIZE="-1"><B>current code review = </B> 2014-10-11 08:52:17 (id #11)</FONT>
+</TD>
+  <TD align="right"><FONT SIZE="-1"><B>base = </B>2014-10-08 18:02:27  (id #1)</FONT></TD>
+ </TD> </TR>
+</TABLE><BR>
+<TABLE BORDER="0" WIDTH="90%">
+  <TR>
+    <TD align="left">
+      <TABLE BORDER="3">
+        <FORM name="filter">
+        <TR>
+          <TD>
+            <CAPTION>Filter Options</CAPTION>
+          </TD>
+        </TR>
+        <TR>
+          <TD>History:<BR> 
+            <TABLE BORDER="0">
+              <TR>
+                <TD>
+<INPUT type="checkbox" name="annotation_lineage" value="+" 
+  title="added since base code review" 
+  onClick="opener.Annot_Filter('annotation_lineage', this.checked, this.value, '5')" CHECKED>+</TD>
+                <TD><I>added</I></TD>
+              </TR>
+              <TR>
+                <TD>
+<INPUT type="checkbox" name="annotation_lineage" value="-" 
+  title="dropped since base code review" 
+  onClick="opener.Annot_Filter('annotation_lineage', this.checked, this.value, '5')" CHECKED >-</TD>
+                <TD><I>dropped</I></TD>
+              </TR>
+              <TR>
+                <TD>
+<INPUT type="checkbox" name="annotation_lineage" value="U" 
+  title="unchanged since base code review" 
+  onClick="opener.Annot_Filter('annotation_lineage', this.checked, this.value, '5')" CHECKED>U</TD>
+                <TD><I>unchanged</I></TD>
+              </TR>
+            </TABLE>
+          </TD>
+          <TD> Annotation Kind:<BR> 
+            <TABLE BORDER="0">
+              <TR>
+                <TD>
+<INPUT type="checkbox" name="annotation_kind" value="pre" 
+  onClick="opener.Annot_Filter('annotation_kind', this.checked, this.value, '5')" CHECKED >pre</TD>
+              </TR>
+              <TR>
+                <TD>
+<INPUT type="checkbox" name="annotation_kind" value="presumption" 
+  onClick="opener.Annot_Filter('annotation_kind', this.checked, this.value, '5')" CHECKED >presumption</TD>
+              </TR>
+              <TR>
+                <TD>
+<INPUT type="checkbox" name="annotation_kind" value="post" 
+  onClick="opener.Annot_Filter('annotation_kind', this.checked, this.value, '5')" CHECKED >post</TD>
+              </TR>
+              <TR>
+                <TD>
+<INPUT type="checkbox" name="annotation_kind" value="unanalyzed" 
+  onClick="opener.Annot_Filter('annotation_kind', this.checked, this.value, '5')" CHECKED >unanalyzed</TD>
+              </TR>
+              <TR>
+                <TD>
+<INPUT type="checkbox" name="annotation_kind" value="test" 
+  onClick="opener.Annot_Filter('annotation_kind', this.checked, this.value, '5')" CHECKED >test</TD>
+              </TR>
+            </TABLE>
+          </TD>
+        </TR>
+        </FORM>
+      </TABLE>
+    
+ <BR>          </TD>
+        </TR>
+      </TABLE>
+    </TD>
+  </TR>
+</TABLE>
+<BR>
+<LI>    <A HREF="b~main.adb-frameset.html"      TARGET="main_frame_623"     onClick=
+      "go_to_source(8,'Ann_L8','P','b~main.adb-frameset.html');"> ada_main_<wbr>for_<wbr>main'Elab_Body     </A>
+</LI><BR><table id="method_table1" width="90%" border="1">
+
+<TR><TH> -/+ </TH>
+<TH> Kind </TH>
+<TH> Annotation Text </TH>
+<TH> Date</TH></TR></table>
+<BR>
+<LI>    <A HREF="b~main.adb-frameset.html"      TARGET="main_frame_623"     onClick=
+      "go_to_source(11,'Ann_L11','P','b~main.adb-frameset.html');"> ada_main_<wbr>for_<wbr>main.<wbr>adafinal     </A>
+</LI><BR><table id="method_table2" width="90%" border="1">
+
+<TR><TH> -/+ </TH>
+<TH> Kind </TH>
+<TH> Annotation Text </TH>
+<TH> Date</TH></TR></table>
+<BR>
+<LI>    <A HREF="b~main.adb-frameset.html"      TARGET="main_frame_623"     onClick=
+      "go_to_source(16,'Ann_L16','P','b~main.adb-frameset.html');"> ada_main_<wbr>for_<wbr>main.adainit     </A>
+</LI><BR><table id="method_table3" width="90%" border="1">
+
+<TR><TH> -/+ </TH>
+<TH> Kind </TH>
+<TH> Annotation Text </TH>
+<TH> Date</TH></TR><TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>(bcontrol.<wbr>blinker_<wbr>controlT1'First) = 1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>(bcontrol.<wbr>blinker_<wbr>controlT1'Last) = 15</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>(bcontrol.<wbr>command_<wbr>accessA'First) = 1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>(bcontrol.<wbr>command_<wbr>accessA'Last) = 1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>(bcontrol.<wbr>command_<wbr>typeN'First) = 0</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>(bcontrol.<wbr>command_<wbr>typeN'Last) = 6</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>(bcontrol.<wbr>command_<wbr>typeS'First) = 1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>(bcontrol.<wbr>command_<wbr>typeS'Last) = 18</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>(bcontrol.<wbr>left_<wbr>blinkerT1'First) = 1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>(bcontrol.<wbr>left_<wbr>blinkerT1'Last) = 12</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>(bcontrol.<wbr>right_<wbr>blinkerT1'First) = 1</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>(bcontrol.<wbr>right_<wbr>blinkerT1'Last) = 13</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>(bcontrol.<wbr>stim_<wbr>controlT1'First) = 1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>(bcontrol.<wbr>stim_<wbr>controlT1'Last) = 12</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>(bcontrol.<wbr>warn_<wbr>blinkerT1'First) = 1</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>(bcontrol.<wbr>warn_<wbr>blinkerT1'Last) = 12</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>(blinker.<wbr>cmd_typeN'First) = 0</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>(blinker.<wbr>cmd_typeN'Last) = 2</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>(blinker.<wbr>cmd_typeS'First) = 1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>(blinker.<wbr>cmd_typeS'Last) = 9</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>(blinker.<wbr>cmd_type_<wbr>accessA'First) = 1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>(blinker.<wbr>cmd_type_<wbr>accessA'Last) = 1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>(blinker.<wbr>id_typeN'First) = 0</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>(blinker.<wbr>id_typeN'Last) = 3</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>(blinker.<wbr>id_typeS'First) = 1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>(blinker.<wbr>id_typeS'Last) = 3</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>Barrier_Function_<wbr>Pointer_<wbr>_<wbr>Designated_<wbr>Subprogram_<wbr> Table(<wbr>309_<wbr>504) = null</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>Barrier_Function_<wbr>Pointer_<wbr>_<wbr>Designated_<wbr>Subprogram_<wbr> Table(<wbr>57_<wbr>600) = &amp;bcontrol.<wbr>command_<wbr>access.<wbr> receive_B7s</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>Blinker_Control.<wbr>_<wbr>priority'Initialized</td><td align="center">2014-10-10 21:26:16</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>Blinker_Control.<wbr>_<wbr>task_<wbr>id'Initialized</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>Command._<wbr>Lock'Initialized</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>Command.new_<wbr>command = false</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>Entry_Action_<wbr>Pointer_<wbr>_<wbr>Designated_<wbr>Subprogram_<wbr> Table(<wbr>309_<wbr>760) = null</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>Entry_Action_<wbr>Pointer_<wbr>_<wbr>Designated_<wbr>Subprogram_<wbr> Table(<wbr>57_<wbr>856) = &amp;bcontrol.<wbr>command_<wbr>access.<wbr> receive_<wbr>E6s'Protected_Type_Op</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>Find_Body_<wbr>Index_<wbr>Access_<wbr>_<wbr>Designated_<wbr>Subprogram_<wbr> Table(<wbr>327_<wbr>168) = null</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>Find_Body_<wbr>Index_<wbr>Access_<wbr>_<wbr>Designated_<wbr>Subprogram_<wbr> Table(<wbr>95_<wbr>744) = &amp;bcontrol.<wbr>command_accessF</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>Left_Blinker.<wbr>_<wbr>priority'Initialized</td><td align="center">2014-10-10 21:26:16</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>Left_Blinker.<wbr>_<wbr>task_<wbr>id'Initialized</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>Left_Blinker.c = L</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>Library_Task_<wbr>Level = 3</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>Protected_<wbr>Command.<wbr>_<wbr>Lock'Initialized</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>Protected_<wbr>Command.<wbr>command_<wbr>is_<wbr>new = false</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>Right_Blinker.<wbr>_<wbr>priority = Left_<wbr>Blinker.<wbr>_<wbr>priority</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>Right_Blinker.<wbr>_<wbr>task_<wbr>id = Left_<wbr>Blinker.<wbr>_task_id</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>Right_Blinker.c = R</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>Stim_Control.<wbr>_<wbr>priority'Initialized</td><td align="center">2014-10-10 21:26:16</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>Stim_Control.<wbr>_<wbr>task_<wbr>id'Initialized</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>Task_Procedure_<wbr>Access_<wbr>_<wbr>Designated_<wbr>Subprogram_<wbr> Table(<wbr>128_<wbr>256) = &amp;system.<wbr>tasking.<wbr>task_<wbr> procedure_<wbr>access'Unknown_<wbr>Designated_<wbr>Subprogram</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>Time_Span_<wbr>Zero = 0</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>Unspecified_<wbr>Priority = -1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>Unspecified_<wbr>Size = -2<SUP>31</SUP></td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>Unspecified_<wbr>Task_<wbr>Info = null</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>Warn_Blinker.<wbr>_<wbr>priority = Left_<wbr>Blinker.<wbr>_<wbr>priority</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>Warn_Blinker.<wbr>_<wbr>task_<wbr>id = Left_<wbr>Blinker.<wbr>_task_id</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>Warn_Blinker.c = E</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>C49s = 1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>blinker_<wbr>controlT1 = &amp;bcontrol.<wbr>blinker_<wbr> controlT1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>blinker_<wbr>controlT1'First = 1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>blinker_<wbr>controlT1'Initialized</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>blinker_<wbr>controlT1'Last = 15</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>blinker_<wbr>controlT1(<wbr>1.<wbr>.<wbr>15) in (<wbr>95 | 98.<wbr>.<wbr>99 | 101 | 105 | .<wbr>.<wbr>. | 116)</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>blinker_<wbr>control_<wbr>typeE'Initialized</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>blinker_<wbr>control_<wbr>typeZ = -2<SUP>31</SUP></td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>command_<wbr>accessA = &amp;bcontrol.<wbr>command_<wbr> accessA</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>command_<wbr>accessA'First = 1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>command_<wbr>accessA'Last = 1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>command_<wbr>accessA(<wbr>1).<wbr>Action = bcontrol.<wbr>command_<wbr>access.<wbr>receive_<wbr>E6s'Protected_<wbr> Type_<wbr>Op'access</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>command_<wbr>accessA(<wbr>1).<wbr>Barrier = bcontrol.<wbr>command_<wbr>access.<wbr>receive_<wbr>B7s'access</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>command_<wbr>typeN = &amp;bcontrol.<wbr>command_typeN</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>command_<wbr>typeN'First = 0</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>command_<wbr>typeN'Last = 6</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>command_<wbr>typeN(0) = 1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>command_<wbr>typeN(1) = 4</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>command_<wbr>typeN(2) = 7</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>command_<wbr>typeN(3) = 10</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>command_<wbr>typeN(4) = 13</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>command_<wbr>typeN(5) = 16</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>command_<wbr>typeN(6) = 19</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>command_<wbr>typeS = &amp;bcontrol.<wbr>command_typeS</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>command_<wbr>typeS'First = 1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>command_<wbr>typeS'Last = 18</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>command_<wbr>typeS(<wbr>1.<wbr>.18) in (<wbr>66 | 69 | 76.<wbr>.<wbr>77 | 80 | 82..84)</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>left_<wbr>blinkerT1 = &amp;bcontrol.<wbr>left_<wbr>blinkerT1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>left_<wbr>blinkerT1'First = 1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>left_<wbr>blinkerT1'Initialized</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>left_<wbr>blinkerT1'Last = 12</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>left_<wbr>blinkerT1(<wbr>1.<wbr>.12) in (<wbr>95 | 98 | 101.<wbr>.<wbr>102 | 105 | .<wbr>.<wbr>. | 116)</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>bcontrol.<wbr>right_<wbr>blinkerT1 = &amp;bcontrol.<wbr>right_<wbr> blinkerT1</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>bcontrol.<wbr>right_<wbr>blinkerT1'First = 1</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>bcontrol.<wbr>right_<wbr>blinkerT1'Initialized</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>bcontrol.<wbr>right_<wbr>blinkerT1'Last = 13</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>bcontrol.<wbr>right_<wbr>blinkerT1(<wbr>1.<wbr>.13) in (<wbr>95 | 98 | 101 | 103.<wbr>.<wbr>105 | .<wbr>.<wbr>. | 116)</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>stim_<wbr>controlT1 = &amp;bcontrol.<wbr>stim_<wbr>controlT1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>stim_<wbr>controlT1'First = 1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>stim_<wbr>controlT1'Initialized</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>stim_<wbr>controlT1'Last = 12</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>stim_<wbr>controlT1(<wbr>1.<wbr>.12) in (<wbr>95 | 99 | 105 | 108.<wbr>.<wbr>111 | 114..116)</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>stim_<wbr>control_<wbr>typeE'Initialized</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>bcontrol.<wbr>stim_<wbr>control_<wbr>typeZ = -2<SUP>31</SUP></td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>bcontrol.<wbr>warn_<wbr>blinkerT1 = &amp;bcontrol.<wbr>warn_<wbr>blinkerT1</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>bcontrol.<wbr>warn_<wbr>blinkerT1'First = 1</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>bcontrol.<wbr>warn_<wbr>blinkerT1'Initialized</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>bcontrol.<wbr>warn_<wbr>blinkerT1'Last = 12</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>bcontrol.<wbr>warn_<wbr>blinkerT1(<wbr>1.<wbr>.12) in (<wbr>95 | 97.<wbr>.<wbr>98 | 101 | 105 | .<wbr>.<wbr>. | 119)</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>blinker.C48s = 1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>blinker.blinker_<wbr>typeE = true</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>blinker.blinker_<wbr>typeZ = -2<SUP>31</SUP></td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>blinker.cmd_<wbr>typeN = &amp;blinker.<wbr>cmd_typeN</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>blinker.cmd_<wbr>typeN'First = 0</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>blinker.cmd_<wbr>typeN'Last = 2</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>blinker.cmd_<wbr>typeN(0) = 1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="new_post">
+<TD align="center"><B><FONT family="courier">+</B></FONT></TD><td align="center">post</td><td>blinker.cmd_<wbr>typeN(1) = 5</td><td align="center">2014-10-10 21:26:16</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>blinker.cmd_<wbr>typeN(1) = 6</td><td align="center">2014-10-10 18:06:50</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>blinker.cmd_<wbr>typeN(2) = 10</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>blinker.cmd_<wbr>typeS = &amp;blinker.<wbr>cmd_typeS</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>blinker.cmd_<wbr>typeS'First = 1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>blinker.cmd_<wbr>typeS'Last = 9</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>blinker.cmd_<wbr>typeS(1) = 83</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>blinker.cmd_<wbr>typeS(2) = 84</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>blinker.cmd_<wbr>typeS(3) = 65</td><td align="center">2014-10-10 18:07:58</td></tr>
+<TR class="new_post">
+<TD align="center"><B><FONT family="courier">+</B></FONT></TD><td align="center">post</td><td>blinker.cmd_<wbr>typeS(3) = 79</td><td align="center">2014-10-10 21:26:16</td></tr>
+<TR class="new_post">
+<TD align="center"><B><FONT family="courier">+</B></FONT></TD><td align="center">post</td><td>blinker.cmd_<wbr>typeS(4) = 80</td><td align="center">2014-10-10 21:26:16</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>blinker.cmd_<wbr>typeS(4) = 82</td><td align="center">2014-10-10 18:07:58</td></tr>
+<TR class="new_post">
+<TD align="center"><B><FONT family="courier">+</B></FONT></TD><td align="center">post</td><td>blinker.cmd_<wbr>typeS(5) = 83</td><td align="center">2014-10-10 21:26:16</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>blinker.cmd_<wbr>typeS(5) = 84</td><td align="center">2014-10-10 18:07:58</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>blinker.cmd_<wbr>typeS(6) = 83</td><td align="center">2014-10-10 18:07:58</td></tr>
+<TR class="new_post">
+<TD align="center"><B><FONT family="courier">+</B></FONT></TD><td align="center">post</td><td>blinker.cmd_<wbr>typeS(6) = 84</td><td align="center">2014-10-10 21:26:16</td></tr>
+<TR class="new_post">
+<TD align="center"><B><FONT family="courier">+</B></FONT></TD><td align="center">post</td><td>blinker.cmd_<wbr>typeS(7) = 65</td><td align="center">2014-10-10 21:26:16</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>blinker.cmd_<wbr>typeS(7) = 84</td><td align="center">2014-10-10 18:07:58</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>blinker.cmd_<wbr>typeS(8) = 79</td><td align="center">2014-10-10 18:07:58</td></tr>
+<TR class="new_post">
+<TD align="center"><B><FONT family="courier">+</B></FONT></TD><td align="center">post</td><td>blinker.cmd_<wbr>typeS(8) = 82</td><td align="center">2014-10-10 21:26:16</td></tr>
+<TR class="dropped_post">
+<TD align="center"><B><FONT family="courier">-</B></FONT></TD><td align="center">post</td><td>blinker.cmd_<wbr>typeS(9) = 80</td><td align="center">2014-10-10 18:07:58</td></tr>
+<TR class="new_post">
+<TD align="center"><B><FONT family="courier">+</B></FONT></TD><td align="center">post</td><td>blinker.cmd_<wbr>typeS(9) = 84</td><td align="center">2014-10-10 21:26:16</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>blinker.cmd_<wbr>type_<wbr>accessA = &amp;blinker.<wbr>cmd_<wbr>type_<wbr> accessA</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>blinker.cmd_<wbr>type_<wbr>accessA'First = 1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>blinker.cmd_<wbr>type_<wbr>accessA'Last = 1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>blinker.cmd_<wbr>type_<wbr>accessA(<wbr>1).<wbr>Action = blinker.<wbr>cmd_<wbr>type_<wbr>access.<wbr>receive_<wbr>E11s'Protected_<wbr> Type_<wbr>Op'access</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>blinker.cmd_<wbr>type_<wbr>accessA(<wbr>1).<wbr>Barrier = blinker.<wbr>cmd_<wbr>type_<wbr>access.<wbr>receive_<wbr>B12s'access</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>blinker.id_<wbr>typeN = &amp;blinker.<wbr>id_typeN</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>blinker.id_<wbr>typeN'First = 0</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>blinker.id_<wbr>typeN'Last = 3</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>blinker.id_<wbr>typeN(0) = 1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>blinker.id_<wbr>typeN(1) = 2</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>blinker.id_<wbr>typeN(2) = 3</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>blinker.id_<wbr>typeN(3) = 4</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>blinker.id_<wbr>typeS = &amp;blinker.<wbr>id_typeS</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>blinker.id_<wbr>typeS'First = 1</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>blinker.id_<wbr>typeS'Last = 3</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>blinker.id_<wbr>typeS(1) = 82</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>blinker.id_<wbr>typeS(2) = 76</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>blinker.id_<wbr>typeS(3) = 69</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>nul = 0</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_unanalyzed">
+<TD align="center">U</TD>
+<td align="center">unanalyzed</td><td>call on bcontrol.<wbr>blinker_<wbr>control_<wbr>typeV'Initialize</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_unanalyzed">
+<TD align="center">U</TD>
+<td align="center">unanalyzed</td><td>call on bcontrol.<wbr>command_<wbr>accessV'Deep_<wbr>Initialize</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_unanalyzed">
+<TD align="center">U</TD>
+<td align="center">unanalyzed</td><td>call on bcontrol.<wbr>command_<wbr>accessV'Initialize</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_unanalyzed">
+<TD align="center">U</TD>
+<td align="center">unanalyzed</td><td>call on bcontrol.<wbr>stim_<wbr>control_<wbr>typeV'Initialize</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_unanalyzed">
+<TD align="center">U</TD>
+<td align="center">unanalyzed</td><td>call on blinker.<wbr>cmd_<wbr>type_<wbr>accessV'Deep_<wbr>Initialize</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_unanalyzed">
+<TD align="center">U</TD>
+<td align="center">unanalyzed</td><td>call on blinker.<wbr>cmd_<wbr>type_<wbr>accessV'Initialize</td><td align="center">2014-10-08 18:02:27</td></tr>
+</table>
+<BR>
+<LI>    <A HREF="b~main.adb-frameset.html"      TARGET="main_frame_623"     onClick=
+      "go_to_source(69,'Ann_L69','P','b~main.adb-frameset.html');"> ada_main_<wbr>for_<wbr>main.main     </A>
+</LI><BR><table id="method_table4" width="90%" border="1">
+
+<TR><TH> -/+ </TH>
+<TH> Kind </TH>
+<TH> Annotation Text </TH>
+<TH> Date</TH></TR><TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>ada_main_<wbr>for_main.<wbr>main'Result'Initialized</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_unanalyzed">
+<TD align="center">U</TD>
+<td align="center">unanalyzed</td><td>call on bcontrol.<wbr>blinker_<wbr>control_<wbr>typeV'Initialize</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_unanalyzed">
+<TD align="center">U</TD>
+<td align="center">unanalyzed</td><td>call on bcontrol.<wbr>command_<wbr>accessV'Deep_<wbr>Initialize</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_unanalyzed">
+<TD align="center">U</TD>
+<td align="center">unanalyzed</td><td>call on bcontrol.<wbr>command_<wbr>accessV'Initialize</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_unanalyzed">
+<TD align="center">U</TD>
+<td align="center">unanalyzed</td><td>call on bcontrol.<wbr>stim_<wbr>control_<wbr>typeV'Initialize</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_unanalyzed">
+<TD align="center">U</TD>
+<td align="center">unanalyzed</td><td>call on blinker.<wbr>cmd_<wbr>type_<wbr>accessV'Deep_<wbr>Initialize</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_unanalyzed">
+<TD align="center">U</TD>
+<td align="center">unanalyzed</td><td>call on blinker.<wbr>cmd_<wbr>type_<wbr>accessV'Initialize</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_unanalyzed">
+<TD align="center">U</TD>
+<td align="center">unanalyzed</td><td>call on interfaces_<wbr>_<wbr>c'Elab_Spec</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_unanalyzed">
+<TD align="center">U</TD>
+<td align="center">unanalyzed</td><td>call on interfaces_<wbr>_<wbr>c_<wbr>_strings'Elab_Spec</td><td align="center">2014-10-08 18:02:27</td></tr>
+</table>
+<BR>
+<LI>    <A HREF="b~main.adb-frameset.html"      TARGET="main_frame_623"     onClick=
+      "go_to_source(64,'Ann_L64','P','b~main.adb-frameset.html');"> main program main     </A>
+</LI><BR><table id="method_table5" width="90%" border="1">
+
+<TR><TH> -/+ </TH>
+<TH> Kind </TH>
+<TH> Annotation Text </TH>
+<TH> Date</TH></TR><TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>Command.command = Command.<wbr>command'Old</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>Command.new_<wbr>command = Command.<wbr>new_<wbr>command'Old</td><td align="center">2014-10-08 18:02:27</td></tr>
+<TR class="unchanged_post">
+<TD align="center">U</TD>
+<td align="center">post</td><td>Command.new_<wbr>command'Initialized</td><td align="center">2014-10-08 18:02:27</td></tr>
+</table>
+  
+</BODY>
+</HTML>

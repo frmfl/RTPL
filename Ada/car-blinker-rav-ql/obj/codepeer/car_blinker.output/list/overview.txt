@@ -1,0 +1,59 @@
+-- CodePeer Overview Listing
+ 
+$$ CodePeer Versions
+Age, Inspection-Id, Date-Timestamp
+base, 1, 2014-10-08 18:02:27
+current, 11, 2014-10-11 08:52:17
+ 
+$$ Directories, 4
+Dir, H-base, H-delta-, H-delta+, H-now, M-base, M-delta-, M-delta+, M-now, L-base, L-delta-, L-delta+, L-now
+.../car-blinker-rav-ql/obj/codepeer, 0,-0,0,0,   0,-0,0,0,   0,-0,0,0 
+.../demo/car-blinker-rav-ql/src, 4,-1,4,7,   1,-0,0,1,   1,-1,0,0 
+.../demo/common/src, 0,-0,0,0,   0,-0,0,0,   0,-0,0,0 
+.../i686-pc-linux-gnu/4.7.4/adainclude, 0,-0,0,0,   0,-0,0,0,   0,-0,0,0 
+__Total__, 4,-1,4,7,   1,-0,0,1,   1,-1,0,0 
+ 
+ 
+$$ Directory: .../car-blinker-rav-ql/obj/codepeer, 2
+File, H-base, H-delta-, H-delta+, H-now, M-base, M-delta-, M-delta+, M-now, L-base, L-delta-, L-delta+, L-now
+b~main.adb, 0,-0,0,0,   0,-0,0,0,   0,-0,0,0 
+b~main.ads, 0,-0,0,0,   0,-0,0,0,   0,-0,0,0 
+__Total__, 0,-0,0,0,   0,-0,0,0,   0,-0,0,0 
+ 
+$$ Directory: .../demo/car-blinker-rav-ql/src, 5
+File, H-base, H-delta-, H-delta+, H-now, M-base, M-delta-, M-delta+, M-now, L-base, L-delta-, L-delta+, L-now
+bcontrol.adb, 0,-0,0,0,   0,-0,0,0,   0,-0,0,0 
+bcontrol.ads, 0,-0,0,0,   0,-0,0,0,   0,-0,0,0 
+blinker.adb, 3,-1,4,6,   0,-0,0,0,   1,-1,0,0 
+blinker.ads, 0,-0,0,0,   0,-0,0,0,   0,-0,0,0 
+main.adb, 1,-0,0,1,   1,-0,0,1,   0,-0,0,0 
+__Total__, 4,-1,4,7,   1,-0,0,1,   1,-1,0,0 
+ 
+$$ Directory: .../demo/common/src, 2
+File, H-base, H-delta-, H-delta+, H-now, M-base, M-delta-, M-delta+, M-now, L-base, L-delta-, L-delta+, L-now
+control.adb, 0,-0,0,0,   0,-0,0,0,   0,-0,0,0 
+control.ads, 0,-0,0,0,   0,-0,0,0,   0,-0,0,0 
+__Total__, 0,-0,0,0,   0,-0,0,0,   0,-0,0,0 
+ 
+$$ Directory: .../i686-pc-linux-gnu/4.7.4/adainclude, 1
+File, H-base, H-delta-, H-delta+, H-now, M-base, M-delta-, M-delta+, M-now, L-base, L-delta-, L-delta+, L-now
+s-tpobop.ads, 0,-0,0,0,   0,-0,0,0,   0,-0,0,0 
+__Total__, 0,-0,0,0,   0,-0,0,0,   0,-0,0,0 
+ 
+$$ Error_Kind_By_File
+File, Kind, H-base, H-delta-, H-delta+, H-now, M-base, M-delta-, M-delta+, M-now, L-base, L-delta-, L-delta+, L-now
+blinker.adb, validity check, 3,-1,4,6,   0,-0,0,0,   0,-0,0,0 
+blinker.adb, access check, 0,-0,0,0,   0,-0,0,0,   1,-1,0,0 
+main.adb, subp never returns, 1,-0,0,1,   0,-0,0,0,   0,-0,0,0 
+main.adb, loop does not complete normally, 0,-0,0,0,   1,-0,0,1,   0,-0,0,0 
+
+
+$$ Error_Kind_By_System
+Kind, H-base, H-delta-, H-delta+, H-now, M-base, M-delta-, M-delta+, M-now, L-base, L-delta-, L-delta+, L-now
+validity check, 3,-1,4,6,   0,-0,0,0,   0,-0,0,0 
+access check, 0,-0,0,0,   0,-0,0,0,   1,-1,0,0 
+subp never returns, 1,-0,0,1,   0,-0,0,0,   0,-0,0,0 
+loop does not complete normally, 0,-0,0,0,   1,-0,0,1,   0,-0,0,0 
+__Total__, 4,-1,4,7,   1,-0,0,1,   1,-1,0,0 
+ 
+$$ Version, 2.3.2 (rev 303695)

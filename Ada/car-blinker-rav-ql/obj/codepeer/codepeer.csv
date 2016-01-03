@@ -1,0 +1,7 @@
+File,Line,Column,Category,New?,Review?,Ranking,Kind,Message,Classification,CWE
+/mate/uwa/home/lutz/projects/demo/car-blinker-rav-ql/src/blinker.adb,21,4,access check,FALSE,FALSE,low,check,"access check might fail: requires _task /= null",unclassified,"252-253,476"
+/mate/uwa/home/lutz/projects/demo/car-blinker-rav-ql/src/blinker.adb,30,20,validity check,FALSE,FALSE,high,check,"validity check: Command.Receiver is uninitialized here",unclassified,"232,236,475"
+/mate/uwa/home/lutz/projects/demo/car-blinker-rav-ql/src/blinker.adb,31,25,validity check,FALSE,FALSE,high,check,"validity check fails here: requires Command.Cmd in START..STOP",unclassified,"232,236,475"
+/mate/uwa/home/lutz/projects/demo/car-blinker-rav-ql/src/blinker.adb,31,25,validity check,FALSE,FALSE,high,check,"validity check: Command.Cmd is uninitialized here",unclassified,"232,236,475"
+/mate/uwa/home/lutz/projects/demo/car-blinker-rav-ql/src/main.adb,10,1,subp never returns,FALSE,FALSE,high,warning,"subp never returns: main",unclassified,""
+/mate/uwa/home/lutz/projects/demo/car-blinker-rav-ql/src/main.adb,22,14,loop does not complete normally,FALSE,FALSE,medium,warning,"loop does not complete normally",unclassified,"835"
