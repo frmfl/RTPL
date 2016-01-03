@@ -8,10 +8,8 @@ use Ada.Real_Time;
 -- main procedure
 procedure main is
    pragma Priority(System.Priority'First); -- main is very low prio
-   stud1 : students;
-   stud2 : students;
+   stud1 : stu;
 
 begin
    stud1.task_stud;
-   stud2.task_stud;
 end main;

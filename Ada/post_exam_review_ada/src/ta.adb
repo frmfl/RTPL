@@ -13,12 +13,13 @@ package body TA is
 
     task body task_TA is
         stud_cnt : Natural := 0; -- counts how many students the TA has processed
-        id : Students_Range := 0; -- TODO: assign below in the loop
+      id : Students_Range := 0; -- TODO: assign below in the loop
+
         -- ...
     begin
         Put_Line("TA was born");
         loop
-
+         Monitor.W
             busy_wait.delay_for(TIME_WALK); -- ta is entering office or walking around a bit
 
             Put_Line("TA: waiting for student...");

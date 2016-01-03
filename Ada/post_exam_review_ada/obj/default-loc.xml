@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<Locations>
+  <Project>
+    <vfs_file />
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/florian/apps/gnat/bin/src_ada/hello.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/florian/apps/gnat/bin/hello_world.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 12" >
+      <vfs_project />
+      <vfs_file>/home/florian/apps/gnat/bin/hello_world.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/florian/apps/gnat/bin/src_ada/hello.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/florian/apps/gnat/bin/src_ada/hello.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/florian/apps/gnat/bin/src_java/com/adacore/example/Main.java</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/florian/apps/gnat/bin/src_ada/hello.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/florian/apps/gnat/bin/src_ada/hello.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/florian/apps/gnat/bin/src_ada/hello.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/florian/apps/gnat/bin/src_java/com/adacore/example/Main.java</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/florian/apps/gnat/bin/src_ada/hello.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/florian/apps/gnat/bin/src_ada/hello.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/florian/apps/gnat/bin/src_java/com/adacore/example/Main.java</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/florian/coding/RTPL/RTPL/Ada/post_exam_review_ada/src/busy_wait.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/florian/coding/RTPL/RTPL/Ada/post_exam_review_ada/src/busy_wait.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/florian/coding/RTPL/RTPL/Ada/post_exam_review_ada/src/busy_wait.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/florian/coding/RTPL/RTPL/Ada/post_exam_review_ada/src/busy_wait.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/florian/coding/RTPL/RTPL/Ada/post_exam_review_ada/src/main.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>
