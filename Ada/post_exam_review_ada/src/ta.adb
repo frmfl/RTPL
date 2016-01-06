@@ -3,11 +3,13 @@ with Ada.Assertions;
 with Ada.Exceptions;
 with Review_Settings;
 with busy_wait;
+with waiting_room;
 
 use Ada.Text_IO;
 use Ada.Assertions;
 use Ada.Exceptions;
 use Review_Settings;
+use waiting_room;
 
 package body TA is
 
@@ -19,19 +21,27 @@ package body TA is
     begin
         Put_Line("TA was born");
         loop
-         Monitor.W
-            busy_wait.delay_for(TIME_WALK); -- ta is entering office or walking around a bit
 
-            Put_Line("TA: waiting for student...");
-            -- TODO: wait until student wakes me up, take student into review
+         busy_wait.delay_for(TIME_WALK); -- ta is entering office or walking around a bit
+
+         Put_Line("TA: waiting for student...");
+         -- TODO: wait until student wakes me up, take student into review
+         --waiting_room.WAIT_Review; --protected entry to trigger TA wakeup
+
+
             -- and also obtain the id of the student task
 
+         --waiting_room_protected.ta_ready;
+           -- door_protected.sleep; -- waits for students
+
+            waiting_room_protected.review_Student(id); -- takes student in review
             -- review
             stud_cnt := stud_cnt + 1;
             Put_Line("TA: in review with stud"&id'img&", total="&stud_cnt'img);
             busy_wait.delay_for(TIME_REVIEW);
             Put_Line("TA: finished student"&id'img);
-        end loop;
+      end loop;
+
     exception
         when Error: others =>
             Put_Line("TA: terminates due to exception:");
@@ -39,6 +49,7 @@ package body TA is
             raise Program_Error;
     end task_TA;
 
-    -- ...
+   TeachingAssistant : task_TA;
+
 
 end TA;
