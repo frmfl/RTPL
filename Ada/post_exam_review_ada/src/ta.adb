@@ -26,7 +26,8 @@ package body TA is
 
          Put_Line("TA: waiting for student...");
          -- TODO: wait until student wakes me up, take student into review
-         --waiting_room.WAIT_Review; --protected entry to trigger TA wakeup
+
+         Wait; --protected entry to trigger TA wakeup
 
 
             -- and also obtain the id of the student task
@@ -34,7 +35,7 @@ package body TA is
          --waiting_room_protected.ta_ready;
            -- door_protected.sleep; -- waits for students
 
-            waiting_room_protected.review_Student(id); -- takes student in review
+             -- takes student in review
             -- review
             stud_cnt := stud_cnt + 1;
             Put_Line("TA: in review with stud"&id'img&", total="&stud_cnt'img);

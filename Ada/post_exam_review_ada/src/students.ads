@@ -4,9 +4,6 @@ package students is
 -- static task at package level. TODO: make three of them.
    task type task_stud(ID : Review_Settings.Students_Range);
 
-
-
-
    student1 : task_stud(1);
    --student1.PrintID;
    student2 : task_stud(2);

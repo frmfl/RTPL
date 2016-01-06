@@ -15,5 +15,6 @@ package Review_Settings is
    -----------------
    subtype Students_Range is Integer range 0 .. N_SEATS - 1; -- when students are iterated
    type Seat_Range is mod N_SEATS; -- when seats are iterated
+   type Arr_List is array (Seat_Range) of Students_Range;
 
 end Review_Settings;
