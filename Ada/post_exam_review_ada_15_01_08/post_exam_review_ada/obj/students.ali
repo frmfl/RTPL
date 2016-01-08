@@ -1,0 +1,178 @@
+V "GNAT Lib v2014"
+A -g
+A -gnatA
+P DB LC TF  SS ZX
+
+RN
+RR SIMPLE_BARRIERS
+RR NO_ABORT_STATEMENTS
+RR NO_ASYNCHRONOUS_CONTROL
+RR NO_CALENDAR
+RV NO_DELAY
+RR NO_DYNAMIC_ATTACHMENT
+RR NO_DYNAMIC_PRIORITIES
+RR NO_ENTRY_QUEUE
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
+RV NO_IO
+RR NO_IMPLICIT_HEAP_ALLOCATIONS
+RR NO_LOCAL_TIMING_EVENTS
+RR NO_LOCAL_PROTECTED_OBJECTS
+RR NO_PROTECTED_TYPE_ALLOCATORS
+RR NO_RELATIVE_DELAY
+RR NO_REQUEUE_STATEMENTS
+RV NO_SECONDARY_STACK
+RR NO_SELECT_STATEMENTS
+RR NO_SPECIFIC_TERMINATION_HANDLERS
+RV NO_STANDARD_STORAGE_POOLS
+RR NO_TASK_ALLOCATORS
+RR NO_TASK_ATTRIBUTES_PACKAGE
+RR NO_TASK_HIERARCHY
+RR NO_TASK_TERMINATION
+RV NO_TASKING
+RR NO_TERMINATE_ALTERNATIVES
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+RR MAX_PROTECTED_ENTRIES=1
+RR MAX_SELECT_ALTERNATIVES=0
+RR MAX_TASK_ENTRIES=0
+RV MAX_TASKS=3
+RR MAX_ASYNCHRONOUS_SELECT_NESTING=0
+RV MAX_ENTRY_QUEUE_LENGTH=1+
+
+U students%b		students.adb		6771a31d OO PK IL
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.real_time.delays%s  a-retide.adb		a-retide.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W busy_wait%s		busy_wait.adb		busy_wait.ali  AD
+W review_settings%s	review_settings.ads	review_settings.ali
+W system%s		system.ads		system.ali
+W system.concat_2%s	s-conca2.adb		s-conca2.ali
+W system.concat_3%s	s-conca3.adb		s-conca3.ali
+W system.concat_5%s	s-conca5.adb		s-conca5.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.tasking.protected_objects.single_entry%s  s-tposen.adb  s-tposen.ali
+W system.tasking.restricted.stages%s  s-tarest.adb  s-tarest.ali
+W waiting_room%s	waiting_room.adb	waiting_room.ali  AD
+
+U students%s		students.ads		626148bd EE OO PK IL
+W review_settings%s	review_settings.ads	review_settings.ali
+W system%s		system.ads		system.ali
+W system.parameters%s	s-parame.adb		s-parame.ali
+W system.task_info%s	s-tasinf.adb		s-tasinf.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.restricted.stages%s  s-tarest.adb  s-tarest.ali
+
+D ada.ads		20140406181354 3ffc8e18 ada%s
+D a-except.ads		20140406181356 43d57f8c ada.exceptions%s
+D a-finali.ads		20140406181359 69f99942 ada.finalization%s
+D a-ioexce.ads		20140406181358 e4a01f64 ada.io_exceptions%s
+D a-reatim.ads		20140406181358 63f07669 ada.real_time%s
+D a-retide.ads		20140406181357 081cdaa4 ada.real_time.delays%s
+D a-stream.ads		20140406181355 1a984740 ada.streams%s
+D a-tags.ads		20140406181357 dc4d0634 ada.tags%s
+D a-textio.ads		20140406181359 386df5d4 ada.text_io%s
+D a-unccon.ads		20140406181359 f9eb8f06 ada.unchecked_conversion%s
+D busy_wait.ads		20160107164748 bbc6a413 busy_wait%s
+D interfac.ads		20140406181359 69adb1b9 interfaces%s
+D i-c.ads		20140406181358 5421119b interfaces.c%s
+D i-cstrea.ads		20140406181357 febc86ed interfaces.c_streams%s
+D review_settings.ads	20160108135831 4def8ac5 review_settings%s
+D students.ads		20160107175842 2f8ec278 students%s
+D students.adb		20160108135310 8a50ca35 students%b
+D system.ads		20140406181356 bd760655 system%s
+D s-atacco.ads		20140406181355 4c36d12f system.address_to_access_conversions%s
+D s-conca2.ads		20140406181358 02a0d7d0 system.concat_2%s
+D s-conca3.ads		20140406181355 0b705ca5 system.concat_3%s
+D s-conca5.ads		20140406181356 875e432e system.concat_5%s
+D s-crtl.ads		20140406181356 2c012597 system.crtl%s
+D s-exctab.ads		20140406181354 54135002 system.exception_table%s
+D s-ficobl.ads		20140406181355 078245e4 system.file_control_block%s
+D s-finmas.ads		20140406181356 814daec4 system.finalization_masters%s
+D s-finroo.ads		20140406181359 4ff27390 system.finalization_root%s
+D s-imgint.ads		20140406181359 02dbe0c2 system.img_int%s
+D s-linux.ads		20140406181355 befedf55 system.linux%s
+D s-multip.ads		20140406181358 38ac9f73 system.multiprocessors%s
+D s-oscons.ads		20140410143800 04020b75 system.os_constants%s
+D s-osinte.ads		20140406181359 fd138fd1 system.os_interface%s
+D s-parame.ads		20140406181358 06da98b2 system.parameters%s
+D s-pooglo.ads		20140406181357 542f33d0 system.pool_global%s
+D s-secsta.ads		20140406181359 86a2856d system.secondary_stack%s
+D s-soflin.ads		20140406181358 aa763b52 system.soft_links%s
+D s-stache.ads		20140406181355 a37c21ec system.stack_checking%s
+D s-stausa.ads		20140406181355 017a0a05 system.stack_usage%s
+D s-stalib.ads		20140406181355 fa0a3617 system.standard_library%s
+D s-stoele.ads		20140406181357 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20140406181355 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20140406181357 b16154c2 system.storage_pools%s
+D s-tasinf.ads		20140406181357 2b3f8252 system.task_info%s
+D s-taspri.ads		20140406181359 15f617a8 system.task_primitives%s
+D s-taprop.ads		20140406181355 1dd2e1b6 system.task_primitives.operations%s
+D s-taskin.ads		20140406181355 3f821f32 system.tasking%s
+D s-taprob.ads		20140406181354 502249e3 system.tasking.protected_objects%s
+D s-tposen.ads		20140406181356 94c79adf system.tasking.protected_objects.single_entry%s
+D s-tasres.ads		20140406181356 0c8ef6fb system.tasking.restricted%s
+D s-tarest.ads		20140406181359 128b2dbd system.tasking.restricted.stages%s
+D s-traent.ads		20140406181355 b5116092 system.traceback_entries%s
+D s-unstyp.ads		20140406181356 510692af system.unsigned_types%s
+D s-wchcon.ads		20140406181358 1b7d22d2 system.wch_con%s
+D waiting_room.ads	20160108134109 2cce79b7 waiting_room%s
+D /home/student/workspace/post_exam_review_ada/config.adc  20160108140232 00000000
+X 1 ada.ads
+16K9*Ada 19e8 17|1r6 2r6 5r6 8r5 9r5 11r5 20r21 26r23
+X 2 a-except.ads
+53K13*Exceptions 360e19 17|2w10 9r9
+103V13*Exception_Information{string} 17|78s23
+X 5 a-reatim.ads
+39K13*Real_Time 138e18 17|5w10 11r9 20r25 26r27
+41O9*Time<duration> 17|20r35
+46O9*Time_Span<duration>
+53V13*Clock{41O9} 17|26s37
+55V14*"+"{41O9} 17|26s43 72s33
+X 9 a-textio.ads
+49K13*Text_IO 471e16 17|1w10 8r9
+263U14*Put_Line 17|38s13 53s31 61s13 65s13 77s13 78s13
+X 11 busy_wait.ads
+4K9*busy_wait 9e14 17|4w6 62r13 68r10
+8U15*delay_for 17|62s23 68s20
+X 15 review_settings.ads
+3K9*Review_Settings 21e20 16|1w6 5r29 17|3w6 10r5
+7o4*STUD_PERIOD{5|46O9} 17|26r45 72r35
+8o4*TIME_REVIEW{5|46O9} 17|62r33
+9o4*TIME_WALK{5|46O9} 17|68r30
+17I12*Students_Range{integer} 16|5r45
+X 16 students.ads
+3K9*students 14l5 14e13 17|15b14 81l5 81t13
+5T14*task_stud 5d24 7r15 9r15 11r15 17|16b15 80l9 80t18
+5i24 ID{15|17I12} 17|38r27 43r36 46r18 48r45 49r45 51r45 53r68 61r27 65r27
+. 77r27
+7t4*student1{5T14}
+9t4*student2{5T14}
+11t4*student3{5T14}
+X 17 students.adb
+17i7 serial{natural} 60m13 60r23 61r42
+18b7 has_seat{boolean} 43m40 45r13
+20o9 Next_Time{5|41O9} 26m10 31r22 72m10 72r23
+76r14 Error{2|62R9} 78r45
+X 38 s-stausa.ads
+203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
+268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+X 50 s-tarest.ads
+222U14*Activate_All_Tasks_Sequential 223i<c,__gnat_activate_all_tasks>22
+X 54 waiting_room.ads
+4K9*waiting_room 17|6w6 12r5 54|82e19
+9Y16 wait 17|48s40 49s40 51s40
+20w7*waiting_room1{7W22} 17|48r26
+21w7*waiting_room2{7W22} 17|49r26
+22w7*waiting_room3{7W22} 17|51r26
+34w17*waiting_list 17|43r13
+36U21 take_seat 17|43s26
+
