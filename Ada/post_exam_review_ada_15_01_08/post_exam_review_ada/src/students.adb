@@ -47,9 +47,7 @@ package body students is
 
                when 0 => waiting_room1.wait(id);
                when 1 => waiting_room2.wait(id);
-
                when 2 => waiting_room3.wait(id);
-
                when others => Put_Line("wrong value in student " & id'img );
 
             end case;

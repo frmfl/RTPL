@@ -12,7 +12,7 @@ package waiting_room is
       private
          student_is_waiting : Boolean := false ;
          ta_is_ready : Boolean := false;
-         actual_student_id: Students_Range := 0;
+         current_student_id: Students_Range := 0;
    
       end waiting_room_protected;
 
@@ -24,8 +24,9 @@ package waiting_room is
    
       protected door_protected is
          entry sleep;             
-         procedure knock;
-   
+      procedure knock;
+        procedure no_student_waiting;
+ 
       private
          student_knocks : Boolean := false;
       end door_protected;
