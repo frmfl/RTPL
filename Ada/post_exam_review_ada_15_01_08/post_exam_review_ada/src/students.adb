@@ -45,12 +45,13 @@ package body students is
          if has_seat = true then
             case id is
 
-               when 0 => waiting_room1.wait(id);
-               when 1 => waiting_room2.wait(id);
-               when 2 => waiting_room3.wait(id);
+               when 0 => student_handle0.wait;
+               when 1 => student_handle1.wait;
+               when 2 => student_handle2.wait;
                when others => Put_Line("wrong value in student " & id'img );
 
             end case;
+
 
 
             -- TODO

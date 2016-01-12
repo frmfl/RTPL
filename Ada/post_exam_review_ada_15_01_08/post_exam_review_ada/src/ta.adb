@@ -18,9 +18,7 @@ package body TA is
    task body task_TA is
       stud_cnt : Natural := 0; -- counts how many students the TA has processed
       id : Students_Range := 0; -- TODO: assign below in the loop
-      id2 : Students_Range := 0; -- TODO: assign below in the loop
-      --TA_MIN_SEP: Time_Span := TA_MINT-TIME_REVIEW-TIME_WALK ;
-      -- ...
+
    begin
       Put_Line("TA was born");
       loop
@@ -35,7 +33,7 @@ package body TA is
 
          -- and also obtain the id of the student task
 
-         door_protected.sleep; -- waits for students
+         protected_review_room.sleep; -- waits for students
 
 
          waiting_list.get_top_seat(id);   -- id is out
@@ -45,9 +43,9 @@ package body TA is
          -- todo: delete id in procedure review_Student.. not needed; waiting_list used instead for id transfer
          case id is
 
-            when 0 => waiting_room1.review_Student(id2); -- for debugging: Put_Line("review 0");
-            when 1 => waiting_room2.review_Student(id2); -- for debugging: Put_Line("review 1");
-            when 2 => waiting_room3.review_Student(id2); -- for debuggingPut_Line("review 2");
+            when 0 => student_handle0.review_Student; -- for debugging: Put_Line("review 0");
+            when 1 => student_handle1.review_Student; -- for debugging: Put_Line("review 1");
+            when 2 => student_handle2.review_Student; -- for debuggingPut_Line("review 2");
 
             when others => Put_Line("wrong value in student " & id'img );
 
@@ -64,8 +62,6 @@ package body TA is
          Put_Line("TA: finished student"&id'img);
 
          -- guarantee minimum inter-arrival time
-
-
          -- Guarantee Minimum Seperation
          busy_wait.delay_for(TA_MINT);
       end loop;
