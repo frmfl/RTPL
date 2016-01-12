@@ -21,7 +21,7 @@ package waiting_room is
       protected protected_review_room is
         entry sleep;        
         procedure knock;
-        procedure no_student_waiting;
+        procedure reviewed_all_students;
  
       private
          indicate_waiting : Boolean := false;
@@ -29,7 +29,7 @@ package waiting_room is
 
       -- protected object
       protected waiting_list is
-        procedure take_seat (stud_id: in Students_Range; could_take_seat: out Boolean); 
+        procedure take_seat (stud_id: in Students_Range; stud_got_seat: out Boolean); 
         procedure get_top_seat (stud_id: out Students_Range);
       
       private 

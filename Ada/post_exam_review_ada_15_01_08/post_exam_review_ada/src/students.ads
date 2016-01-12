@@ -5,11 +5,8 @@ package students is
    task type task_stud(ID : Review_Settings.Students_Range);
 
    student1 : task_stud(0);
-   --student1.PrintID;
    student2 : task_stud(1);
-   --student2.PrintID;
    student3 : task_stud(2);
-   --student3.PrintID;
 
 end students;
 

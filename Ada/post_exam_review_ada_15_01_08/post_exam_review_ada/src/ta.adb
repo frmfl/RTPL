@@ -18,34 +18,30 @@ package body TA is
    task body task_TA is
       stud_cnt : Natural := 0; -- counts how many students the TA has processed
       id : Students_Range := 0; -- TODO: assign below in the loop
+      Next_Time : Ada.Real_Time.Time;
+
 
    begin
       Put_Line("TA was born");
+      Next_Time:= Ada.Real_Time.Clock + TA_MINT;
+
       loop
 
          busy_wait.delay_for(TIME_WALK); -- ta is entering office or walking around a bit
 
          Put_Line("TA: waiting for student...");
-         -- TODO: wait until student wakes me up, take student into review
 
-         --Wait; --protected entry to trigger TA wakeup
+         -- blocked by entry; sleeps until released by any student
+         protected_review_room.sleep;
 
-
-         -- and also obtain the id of the student task
-
-         protected_review_room.sleep; -- waits for students
-
-
-         waiting_list.get_top_seat(id);   -- id is out
-
-         --busy_wait.delay_for(TIME_WALK); -- ta walks back to the room
-
-         -- todo: delete id in procedure review_Student.. not needed; waiting_list used instead for id transfer
+         -- retrieve ID of student who is first in waiting list array
+         waiting_list.get_top_seat(id);
+         -- switch case: take the student in review whos ID was retrieved from array.
          case id is
 
-            when 0 => student_handle0.review_Student; -- for debugging: Put_Line("review 0");
-            when 1 => student_handle1.review_Student; -- for debugging: Put_Line("review 1");
-            when 2 => student_handle2.review_Student; -- for debuggingPut_Line("review 2");
+            when 0 => student_handle0.review_Student;
+            when 1 => student_handle1.review_Student;
+            when 2 => student_handle2.review_Student;
 
             when others => Put_Line("wrong value in student " & id'img );
 
@@ -63,7 +59,8 @@ package body TA is
 
          -- guarantee minimum inter-arrival time
          -- Guarantee Minimum Seperation
-         busy_wait.delay_for(TA_MINT);
+         delay until(Next_Time);
+         Next_Time := Next_Time + TA_MINT;
       end loop;
 
    exception

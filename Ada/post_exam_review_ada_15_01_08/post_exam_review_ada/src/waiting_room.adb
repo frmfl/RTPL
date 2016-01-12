@@ -22,17 +22,18 @@ package body waiting_room is
    -- this protected object implements the seats, where students take a seat by giving their ID
    protected body waiting_list is
       -- student takes a seat, gives its ID and gets, if there was a free seat
-      procedure take_seat (stud_id: in Students_Range; could_take_seat: out Boolean) is
+      procedure take_seat (stud_id: in Students_Range; stud_got_seat : out Boolean) is
       begin
          if num_students_waiting <= Seat_Range'Last then
             seats(num_students_waiting) := stud_id;
+            
             num_students_waiting := num_students_waiting + 1;
             protected_review_room.knock;
-            could_take_seat := true;
+            stud_got_seat := true;
             -- Debug Option:
             -- Put_Line("take_seat" & seats(0)'img & seats(1)'img & seats(2)'img & "   " & students_waiting'Img & " students waiting");
          else
-            could_take_seat := false;
+            stud_got_seat := false;
             -- Debug Option:
             -- Put_Line("take_seat" & seats(0)'img & seats(1)'img & seats(2)'img & "...can't take one, seats full!");
          end if;
@@ -51,7 +52,7 @@ package body waiting_room is
          num_students_waiting := num_students_waiting - 1; -- decrement number of students on waiting list
 	 -- ToDo: Analyze what happens if preempted here by TA-task and actually no student is waiting
          if num_students_waiting = 0 then
-            protected_review_room.no_student_waiting;
+            protected_review_room.reviewed_all_students;
          end if;
          -- for debugging:
          --   Put_Line("get_top_seat" & seats(0)'img & seats(1)'img & seats(2)'img);
@@ -75,11 +76,11 @@ package body waiting_room is
 --         Put_Line("student_knocks true");
       end knock;
 
-      procedure no_student_waiting is
+      procedure reviewed_all_students is
          begin
          indicate_waiting := false;
 
-      end no_student_waiting;
+      end reviewed_all_students;
 
    end protected_review_room;
 

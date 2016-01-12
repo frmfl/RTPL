@@ -13,36 +13,26 @@ use waiting_room;
 
 
 package body students is
-    task body task_stud is
+   task body task_stud is
       serial : Natural := 0;
-      has_seat : Boolean := false;
-        --id : constant Students_Range := 0;
-        Next_Time : Ada.Real_Time.Time;
-      -- ...
-    begin
-      -- ...
+      got_seat : Boolean := false;
+      Next_Time : Ada.Real_Time.Time;
+   begin
+      -- make student task periodic
+      Next_Time := Ada.Real_Time.Clock + STUD_PERIOD;
 
-      -- TODO: make this task periodic
-         Next_Time := Ada.Real_Time.Clock + STUD_PERIOD;
-      -- TODO
-
-        loop
-         -- TODO: make this task periodic
+      loop
+         -- make student task periodic
          delay until Next_Time;
-         -- TODO
-            -- ...
 
-         --door_protected.knock; -- shows that student is waiting
+         Put_Line("S:"&id'img &" waiting..");
 
+         -- Student takes a seat on waiting list if possible
+         waiting_list.take_seat(id, got_seat);
 
-            Put_Line("S:"&id'img &" waiting..");
-            -- TODO: student takes a seat here and waits for TA to call him
-            --   waiting_room_protected.wait(id); -- student takes a seat
-
-
-            waiting_list.take_seat(id, has_seat);
-
-         if has_seat = true then
+         -- if the calling student with id got_seat,
+         -- according student instance will call an entry
+         if got_seat = true then
             case id is
 
                when 0 => student_handle0.wait;
@@ -52,29 +42,20 @@ package body students is
 
             end case;
 
-
-
-            -- TODO
-
             serial := serial + 1;
             Put_Line("S:"&id'img &"(#" & serial'img &") in review");
             busy_wait.delay_for(TIME_REVIEW);
          end if;
 
-            Put_Line("S:"&id'img &" leaves");
+         Put_Line("S:"&id'img &" leaves");
 
-         -- student is walking out of the room -- for synchronization needed
-         busy_wait.delay_for(TIME_WALK);
-
-
-        -- TODO: make this task periodic
+         -- TODO: make this task periodic
          Next_Time := Next_Time + STUD_PERIOD;
-         -- TODO
-        end loop;
-    exception
-        when Error: others =>
-            Put_Line("S:"&id'img &" terminates due to exception:");
-            Put_Line (Exception_Information(Error));
-            raise Program_Error;
-    end task_stud;
+      end loop;
+   exception
+      when Error: others =>
+         Put_Line("S:"&id'img &" terminates due to exception:");
+         Put_Line (Exception_Information(Error));
+         raise Program_Error;
+   end task_stud;
 end students;
