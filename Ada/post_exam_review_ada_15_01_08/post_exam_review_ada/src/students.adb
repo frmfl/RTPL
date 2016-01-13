@@ -31,7 +31,8 @@ package body students is
          waiting_list.take_seat(id, got_seat);
 
          -- if the calling student with id got_seat,
-         -- according student instance will call an entry
+         -- according student instance will get blocked in an entry
+         -- until released by the TA
          if got_seat = true then
             case id is
 

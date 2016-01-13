@@ -19,8 +19,6 @@ package body TA is
       stud_cnt : Natural := 0; -- counts how many students the TA has processed
       id : Students_Range := 0; -- TODO: assign below in the loop
       Next_Time : Ada.Real_Time.Time;
-
-
    begin
       Put_Line("TA was born");
       Next_Time:= Ada.Real_Time.Clock + TA_MINT;
@@ -44,21 +42,15 @@ package body TA is
             when 2 => student_handle2.review_Student;
 
             when others => Put_Line("wrong value in student " & id'img );
-
          end case;
 
-
-         --   Put_Line("TA: waits... still");
-
          -- takes student in review
-         -- review
          stud_cnt := stud_cnt + 1;
          Put_Line("TA: in review with stud"&id'img&", total="&stud_cnt'img);
          busy_wait.delay_for(TIME_REVIEW);
          Put_Line("TA: finished student"&id'img);
 
          -- guarantee minimum inter-arrival time
-         -- Guarantee Minimum Seperation
          delay until(Next_Time);
          Next_Time := Next_Time + TA_MINT;
       end loop;
@@ -69,9 +61,6 @@ package body TA is
          Put_Line (Exception_Information(Error));
          raise Program_Error;
    end task_TA;
-
-   --  TeachingAssistant : task_TA;
-
 
 end TA;
 

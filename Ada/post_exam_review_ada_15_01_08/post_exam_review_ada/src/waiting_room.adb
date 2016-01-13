@@ -39,7 +39,7 @@ package body waiting_room is
          end if;
       end take_seat;
 
-      -- ta takes the longest waiting student
+      -- ta takes longest waiting student in review = array position 0
       procedure get_top_seat (stud_id: out Students_Range) is begin
          stud_id := seats(0);
 
